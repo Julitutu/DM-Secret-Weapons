@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Aggrataurian</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-aggrataurian.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-aggrataurian.xml" />
+		</update>
+	</info>
+
+	<element name="Aggrataurian" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_AGGRATAURIAN">
+		<description>
+			<p>“Flightless and frightful” was the description given by famed gnoll explorer Ignobious Riot upon discovering a roaming band of aggrataurian in the Craggy Mountains of western Avestros. Aggrataurian are towering, highly aggressive, flightless bird-folk, widely known as “jerks” by most outsiders. At first, it was believed that aggrataurian were isolationists, viewing any non-aggrataurian as a threat worthy of fierce assault. However, as time passed and outsiders saw aggrataurian they treated one another with the same ferocity as any other species, it came to be understood that these people were just “kind of like that”.</p>
+			<p>Aggrataurian are highly aggressive. They live to brawl, and solve problems with direct physical confrontation where possible. They are not actively murderous, however, merely viewing hand-to-beak combat as the most efficient way to solve problems. Aggrataurians believe that all hierarchy is ultimately dictated by force, so why not cut the nonsense and work out who’s top of the pecking order right here and now?</p>
+			<p>In recent years, through repeated efforts from various species to develop trade and bonds with the aggrataurian, some individuals have learned to quell their fighting tendencies long enough to hold a conversation with others. However, even the most habituated aggratuarian is always down for a scrap, and are known to be swift in misreading anything from a friendly wave to a passing compliment as an invitation to fight.</p>
+			<h4>AGGRATAURIAN TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 2, and your Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 35 feet.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Aggrataurian grow to an impressive height, often reaching 8 feet by adulthood. Your size is medium.</p>
+			<p class="indent"><strong><em>Adrenaline Burst.</em></strong> On your turn, immediately after you hit a creature with a weapon attack roll, you can take one additional action. This action can only be used to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action. Once you use this feature, you cannot do so again until you finish a short or long rest.</p>
+			<p class="indent"><strong><em>Determined.</em></strong> When you roll a natural 1 on an attack roll against a hostile creature, you gain a point of inspiration.</p>
+			<p class="indent"><strong><em>Eager Combatant.</em></strong> You have advantage on Initiative rolls.</p>
+			<p class="indent"><strong><em>Fierce Peck.</em></strong> Your beak is a fierce weapon that you can use to make unarmed strikes. When you hit with it, the strike deals 1d6+your Strength modifier bludgeoning damage. Thanks to your long neck, your reach is increased by 5 feet when making unarmed strikes with your beak.</p>
+			<p class="indent"><strong><em>Hardy Survivor.</em></strong> You have proficiency in one of the following skills of your choice: Acrobatics, Athletics, Animal Handling, Intimidation, or Nature.</p>
+			<p class="indent"><strong><em>Heavy Feathers.</em></strong> You resist cold damage.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> Your character can speak, read, and write Auran, Common, and one other language that you and your GM agree is appropriate for your character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="strength" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Aggrataurian)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Aggrataurian)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_MM_LANGUAGE_AURAN" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Aggrataurian)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_ADRENALINE_BURST" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_DETERMINED" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_EAGER_COMBATANT" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_FIERCE_PECK" />
+			<select type="Proficiency" name="Hardy Survivor" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+		</rules>
+	</element>
+
+	<element name="Adrenaline Burst" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_ADRENALINE_BURST">
+		<description>
+			<p>On your turn, immediately after you hit a creature with a weapon attack roll, you can take one additional action. This action can only be used to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action. Once you use this feature, you cannot do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Action">
+			<description>After you hit with a weapon attack, you can take one additional action (Attack -one weapon attack only-, Dash, Disengage, Hide, or Use an Object).</description>
+		</sheet>
+	</element>
+	<element name="Determined" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_DETERMINED">
+		<description>
+			<p>When you roll a natural 1 on an attack roll against a hostile creature, you gain a point of inspiration.</p>
+		</description>
+		<sheet>
+			<description>When you roll a 1 on an attack roll against a hostile creature, you gain a point of inspiration.</description>
+		</sheet>
+	</element>
+	<element name="Eager Combatant" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_EAGER_COMBATANT">
+		<description>
+			<p>You have advantage on Initiative rolls.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on initiative rolls.</description>
+		</sheet>
+	</element>
+	<element name="Fierce Peck" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AGGRATAURIAN_FIERCE_PECK">
+		<description>
+			<p>Your beak is a fierce weapon that you can use to make unarmed strikes. When you hit with it, the strike deals 1d6+your Strength modifier bludgeoning damage. Thanks to your long neck, your reach is increased by 5 feet when making unarmed strikes with your beak.</p>
+		</description>
+		<sheet>
+			<description>Your beak is a natural weapon that deals 1d6 + {{strength:modifier}} bludgeoning damage and has a reach of 10 feet.</description>
+		</sheet>
+	</element>
+</elements>

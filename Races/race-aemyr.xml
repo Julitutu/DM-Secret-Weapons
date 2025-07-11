@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Aemyr</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-aemyr.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-aemyr.xml" />
+		</update>
+	</info>
+
+	<!-- Base Aemyr Race -->
+	<element name="Aemyr" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_AEMYR">
+		<description>
+			<p>Ancient legends tell that the first Aemyr were created by a powerful, empathetic archfey who sought to create guardians for the natural world across all planes of existence. Aemyr have been found on many planes, uniquely adapted to suit their environment. There are two primary subraces that exist on the Material Plane: The Flaxfoot and The Lowstone.</p>
+			<p>Flaxfoot Aemyr usually dwell in forests, and by natural disposition are playful and merry. They have an unfortunate reputation for gluttony, and overindulgence in fine food and drink, however this is largely unfounded. Flaxfoot enjoy the bounties of their forest home to the fullest, but they are no more greedy or gluttonous than any other race. Still, rarely do travellers who come upon a Flaxfoot town leave the next morning without a full belly and ringing hangover.</p>
+			<p>Lowstone Aemyr are mountain dwellers. Acclimated to life at the very peak of the tallest mountains, they are a rare sight on the lands below. Many Mountain Dwarf legends feature Lowstone as invisible protectors or guardians to those who fall foul of the mountain. They are rumoured to have the power to sense volcanic eruptions and earthquakes before they happen, and have long aided Dwarves building mighty mountain fortresses in ways that will not provoke the mountain’s wrath.</p>
+			<h4>AEMYR TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 1.</p>
+			<p class="indent"><strong><em>Fey.</em></strong> Your creature type is Fey, rather than Humanoid.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Aemyr mature slower than humans, reaching adulthood in their third decade. On average, they live for about 80 years.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30ft.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Aemyr stand between 2 and 3ft tall. Your size is small.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong> Two primary subraces of Aemyr exist on the Material Plane: the forest-dwelling Flaxfoot and the mountain-dwelling Lowstone. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Wisdom +1) -->
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (three +1's) -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Aemyr)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Fey Creature Type -->
+			<grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FEY" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Size (Small) -->
+			<grant type="Size" id="ID_SIZE_SMALL" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Aemyr Subrace" supports="Aemyr" />
+		</rules>
+	</element>
+
+	<!-- Flaxfoot Aemyr Subrace -->
+	<element name="Flaxfoot Aemyr" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_FLAXFOOT_AEMYR">
+		<supports>Aemyr</supports>
+		<description>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Dexterity score increases by 2.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> You have a fly speed equal to your walking speed while you aren’t wearing medium or heavy armour.</p>
+			<p class="indent"><strong><em>Hasty Response.</em></strong> You have advantage on initiative rolls.</p>
+			<p class="indent"><strong><em>Strong of Heart.</em></strong> You have advantage on Charisma saving throws.</p>
+			<p class="indent"><strong><em>Forest Dweller.</em></strong> You gain proficiency in two skills of your choice from among Nature, Survival, Perception and Animal Handling.</p>
+			<p class="indent"><strong><em>Flaxfoot Magic.</em></strong> You know the Dancing Lights cantrip, and can choose to cast it without verbal or somatic components a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Flaxfoot)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_FLAXFOOT_WINGS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_HASTY_RESPONSE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_STRONG_OF_HEART" />
+			<select type="Proficiency" name="Forest Dweller" number="2" supports="ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_SURVIVAL|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_ANIMALHANDLING" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_FLAXFOOT_MAGIC" />
+		</rules>
+	</element>
+
+    <!-- Flaxfoot Trait Definitions -->
+	<element name="Flaxfoot Wings" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_FLAXFOOT_WINGS">
+		<description>
+			<p>You have a fly speed equal to your walking speed while you aren’t wearing medium or heavy armour.</p>
+		</description>
+		<sheet>
+			<description>You can't fly while wearing medium or heavy armor.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:fly" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Hasty Response" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_HASTY_RESPONSE">
+		<description>
+			<p>You have advantage on initiative rolls.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on initiative rolls.</description>
+		</sheet>
+	</element>
+	<element name="Strong of Heart" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_STRONG_OF_HEART">
+		<description>
+			<p>You have advantage on Charisma saving throws.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on Charisma saving throws.</description>
+		</sheet>
+	</element>
+	<element name="Flaxfoot Magic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_FLAXFOOT_MAGIC">
+		<description>
+			<p>You know the Dancing Lights cantrip, and can choose to cast it without verbal or somatic components a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>You know the Dancing Lights cantrip. You can cast it without verbal or somatic components a number of times equal to your proficiency bonus per long rest.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DANCING_LIGHTS" />
+		</rules>
+	</element>
+
+	<!-- Lowstone Aemyr Subrace -->
+	<element name="Lowstone Aemyr" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LOWSTONE_AEMYR">
+		<supports>Aemyr</supports>
+		<description>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2.</p>
+			<p class="indent"><strong><em>Sturdy Wings.</em></strong> You have a fly speed equal to your walking speed. You can fly while wearing medium armour, but not heavy armor.</p>
+			<p class="indent"><strong><em>Lowstone Resistance.</em></strong> You have advantage on saving throws to avoid or end the poisoned condition, and you resist poison damage.</p>
+			<p class="indent"><strong><em>Strength of Mind.</em></strong> You have advantage on Intelligence saving throws.</p>
+			<p class="indent"><strong><em>Mountain Dweller.</em></strong> You gain proficiency in two skills of your choice from among Nature, Athletics, Medicine and Insight.</p>
+			<p class="indent"><strong><em>Lowstone Magic.</em></strong> You know the Mending cantrip, and can choose to cast it with a casting time of one action, rather than one minute, a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Lowstone)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_STURDY_WINGS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_LOWSTONE_RESISTANCE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_STRENGTH_OF_MIND" />
+			<select type="Proficiency" name="Mountain Dweller" number="2" supports="ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AEMYR_LOWSTONE_MAGIC" />
+		</rules>
+	</element>
+
+	<!-- Lowstone Trait Definitions -->
+	<element name="Sturdy Wings" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_STURDY_WINGS">
+		<description>
+			<p>You have a fly speed equal to your walking speed. You can fly while wearing medium armour, but not heavy armor.</p>
+		</description>
+		<sheet>
+			<description>You can't fly while wearing heavy armor.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:fly" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Lowstone Resistance" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_LOWSTONE_RESISTANCE">
+		<description>
+			<p>You have advantage on saving throws to avoid or end the poisoned condition, and you resist poison damage.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against poison.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+	<element name="Strength of Mind" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_STRENGTH_OF_MIND">
+		<description>
+			<p>You have advantage on Intelligence saving throws.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on Intelligence saving throws.</description>
+		</sheet>
+	</element>
+	<element name="Lowstone Magic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AEMYR_LOWSTONE_MAGIC">
+		<description>
+			<p>You know the Mending cantrip, and can choose to cast it with a casting time of one action, rather than one minute, a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>You know the Mending cantrip. You can cast it as an action a number of times equal to your proficiency bonus per long rest.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_MENDING" />
+		</rules>
+	</element>
+</elements>

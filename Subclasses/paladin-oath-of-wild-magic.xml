@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Paladin - Oath of Wild Magic</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="paladin-oath-of-wild-magic.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/paladin-oath-of-wild-magic.xml" />
+		</update>
+	</info>
+
+	<element name="Oath of Wild Magic" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_PALADIN_OATH_OF_WILD_MAGIC">
+		<supports>Sacred Oath</supports>
+		<description>
+			<p>The Oath of Wild Magic is sworn to embrace and uphold the fundamental forces of magic. Becoming in tune with the gentle hum of magic that permeates all realms, allowing the chaos of unpredictable forces to guide you, and, in turn, guiding them without demanding control; these are the ideals of Wild Magic Paladins.</p>
+			<p class="indent">This philosophy manifests as ideals revolving around freedom, honesty, and impermanence. Many Wild Magic Paladins serve as councillors and ambassadors to powerful, magical beings like dragons and archmages, or as guardians of significant, magical places.</p>
+			<p class="indent">Many Paladins who swear this oath do so to unite themselves with the fundamental, divine magic that permeates all things.</p>
+			<p class="indent"><b>Tenets of Wild Magic</b></p>
+			<p class="indent">The Tenets of Wild Magic are less rigid than those of other paladin orders, serving as philosophical guidelines rather than an immutable code.</p>
+			<p class="indent"><b>Impermanence.</b> Nothing lasts forever. One day everything will end, and no-one will remember. Seek not to preserve the ways of old, embrace change and spontaneity.</p>
+			<p class="indent"><b>Freedom.</b> Bare not shackles of iron or philosophy. The magic of the world cannot truly be captured or owned. The same applies to all living things, we are manifestations of magic.</p>
+			<p class="indent"><b>Honesty.</b> Divine Magic is a fundamental force of existence. Like gravity, it cannot lie. You should be the same. Hide nothing, speak openly, seek not to control others with deception.</p>
+			<p class="indent"><b>Humility.</b> Stake no claim to the forces or form you wield. Your strength of body and magic are temporary gifts, not rights. They will fade in time. Be thankful. Command them with respect.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_OATH_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_AURA_OF_CHAOS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_DARKNESS_FROM_LIGHT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHAOS_INCARNATE" />
+		</description>
+		<sheet display="false">
+			<description>The Oath of Wild Magic is sworn to embrace and uphold the fundamental forces of magic.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_OATH_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_AURA_OF_CHAOS" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_DARKNESS_FROM_LIGHT" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHAOS_INCARNATE" level="20" />
+		</rules>
+	</element>
+	<element name="Oath Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_OATH_SPELLS">
+		<description>
+			<p>You gain Oath Spells at the Paladin Levels listed.</p>
+			<h5>Oath of Wild Magic Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>Disguise Self, one randomly determined 1st level spell from the Sorcerer spell list</i></td></tr>
+				<tr><td>5th</td><td><i>Levitate, one randomly determined 2nd level spell from the Sorcerer spell list</i></td></tr>
+				<tr><td>9th</td><td><i>Major Image, one randomly determined 3rd level spell from the Sorcerer spell list</i></td></tr>
+				<tr><td>13th</td><td><i>Hallucinatory Terrain, one randomly determined 4th level spell from the Sorcerer spell list</i></td></tr>
+				<tr><td>17th</td><td><i>Legend Lore, one randomly determined 5th level spell from the Sorcerer spell list</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="3" spellcasting="Paladin" prepared="true" />
+			<select type="Spell" name="Sorcerer Spell (1st level)" supports="Sorcerer,1" level="3" spellcasting="Paladin" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_LEVITATE" level="5" spellcasting="Paladin" prepared="true" />
+			<select type="Spell" name="Sorcerer Spell (2nd level)" supports="Sorcerer,2" level="5" spellcasting="Paladin" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_MAJOR_IMAGE" level="9" spellcasting="Paladin" prepared="true" />
+			<select type="Spell" name="Sorcerer Spell (3rd level)" supports="Sorcerer,3" level="9" spellcasting="Paladin" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_HALLUCINATORY_TERRAIN" level="13" spellcasting="Paladin" prepared="true" />
+			<select type="Spell" name="Sorcerer Spell (4th level)" supports="Sorcerer,4" level="13" spellcasting="Paladin" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_LEGEND_LORE" level="17" spellcasting="Paladin" prepared="true" />
+			<select type="Spell" name="Sorcerer Spell (5th level)" supports="Sorcerer,5" level="17" spellcasting="Paladin" prepared="true"/>
+		</rules>
+	</element>
+	<element name="Channel Divinity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY">
+		<description>
+			<p>When you take this oath at 3rd level, you gain the following Channel Divinity options.</p>
+			<p class="indent"><b>Well of Magic.</b> You draw upon the latent magic of the world to empower yourself. Over the course of a short rest, you regain expended spell slots. The spell slots can have a combined level of up to your proficiency bonus.</p>
+			<p class="indent"><b>Chaos Channeler.</b> When you use your Divine Smite ability, choose one: Light or Darkness. Roll on the corresponding Wild Magic Table and apply that effect. Once you use this Channel Divinity, you can activate this effect again when you Divine Smite a number of times equal to your proficiency bonus per short rest, but never more than once per turn.</p>
+			<h5>Wild Magic of Light</h5>
+			<table>
+				<thead>
+					<tr><td>d8</td><td>Effect</td></tr>
+				</thead>
+				<tr><td>1</td><td>You gain temporary Hit Points equal to your charisma modifier at the start of each of your turns for the next minute.</td></tr>
+				<tr><td>2</td><td>You regain one expended spell slot of 3rd level or below.</td></tr>
+				<tr><td>3</td><td>Choose a damage type. You have resistance to that type for the next minute.</td></tr>
+				<tr><td>4</td><td>You grow one size category larger for the next minute, if there is room. Your reach is increased by 5 feet, your weapon attacks deal an additional 1d4 damage, and you have advantage on strength checks and strength saving throws for this time.</td></tr>
+				<tr><td>5</td><td>For the next minute, you can take the Dash or Disengage actions as a bonus action.</td></tr>
+				<tr><td>6</td><td>For the next minute, you can use your reaction when you make an attack roll or saving throw to roll 1d6 and add the result to your roll.</td></tr>
+				<tr><td>7</td><td>For the next minute, when you use your Lay on Hands feature, the creature you heal recovers five hit points for each point you expend.</td></tr>
+				<tr><td>8</td><td>A creature you can see within 30 feet of you is charmed by you for the next minute, or until you or one of your allies deals damage to them. At the end of each of their turns, they make Wisdom saving throw, ending this effect early on a success.</td></tr>
+			</table>
+			<h5>Wild Magic of Darkness</h5>
+			<table>
+				<thead>
+					<tr><td>d8</td><td>Effect</td></tr>
+				</thead>
+				<tr><td>1</td><td>For the next minute, you have advantage on all attack rolls, and attack rolls against you are made at advantage.</td></tr>
+				<tr><td>2</td><td>For the next minute, your weapon attacks deal an additional 1d6 necrotic damage.</td></tr>
+				<tr><td>3</td><td>For the next minute, you can teleport a number of feet equal to half your walking speed to an unoccupied space you can see as a bonus action.</td></tr>
+				<tr><td>4</td><td>Choose up to two creatures you can see within 30 feet. For the next minute, they must roll a d4 and subtract the result from all their attack rolls and saving throws.</td></tr>
+				<tr><td>5</td><td>Your form becomes wreathed in shadows, making your movements difficult to track. Attack rolls against you have disadvantage for the next minute.</td></tr>
+				<tr><td>6</td><td>For the next minute, when you hit a creature with an attack roll, they must make a Charisma saving throw or be blinded until the start of your next turn. You can only use this ability once per turn.</td></tr>
+				<tr><td>7</td><td>You can immediately take one additional action.</td></tr>
+				<tr><td>8</td><td>All creatures of your choice within 10 feet of you lose hit points equal to your Paladin level. You gain temporary hit points equal to the total number hit points other creatures lost by this effect.</td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>You gain the following two Channel Divinity options.&#13;
+			• Well of Magic. Over the course of a short rest, you regain expended spell slots. The spell slots can have a combined level of up to your proficiency bonus.&#13;
+			• Chaos Channeler. When you use your Divine Smite ability, choose one: Light or Darkness. Roll on the corresponding Wild Magic Table and apply that effect. Once you use this Channel Divinity, you can activate this effect again when you Divine Smite a number of times equal to your proficiency bonus per short rest, but never more than once per turn.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY_WELL_OF_MAGIC" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY_CHAOS_CHANNELER" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Well of Magic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY_WELL_OF_MAGIC">
+		<description>
+			<p>You draw upon the latent magic of the world to empower yourself. Over the course of a short rest, you regain expended spell slots. The spell slots can have a combined level of up to your proficiency bonus.</p>
+		</description>
+		<sheet usage="Channel Divinity" alt="Well of Magic">
+			<description>Over the course of a short rest, you regain expended spell slots. The spell slots can have a combined level of up to {{proficiency}}.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Chaos Channeler" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHANNEL_DIVINITY_CHAOS_CHANNELER">
+		<description>
+			<p>When you use your Divine Smite ability, choose one: Light or Darkness. Roll on the corresponding Wild Magic Table and apply that effect. Once you use this Channel Divinity, you can activate this effect again when you Divine Smite a number of times equal to your proficiency bonus per short rest, but never more than once per turn.</p>
+			<h5>Wild Magic of Light</h5>
+			<table>
+				<thead>
+					<tr><td>d8</td><td>Effect</td></tr>
+				</thead>
+				<tr><td>1</td><td>You gain temporary Hit Points equal to your charisma modifier at the start of each of your turns for the next minute.</td></tr>
+				<tr><td>2</td><td>You regain one expended spell slot of 3rd level or below.</td></tr>
+				<tr><td>3</td><td>Choose a damage type. You have resistance to that type for the next minute.</td></tr>
+				<tr><td>4</td><td>You grow one size category larger for the next minute, if there is room. Your reach is increased by 5 feet, your weapon attacks deal an additional 1d4 damage, and you have advantage on strength checks and strength saving throws for this time.</td></tr>
+				<tr><td>5</td><td>For the next minute, you can take the Dash or Disengage actions as a bonus action.</td></tr>
+				<tr><td>6</td><td>For the next minute, you can use your reaction when you make an attack roll or saving throw to roll 1d6 and add the result to your roll.</td></tr>
+				<tr><td>7</td><td>For the next minute, when you use your Lay on Hands feature, the creature you heal recovers five hit points for each point you expend.</td></tr>
+				<tr><td>8</td><td>A creature you can see within 30 feet of you is charmed by you for the next minute, or until you or one of your allies deals damage to them. At the end of each of their turns, they make Wisdom saving throw, ending this effect early on a success.</td></tr>
+			</table>
+			<h5>Wild Magic of Darkness</h5>
+			<table>
+				<thead>
+					<tr><td>d8</td><td>Effect</td></tr>
+				</thead>
+				<tr><td>1</td><td>For the next minute, you have advantage on all attack rolls, and attack rolls against you are made at advantage.</td></tr>
+				<tr><td>2</td><td>For the next minute, your weapon attacks deal an additional 1d6 necrotic damage.</td></tr>
+				<tr><td>3</td><td>For the next minute, you can teleport a number of feet equal to half your walking speed to an unoccupied space you can see as a bonus action.</td></tr>
+				<tr><td>4</td><td>Choose up to two creatures you can see within 30 feet. For the next minute, they must roll a d4 and subtract the result from all their attack rolls and saving throws.</td></tr>
+				<tr><td>5</td><td>Your form becomes wreathed in shadows, making your movements difficult to track. Attack rolls against you have disadvantage for the next minute.</td></tr>
+				<tr><td>6</td><td>For the next minute, when you hit a creature with an attack roll, they must make a Charisma saving throw or be blinded until the start of your next turn. You can only use this ability once per turn.</td></tr>
+				<tr><td>7</td><td>You can immediately take one additional action.</td></tr>
+				<tr><td>8</td><td>All creatures of your choice within 10 feet of you lose hit points equal to your Paladin level. You gain temporary hit points equal to the total number hit points other creatures lost by this effect.</td></tr>
+			</table>
+		</description>
+		<sheet usage="Channel Divinity" alt="Chaos Channeler">
+			<description>When you use your Divine Smite ability, choose one: Light or Darkness. Roll on the corresponding Wild Magic Table and apply that effect. Once you use this Channel Divinity, you can activate this effect again when you Divine Smite a number of times equal to {{proficiency}} per short rest, but never more than once per turn.
+			</description>
+		</sheet>
+	</element>
+	<element name="Aura of Chaos" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_AURA_OF_CHAOS">
+		<description>
+			<p>Starting at 7th level, you exude an aura of chaotic, magical energy, influencing the world in unpredictable ways.</p>
+			<p class="indent">When a hostile creature within 10 feet of you rolls a natural 20 on an attack roll or ability check, you can use your reaction to chaotically influence fate. They reroll the die, and must use the new roll.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When a hostile creature within {{aura of chaos:range}} feet of you rolls a natural 20 on an attack roll or ability check, you can use your reaction to chaotically influence fate. They reroll the die, and must use the new roll.</description>
+		</sheet>
+		<rules>
+			<stat name="aura of chaos:range" value="10" />
+			<stat name="aura of chaos:range" value="20" level="18" />
+		</rules>
+	</element>
+	<element name="Darkness From Light" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_DARKNESS_FROM_LIGHT">
+		<description>
+			<p>At 15th level, you can manipulate the magic of your Lay on Hands feature to inflict harm as well as healing.</p>
+			<p class="indent">When you use your Lay on Hands feature, you can choose to inflict necrotic damage equal to the number of Hit Points you expend, rather than healing that amount.</p>
+			<p class="indent">If you do this, the target must make a Charisma saving throw. On a success, any damage dealt by this feature is halved.</p>
+			<p class="indent">This feature has no effect on undead or constructs.</p>
+		</description>
+		<sheet>
+			<description>When you use your Lay on Hands feature, you can choose to inflict necrotic damage equal to the number of Hit Points you expend, rather than healing that amount. If you do this, the target must make a DC {{paladin:spellcasting:dc}} Charisma saving throw. On a success, any damage dealt by this feature is halved. This feature has no effect on undead or constructs.</description>
+		</sheet>
+	</element>
+	<element name="Chaos Incarnate" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WILD_MAGIC_CHAOS_INCARNATE">
+		<description>
+			<p>At 20th level, you can enter a state of total connection to magic, letting you exert some degree of control over your Wild Magic surges. As a bonus action, you gain the following effects for one minute:</p>
+			<ul>
+				<li>When you use your Chaos Channeler ability, you can choose one effect from either table to apply. Then roll on the other table and apply that effect as well.</li>
+				<li>You can use your Chaos Channeler ability once per round when you hit a creature with an attack. This use does not count against the amount of times you can use your Chaos Channeler ability or Channel Divinity per short rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action">
+			<description>You can enter a state of total connection to magic, letting you exert some degree of control over your Wild Magic surges. As a bonus action, you gain the following effects for one minute:&#13;
+			• When you use your Chaos Channeler ability, you can choose one effect from either table to apply. Then roll on the other table and apply that effect as well.&#13;
+			• You can use your Chaos Channeler ability once per round when you hit a creature with an attack. This use does not count against the amount of times you can use your Chaos Channeler ability or Channel Divinity per short rest.</description>
+		</sheet>
+	</element>
+</elements>

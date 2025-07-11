@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Warlock - The Unseen</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="warlock-the-unseen.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/warlock-the-unseen.xml" />
+		</update>
+	</info>
+
+	<element name="The Unseen" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WARLOCK_THE_UNSEEN">
+		<supports>Otherworldly Patron</supports>
+		<description>
+			<p>Unburdened by mortality, morality, and fear, ever rising and falling in the dark and hopeless places of the world, exists an idea. It is a gnawing concept; a thought as invisible and infectious as a virus. It is called The Unseen.</p>
+			<p class="indent">Followers of The Unseen answer not to a dark god or monstrosity. Instead, they draw power from an ideology, and a community of fellow believers. The Unseen is a philosophy of unity and destruction; a call to the downtrodden and unwanted to band together and set the world alight. Members of The Unseen operate in the shadows, an ever growing collective seeking the ruination of modern society. Under the cover of nightfall, ordinary men and women–teachers, doctors, beggars, and merchants, don masks and perform rituals to beckon in the coming chaos.</p>
+			<p class="indent">The motivations of individuals may vary wildly. Some believe the current rule of the world is corrupt and wicked, and seek to reverse the fortunes of the tyrannised and build a new order for the benefit of the people. Others seek personal power, eager to spread carnage and rise like smoke through its chaos. In all cases, The Unseen draw strength from one another, empowered by a vision of a new world. To the mighty and powerful, there is no threat more terrifying.</p>
+			<p class="indent">The Unseen is labelled as an anarchistic cult and outlawed in most empires, and membership is punishable by death. However, no matter the brutal retribution of the state, The Unseen seem to grow ever more numerous, harbingers of a new order that will rise from the ashes of the world they burn. If you dare dream of a better world, and are willing to do whatever it takes to bring it to bear, seek out The Unseen.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_EXPANDED_SPELL_LIST" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_SHARED_MALICE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_UNSEEN_IDEALOGUE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_COLLECTIVE_KNOWLEDGE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_THOUGHT_DOMINATOR" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_AURA_OF_LEGION" />
+		</description>
+		<sheet display="false">
+			<description>Followers of The Unseen answer not to a dark god or monstrosity. Instead, they draw power from an ideology, and a community of fellow believers.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_EXPANDED_SPELL_LIST" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_SHARED_MALICE" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_UNSEEN_IDEALOGUE" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_COLLECTIVE_KNOWLEDGE" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_THOUGHT_DOMINATOR" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_AURA_OF_LEGION" level="14" />
+		</rules>
+	</element>
+	<element name="Expanded Spell List" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_EXPANDED_SPELL_LIST">
+		<description>
+			<p>The Unseen lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
+			<h5>Expanded Spell List</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>bane, bless</i></td></tr>
+				<tr><td>2nd</td><td><i>collective power*, pass without trace</i></td></tr>
+				<tr><td>3rd</td><td><i>glyph of warding, revivify</i></td></tr>
+				<tr><td>4th</td><td><i>death ward, life resurgence*</i></td></tr>
+				<tr><td>5th</td><td><i>modify memory, shared fate*</i></td></tr>
+			</table>
+			<p class="indent">*see page 10</p>
+		</description>
+		<sheet display="false" />
+		<spellcasting name="Warlock" extend="true">
+			<extend>ID_PHB_SPELL_BANE</extend>
+			<extend>ID_PHB_SPELL_BLESS</extend>
+			<extend>ID_DMSW_SPELL_COLLECTIVE_POWER</extend>
+			<extend>ID_PHB_SPELL_PASS_WITHOUT_TRACE</extend>
+			<extend>ID_PHB_SPELL_GLYPH_OF_WARDING</extend>
+			<extend>ID_PHB_SPELL_REVIVIFY</extend>
+			<extend>ID_PHB_SPELL_DEATH_WARD</extend>
+			<extend>ID_DMSW_SPELL_LIFE_RESURGENCE</extend>
+			<extend>ID_PHB_SPELL_MODIFY_MEMORY</extend>
+			<extend>ID_DMSW_SPELL_SHARED_FATE</extend>
+		</spellcasting>
+	</element>
+	<element name="Shared Malice" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_SHARED_MALICE">
+		<description>
+			<p>When a creature you can see within 20 feet makes an attack roll, ability check, or saving throw, you can use your reaction to choose a number of allied creatures within 20 feet of you up to your proficiency bonus, and draw on your collective willpower to impose a negative modifier to that attack roll, ability check, or saving throw equal to 1 + the number of creatures you chose. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+			<description>When a creature you can see within 20 feet makes an attack roll, ability check, or saving throw, you can use your reaction to choose a number of allied creatures within 20 feet of you up to your proficiency bonus, and draw on your collective willpower to impose a negative modifier to that attack roll, ability check, or saving throw equal to 1 + the number of creatures you chose.</description>
+		</sheet>
+	</element>
+	<element name="Unseen Idealogue" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_UNSEEN_IDEALOGUE">
+		<description>
+			<p>You know the spell charm person, and can cast it a number of times equal to your proficiency bonus per long rest without expending a spell slot.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>You know the spell charm person, and can cast it a number of times equal to your proficiency bonus per long rest without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" />
+		</rules>
+	</element>
+	<element name="Collective Knowledge" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_COLLECTIVE_KNOWLEDGE">
+		<description>
+			<p>You learn three additional Eldritch Invocations of your choice.</p>
+		</description>
+		<sheet>
+			<description>You learn three additional Eldritch Invocations of your choice.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Eldritch Invocation" supports="Eldritch Invocation" number="3" />
+		</rules>
+	</element>
+	<element name="Thought Dominator" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_THOUGHT_DOMINATOR">
+		<description>
+			<p>You learn the spell dominate person, and can cast it once per long rest without expending a spell slot.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You learn the spell dominate person, and can cast it once per long rest without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" />
+		</rules>
+	</element>
+	<element name="Aura of Legion" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_UNSEEN_AURA_OF_LEGION">
+		<description>
+			<p>Your power is magnified when allies stand together. You generate an aura of power which extends in a 20-foot radius while conscious. You, and friendly creatures within the aura, gain a bonus to saving throws equal to the number of friendly creatures within 20 feet of you (maximum +5).</p>
+		</description>
+		<sheet>
+			<description>You generate an aura of power which extends in a 20-foot radius while conscious. You, and friendly creatures within the aura, gain a bonus to saving throws equal to the number of friendly creatures within 20 feet of you (maximum +5).</description>
+		</sheet>
+	</element>
+</elements>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Sorcerer - Demonic Bloodline</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="sorcerer-demonic-bloodline.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/sorcerer-demonic-bloodline.xml" />
+		</update>
+	</info>
+
+	<element name="Demonic Bloodline" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_SORCERER_DEMONIC_BLOODLINE">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>The innate magic that flows through your veins is Demonic in origin, a dark power that burns with a desire to be wielded in battle. Often, Sorcerers with this origin can trace their powers back to a dark bargain or blood pact made by an ancestor with a powerful Demon, or even claim a parent as one possessed by a Demon. Sometimes, these powers manifest in individuals seemingly at random, perhaps as a result of the unknowable machinations of a powerful Demon Lord in another realm of existence, or as an unpredictable, chaotic burst of Demonic energy latching onto a host.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_SPELLCASTING" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DARK_WANDERER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_SORCEROUS_FRENZY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_TRANSFORMATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_FAMILIAR" />
+		</description>
+		<sheet display="false">
+			<description>The innate magic that flows through your veins is Demonic in origin, a dark power that burns with a desire to be wielded in battle.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_SPELLCASTING" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DARK_WANDERER" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_SORCEROUS_FRENZY" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_TRANSFORMATION" level="14" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_FAMILIAR" level="18" />
+		</rules>
+	</element>
+	<element name="Demonic Spellcasting" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_SPELLCASTING">
+		<description>
+			<p>Starting at 1st level, you learn additional spells when you reach certain levels in this class, as shown on the Demonic Spellcasting table. Each of these spells counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a conjuration or necromancy spell from the sorcerer, warlock, or wizard spell list.</p>
+			<h5>Demonic Spellcasting</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>Thaumaturgy, Bane, Inflict Wounds</i></td></tr>
+				<tr><td>3rd</td><td><i>Darkness, Levitate</i></td></tr>
+				<tr><td>5th</td><td><i>Animate Dead, Fear</i></td></tr>
+				<tr><td>7th</td><td><i>Phantasmal Killer, Banishment</i></td></tr>
+				<tr><td>9th</td><td><i>Contact Other Plane, Planar Binding</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" level="1" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BANE" level="1" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_INFLICT_WOUNDS" level="1" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_LEVITATE" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_DEAD" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FEAR" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_PHANTASMAL_KILLER" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONTACT_OTHER_PLANE" level="9" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_PLANAR_BINDING" level="9" spellcasting="Sorcerer" prepared="true" />
+		</rules>
+	</element>
+	<element name="Dark Wanderer" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DARK_WANDERER">
+		<description>
+			<p>Starting at 1st level, you have Darkvision at a range of 60ft, and you can read and write Abyssal or one other language of your choice. In addition, whenever you cast a spell that would create magical darkness, you and a number of creatures you designate equal to your Charisma modifier (minimum 1) can treat that magical darkness as though it were non-magical darkness (allowing for creatures with Darkvision to see in it, for example).</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can read and write Abyssal or one other language of your choice. In addition, whenever you cast a spell that would create magical darkness, you and {{dark wanderer:creatures}} can treat that magical darkness as though it were non-magical darkness.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<select type="Language" name="Language (Dark Wanderer)" supports="Standard||Exotic" />
+			<stat name="dark wanderer:creatures" value="1" bonus="base" />
+			<stat name="dark wanderer:creatures" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+	<element name="Sorcerous Frenzy" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_SORCEROUS_FRENZY">
+		<description>
+			<p>Starting at 6th level, whenever you kill a hostile enemy humanoid, celestial or fiend you regain 2 sorcery points.</p>
+			<p class="indent">Additionally, you can use your sorcery points to enhance yourself. As a bonus action, you can spend any number of sorcery points to grant yourself 5x that many temporary hit points.</p>
+			<p class="indent">Once you use this feature to gain temporary hit points, you can’t do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+			<description>Whenever you kill a hostile enemy humanoid, celestial or fiend you regain 2 sorcery points.&#13;
+			Additionally, you can use your sorcery points to enhance yourself. As a bonus action, you can spend any number of sorcery points to grant yourself 5x that many temporary hit points.</description>
+		</sheet>
+	</element>
+	<element name="Demonic Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_TRANSFORMATION">
+		<description>
+			<p>Starting at 14th level, as a bonus action, you can unleash the chaotic, demonic energy within you, enhancing your abilities for the next 10 minutes. Roll twice on the table below to randomly determine the benefits you recieve, rerolling any duplicates.</p>
+			<ul>
+				<li>1. You grow skeletal wings, have a fly speed of 40 ft, can hover, and your movement does not provoke opportunity attacks.</li>
+				<li>2. Your hands become long, sharp talons. Your reach increases by 5ft, and you can use your action to make two unarmed strikes, dealing 1d12 magical slashing damage on each hit. You can use your Charisma modifier, instead of Strength or Dexterity modifier, for the attack and damage rolls.</li>
+				<li>3. You turn invisible and can communicate telepathically with any creature that speaks at least one language within 120ft of you.</li>
+				<li>4. You have advantage on saving throws against spells and other magical effects.</li>
+				<li>5. Spells you cast cannot be counterspelled or dispelled, except by an anti-magic field.</li>
+				<li>6. Even if you cast a spell with a casting time of a bonus action, you can still cast a levelled spell as your action, as long as that spell has a casting time of one action.</li>
+				<li>7. Whenever you cast a spell, you may treat that spell as though it were cast at one level higher than you cast it.</li>
+				<li>8. You have resistance to all non-magical damage, and have advantage on all saving throws to maintain concentration on a spell.</li>
+			</ul>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest, unless you spend 6 sorcery points to use it again.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+			<description>As a bonus action, you can unleash the chaotic, demonic energy within you, enhancing your abilities for the next 10 minutes. Roll twice on the table below to randomly determine the benefits you recieve, rerolling any duplicates.&#13;
+			1. You grow skeletal wings, have a fly speed of 40 ft, can hover, and your movement does not provoke opportunity attacks.&#13;
+			2. Your hands become long, sharp talons. Your reach increases by 5ft, and you can use your action to make two unarmed strikes, dealing 1d12 magical slashing damage on each hit. You can use your Charisma modifier, instead of Strength or Dexterity modifier, for the attack and damage rolls.&#13;
+			3. You turn invisible and can communicate telepathically with any creature that speaks at least one language within 120ft of you.&#13;
+			4. You have advantage on saving throws against spells and other magical effects.&#13;
+			5. Spells you cast cannot be counterspelled or dispelled, except by an anti-magic field.&#13;
+			6. Even if you cast a spell with a casting time of a bonus action, you can still cast a levelled spell as your action, as long as that spell has a casting time of one action.&#13;
+			7. Whenever you cast a spell, you may treat that spell as though it were cast at one level higher than you cast it.&#13;
+			8. You have resistance to all non-magical damage, and have advantage on all saving throws to maintain concentration on a spell.</description>
+		</sheet>
+	</element>
+	<element name="Demonic Familiar" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMONIC_BLOODLINE_DEMONIC_FAMILIAR">
+		<description>
+			<p>Starting at 18th level, once per long rest, as an action, you can call forth a demon to aid you in battle. A Hezrou appears at a point you choose within 60ft of you. You can command it as a free action, and it takes its turn immediately after yours. It obeys your commands and is hostile to everyone except you and your allies. It lasts for 59 minutes, or until its hit points reach 0, at which point it vanishes.</p>
+			<p class="indent">In addition, the Hezrou gains the following benefits:</p>
+			<ol>
+				<li>If the Hezrou forces an enemy to make a saving throw, it uses your spell save DC.</li>
+				<li>When summoned, the Hezrou gains temporary hit points equal to your Sorcerer level + your charisma modifier.</li>
+				<li>You gain the damage immunities and resistances of the Hezrou, and it gains any damage resistances and immunities you have, for as long as you are within 60ft of each other and neither of you are incapacitated.</li>
+			</ol>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>As an action, you can call forth a demon to aid you in battle. A Hezrou appears at a point you choose within 60ft of you. You can command it as a free action, and it takes its turn immediately after yours. It obeys your commands and is hostile to everyone except you and your allies. It lasts for 59 minutes, or until its hit points reach 0, at which point it vanishes.&#13;
+			In addition, the Hezrou gains the following benefits:&#13;
+			• If the Hezrou forces an enemy to make a saving throw, it uses your spell save DC.&#13;
+			• When summoned, the Hezrou gains temporary hit points equal to {{demonic familiar:thp}}.&#13;
+			• You gain the damage immunities and resistances of the Hezrou, and it gains any damage resistances and immunities you have, for as long as you are within 60ft of each other and neither of you are incapacitated.</description>
+		</sheet>
+		<rules>
+			<stat name="demonic familiar:thp" value="level:sorcerer" />
+			<stat name="demonic familiar:thp" value="charisma:modifier" />
+		</rules>
+	</element>
+</elements>

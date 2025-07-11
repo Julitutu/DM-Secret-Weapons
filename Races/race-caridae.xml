@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Caridae</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-caridae.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-caridae.xml" />
+		</update>
+	</info>
+
+	<!-- CARIDAE RACE -->
+
+	<element name="Caridae" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CARIDAE">
+		<description>
+			<p>Caridae are an amphibious, jungle dwelling race. They come in four main types: Fire-Belly, Galvanic, Poison Dart and Kinetic. Caridae grow into their type upon reaching adulthood. These types seem to have no genetic bearing. For example, two parent Fire-Belly Caridae might produce an offspring that grows into a Galvanic. As such, many myths and legends exist in Caridae folklore attempting to explain where Caridae powers come from, and what they mean.</p>
+			<p>Caridae live relatively short lives and are innately curious and trusting. This naivety is sometimes attributed as stupidity to cynical outsiders, but Caridae are as intelligent as any other sentient race. They simply have a natural inclination to take words and people at face value.</p>
+			<h4>CARIDAE TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution, Dexterity and Strength scores increase by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Caridae are famously variable in size, even within the same family. Grown Caridae range from 3 feet to 7 feet tall. Your size is small or medium (your choice).</p>
+			<p class="indent"><strong><em>Age.</em></strong> Caridae reach adulthood in their early teens, and go on to live for around half a century.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30ft.</p>
+			<p class="indent"><strong><em>Amphibious.</em></strong> You have a swim speed equal to your walking speed, and you can hold your breath for up to four hours.</p>
+			<p class="indent"><strong><em>Natural Adhesive.</em></strong> You are naturally sticky. You have advantage on any skill checks you make to climb or hold onto something, and other creatures have disadvantage on any skill check they make to escape being grappled by you.</p>
+			<p class="indent"><strong><em>Claws.</em></strong> Your claws are natural weapons. When you make an unarmed strike using them, you deal damage equal to 1d6 + your Strength modifier.</p>
+			<p class="indent"><strong><em>Cacophonous Croak.</em></strong> Caridae can speak at an incredible volume. At full intensity, your words can be heard and understood clearly from up to 1,000 feet away.</p>
+			<p class="indent"><strong><em>Jungle Born.</em></strong> You gain proficiency in the Nature skill.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong> All Caridae develop a unique biological trait in adulthood. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Caridae)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Caridae)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CARIDAE_NATURAL_ADHESIVE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CARIDAE_CARIDAE_CLAWS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CARIDAE_CACOPHONOUS_CROAK" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Caridae Type" supports="Caridae" />
+		</rules>
+	</element>
+
+    <!-- Caridae Trait Definitions -->
+	<element name="Natural Adhesive" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CARIDAE_NATURAL_ADHESIVE">
+		<description>
+			<p>You are naturally sticky. You have advantage on any skill checks you make to climb or hold onto something, and other creatures have disadvantage on any skill check they make to escape being grappled by you.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on checks to climb or hold on. Creatures have disadvantage on checks to escape your grapple.</description>
+		</sheet>
+	</element>
+	<element name="Claws" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CARIDAE_CARIDAE_CLAWS">
+		<description>
+			<p>Your claws are natural weapons. When you make an unarmed strike using them, you deal damage equal to 1d6 + your Strength modifier.</p>
+		</description>
+		<sheet>
+			<description>Your claws are natural weapons that deal 1d6 + {{strength:modifier}} slashing damage.</description>
+		</sheet>
+	</element>
+	<element name="Cacophonous Croak" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CARIDAE_CACOPHONOUS_CROAK">
+		<description>
+			<p>Caridae can speak at an incredible volume. At full intensity, your words can be heard and understood clearly from up to 1,000 feet away.</p>
+		</description>
+		<sheet>
+			<description>Your voice can be clearly heard up to 1,000 feet away.</description>
+		</sheet>
+	</element>
+
+	<!-- Caridae Subraces -->
+	<element name="Fire-Belly" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_FIRE_BELLY_CARIDAE">
+		<supports>Caridae</supports>
+		<description>
+			<p class="indent"><strong><em>Fire-Belly.</em></strong> When you take the attack action, you can use one of your attacks to belch a burning, green flame. All creatures in a 10-foot cone must succeed on a Dexterity Saving Throw (DC = 8 + your proficiency bonus + your Constitution modifier) or take 1d6 fire damage. This damage increases to 2d6 at level 5, 3d6 at level 11, and 4d6 at level 17. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Action">
+			<description>As one of your attacks, you can belch a 10-foot cone of flame. Creatures must make a DC {{fire-belly:dc}} DEX save or take 1d6 fire damage.</description>
+			<description level="5">As one of your attacks, you can belch a 10-foot cone of flame. Creatures must make a DC {{fire-belly:dc}} DEX save or take 2d6 fire damage.</description>
+			<description level="11">As one of your attacks, you can belch a 10-foot cone of flame. Creatures must make a DC {{fire-belly:dc}} DEX save or take 3d6 fire damage.</description>
+			<description level="17">As one of your attacks, you can belch a 10-foot cone of flame. Creatures must make a DC {{fire-belly:dc}} DEX save or take 4d6 fire damage.</description>
+		</sheet>
+		<rules>
+			<stat name="fire-belly:dc" value="8" />
+			<stat name="fire-belly:dc" value="proficiency" />
+			<stat name="fire-belly:dc" value="constitution:modifier" />
+		</rules>
+	</element>
+	<element name="Galvanic" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_GALVANIC_CARIDAE">
+		<supports>Caridae</supports>
+		<description>
+			<p class="indent"><strong><em>Galvanic.</em></strong> You can use a bonus action to galvanize your body with a powerful, reactive, electric charge. Until the start of your next turn, any creature within 10 feet of you that hits you with a melee weapon attack immediately takes 1d10 lightning damage. This damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You galvanize your body. Until the start of your next turn, any creature within 10ft that hits you with a melee attack takes 1d10 lightning damage.</description>
+			<description level="5">You galvanize your body. Until the start of your next turn, any creature within 10ft that hits you with a melee attack takes 2d10 lightning damage.</description>
+			<description level="11">You galvanize your body. Until the start of your next turn, any creature within 10ft that hits you with a melee attack takes 3d10 lightning damage.</description>
+			<description level="17">You galvanize your body. Until the start of your next turn, any creature within 10ft that hits you with a melee attack takes 4d10 lightning damage.</description>
+		</sheet>
+	</element>
+	<element name="Poison Dart" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_POISON_DART_CARIDAE">
+		<supports>Caridae</supports>
+		<description>
+			<p class="indent"><strong><em>Poison Dart.</em></strong> When you take the attack action, you can use one of those attacks to spout a viscous, purple poison at a creature within 30 feet of you. That creature must succeed on a Dexterity Saving Throw (DC = 8 + your proficiency bonus + your Constitution modifier) or take 1d8 poison damage. This damage increases to 2d8 at level 5, 3d8 at level 11, and 4d8 at level 17. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Action">
+			<description>As one of your attacks, you can spout poison at a creature within 30ft. It must make a DC {{poison-dart:dc}} DEX save or take 1d8 poison damage.</description>
+			<description level="5">As one of your attacks, you can spout poison at a creature within 30ft. It must make a DC {{poison-dart:dc}} DEX save or take 2d8 poison damage.</description>
+			<description level="11">As one of your attacks, you can spout poison at a creature within 30ft. It must make a DC {{poison-dart:dc}} DEX save or take 3d8 poison damage.</description>
+			<description level="17">As one of your attacks, you can spout poison at a creature within 30ft. It must make a DC {{poison-dart:dc}} DEX save or take 4d8 poison damage.</description>
+		</sheet>
+		<rules>
+			<stat name="poison-dart:dc" value="8" />
+			<stat name="poison-dart:dc" value="proficiency" />
+			<stat name="poison-dart:dc" value="constitution:modifier" />
+		</rules>
+	</element>
+	<element name="Kinetic" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_KINETIC_CARIDAE">
+		<supports>Caridae</supports>
+		<description>
+			<p class="indent"><strong><em>Kinetic.</em></strong> Your walking speed increases by 10 feet, and your jump distance is increased by a number of feet equal to your Constitution modifier. In addition, you can take the dash, dodge, or disengage action as a bonus action a number of times equal to your proficiency bonus per short rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Short Rest" action="Bonus Action">
+			<description> Your jump distance is increased by {{constitution:modifier}} feet. You can take the Dash, Dodge, or Disengage action as a bonus action.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" />
+		</rules>
+	</element>
+</elements>

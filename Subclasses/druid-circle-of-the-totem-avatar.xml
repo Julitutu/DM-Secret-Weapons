@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Druid - Circle of the Totem Avatar</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="druid-circle-of-the-totem-avatar.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/druid-circle-of-the-totem-avatar.xml" />
+		</update>
+	</info>
+
+	<element name="Circle of the Totem Avatar" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_DRUID_CIRCLE_OF_THE_TOTEM_AVATAR">
+		<supports>Druid Circle</supports>
+		<description>
+			<p>The Circle of the Totem Avatar is an ancient order of Druids that harness the spiritual energies of the earth and manifest them in the form of powerful, totem armor. They cloak themselves in a spiritual avatar, amplifying their size and power. The form a druid’s Totem Avatar takes often reflects an aspect of their personality or beliefs. An aggressive, hard headed druid may form themselves a Beast Totem Avatar in the form of a mighty bull, whereas a contemplative and subtle druid’s Beast Totem Avatar may take the shape of an owl.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_TOTEMIC_TRANSFORMATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_GUARDIAN_SOUL" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_ENHANCED_TOTEMIC_TRANSFORMATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_TOTEM_UNIFICATION" />
+		</description>
+		<sheet display="false">
+			<description>The Circle of the Totem Avatar is an ancient order of Druids that harness the spiritual energies of the earth and manifest them in the form of powerful, totem armor.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_TOTEMIC_TRANSFORMATION" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_GUARDIAN_SOUL" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_ENHANCED_TOTEMIC_TRANSFORMATION" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_TOTEM_UNIFICATION" level="14" />
+		</rules>
+	</element>
+	<element name="Totemic Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_TOTEMIC_TRANSFORMATION">
+		<description>
+			<p>Starting at 2nd level, as a bonus action, you can expend one use of your Wild Shape to conjure spectral Totem Armor around your body, granting you the following benefits:</p>
+			<ul>
+				<li>You gain temporary hit points equal to your Druid level x3 for as long as your Totem Armor remains.</li>
+				<li>Your size becomes large, if there is room to do so.</li>
+				<li>Your reach increases by 5ft.</li>
+			</ul>
+			<p class="indent">In addition, choose one of the following forms: Beast, Tree, or Golem. The form you choose confers additional benefits.</p>
+			<p class="indent"><b>Beast Form:</b></p>
+			<ul>
+				<li>You can use your Wisdom modifier when calculating attack and damage rolls for your unarmed strikes.</li>
+				<li>When you take the attack action on your turn, you can make a number of totemic unarmed strikes equal to half your Wisdom Modifier (rounded down).</li>
+				<li>Your totemic unarmed strikes deal 1d6 force damage.</li>
+			</ul>
+			<p class="indent"><b>Tree Form:</b></p>
+			<ul>
+				<li>Whenever you cast a leveled spell, you can bless one creature within 30ft of you with temporary hit points equal to that spell’s level + your wisdom modifier.</li>
+				<li>You have advantage on saving throws against spells and other magical effects.</li>
+				<li>You are immune to the Stunned, Paralyzed and Prone conditions.</li>
+			</ul>
+			<p class="indent"><b>Golem Form:</b></p>
+			<ul>
+				<li>You resist Bludgeoning, Slashing and Piercing damage from weapon attacks.</li>
+				<li>You have advantage on Strength and Constitution Saving Throws.</li>
+			</ul>
+			<p class="indent">Your Totem Armor lasts for 1 minute, or until you fall unconscious, Wild Shape, or use your Totemic Activation feature again to shift forms.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>As a bonus action, you can expend one use of your Wild Shape to conjure spectral Totem Armor around your body, granting you the following benefits:&#13;
+			• You gain {{totemic transformation:thp}} temporary hit points for as long as your Totem Armor remains.&#13;
+			• Your size becomes large, if there is room to do so.&#13;
+			• Your reach increases by 5ft.&#13;
+			In addition, choose one of the following forms: Beast, Tree, or Golem. The form you choose confers additional benefits.&#13;
+			Beast Form:&#13;
+			• You can use your Wisdom modifier when calculating attack and damage rolls for your unarmed strikes.&#13;
+			• When you take the attack action on your turn, you can make a number of totemic unarmed strikes equal to {{wisdom:modifier:half}}.&#13;
+			• Your totemic unarmed strikes deal 1d6 force damage.&#13;
+			Tree Form:&#13;
+			• Whenever you cast a leveled spell, you can bless one creature within 30ft of you with temporary hit points equal to that spell’s level + {{wisdom:modifier}}.&#13;
+			• You have advantage on saving throws against spells and other magical effects.&#13;
+			• You are immune to the Stunned, Paralyzed and Prone conditions.&#13;
+			Golem Form:&#13;
+			• You resist Bludgeoning, Slashing and Piercing damage from weapon attacks.&#13;
+			• You have advantage on Strength and Constitution Saving Throws.&#13;
+			Your Totem Armor lasts for 1 minute, or until you fall unconscious, Wild Shape, or use your Totemic Activation feature again to shift forms.</description>
+		</sheet>
+		<rules>
+			<stat name="totemic transformation:thp" value="level:druid" />
+			<stat name="totemic transformation:thp" value="level:druid" />
+			<stat name="totemic transformation:thp" value="level:druid" />
+		</rules>
+	</element>
+	<element name="Guardian Soul" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_GUARDIAN_SOUL">
+		<description>
+			<p>From 6th level, your Totem Armor offers you a measure of protection against lethal damage. Whenever you would fall to 0 hit points or die while in your Totemic Transformation, you instead fall to 1 hit point and your Totemic Transformation ends.</p>
+		</description>
+		<sheet>
+			<description>Whenever you would fall to 0 hit points or die while in your Totemic Transformation, you instead fall to 1 hit point and your Totemic Transformation ends.</description>
+		</sheet>
+	</element>
+	<element name="Enhanced Totemic Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_ENHANCED_TOTEMIC_TRANSFORMATION">
+		<description>
+			<p>Starting at 10th level, you can enhance your totem forms with a greater level of power. Your Totem transformations gain the following benefits:</p>
+			<p class="indent"><b>Beast:</b> Your unarmed strikes count as magical for the purpose of overcoming resistances and immunities, and if you take the attack action on your turn, you can make a single totemic unarmed strike as a bonus action.</p>
+			<p class="indent"><b>Tree:</b> You have 30ft of Tremorsense, and you can cast spells with a range of touch targeting a creature up to 30 ft away from you, as long as both you and that target are touching the ground.</p>
+			<p class="indent"><b>Golem:</b> You are resistant to fire, cold and poison damage.</p>
+		</description>
+		<sheet>
+			<description>Your Totem transformations gain the following benefits:&#13;
+			• Beast: Your unarmed strikes count as magical for the purpose of overcoming resistances and immunities, and if you take the attack action on your turn, you can make a single totemic unarmed strike as a bonus action.&#13;
+			• Tree: You have 30ft of Tremorsense, and you can cast spells with a range of touch targeting a creature up to 30 ft away from you, as long as both you and that target are touching the ground.&#13;
+			• Golem: You are resistant to fire, cold and poison damage.</description>
+		</sheet>
+	</element>
+	<element name="Totem Unification" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOTEM_AVATAR_TOTEM_UNIFICATION">
+		<description>
+			<p>By expending two uses of your Wild Shape, you can activate all forms of your Totem Armor simultaneously, gaining the benefits of all of the totem forms at once.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>By expending two uses of your Wild Shape, you can activate all forms of your Totem Armor simultaneously, gaining the benefits of all of the totem forms at once.</description>
+		</sheet>
+	</element>
+</elements>

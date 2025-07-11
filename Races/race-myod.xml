@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Myod</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-myod.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-myod.xml" />
+		</update>
+	</info>
+
+	<element name="Myod" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_MYOD">
+		<description>
+			<p>Myods-y lives under the oceans, Myods-y lives under the sea, With his tentacles, he knows the motions, So bring back myods-y to me! - Autumn Coastal folk song</p>
+			<p>Although rarely seen on land, beneath the spitting, churning black tides that slap at the golden sands of the Autumn Coast live an enormous society of tentacle headed humanoids - the myods. The Under, their submerged capital, is the most densely populated city in Avestros, with an approximate population of 500,000 myods in permanent residence. It is a city of intellectuals, universities, high culture, and scientific experimentation.</p>
+			<p>Myods are relentlessly curious and naturally intelligent, measuring maturity not in years, but in mental acuity. A myod becomes an adult when they are capable of solving a gauntlet of complex mathematical and philosophical questions in under 1 minute, whilst juggling using at least three tentacles. As such, precocious myods as young as four can be found occupying senior positions in society such as lawyers, doctors, and professors. This hasty induction into society is necessary, however, as even the longest-lived myods never reach 30 years of age. It’s been said they could conquer the world if they had the time, but myods are not, by nature, aggressive folk. Though able to move and live on land, they typically prefer the ocean, and often act as emissaries between land folk and other, less docile sea dwelling races.</p>
+			<h4>MYOD TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet, and you have a swimming speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Grasping Tentacles.</em></strong> You have advantage on Athletics checks made to grapple creatures, and you can grapple creatures using your tentacles, leaving both arms free.</p>
+			<p class="indent"><strong><em>Ink Cloud.</em></strong> In place of one attack when you take the attack action, you can release a blast of ink, which behaves differently depending on whether or not you are underwater. If you are underwater, a 10-foot-radius cloud of ink extends all around you. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, you can take the Dash action as a bonus action. If you are not underwater, one creature within 10 feet of you must succeed on a Dexterity saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus) or be blinded by the ink for 1 minute, or until they use an action to wipe the ink away. After releasing the ink, you can take the Dash action as a bonus action. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong><em>Many Brains.</em></strong> You have advantage on Intelligence saving throws.</p>
+			<p class="indent"><strong><em>Oceanborne.</em></strong> You can breathe air and water.</p>
+			<p class="indent"><strong><em>Natural Camouflage.</em></strong> You have proficiency in the Stealth skill.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> Your character can speak, read, and write Common and one other language that you and your GM agree is appropriate for the character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="intelligence" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Myod)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Myod)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:swim" value="30" bonus="base" />
+
+			<!-- Darkvision -->
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Myod)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MYOD_GRASPING_TENTACLES" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MYOD_INK_CLOUD" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MYOD_MANY_BRAINS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MYOD_OCEANBORNE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+		</rules>
+	</element>
+
+	<element name="Grasping Tentacles" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MYOD_GRASPING_TENTACLES">
+		<description>
+            <p>You have advantage on Athletics checks made to grapple creatures, and you can grapple creatures using your tentacles, leaving both arms free.</p>
+        </description>
+		<sheet>
+            <description>You have advantage on Athletics checks to grapple. You can grapple with your tentacles, leaving your hands free.</description>
+        </sheet>
+	</element>
+	<element name="Ink Cloud" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MYOD_INK_CLOUD">
+		<description>
+            <p>In place of one attack when you take the attack action, you can release a blast of ink, which behaves differently depending on whether or not you are underwater. If you are underwater, a 10-foot-radius cloud of ink extends all around you. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, you can take the Dash action as a bonus action. If you are not underwater, one creature within 10 feet of you must succeed on a Dexterity saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus) or be blinded by the ink for 1 minute, or until they use an action to wipe the ink away. After releasing the ink, you can take the Dash action as a bonus action. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+        </description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Action">
+			<description>In place of an attack, you release ink. You can then Dash as a bonus action.&#13;
+			• Underwater: 10-ft radius of heavy obscurement for 1 min.&#13;
+			• On land: A creature within 10ft must make a DC {{ink-cloud:dc}} DEX save or be blinded for 1 min (action to wipe away).</description>
+		</sheet>
+		<rules>
+			<stat name="ink-cloud:dc" value="8" />
+			<stat name="ink-cloud:dc" value="constitution:modifier" />
+			<stat name="ink-cloud:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Many Brains" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MYOD_MANY_BRAINS">
+		<description>
+            <p>You have advantage on Intelligence saving throws.</p>
+        </description>
+		<sheet>
+            <description>You have advantage on Intelligence saving throws.</description>
+        </sheet>
+	</element>
+	<element name="Oceanborne" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MYOD_OCEANBORNE">
+		<description>
+            <p>You can breathe air and water.</p>
+        </description>
+		<sheet>
+            <description>You can breathe air and water.</description>
+        </sheet>
+	</element>
+</elements>

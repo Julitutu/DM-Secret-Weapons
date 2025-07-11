@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Paladin - Oath of the Endless Abyss</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="paladin-oath-of-the-endless-abyss.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/paladin-oath-of-the-endless-abyss.xml" />
+		</update>
+	</info>
+
+	<element name="Oath of the Endless Abyss" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_PALADIN_OATH_OF_THE_ENDLESS_ABYSS">
+		<supports>Sacred Oath</supports>
+		<description>
+			<p>Oath of the Endless Abyss is a Demonic seasoning of the Oath of the Nine Hells subclass</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_OATH_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_DEMONIC_AURA" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_DEMONIC_GIFTS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_ABYSSAL_TRANSFORMATION" />
+		</description>
+		<sheet display="false">
+			<description>Oath of the Endless Abyss is a Demonic seasoning of the Oath of the Nine Hells subclass</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_OATH_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_DEMONIC_AURA" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_DEMONIC_GIFTS" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_ABYSSAL_TRANSFORMATION" level="20" />
+		</rules>
+	</element>
+	<element name="Oath Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_OATH_SPELLS">
+		<description>
+			<p>You gain the following oath spells at the paladin levels listed.</p>
+			<h5>Oath of the Endless Abyss Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>bane, hideous laughter</i></td></tr>
+				<tr><td>5th</td><td><i>blindness/deafness, spider climb</i></td></tr>
+				<tr><td>9th</td><td><i>haste, magic circle</i></td></tr>
+				<tr><td>13th</td><td><i>confusion, banishment</i></td></tr>
+				<tr><td>17th</td><td><i>dominate person, planar binding</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_BANE" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_TASHAS_HIDEOUS_LAUGHTER" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLINDNESS_DEAFNESS" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIDER_CLIMB" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MAGIC_CIRCLE" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONFUSION" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_PLANAR_BINDING" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+	<element name="Channel Divinity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY">
+		<description>
+			<p>When you take this oath, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b>Abyssal Strike.</b> As a bonus action, you imbue a weapon you are holding with the roiling fury of the abyss. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of clawing shadow, and the target takes additional necrotic damage equal to 10 + your Paladin level (whether the attack hits or misses).</p>
+			<p class="indent"><b>Terrorize.</b> As an action, you present your holy symbol and utter a ferocious battlecry. Each Humanoid that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain the following two Channel Divinity options.&#13;
+			• Abyssal Strike. As a bonus action, you imbue a weapon you are holding with the roiling fury of the abyss. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of clawing shadow, and the target takes additional necrotic damage equal to 10 + your Paladin level (whether the attack hits or misses).&#13;
+			• Terrorize. As an action, you present your holy symbol and utter a ferocious battlecry. Each Humanoid that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY_ABYSSAL_STRIKE" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY_TERRORIZE" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Abyssal Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY_ABYSSAL_STRIKE">
+		<description>
+			<p>As a bonus action, you imbue a weapon you are holding with the roiling fury of the abyss. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of clawing shadow, and the target takes additional necrotic damage equal to 10 + your Paladin level (whether the attack hits or misses).</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Bonus Action" alt="Abyssal Strike">
+			<description>As a bonus action, you imbue a weapon you are holding with the roiling fury of the abyss. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of clawing shadow, and the target takes additional {{abyssal strike:damage}} necrotic damage (whether the attack hits or misses).</description>
+		</sheet>
+		<rules>
+			<stat name="abyssal strike:damage" value="10" />
+			<stat name="abyssal strike:damage" value="level:paladin" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Terrorize" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_CHANNEL_DIVINITY_TERRORIZE">
+		<description>
+			<p>As an action, you present your holy symbol and utter a ferocious battlecry. Each Humanoid that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.</p>
+			<p class="indent">A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Action" alt="Terrorize">
+			<description>As an action, you present your holy symbol and utter a ferocious battlecry. Each Humanoid that can see or hear you within 30 feet of you must make a DC {{paladin:spellcasting:dc}} Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.&#13;
+			A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</description>
+		</sheet>
+	</element>
+	<element name="Demonic Aura" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_DEMONIC_AURA">
+		<description>
+			<p>You radiate an aura of chaotic, cruel magic. Creatures of your choice within 10 feet of you take an additional 1d4 necrotic damage when hit by a weapon attack.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
+		</description>
+		<sheet>
+			<description>You radiate an aura of chaotic, cruel magic. Creatures of your choice within {{demonic aura:range}} feet of you take an additional 1d4 necrotic damage when hit by a weapon attack.</description>
+		</sheet>
+		<rules>
+			<stat name="demonic aura:range" value="10" />
+			<stat name="demonic aura:range" value="20" level="18" />
+		</rules>
+	</element>
+	<element name="Demonic Gifts" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_DEMONIC_GIFTS">
+		<description>
+			<p>You are immune to necrotic damage and the frightened condition.</p>
+			<p class="indent">In addition, you learn one Eldritch Invocation of your choice from the Warlock class. You must still meet the prerequisites to learn it (if any).</p>
+			<p class="indent">You can swap the Eldritch Invocation you gained from this feature for another by performing a 1 hour ritual. Once you perform this ritual, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the frightened condition.&#13;
+			In addition, you learn one Eldritch Invocation of your choice from the Warlock class. You must still meet the prerequisites to learn it (if any).&#13;
+			You can swap the Eldritch Invocation you gained from this feature for another by performing a 1 hour ritual. Once you perform this ritual, you cannot do so again until you finish a long rest.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_NECROTIC" />
+			<select type="Class Feature" name="Eldritch Invocation (Demonic Gifts)" supports="Eldritch Invocation" />
+		</rules>
+	</element>
+	<element name="Abyssal Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_ENDLESS_ABYSS_ABYSSAL_TRANSFORMATION">
+		<description>
+			<p>As an action on your turn, you can cast the shapechange spell with this feature, without expending a spell slot, but the creature you shapechange into must be a Fiend (Demon).</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>As an action on your turn, you can cast the shapechange spell with this feature, without expending a spell slot, but the creature you shapechange into must be a Fiend (Demon).</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHAPECHANGE" />
+		</rules>
+	</element>
+</elements>

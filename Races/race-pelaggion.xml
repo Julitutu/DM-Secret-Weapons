@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Pelaggion</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-pelaggion.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-pelaggion.xml" />
+		</update>
+	</info>
+
+	<!-- PELAGGION RACE -->
+
+	<element name="Pelaggion" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_PELAGGION">
+		<description>
+			<p>Pelaggion are an amphibious, mammalian race of humanoids native to the shores and islands of Avestros. A common sight on the continent, Pelaggion are rarely found outside its borders. With powerful bodies well adapted for swift motion across both land and ocean, Pelaggion society is wholly structured around the sanctity of The Hunt and an individual’s personal value to the tribe.</p>
+			<p>Each Pelaggion has a niche, and they take great pride in their area of expertise. To be rendered “useless” through injury or superior competition is a terrible fate to a Pelaggion. Many leave the tribe and oceans to seek fortune or die alone if they feel they can no longer provide a tangible contribution to their community. They are often sought out as fortune-tellers or advisors, due to their ability to see glimpses of the near future.</p>
+			<h4>PELAGGION TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength, Dexterity and Wisdom scores increase by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Pelaggion adults stand between 6-7 feet tall. Females are typically a little larger than males. Your size is Medium.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Pelaggion have a similar lifespan to humans, reaching adulthood in their early 20s and living for about a century.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 35 feet, and you have a swim speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe in both water and air.</p>
+			<p class="indent"><strong><em>Pelaggonian Niche.</em></strong> Through diligent training to provide a service to your community, you are proficient in one skill and with one artisan’s tool of your choice.</p>
+			<p class="indent"><strong><em>Glimpse the Future.</em></strong> You know the Guidance cantrip, and can cast it as a bonus action, without components, using this trait. You can cast Guidance in this way a number of times equal to your proficiency bonus per long rest.</p>
+			<p class="indent"><strong><em>Waterborn.</em></strong> You resist Fire damage.</p>
+			<p class="indent"><strong><em>Hunter’s Instinct.</em></strong> You have advantage on Wisdom (Perception and Survival) and Intelligence (Investigation) checks made to find or track a creature.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Pelaggion)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="35" bonus="base" />
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_PELAGGION_AMPHIBIOUS" />
+			<select type="Proficiency" name="Pelaggonian Niche (Skill)" supports="Skill" />
+			<select type="Proficiency" name="Pelaggonian Niche (Tool)" supports="Artisan tools" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_PELAGGION_GLIMPSE_THE_FUTURE" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_PELAGGION_HUNTERS_INSTINCT" />
+		</rules>
+	</element>
+	<element name="Amphibious" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_PELAGGION_AMPHIBIOUS">
+		<description>
+			<p>You can breathe in both water and air.</p>
+		</description>
+		<sheet>
+			<description>You can breathe air and water.</description>
+		</sheet>
+	</element>
+	<element name="Glimpse the Future" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_PELAGGION_GLIMPSE_THE_FUTURE">
+		<description>
+			<p>You know the Guidance cantrip, and can cast it as a bonus action, without components, using this trait. You can cast Guidance in this way a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You know the Guidance cantrip. You can cast it as a bonus action without components a number of times equal to your proficiency bonus per long rest.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+		</rules>
+	</element>
+	<element name="Hunter’s Instinct" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_PELAGGION_HUNTERS_INSTINCT">
+		<description>
+			<p>You have advantage on Wisdom (Perception and Survival) and Intelligence (Investigation) checks made to find or track a creature.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on Perception, Survival, and Investigation checks made to find or track a creature.</description>
+		</sheet>
+	</element>
+</elements>

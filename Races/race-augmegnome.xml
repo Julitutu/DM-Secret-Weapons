@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Augmegnome</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-augmegnome.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-augmegnome.xml" />
+		</update>
+	</info>
+
+	<!-- Augmegnome Race -->
+	<element name="Augmegnome" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_AUGMEGNOME">
+		<description>
+			<p>Augmegnome are an unusual subspecies of gnomes that have grown accustomed to the dense, highland jungles of Avestros. Over centuries, they have adapted to grow tall and lithe, able to move swiftly through the jungle and protect themselves from the more physically magical dangers that surround them.</p>
+			<p>Augmegnome are sometimes stereotyped as flighty, stupid and naive by other gnomes, but they are no less wise or inquisitive than their cousins. Instead of relying on tools and intellect, they prefer to take matters into their own hands, facing danger head on with panache and style.</p>
+			<h4>AUGMEGNOME TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma score increases by 2, and your Intelligence score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Augmegnome mature at the same rate as humans and other gnomes, and are expected to settle into adult life at around 40. They typically have shorter lifespans than other gnomes, living for around three centuries.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Augmegnome stand taller than humans, at around 7 feet high. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 35 feet.</p>
+			<p class="indent"><strong><em>Gnomish Vitality.</em></strong> You have advantage on Strength, Dexterity and Constitution saving throws against magic.</p>
+			<p class="indent"><strong><em>Lunging Reach.</em></strong> When you make a melee attack on your turn, your reach for it is 5 feet greater than normal.</p>
+			<p class="indent"><strong><em>Augmented Aura.</em></strong> When you cast a spell with the range of touch, you can make the range of that spell 30 feet. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+			<p class="indent"><strong><em>Augmegnome Magic.</em></strong> You know the Thaumaturgy cantrip. Starting at 5th level, you can cast the spell Fly with this trait, targeting only yourself. Once you cast Fly with this trait, you cannot do so again until you complete a long rest. You can also cast Fly with any spell slots you have of the appropriate level. Intelligence, Wisdom or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+			<p class="indent"><strong><em>Augmegnome Talents.</em></strong> You gain proficiency in one of the following skills: Athletics, Acrobatics, Nature, Perception, Persuasion.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Charisma +2, Intelligence +1) -->
+			<stat name="charisma" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="intelligence" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (+2 and +1, or three +1's) -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Augmegnome)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Augmegnome)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size (Medium) -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_GNOMISH_VITALITY" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_LUNGING_REACH" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMENTED_AURA" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC" />
+
+			<!-- Augmegnome Talents Skill Choice -->
+			<select type="Proficiency" name="Augmegnome Talents" supports="ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_PERSUASION" />
+		</rules>
+	</element>
+
+	<!-- Trait Definitions -->
+	<element name="Gnomish Vitality" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_GNOMISH_VITALITY">
+		<description>
+			<p>You have advantage on Strength, Dexterity and Constitution saving throws against magic.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on Strength, Dexterity, and Constitution saving throws against magic.</description>
+		</sheet>
+	</element>
+	<element name="Lunging Reach" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_LUNGING_REACH">
+		<description>
+			<p>When you make a melee attack on your turn, your reach for it is 5 feet greater than normal.</p>
+		</description>
+		<sheet>
+			<description>When you make a melee attack on your turn, your reach for it is 5 feet greater than normal.</description>
+		</sheet>
+	</element>
+	<element name="Augmented Aura" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMENTED_AURA">
+		<description>
+			<p>When you cast a spell with the range of touch, you can make the range of that spell 30 feet. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you cast a spell with a range of touch, you can make its range 30 feet instead.</description>
+		</sheet>
+	</element>
+	<element name="Augmegnome Magic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC">
+		<description>
+			<p>You know the Thaumaturgy cantrip. Starting at 5th level, you can cast the spell Fly with this trait, targeting only yourself. Once you cast Fly with this trait, you cannot do so again until you complete a long rest. You can also cast Fly with any spell slots you have of the appropriate level. Intelligence, Wisdom or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description>You know the Thaumaturgy cantrip. Your spellcasting ability for these spells is {{spellcasting:augmegnome magic}}.</description>
+			<description level="5">You know the Thaumaturgy cantrip. You can cast Fly (self only) once per long rest. Your spellcasting ability for these spells is {{spellcasting:augmegnome magic}}.&#13;
+			You can also cast Fly using spell slots you have.</description>
+		</sheet>
+		<rules>
+			<!-- Allows the player to choose their spellcasting ability for this trait -->
+			<select type="Racial Trait" name="Augmegnome Magic" supports="Augmegnome Magic" />
+			<!-- Grants the spells at the appropriate levels -->
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" />
+			<grant type="Spell" id="ID_PHB_SPELL_FLY" level="5" />
+		</rules>
+	</element>
+
+	<!-- Augmegnome Magic Spellcasting Ability Choices -->
+	<element name="Augmegnome Magic (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC_INTELLIGENCE">
+		<supports>Augmegnome Magic</supports>
+		<description>
+			<div element="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat inline="true" name="spellcasting:augmegnome magic" value="Intelligence" />
+		</rules>
+	</element>
+	<element name="Augmegnome Magic (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC_WISDOM">
+		<supports>Augmegnome Magic</supports>
+		<description>
+			<div element="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat inline="true" name="spellcasting:augmegnome magic" value="Wisdom" />
+		</rules>
+	</element>
+	<element name="Augmegnome Magic (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC_CHARISMA">
+		<supports>Augmegnome Magic</supports>
+		<description>
+			<div element="ID_DMSW_RACIAL_TRAIT_AUGMEGNOME_AUGMEGNOME_MAGIC" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat inline="true" name="spellcasting:augmegnome magic" value="Charisma" />
+		</rules>
+	</element>
+</elements>

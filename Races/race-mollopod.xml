@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Mollopod</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-mollopod.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-mollopod.xml" />
+		</update>
+	</info>
+
+	<element name="Mollopod" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_MOLLOPOD">
+		<description>
+			<p>A humanoid race of shelled molluscs, mollopod are an artful, amiable, spiritual folk who live and thrive in the freshwater swamps of Avestros. Renowned for their eccentric and idiosyncratic beliefs (each mollopod has their own theory on the nature of the cosmos that they’re pretty darn sure is the right one), mollopod often find themselves acting as spiritual guides, fortune tellers, and advisors on the mystical to folk of all races. They share similar gifts of foresight to the mountain dwelling cyclod, and have an innate flair for the theatrical and storytelling.</p>
+			<p>A mollopod’s most distinctive feature is, of course, its shell, which begins growing on its back from childhood. A mollopod is considered an adult from the day its shell “manifests”, at which point a connection between the material plane and the immaterial plane is created. From this point on, the mollopod carries an extra-dimensional gateway on its back, and is able to store any number of objects safely there. No matter the situation, a well travelled mollopod will likely carry the answer somewhere on its back.</p>
+			<h4>MOLLOPOD TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma score increases by 2, and your Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Mollopod reach maturity when their shell manifests, usually around the age of 20, and go on to live for up to three centuries.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Bottomless Shell.</em></strong> Your shell is a gateway to an extra-dimensional space. You can store any number of objects in that space that are small enough to fit through the entrance to your shell, which is around 1 foot in diameter. Only objects can enter this extra-dimensional space, and the only manner in which you can enter it is to use an action to reach in and place or retrieve something from inside. You can picture the object you wish to retrieve from your shell, and so long as it has been stored in the extra-dimensional space that object will appear in your hand as you withdraw it.</p>
+			<p class="indent"><strong><em>Divination.</em></strong> You are blessed with an innate sense of things to come. You know the guidance cantrip. You also know the detect magic spell or one other 1st-level Divination spell of your choice, and you can cast that spell once per long rest without expending a spell slot. You can also cast that spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+			<p class="indent"><strong><em>Sturdy Shell.</em></strong> When you aren’t wearing armor, your AC is 12 + your Constitution modifier. You can use this feature to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you calculate your AC with this feature.</p>
+			<p class="indent"><strong><em>Viscous Climber.</em></strong> You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. If you move across a surface leaving your hands free in this way, treat that surface as difficult terrain.</p>
+			<p class="indent"><strong><em>Viscous Grip.</em></strong> You have advantage on ability checks made to grapple a creature and on ability checks and saving throws to avoid being moved against your will, disarmed, or knocked prone.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language of your choice.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="charisma" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Mollopod)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Mollopod)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Mollopod)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_BOTTOMLESS_SHELL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_STURDY_SHELL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_VISCOUS_CLIMBER" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_VISCOUS_GRIP" />
+		</rules>
+	</element>
+
+	<element name="Bottomless Shell" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_BOTTOMLESS_SHELL">
+		<description>
+			<p>Your shell is a gateway to an extra-dimensional space. You can store any number of objects in that space that are small enough to fit through the entrance to your shell, which is around 1 foot in diameter. Only objects can enter this extra-dimensional space, and the only manner in which you can enter it is to use an action to reach in and place or retrieve something from inside. You can picture the object you wish to retrieve from your shell, and so long as it has been stored in the extra-dimensional space that object will appear in your hand as you withdraw it.</p>
+		</description>
+		<sheet>
+			<description>Your shell is an extra-dimensional space. As an action, you can store or retrieve an object that fits through its 1-foot diameter opening.</description>
+		</sheet>
+	</element>
+	<element name="Divination" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION">
+		<description>
+			<p>You are blessed with an innate sense of things to come. You know the guidance cantrip. You also know the detect magic spell or one other 1st-level Divination spell of your choice, and you can cast that spell once per long rest without expending a spell slot. You can also cast that spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description>You know the Guidance cantrip. You can also cast your chosen 1st-level Divination spell once per long rest. Your spellcasting ability for these spells is {{spellcasting:divination}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+			<select type="Racial Trait" name="Divination Spell" supports="Divination Spell" />
+			<select type="Racial Trait" name="Spellcasting Ability (Divination)" supports="Divination Ability" />
+		</rules>
+	</element>
+	<element name="Detect Magic (Divination)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION_DETECT_MAGIC">
+		<supports>Divination Spell</supports>
+		<description>
+			<p>You know the detect magic spell and can cast it once per long rest without a spell slot.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" />
+		</rules>
+	</element>
+	<element name="Divination Spell (Custom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION_CUSTOM">
+		<supports>Divination Spell</supports>
+		<description>
+			<p>You know a 1st-level Divination spell of your choice and can cast it once per long rest without a spell slot.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Spell" name="Divination Spell" supports="Divination,1" />
+		</rules>
+	</element>
+	<element name="Divination (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION_INTELLIGENCE">
+		<supports>Divination Ability</supports>
+		<description /> 
+        <sheet display="false" />
+		<rules>
+            <stat inline="true" name="spellcasting:divination" value="Intelligence" />
+        </rules>
+	</element>
+	<element name="Divination (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION_WISDOM">
+		<supports>Divination Ability</supports>
+		<description /> 
+        <sheet display="false" />
+		<rules>
+            <stat inline="true" name="spellcasting:divination" value="Wisdom" />
+        </rules>
+	</element>
+	<element name="Divination (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_DIVINATION_CHARISMA">
+		<supports>Divination Ability</supports>
+		<description /> 
+        <sheet display="false" />
+		<rules>
+            <stat inline="true" name="spellcasting:divination" value="Charisma" />
+        </rules>
+	</element>
+	<element name="Sturdy Shell" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_STURDY_SHELL">
+		<description>
+			<p>When you aren’t wearing armor, your AC is 12 + your Constitution modifier. You can use this feature to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you calculate your AC with this feature.</p>
+		</description>
+		<sheet alt="Natural Armor">
+			<description>When not wearing armor, your AC is 12 + your Constitution modifier.</description>
+		</sheet>
+		<rules>
+			<stat name="natural armor:ac" value="12" bonus="base" />
+			<stat name="natural armor:ac" value="constitution:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="natural armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+	</element>
+	<element name="Viscous Climber" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_VISCOUS_CLIMBER">
+		<description>
+			<p>You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. If you move across a surface leaving your hands free in this way, treat that surface as difficult terrain.</p>
+		</description>
+		<sheet>
+			<description>You have a climb speed of 30ft. Climbing with hands free treats the surface as difficult terrain.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:climb" value="30" bonus="base" />
+		</rules>
+	</element>
+	<element name="Viscous Grip" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_MOLLOPOD_VISCOUS_GRIP">
+		<description>
+			<p>You have advantage on ability checks made to grapple a creature and on ability checks and saving throws to avoid being moved against your will, disarmed, or knocked prone.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on checks to grapple, and on checks/saves to avoid being moved, disarmed, or knocked prone.</description>
+		</sheet>
+	</element>
+</elements>

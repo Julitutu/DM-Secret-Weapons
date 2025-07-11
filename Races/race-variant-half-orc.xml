@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Variant Half-Orc</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-variant-half-orc.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-variant-half-orc.xml" />
+		</update>
+	</info>
+
+	<element name="Variant Half-Orc" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_VARIANT_HALF_ORC">
+		<description>
+			<p>In the distant past, orcs were feared and despised as a brutish, cruel people. Labelled as savage and murderous, orcs were often isolated, slaughtered, and enslaved by races who called themselves “noble”. Thankfully, such times have passed, and today orcs are accepted as equals to other beings, as capable of art, magic, diplomacy, and empathy as any group of people. As a consequence of this shift toward a more cosmopolitan world, half-orcs became commonplace; children blessed with orcish ancestry from one parent alongside the ancestry of the other.</p>
+			<p>Half-orcs can be born with any number of physical traits from either ancestry. Some appear identical to orcs, naturally tall, broad, and muscular, with green or purple skin. Others are born with a mixture of physical traits. A half-orc, half-centaur may have an orcish torso and head with a horse’s body. Another might have a typically orcish body, but a horse’s tail and hooves in place of their feet. A half-orc, half-dragonborn may have the scales and horns of a dragon, but the build and tusks of an orc. When you select this race, you choose your physical appearance.</p>
+			<h4>HALF-ORC TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern colour in darkness, only shades of grey.</p>
+			<p class="indent"><strong><em>Relentless Endurance.</em></strong> When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.</p>
+			<p class="indent"><strong><em>Dual Lineage.</em></strong> Choose one of the following lineages and gain the associated benefits.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Base Half-Orc Traits -->
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_RELENTLESS_ENDURANCE" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Dual Lineage" supports="Half-Orc Lineage" />
+		</rules>
+	</element>
+
+	<!-- Lineage Subraces -->
+	<element name="Human Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_HUMAN_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase three Ability Scores of your choice by 1</p>
+			<p class="indent">You gain proficiency in one skill and one tool of your choice, and you speak one additional language you and your GM agree is appropriate for your character</p>
+			<p class="indent">Your size is Medium or Small.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Human Lineage)" supports="Custom Ability Score Increase 1" number="3" />
+			<select type="Proficiency" name="Skill Proficiency (Human Lineage)" supports="Skill" />
+			<select type="Proficiency" name="Tool Proficiency (Human Lineage)" supports="Tool" />
+			<select type="Language" name="Language (Human Lineage)" supports="Standard||Exotic" />
+			<select type="Racial Trait" name="Size (Human Lineage)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+		</rules>
+	</element>
+	<element name="High Elf Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_HIGH_ELF_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Intelligence score by 2</p>
+			<p class="indent">You have proficiency in the Perception skill</p>
+			<p class="indent">You know one cantrip of your choice from the Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting modifier for this spell (choose when you select this
+race)</p>
+			<p class="indent">Your size is Medium.</p>
+		</description>
+		<sheet>
+            <description>Your spellcasting ability is {{spellcasting:high-elf-cantrip}}.</description>
+        </sheet>
+		<rules>
+			<stat name="intelligence" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (High Elf Lineage)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<select type="Spell" name="Cantrip (High Elf Lineage)" supports="Wizard,0" />
+			<select type="Racial Trait" name="Spellcasting Ability (High Elf Cantrip)" supports="High Elf Cantrip" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+		</rules>
+	</element>
+        <element name="High Elf Cantrip (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_HIGH_ELF_CANTRIP_INT">
+            <supports>High Elf Cantrip</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="spellcasting:high-elf-cantrip" value="Intelligence" inline="true" />
+            </rules>
+        </element>
+        <element name="High Elf Cantrip (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_HIGH_ELF_CANTRIP_WIS">
+            <supports>High Elf Cantrip</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="spellcasting:high-elf-cantrip" value="Wisdom" inline="true" />
+            </rules>
+        </element>
+        <element name="High Elf Cantrip (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_HIGH_ELF_CANTRIP_CHA">
+            <supports>High Elf Cantrip</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="spellcasting:high-elf-cantrip" value="Charisma" inline="true" />
+            </rules>
+        </element>
+	<element name="Halfling Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_HALFLING_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Dexterity score by 2</p>
+			<p class="indent">You have the Lucky trait, which allows you to reroll a 1 on the d20 for an attack roll, ability check, or saving throw</p>
+			<p class="indent">You have proficiency in the Stealth skill</p>
+			<p class="indent">Your size is Small.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Halfling Lineage)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_LUCKY" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+		</rules>
+	</element>
+	<element name="Gnome Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_GNOME_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Intelligence score by 2</p>
+			<p class="indent">You have proficiency with two tools of your choice</p>
+			<p class="indent">If you fail an Intelligence, Wisdom, or Charisma saving throw, you can reroll that saving throw. You must use the new roll. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest</p>
+			<p class="indent">Your size is Small.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="intelligence" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Gnome Lineage)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Proficiency" name="Tool Proficiency (Gnome Lineage)" supports="Tool" number="2" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_GNOME_CUNNING_REROLL" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+		</rules>
+	</element>
+        <element name="Gnome Cunning Reroll" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_GNOME_CUNNING_REROLL">
+            <description>
+                <p>If you fail an Intelligence, Wisdom, or Charisma saving throw, you can reroll that saving throw. You must use the new roll. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</p>
+            </description>
+            <sheet usage="{{proficiency}}/Long Rest">
+                <description>If you fail an INT, WIS, or CHA save, you can reroll it and must use the new roll.</description>
+            </sheet>
+        </element>
+	<element name="Tiefling Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_TIEFLING_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Charisma score by 2</p>
+			<p class="indent">You gain proficiency in one of the following skills: Deception, Intimidation, Persuasion, or Religion</p>
+			<p class="indent">You have a resistance to Fire damage</p>
+			<p class="indent">Your size is Medium.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="charisma" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Tiefling Lineage)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Proficiency" name="Skill Proficiency (Tiefling Lineage)" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_RELIGION" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+		</rules>
+	</element>
+	<element name="Dwarf Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_DWARF_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Strength score by 1 and your Constitution score by 1</p>
+			<p class="indent">You have proficiency with two martial weapons of your choice</p>
+			<p class="indent">You have advantage on saving throws to avoid the harmful effects of poisons, and you have a resistance to poison damage</p>
+			<p class="indent">Your size is Medium.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Dwarf Lineage)" supports="Custom Ability Score Increase 1" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Proficiency" name="Martial Weapon Proficiency (Dwarf Lineage)" supports="Martial" number="2" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_DWARVEN_RESILIENCE" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+		</rules>
+	</element>
+	<element name="Dragonborn Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_DRAGONBORN_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Strength score by 1 and your Charisma score by 1</p>
+			<p class="indent">You have a tough, scaly hide. When you aren’t wearing armour, your AC equals 13 + your Dexterity modifier (a shield’s benefits apply as normal)</p>
+			<p class="indent">When you hit a creature with an attack roll, you can deal additional damage equal to twice your proficiency bonus. This additional damage is acid, cold, fire, lightning, or thunder damage (choose when you select this race). You can use this feature a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest</p>
+			<p class="indent">Your size is Medium.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Dragonborn Lineage)" supports="Custom Ability Score Increase 1" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRAGONBORN_NATURAL_ARMOR" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRAGONBORN_DAMAGE" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+		</rules>
+	</element>
+        <element name="Natural Armor (Dragonborn Lineage)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRAGONBORN_NATURAL_ARMOR">
+            <description>
+                <p>You have a tough, scaly hide. When you aren’t wearing armour, your AC equals 13 + your Dexterity modifier (a shield’s benefits apply as normal).</p>
+            </description>
+            <sheet alt="Natural Armor">
+                <description>While not wearing armor, your AC is 13 + your Dexterity modifier.</description>
+            </sheet>
+            <rules>
+                <stat name="natural armor:ac" value="13" bonus="base" />
+                <stat name="natural armor:ac" value="dexterity:modifier" bonus="ability" />
+                <stat name="ac:calculation" value="natural armor:ac" bonus="calculation" equipped="[armor:none]" />
+            </rules>
+        </element>
+        <element name="Draconic Damage" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRAGONBORN_DAMAGE">
+            <description>
+                <p>When you hit a creature with an attack roll, you can deal additional damage equal to twice your proficiency bonus. This additional damage is acid, cold, fire, lightning, or thunder damage (choose when you select this race). You can use this feature a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</p>
+            </description>
+            <sheet usage="{{proficiency}}/Long Rest">
+                <description>When you hit with an attack, you can deal an extra {{draconic-damage}} {{draconic-damage:type}} damage.</description>
+            </sheet>
+            <rules>
+                <select type="Racial Trait" name="Damage Type (Draconic Damage)" supports="Draconic Damage" />
+
+                <stat name="draconic-damage" value="proficiency" />
+                <stat name="draconic-damage" value="proficiency" />
+            </rules>
+        </element>
+        <element name="Acid" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRACONIC_DAMAGE_ACID">
+            <supports>Draconic Damage</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="draconic-damage:type" value="acid" inline="true"/>
+            </rules>
+        </element>
+        <element name="Cold" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRACONIC_DAMAGE_COLD">
+            <supports>Draconic Damage</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="draconic-damage:type" value="cold" inline="true"/>
+            </rules>
+        </element>
+        <element name="Fire" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRACONIC_DAMAGE_FIRE">
+            <supports>Draconic Damage</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="draconic-damage:type" value="fire" inline="true"/>
+            </rules>
+        </element>
+        <element name="Lightning" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRACONIC_DAMAGE_LIGHTNING">
+            <supports>Draconic Damage</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="draconic-damage:type" value="lightning" inline="true"/>
+            </rules>
+        </element>
+        <element name="Thunder" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_DRACONIC_DAMAGE_THUNDER">
+            <supports>Draconic Damage</supports>
+            <description/>
+            <sheet display="false"/>
+            <rules>
+                <stat name="draconic-damage:type" value="thunder" inline="true"/>
+            </rules>
+        </element>
+	<element name="Centaur Lineage" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_CENTAUR_LINEAGE">
+		<supports>Half-Orc Lineage</supports>
+		<description>
+			<p>Increase your Strength score by 2</p>
+			<p class="indent">Your base walking speed increases to 40 feet</p>
+			<p class="indent">You have hooves, which you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike</p>
+			<p class="indent">Your size is Medium.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="strength" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Centaur Lineage)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="innate speed" value="10" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_CENTAUR_HOOVES" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+		</rules>
+	</element>	
+        <element name="Hooves (Centaur Lineage)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_HALF_ORC_CENTAUR_HOOVES">
+            <description>
+                <p>You have hooves, which you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
+            </description>
+            <sheet>
+                <description>Your hooves are natural weapons that deal 1d6 + {{strength:modifier}} bludgeoning damage.</description>
+            </sheet>
+        </element>
+</elements>

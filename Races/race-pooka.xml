@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Pooka</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-pooka.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-pooka.xml" />
+		</update>
+	</info>
+	<!-- POOKA RACE -->
+
+	<element name="Pooka" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_POOKA">
+		<description>
+			<p>A compound race, Pooka are unlike any other humanoid in that their brain (known as The Gnute) exists separately from their body. The Gnute is housed in the centre of a living, symbiotic “shell” organism (known as The Ultat). The two creatures are born together, sharing the same thoughts, desires and sensory information. Together, they form a Pooka.</p>
+			<p>In very rare, tragic cases, the connection between the Gnute and the Ultat can be severed. At this time, the Ultat ceases to hear the commands of the Gnute, and is driven by instinct. This leaves the Gnute to wither, existing as a prisoner inside a body they cannot command, impotently observing its actions. In this form, the Pooka is dangerously aggressive and primal. Pooka who’s Gnute and Ultat are not working in unison are referred to as being “desynchronised” by others of their kind. Although the condition is treatable, once the Gnute and Ultat have been disconnected, the Pooka is forever changed. Pooka who are saved and reunited return altered by the magical trauma of the experience.</p>
+			<h4>POOKA TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution, Wisdom and Charisma scores increase by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Pooka grow extremely slowly as larvae beneath the earth. They emerge from the ground fully formed after about a century, and go on to live for up to 500 years.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Pooka stand tall among other humanoids, reaching up to 8ft in height. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 35 feet.</p>
+			<p class="indent"><strong><em>Double Vision.</em></strong> You have proficiency in the Perception and Insight skills.</p>
+			<p class="indent"><strong><em>Split Mind.</em></strong> You have advantage on saving throws to resist the Charmed condition.</p>
+			<p class="indent"><strong><em>Poison Claw.</em></strong> As a bonus action, you can make one unarmed strike against a creature within your reach. On a hit, you deal 1d12 Poison damage. At level 11, this damage increases to 2d12. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses on a long rest.</p>
+			<p class="indent"><strong><em>Pooka State.</em></strong> A Pooka's magical abilities depend on the state of the connection between their Gnute and Ultat. Choose whether you are Symbiotic or have been Desynchronised.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Pooka)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POOKA_SPLIT_MIND" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POOKA_POISON_CLAW" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Pooka State" supports="Pooka" />
+		</rules>
+	</element>
+
+	<!-- Pooka Subraces -->
+	<element name="Symbiotic Pooka" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SYMBIOTIC_POOKA">
+		<supports>Pooka</supports>
+		<description>
+			<p class="indent"><strong><em>Symbiotic Pooka.</em></strong> If you have never desynchronised, you know the Druidcraft cantrip. Starting at 3rd level you can cast the Cure Wounds spell with this trait. Starting at 5th level, you can also cast the Enhance Ability spell with this trait. Once you cast Cure Wounds or Enhance Ability with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC" />
+		</rules>
+	</element>
+	<element name="Desynchronised Pooka" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_DESYNCHRONISED_POOKA">
+		<supports>Pooka</supports>
+		<description>
+			<p class="indent"><strong><em>Desynchronised Pooka.</em></strong> If you are currently or have ever been desynchronised, you know the Thaumaturgy cantrip. Starting at 3rd level you can cast the Entangle spell with this trait. Starting at 5th level, you can also cast the Blindness/Deafness spell with this trait. Once you cast Entangle or Blindness/Deafness with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POOKA_DESYNCHRONISED_MAGIC" />
+		</rules>
+	</element>
+
+	<!-- Pooka Trait Definitions -->
+	<element name="Split Mind" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_SPLIT_MIND">
+		<description>
+			<p>You have advantage on saving throws to resist the Charmed condition.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against being charmed.</description>
+		</sheet>
+	</element>
+	<element name="Poison Claw" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_POISON_CLAW">
+		<description>
+			<p>As a bonus action, you can make one unarmed strike against a creature within your reach. On a hit, you deal 1d12 Poison damage. At level 11, this damage increases to 2d12. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses on a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You can make an unarmed strike that deals 1d12 poison damage.</description>
+			<description level="11">You can make an unarmed strike that deals 2d12 poison damage.</description>
+		</sheet>
+	</element>
+	<element name="Symbiotic Magic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC">
+		<description>
+			<p>You know the Druidcraft cantrip. Starting at 3rd level you can cast the Cure Wounds spell with this trait. Starting at 5th level, you can also cast the Enhance Ability spell with this trait. Once you cast Cure Wounds or Enhance Ability with this trait, you can’t cast that spell with it again until you finish a long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description>You know Druidcraft. Your spellcasting ability is {{spellcasting:symbiotic magic}}.</description>
+			<description level="3">You know Druidcraft. You can cast Cure Wounds once per long rest. Your spellcasting ability is {{spellcasting:symbiotic magic}}.</description>
+			<description level="5">You know Druidcraft. You can cast Cure Wounds and Enhance Ability once per long rest each. Your spellcasting ability is {{spellcasting:symbiotic magic}}.</description>
+		</sheet>
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Symbiotic)" supports="Symbiotic Magic" />
+			<grant type="Spell" id="ID_PHB_SPELL_DRUIDCRAFT" />
+			<grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="5" />
+		</rules>
+	</element>
+	<element name="Desynchronised Magic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_DESYNCHRONISED_MAGIC">
+		<description>
+			<p>You know the Thaumaturgy cantrip. Starting at 3rd level you can cast the Entangle spell with this trait. Starting at 5th level, you can also cast the Blindness/Deafness spell with this trait. Once you cast Entangle or Blindness/Deafness with this trait, you can’t cast that spell with it again until you finish a long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description>You know Thaumaturgy. Your spellcasting ability is {{spellcasting:symbiotic magic}}.</description>
+			<description level="3">You know Thaumaturgy. You can cast Entangle once per long rest. Your spellcasting ability is {{spellcasting:symbiotic magic}}.</description>
+			<description level="5">You know Thaumaturgy. You can cast Entangle and Blindness/Deafness once per long rest each. Your spellcasting ability is {{spellcasting:symbiotic magic}}.</description>
+		</sheet>
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Desynchronised)" supports="Symbiotic Magic" />
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENTANGLE" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLINDNESS_DEAFNESS" level="5" />
+		</rules>
+	</element>
+	<!-- Symbiotic Magic Choices -->
+	<element name="Symbiotic Magic (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC_INTELLIGENCE">
+        <supports>Symbiotic Magic</supports>
+        <description>
+            <div element="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat inline="true" name="spellcasting:symbiotic magic" value="Intelligence" />
+        </rules>
+        </element>
+	<element name="Symbiotic Magic (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC_WISDOM">
+        <supports>Symbiotic Magic</supports>
+        <description>
+            <div element="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat inline="true" name="spellcasting:symbiotic magic" value="Wisdom" />
+        </rules>
+        </element>
+	<element name="Symbiotic Magic (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC_CHARISMA">
+        <supports>Symbiotic Magic</supports>
+        <description>
+            <div element="ID_DMSW_RACIAL_TRAIT_POOKA_SYMBIOTIC_MAGIC" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat inline="true" name="spellcasting:symbiotic magic" value="Charisma" />
+        </rules>
+        </element>
+</elements>

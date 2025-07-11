@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Owlet</name>
+        <description>Owlet from DM's Secret Weapons.</description>
+        <author>DM's Secret Weapons</author>
+        <update version="0.1.0">
+            <file name="owlet.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Familiars/owlet.xml" />
+        </update>
+    </info>
+    <element name="Owlet" type="Companion" source="DM Secret Weapons" id="ID_DMSW_COMPANION_OWLET">
+        <supports>Familiar</supports>
+        <description>
+            <p>If the DM allows, the Owlet can be your familiar and summoned via the Find Familiar spell.</p>
+        </description>
+        <setters>
+            <set name="strength">10</set>
+            <set name="dexterity">11</set>
+            <set name="constitution">13</set>
+            <set name="intelligence">3</set>
+            <set name="wisdom">12</set>
+            <set name="charisma">7</set>
+            <set name="ac">11 (Natural Armor)</set>
+            <set name="hp">6 (1d10+1)</set>
+            <set name="speed">30 ft.</set>
+            <set name="senses">Darkvision 60 ft., passive Perception 13</set>
+            <set name="languages">—</set>
+            <set name="skills">Perception +3</set>
+            <set name="type">Monstrosity</set>
+            <set name="size">Tiny</set>
+            <set name="alignment">unaligned</set>
+            <set name="challenge">0</set>
+            <set name="traits">ID_DMSW_COMPANION_TRAIT_OWLET_KEEN_SIGHT_AND_SMELL</set>
+            <set name="actions">ID_DMSW_COMPANION_ACTION_OWLET_BEAK</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="11" />
+            <stat name="companion:hp:max" value="6" bonus="base" />
+            <stat name="companion:speed" value="30" bonus="base" />
+            <stat name="companion:perception:proficiency" value="companion:proficiency" bonus="base" />
+        </rules>
+    </element>
+    <element name="Keen Sight and Smell" type="Companion Trait" source="DM Secret Weapons" id="ID_DMSW_COMPANION_TRAIT_OWLET_KEEN_SIGHT_AND_SMELL">
+        <description>
+            <p>The Owlet has advantage on Wisdom (Perception) checks that rely on Sight or smell.</p>
+        </description>
+        <sheet>
+            <description>The Owlet has advantage on Wisdom (Perception) checks that rely on Sight or smell.</description>
+        </sheet>
+    </element>
+    <element name="Beak" type="Companion Action" source="DM Secret Weapons" id="ID_DMSW_COMPANION_ACTION_OWLET_BEAK">
+        <description>
+            <p>Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 2 (1d4) piercing damage.</p>
+        </description>
+        <sheet>
+            <description>Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 2 (1d4) piercing damage.</description>
+        </sheet>
+    </element>
+</elements>

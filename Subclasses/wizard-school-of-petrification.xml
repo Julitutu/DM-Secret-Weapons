@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wizard - School of Petrification</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="wizard-school-of-petrification.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/wizard-school-of-petrification.xml" />
+		</update>
+	</info>
+
+	<element name="School of Petrification" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WIZARD_SCHOOL_OF_PETRIFICATION">
+		<supports>Arcane Tradition</supports>
+		<description>
+			<p>Before advancements in magical understanding and experimentation ushered in the contemporary, academic age of spellcasters, disciplines of wizardry existed in a looser, flexible form. Few among these ancient traditions exist today, with one notable exception: The School of Petrification. As belligerent as a rock, this primal doctrine of magic resisted all attempts at innovation and is practised today by wizards across the world in much the same way it was practised millenia ago. Petrification wizards are famous for their labyrinthine, stunningly carved temples—structures of stark beauty and vibrant magic that runs through the stone like blood through veins. There is wisdom in the ancient ways, and wizards of this school understand that no matter how the people of the world evolve in philosophy and habit, the primal power of the earth remains unchangingly supreme.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_FORTIFICATION_OF_STONE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_WHISPERS_OF_STONE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_CURSE_OF_PETRIFICATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_GIFT_OF_THE_STONE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_STONESHAPER" />
+		</description>
+		<sheet display="false">
+			<description>Wizards of this school understand that no matter how the people of the world evolve in philosophy and habit, the primal power of the earth remains unchangingly supreme.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_FORTIFICATION_OF_STONE" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_WHISPERS_OF_STONE" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_CURSE_OF_PETRIFICATION" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_GIFT_OF_THE_STONE" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_STONESHAPER" level="14" />
+		</rules>
+	</element>
+	<element name="Fortification of Stone" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_FORTIFICATION_OF_STONE">
+		<description>
+			<p>As a bonus action, you can you can fortify yourself or one willing creature you are touching with the endurance of stone for one minute, or until you fall unconscious. While fortified in this way, if the target isn’t wearing Heavy Armour, it can calculate its AC as 10 + your Intelligence modifier + your Constitution modifier. You can use your Fortification of Stone a number of times equal your Intelligence modifier (minimum of once), regaining all expended uses upon finishing a long rest.</p>
+		</description>
+		<sheet usage="{{fortification of stone:uses}}/Long Rest" action="Bonus Action">
+			<description>As a bonus action, you can you can fortify yourself or one willing creature you are touching with the endurance of stone for one minute, or until you fall unconscious. While fortified in this way, if the target isn’t wearing Heavy Armour, the AC becomes: {{fortification of stone:ac}}.</description>
+		</sheet>
+		<rules>
+			<stat name="fortification of stone:uses" value="1" bonus="base" />
+			<stat name="fortification of stone:uses" value="intelligence:modifier" bonus="base" />
+
+			<stat name="fortification of stone:ac" value="10" />
+			<stat name="fortification of stone:ac" value="intelligence:modifier" />
+			<stat name="fortification of stone:ac" value="constitution:modifier" />
+		</rules>
+	</element>
+	<element name="Whispers of Stone" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_WHISPERS_OF_STONE">
+		<description>
+			<p>You have proficiency with mason’s tools. You also you learn the petrificus* cantrip and can add your Intelligence modifier to the damage dealt by it. It doesn’t count your number of cantrips known.</p>
+			<p class="indent">In addition, over the course of a one hour ritual, you can cast the spell glyph of warding without material components or expending a spell slot, but you must inscribe the glyph on a stone surface. You can perform this ritual twice, regaining all expended uses upon finishing a long rest.</p>
+			<p class="indent">*see page 9</p>
+		</description>
+		<sheet usage="2/Long Rest">
+			<description> You learn the petrificus* cantrip and can add your Intelligence modifier to the damage dealt by it. It doesn’t count your number of cantrips known.&#13;
+			In addition, over the course of a one hour ritual, you can cast the spell glyph of warding without material components or expending a spell slot, but you must inscribe the glyph on a stone surface.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS" />
+			<grant type="Spell" id="ID_DMSW_SPELL_PETRIFICUS" spellcasting="Wizard" />
+			<grant type="Spell" id="ID_PHB_SPELL_GLYPH_OF_WARDING" spellcasting="Wizard" />
+		</rules>
+	</element>
+	<element name="Curse of Petrification" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_CURSE_OF_PETRIFICATION">
+		<description>
+			<p>When you cast the petrificus cantrip, you can expend a spell slot as part of the casting. If you do, the target has disadvantage on their Constitution save made to avoid the effects of the spell. In addition, you can choose from one of the following effects to add to the spell as you cast it:</p>
+			<ul>
+				<li>The target takes additional damage equal to 5 x the level of the spell slot expended.</li>
+				<li>You gain temporary hit points equal to 5 x the level of the spell slot expended.</li>
+				<li>You can target additional creatures with the spell equal to the level of the spell slot expended.</li>
+				<li>The target has a penalty to Dexterity saving throws equal to the 2 x the level of the spell slot expended until the end of its next turn.</li>
+				<li>The target’s movement speed is reduced by an additional 5 feet x the level of the spell slot expended until the end of its next turn. If this effect reduces the target’s movement to 0, it falls prone.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you cast the petrificus cantrip, you can expend a spell slot as part of the casting. If you do, the target has disadvantage on their Constitution save made to avoid the effects of the spell. In addition, you can choose from one of the following effects to add to the spell as you cast it:&#13;
+			• The target takes additional damage equal to 5 x the level of the spell slot expended.&#13;
+			• You gain temporary hit points equal to 5 x the level of the spell slot expended.&#13;
+			• You can target additional creatures with the spell equal to the level of the spell slot expended.&#13;
+			• The target has a penalty to Dexterity saving throws equal to the 2 x the level of the spell slot expended until the end of its next turn.&#13;
+			• The target’s movement speed is reduced by an additional 5 feet x the level of the spell slot expended until the end of its next turn. If this effect reduces the target’s movement to 0, it falls prone.</description>
+		</sheet>
+	</element>
+	<element name="Gift of the Stone" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_GIFT_OF_THE_STONE">
+		<description>
+			<p>A creature under the effect of your Fortification of Stone feature also resists bludgeoning, slashing, and piercing damage, has advantage on Strength and Constitution saving throws, and has tremorsense out to 30 feet.</p>
+		</description>
+		<sheet>
+			<description>A creature under the effect of your Fortification of Stone feature also resists bludgeoning, slashing, and piercing damage, has advantage on Strength and Constitution saving throws, and has tremorsense out to 30 feet.</description>
+		</sheet>
+	</element>
+	<element name="Stoneshaper" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PETRIFICATION_STONESHAPER">
+		<description>
+			<p>Over the course of a long rest, you can imbue a non-magical pebble with incredible power. The pebble gains the properties of any ioun stone* of your choice. The pebble remains magical in this way until it is destroyed, or you use this feature again.</p>
+		</description>
+		<sheet>
+			<description>Over the course of a long rest, you can imbue a non-magical pebble with incredible power. The pebble gains the properties of any ioun stone* of your choice. The pebble remains magical in this way until it is destroyed, or you use this feature again.</description>
+		</sheet>
+	</element>
+</elements>

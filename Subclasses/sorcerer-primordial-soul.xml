@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Sorcerer - Primordial Soul</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="sorcerer-primordial-soul.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/sorcerer-primordial-soul.xml" />
+		</update>
+	</info>
+
+	<element name="Primordial Soul" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_SORCERER_PRIMORDIAL_SOUL">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>The churning, writhing power of the elements bubbles in your veins. Be it by blood, bond, or gift, your body harbours the power of primordials — ancient incarnations of the raw, natural magic of the multiverse.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_ANCESTRY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_BONDS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_ALLY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION" />
+		</description>
+		<sheet display="false">
+			<description>The churning, writhing power of the elements bubbles in your veins.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_ANCESTRY" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_BONDS" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_ALLY" level="14" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION" level="18" />
+		</rules>
+	</element>
+	<element name="Primordial Ancestry" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_ANCESTRY">
+		<description>
+			<p>Your primordial lineage grants you power. You gain one of the following elemental boons of your choice. When you finish a long rest, you can change your choice. Your current elemental boon also impacts the abilities you receive at later levels.</p>
+			<p class="indent"><b>Earth.</b> Your skin is as hardy and durable as stone. Your hit point maximum increases by an amount equal to your Sorcerer level. In addition, while you aren’t wearing armour, you can calculate your AC as 12+ your Constitution modifier.</p>
+			<p class="indent"><b>Water.</b> You gain a swim speed equal to your walking speed and can breathe underwater. In addition, the first time you hit a creature with a spell attack roll each turn, you can push that creature up to 15 feet away from you.</p>
+			<p class="indent"><b>Fire.</b> You resist cold damage. In addition, when you cast a spell that deals acid, cold, lightning, poison, or thunder damage, you can change the damage type of that spell to fire damage. Finally, spells you cast that deal fire damage ignore damage resistance.</p>
+			<p class="indent"><b>Air.</b> Your walking speed increases by 10 feet and your AC increases by 1 while you aren’t wearing medium or heavy armour. In addition, whenever you cast a spell that targets only yourself, or you take the Dash or Disengage action, you gain a fly speed equal to your walking speed until the end of the turn. If you end that turn in the air, you fall.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain one of the following elemental boons of your choice. When you finish a long rest, you can change your choice.&#13;
+			• Earth. Your skin is as hardy and durable as stone. Your hit point maximum increases by an amount equal to your Sorcerer level. In addition, while you aren’t wearing armour, you can calculate your AC as 12+ your Constitution modifier.&#13;
+			• Water. You gain a swim speed equal to your walking speed and can breathe underwater. In addition, the first time you hit a creature with a spell attack roll each turn, you can push that creature up to 15 feet away from you.&#13;
+			• Fire. You resist cold damage. In addition, when you cast a spell that deals acid, cold, lightning, poison, or thunder damage, you can change the damage type of that spell to fire damage. Finally, spells you cast that deal fire damage ignore damage resistance.&#13;
+			• Air. Your walking speed increases by 10 feet and your AC increases by 1 while you aren’t wearing medium or heavy armour. In addition, whenever you cast a spell that targets only yourself, or you take the Dash or Disengage action, you gain a fly speed equal to your walking speed until the end of the turn. If you end that turn in the air, you fall.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Primordial Ancestry" supports="Primordial Ancestry" />
+		</rules>
+	</element>
+	<element name="Primordial Bonds" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_BONDS">
+		<description>
+			<p>You gain proficiency in two of the following skills, and whenever you make an ability check using one of the following skills, you can make it as a Charisma check even if it normally uses a different ability: Animal Handling, Arcana, History, Nature, Religion, Survival.</p>
+		</description>
+		<sheet>
+			<description>Whenever you make an ability check using one of the chosen skills, you can make it as a Charisma check even if it normally uses a different ability.</description>
+		</sheet>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Primordial Bonds)" supports="ID_PROFICIENCY_SKILL_ANIMAL_HANDLING|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number="2" />
+		</rules>
+	</element>
+	<element name="Elemental Sorcery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY">
+		<description>
+			<p>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action.</p>
+			<p class="indent">In addition, the elemental boon you choose for your Primordial Ancestry feature confers one additional benefit.</p>
+			<p class="indent"><b>Earth.</b> Whenever you fail a Strength or Constitution saving throw, you can spend 1 sorcery point to reroll that save at advantage. You must use the new result.</p>
+			<p class="indent"><b>Water.</b> As a reaction when hit by an attack roll, you can spend 1 sorcery point to conjure a shield of ice to protect yourself. You gain a bonus to your AC equal to your Charisma modifier against that attack, potentially turning a hit into a miss. The ice then shatters, dealing 1d8 cold damage to the attacker if they are within 5 feet of you.</p>
+			<p class="indent"><b>Fire.</b> As a bonus action, you can spend 2 sorcery points to teleport to an unoccupied space you can see within 30 feet of you in a jet of flame. When you do, you can choose to deal 1d10 fire damage to all creatures within 10 feet of the space you teleported from.</p>
+			<p class="indent"><b>Air.</b> As a bonus action, you can spend 1 sorcery point to take the Dash action and the Disengage action.</p>
+		</description>
+		<sheet display="false">
+			<description>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action.&#13;
+			In addition, the elemental boon you choose for your Primordial Ancestry feature confers one additional benefit.&#13;
+			• Earth. Whenever you fail a Strength or Constitution saving throw, you can spend 1 sorcery point to reroll that save at advantage. You must use the new result.&#13;
+			• Water. As a reaction when hit by an attack roll, you can spend 1 sorcery point to conjure a shield of ice to protect yourself. You gain a bonus to your AC equal to your Charisma modifier against that attack, potentially turning a hit into a miss. The ice then shatters, dealing 1d8 cold damage to the attacker if they are within 5 feet of you.&#13;
+			• Fire. As a bonus action, you can spend 2 sorcery points to teleport to an unoccupied space you can see within 30 feet of you in a jet of flame. When you do, you can choose to deal 1d10 fire damage to all creatures within 10 feet of the space you teleported from.&#13;
+			• Air. As a bonus action, you can spend 1 sorcery point to take the Dash action and the Disengage action.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_EARTH"  
+			requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_EARTH"/>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_WATER"  
+			requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_WATER"/>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_FIRE" requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_FIRE"/>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_AIR" requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_AIR"/>
+		</rules>
+	</element>
+	<element name="Primordial Ally" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_PRIMORDIAL_ALLY">
+		<description>
+			<p>You can cast the spell conjure elemental without a spell slot or components. Once you do so, you cannot cast it again using this feature until you finish a long rest. When you cast conjure elemental using this feature, it does not require concentration, and lasts for the full duration.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can cast the spell conjure elemental without a spell slot or components. When you cast conjure elemental using this feature, it does not require concentration, and lasts for the full duration.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CONJURE_ELEMENTAL" />
+		</rules>
+	</element>
+	<element name="Elemental Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION">
+		<description>
+			<p>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious. The benefits you gain depend on the elemental boon you have chosen for your Primordial Ancestry feature.</p>
+			<p class="indent"><b>Earth.</b> You have tremorsense out to 30 feet, and a burrow speed equal to your walking speed. When you burrow, you don’t disturb the material you move through. You take 1d10 bludgeoning damage if you end your turn inside the ground while burrowing.</p>
+			<p class="indent"><b>Water.</b> When a creature starts its turn within 30 feet of you, you can use your reaction attempt to ensnare that creature in a coiling vortex of conjured water. That creature must succeed on a Strength saving throw or be incapacitated until the start of your next turn. Creatures that are Large or smaller have disadvantage on this save.</p>
+			<p class="indent"><b>Fire.</b> You are immune to cold damage. In addition, if you would take fire damage, such as from the spell fireball, you instead gain temporary hit points equal to the damage you would have taken.</p>
+			<p class="indent"><b>Air.</b> When you take the Dash or Disengage action, or cast a spell that targets only yourself, you can turn invisible until the end of your next turn. In addition, while invisible, you resist bludgeoning, slashing, and piercing damage.</p>
+		</description>
+		<sheet display="false">
+			<description>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious. The benefits you gain depend on the elemental boon you have chosen for your Primordial Ancestry feature.&#13;
+			• Earth. You have tremorsense out to 30 feet, and a burrow speed equal to your walking speed. When you burrow, you don’t disturb the material you move through. You take 1d10 bludgeoning damage if you end your turn inside the ground while burrowing.&#13;
+			• Water. When a creature starts its turn within 30 feet of you, you can use your reaction attempt to ensnare that creature in a coiling vortex of conjured water. That creature must succeed on a Strength saving throw or be incapacitated until the start of your next turn. Creatures that are Large or smaller have disadvantage on this save.&#13;
+			• Fire. You are immune to cold damage. In addition, if you would take fire damage, such as from the spell fireball, you instead gain temporary hit points equal to the damage you would have taken.&#13;
+			• Air. When you take the Dash or Disengage action, or cast a spell that targets only yourself, you can turn invisible until the end of your next turn. In addition, while invisible, you resist bludgeoning, slashing, and piercing damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_EARTH"  requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_EARTH"/>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_WATER"  requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_WATER"/>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_FIRE" requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_FIRE"/>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_AIR" requirements="ID_DMSW_PRIMORDIAL_ANCESTRY_AIR"/>
+		</rules>
+	</element>
+
+	<!-- Primordial Ancestry -->
+	<element name="Earth Ancestry" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_PRIMORDIAL_ANCESTRY_EARTH">
+		<compendium display="false" />
+		<supports>Primordial Ancestry</supports>
+		<description>
+			<p>Your skin is as hardy and durable as stone. Your hit point maximum increases by an amount equal to your Sorcerer level. In addition, while you aren’t wearing armour, you can calculate your AC as 12 + your Constitution modifier.</p>
+		</description>
+		<sheet>
+			<description>Your hit point maximum increases by an amount equal to your Sorcerer level. In addition, while you aren’t wearing armour, you can calculate your AC as 12 + your Constitution modifier.</description>
+		</sheet>
+		<rules>
+			<stat name="hp" value="level:sorcerer" />
+			<stat name="ac:primordial ancestry" value="12" />
+			<stat name="ac:primordial ancestry" value="constitution:modifier" />
+			<stat name="ac:calculation" value="ac:primordial ancestry" bonus="calculation" equipped="[armor:none]" alt="Earth Ancestry" />
+		</rules>
+	</element>
+	<element name="Water Ancestry" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_PRIMORDIAL_ANCESTRY_WATER">
+		<compendium display="false" />
+		<supports>Primordial Ancestry</supports>
+		<description>
+			<p>You gain a swim speed equal to your walking speed and can breathe underwater. In addition, the first time you hit a creature with a spell attack roll each turn, you can push that creature up to 15 feet away from you.</p>
+		</description>
+		<sheet>
+			<description>You gain a swim speed equal to your walking speed and can breathe underwater. In addition, the first time you hit a creature with a spell attack roll each turn, you can push that creature up to 15 feet away from you.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Fire Ancestry" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_PRIMORDIAL_ANCESTRY_FIRE">
+		<compendium display="false" />
+		<supports>Primordial Ancestry</supports>
+		<description>
+			<p>You resist cold damage. In addition, when you cast a spell that deals acid, cold, lightning, poison, or thunder damage, you can change the damage type of that spell to fire damage. Finally, spells you cast that deal fire damage ignore damage resistance.</p>
+		</description>
+		<sheet>
+			<description>You resist cold damage. In addition, when you cast a spell that deals acid, cold, lightning, poison, or thunder damage, you can change the damage type of that spell to fire damage. Finally, spells you cast that deal fire damage ignore damage resistance.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+		</rules>
+	</element>
+	<element name="Air Ancestry" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_PRIMORDIAL_ANCESTRY_AIR">
+		<compendium display="false" />
+		<supports>Primordial Ancestry</supports>
+		<description>
+			<p>Your walking speed increases by 10 feet and your AC increases by 1 while you aren’t wearing medium or heavy armour. In addition, whenever you cast a spell that targets only yourself, or you take the Dash or Disengage action, you gain a fly speed equal to your walking speed until the end of the turn. If you end that turn in the air, you fall.</p>
+		</description>
+		<sheet>
+			<description>Your walking speed increases by 10 feet and your AC increases by 1 while you aren’t wearing medium or heavy armour. In addition, whenever you cast a spell that targets only yourself, or you take the Dash or Disengage action, you gain a fly speed equal to your walking speed until the end of the turn. If you end that turn in the air, you fall.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" />
+			<stat name="ac:misc" value="1" requirements="![armor:medium],[armor:heavy]" />
+		</rules>
+	</element>
+
+	<!-- Elemental Sorcery -->
+	<element name="Elemental Sorcery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_EARTH">
+		<compendium display="false" />
+		<description>
+			<p>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, whenever you fail a Strength or Constitution saving throw, you can spend 1 sorcery point to reroll that save at advantage. You must use the new result.</p>
+		</description>
+		<sheet>
+			<description>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, whenever you fail a Strength or Constitution saving throw, you can spend 1 sorcery point to reroll that save at advantage. You must use the new result.</description>
+		</sheet>
+	</element>
+	<element name="Elemental Sorcery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_WATER">
+		<compendium display="false" />
+		<description>
+			<p>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, as a reaction when hit by an attack roll, you can spend 1 sorcery point to conjure a shield of ice to protect yourself. You gain a bonus to your AC equal to your Charisma modifier against that attack, potentially turning a hit into a miss. The ice then shatters, dealing 1d8 cold damage to the attacker if they are within 5 feet of you.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, as a reaction when hit by an attack roll, you can spend 1 sorcery point to conjure a shield of ice to protect yourself. You gain a bonus + {{charisma:modifier}} to your AC against that attack, potentially turning a hit into a miss. The ice then shatters, dealing 1d8 cold damage to the attacker if they are within 5 feet of you.</description>
+		</sheet>
+	</element>
+	<element name="Elemental Sorcery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_FIRE">
+		<compendium display="false" />
+		<description>
+			<p>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, as a bonus action, you can spend 2 sorcery points to teleport to an unoccupied space you can see within 30 feet of you in a jet of flame. When you do, you can choose to deal 1d10 fire damage to all creatures within 10 feet of the space you teleported from.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, as a bonus action, you can spend 2 sorcery points to teleport to an unoccupied space you can see within 30 feet of you in a jet of flame. When you do, you can choose to deal 1d10 fire damage to all creatures within 10 feet of the space you teleported from.</description>
+		</sheet>
+	</element>
+	<element name="Elemental Sorcery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_SORCERY_AIR">
+		<compendium display="false" />
+		<description>
+			<p>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, as a bonus action, you can spend 1 sorcery point to take the Dash action and the Disengage action.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>When you use a bonus action to convert a spell slot into sorcery points, you can cast a cantrip as part of that same bonus action. Also, as a bonus action, you can spend 1 sorcery point to take the Dash action and the Disengage action.</description>
+		</sheet>
+	</element>
+
+	<!-- Elemental Transformation -->
+	<element name="Elemental Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_EARTH">
+		<compendium display="false" />
+		<description>
+			<p>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.</p>
+			<p class="indent">You have tremorsense out to 30 feet, and a burrow speed equal to your walking speed. When you burrow, you don’t disturb the material you move through. You take 1d10 bludgeoning damage if you end your turn inside the ground while burrowing.</p>
+		</description>
+		<sheet action="Action">
+			<description>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.&#13;
+			You have tremorsense out to 30 feet, and a burrow speed equal to your walking speed. When you burrow, you don’t disturb the material you move through. You take 1d10 bludgeoning damage if you end your turn inside the ground while burrowing.</description>
+		</sheet>
+	</element>
+	<element name="Elemental Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_WATER">
+		<compendium display="false" />
+		<description>
+			<p>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.</p>
+			<p class="indent">When a creature starts its turn within 30 feet of you, you can use your reaction attempt to ensnare that creature in a coiling vortex of conjured water. That creature must succeed on a Strength saving throw or be incapacitated until the start of your next turn. Creatures that are Large or smaller have disadvantage on this save.</p>
+		</description>
+		<sheet action="Action">
+			<description>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.&#13;
+			When a creature starts its turn within 30 feet of you, you can use your reaction attempt to ensnare that creature in a coiling vortex of conjured water. That creature must succeed on a DC {{sorcerer:spellcasting:dc}} Strength saving throw or be incapacitated until the start of your next turn. Creatures that are Large or smaller have disadvantage on this save.&#13;
+			</description>
+		</sheet>
+	</element>
+	<element name="Elemental Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_FIRE">
+		<compendium display="false" />
+		<description>
+			<p>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.</p>
+			<p class="indent"> </p>
+		</description>
+		<sheet action="Action">
+			<description>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.&#13;
+			You are immune to cold damage. In addition, if you would take fire damage, such as from the spell fireball, you instead gain temporary hit points equal to the damage you would have taken.</description>
+		</sheet>
+	</element>
+	<element name="Elemental Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PRIMORDIAL_SOUL_ELEMENTAL_TRANSFORMATION_AIR">
+		<compendium display="false" />
+		<description>
+			<p>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.</p>
+			<p class="indent"> </p>
+		</description>
+		<sheet action="Action">
+			<description>At the start of your turn, you can spend 5 sorcery points to alter your body, becoming one with your elemental ancestors. This transformation lasts for 1 minute, or until you fall unconscious.&#13;
+			When you take the Dash or Disengage action, or cast a spell that targets only yourself, you can turn invisible until the end of your next turn. In addition, while invisible, you resist bludgeoning, slashing, and piercing damage.</description>
+		</sheet>
+	</element>
+</elements>

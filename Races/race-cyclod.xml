@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cyclod</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-cyclod.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-cyclod.xml" />
+		</update>
+	</info>
+
+	<!-- Cyclod Race -->
+	<element name="Cyclod" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CYCLOD">
+		<description>
+			<p>The Cyclod are a reclusive race of fey, distant descendants of the mighty Titans. Easily identifiable by the single, large eye in the center of their head and their large tusks, their imposing appearance and scarcity have led to Cyclods being vilified in many cultures as bestial monsters that consume humanoid flesh.</p>
+			<p>In actuality, they are a gentle and timid people, forming small, nomadic communities of roughly a dozen families who wander the mountains of the material plane. No two Cyclods share the same colouration of skin, each born with their own unique coloration and patterns. Cyclod elders traditionally interpret these patterns to predict a newborn’s future.</p>
+			<h4>CYCLOD TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 1, and another ability score of your choice increases by 2.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Cyclods mature at the same rate as humans and live for about two centuries.</p>
+			<p class="indent"><strong><em>Size.</em></strong> The typical Cyclod adult stands around 7ft tall. Your size is medium.</p>
+			<p class="indent"><strong><em>Longstriders.</em></strong> Your base walking speed is 35ft.</p>
+			<p class="indent"><strong><em>Powerful Build.</em></strong> You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+			<p class="indent"><strong><em>Natural Aptitude.</em></strong> You gain proficiency with one tool, one skill, and one martial weapon of your choice.</p>
+			<p class="indent"><strong><em>Fey.</em></strong> Your creature type is fey, rather than humanoid.</p>
+			<p class="indent"><strong><em>Magic Eye.</em></strong> You can see up to 500ft away without difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. In addition, you can see in dim light within 120ft of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Cyclod Regeneration.</em></strong> As a bonus action, you can spend one hit die to heal yourself. Roll the die, add your Constitution modifier, and regain a number of hit points equal to the total (minimum of 1). You can use this trait a number of times equal to your Proficiency Bonus per long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Wisdom +1, Choice +2) -->
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement +2 (Cyclod)" supports="Custom Ability Score Increase 2" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (three +1's) -->
+            <select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Cyclod)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Cyclod)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size (Medium) -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Longstriders (Speed) -->
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<!-- Powerful Build Trait -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CYCLOD_POWERFUL_BUILD" />
+
+			<!-- Natural Aptitude Proficiencies -->
+			<select type="Proficiency" name="Natural Aptitude (Tool)" supports="Tool" />
+			<select type="Proficiency" name="Natural Aptitude (Skill)" supports="Skill" />
+			<select type="Proficiency" name="Natural Aptitude (Martial Weapon)" supports="Martial" />
+
+			<!-- Fey Creature Type -->
+			<grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FEY" />
+
+			<!-- Magic Eye Trait and Vision -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CYCLOD_MAGIC_EYE" />
+			<grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
+
+			<!-- Cyclod Regeneration Trait -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CYCLOD_CYCLOD_REGENERATION" />
+		</rules>
+	</element>
+
+	<element name="Powerful Build" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CYCLOD_POWERFUL_BUILD">
+		<description>
+			<p>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+		</description>
+		<sheet>
+			<description>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</description>
+		</sheet>
+        <rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+	</element>
+	<element name="Magic Eye" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CYCLOD_MAGIC_EYE">
+		<description>
+			<p>You can see up to 500ft away without difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. In addition, you can see in dim light within 120ft of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+		</description>
+		<sheet>
+			<description>You can see up to 500ft away without difficulty. You have darkvision out to 120ft.</description>
+		</sheet>
+	</element>
+	<element name="Cyclod Regeneration" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CYCLOD_CYCLOD_REGENERATION">
+		<description>
+			<p>As a bonus action, you can spend one hit die to heal yourself. Roll the die, add your Constitution modifier, and regain a number of hit points equal to the total (minimum of 1). You can use this trait a number of times equal to your Proficiency Bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You can spend one hit die to heal yourself. Roll the die + {{cyclod regeneration}} and regain hit points equal to the total.</description>
+		</sheet>
+        <stat name="cyclod regeneration" value="1" bonus="base" />
+        <stat name="cyclod regeneration" value="constitution:modifier" bonus="base" />
+	</element>
+</elements>

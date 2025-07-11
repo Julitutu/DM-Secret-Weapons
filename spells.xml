@@ -1,0 +1,3115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Spells</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="spells.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/spells.xml" />
+		</update>
+	</info>
+
+	<element name="Hyperfocus" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_HYPERFOCUS">
+		<supports>Sorcerer, Wizard, Bard</supports>
+		<description>
+			<p>Your touch imbues a target with energy, increasing their awareness. They have advantage on dexterity saving throws and initiative rolls, and can’t be surprised for the duration of the spell.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 Action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Mark of Vulnerability" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_MARK_OF_VULNERABILITY">
+		<supports>Sorcerer, Warlock, Bard</supports>
+		<description>
+			<p>You weave a cursed, spectral mark onto a creature you can see within range. Choose a damage type from among Acid, Cold, Fire, Lightning, Poison, or Thunder.</p>
+			<p class="indent">The target creature loses any resistance to that damage type for the duration of the spell.</p>
+		</description>
+		<setters>
+			<set name="keywords">acid, cold, fire, lightning, poison, thunder</set>
+			<set name="level">0</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 Bonus Action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Wrecking Bolt" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_WRECKING_BOLT">
+		<supports>Sorcerer, Warlock, Bard</supports>
+		<description>
+			<p>You fire a vivid bolt of energy towards an object that isn’t being worn or carried or a construct within range, rippling through the structure and targeting any vulnerabilities in its construction.</p>
+			<p class="indent">The target takes 4d10 force damage.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">1</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 Action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Energy Transfer" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ENERGY_TRANSFER">
+		<supports>Wizard, Bard</supports>
+		<description>
+			<p>Choose one creature within range. It gains 1d8 temporary hit points, and can use its reaction to make a single weapon attack; or cast a spell with a casting time of one action that is of a lower level than the level of this spell; or move up to its movement speed. This movement does not provoke opportunity attacks.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, the target creature gains an additional 1d8 temporary hit points for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 Action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Moonburst" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_MOONBURST">
+		<supports>Wizard, Warlock, Bard, Druid, Ranged, Spell Attack, Spell Saving Throw</supports>
+		<description>
+			<p>Make a ranged spell attack against a creature within range. On a hit, the target takes 3d8 necrotic or radiant damage (your choice) and makes a constitution save. On a failed save, the target is blinded until the start of your next turn.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, radiant</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Lunar Touch" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_LUNAR_TOUCH">
+		<supports>Bard, Druid</supports>
+		<description>
+			<p>You imbue a creature with lunar energy, granting it certain benefits that reflect its true nature:</p>
+			<p class="indent"><strong><em>Good Alignment:</em></strong> Target gains advantage on all wisdom checks, resistance to non-magical bludgeoning, piercing and slashing damage, and +2 AC for the duration.</p>
+			<p class="indent"><strong><em>Evil Alignment:</em></strong> Target gains 4d10 temporary hit points, its movement increases by 10 ft, and adds a +2 to its attack rolls for the duration.</p>
+			<p class="indent"><strong><em>Lawful Alignment:</em></strong> Target can use an action to glow with a faint, silvery light until they use an action to dismiss the effect.</p>
+			<p class="indent"><strong><em>Chaotic Alignment:</em></strong> The target randomly grows or shrinks 1d6 inches for the duration.</p>
+			<p class="indent"><strong><em>Neutral Alignment (if neither Good or Evil):</em></strong> Target gains advantage on all saving throws against spells and other magical effects for the duration.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 minute</set>
+			<set name="duration">1 hour</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A diamond or crystal worth at least 600gp</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">true</set>
+		</setters>
+	</element>
+
+	<element name="Rise of the Blood Moon" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_RISE_OF_THE_BLOOD_MOON">
+		<supports>Wizard, Druid, Spell Saving Throw</supports>
+		<description>
+			<p>Crimson light shines down in a mile-radius sphere centred at a point you can see within range, penetrating magical darkness and walls and objects less than 12 inches thick. Every humanoid and beast with an intelligence score of 3 or higher illuminated by the crimson light makes a wisdom saving throw (they can choose to fail).</p>
+			<p class="indent">On a failed save they gain immunity to all non-magical, non-silvered weapons; their alignment shifts to match yours; they gain 5d10 temporary hit points; their base walking speed increases by 10ft; and their AC increases by 1.</p>
+			<p class="indent">If you choose to do so, you can issue a simple command to all those under the effect of the Blood Moon as you cast it. An example could be “Protect the city”, “Loot and burn”, or “Kill my enemies”. Affected creatures will follow the command to the best of their ability, even risking their life, but will not actively harm themselves.</p>
+			<p class="indent">If no command is given, those affected act according to their new alignment for the duration of the spell.</p>
+			<p class="indent">If this spell is cast on the night of a full moon, unwilling creatures make their wisdom saves with disadvantage.</p>
+			<p class="indent">The effect of this spell on an individual can be dispelled with a Dispel Magic spell cast at 9th level.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">9</set>
+			<set name="school">Transmutation</set>
+			<set name="time">8 hours</set>
+			<set name="duration">12 hours</set>
+			<set name="range">1 mile</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">Several seeds of any moonseed plant, a vial of the caster’s blood, and a spherical, crystal orb worth at least 2,000gp, which the spell consumes</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Berserk" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_BERSERK">
+		<supports>Warlock, Bard, Spell Saving Throw</supports>
+		<description>
+			<p>Choose a creature you can see within range, that target makes a Charisma saving throw (it can choose to fail), or is affected by this spell.</p>
+			<p class="indent">Until the spell ends, the target gains 1d12 temporary hit points; it gains resistance to bludgeoning, slashing, and piercing damage; it makes all strength checks, strength saving throws and melee attack rolls with advantage; it deals an additional +2 damage on all melee attacks; attacks against it have advantage; and it cannot concentrate on spells or cast spells.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the target gains an additional 1d12 temporary hit points for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A ghost pepper seed</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Weave Drain" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_WEAVE_DRAIN">
+		<supports>Wizard</supports>
+		<description>
+			<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 6th level or lower, its spell fails and has no effect. If it is casting a spell of 7th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spells level. On a success, the creature’s spell fails and has no effect.</p>
+			<p class="indent">If the spell fails as a result of you countering it with this spell, you regain a spent spell slot of a level equal to or less than half the level of the spell you countered (rounded down).</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">6</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 Reaction, which you take when you see a creature within 90 feet of you casting a spell</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Spiritual Interposition" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SPIRITUAL_INTERPOSITION">
+		<supports>Paladin, Cleric</supports>
+		<description>
+			<p>You magically intervene in an act of self sacrifice when a creature you can see within range takes damage from an attack. Instead, they take no damage, you take the amount of damage they would have taken, and your hit point total is reduced by the same amount. This damage cannot be resisted or redirected in any way. Your hit point total returns to normal after a short or long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 Reaction, which you take when you see a creature within 30 feet of you take damage</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A dove’s feather</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Invoke Gobbledegook" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_INVOKE_GOBBLEDEGOOK">
+		<supports>Bard, Cleric, Spell Saving Throw</supports>
+		<description>
+			<p>Choose a creature you can see within range. The target must make a Wisdom saving throw or else uncontrollably babble incessant, meaningless nonsense. Creatures that speak a language say gobbledegook phrases. Creatures that do not speak a language instead make a constant stream of grunts, howls and whines.</p>
+			<p class="indent">While babbling in this way, the target cannot speak anything other than gobbledegook, perform the verbal components of spells, or do anything that requires the articulation of its mouth other than babble.</p>
+			<p class="indent">At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Cascading Impact" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CASCADING_IMPACT">
+		<supports>Wizard, Sorcerer, Warlock, Ranged, Spell Attack</supports>
+		<description>
+			<p>Make a ranged spell attack roll at a target within range. On a hit, that creature takes 3d8 force damage and, if it is Large or smaller, you push it up to 10ft in any direction.</p>
+			<p class="indent">If you push the creature into a space occupied by another creature it stops moving and both creatures take 1d8 force damage, are pushed 5ft away from each other, and fall prone.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, it deals an extra 1d8 damage to each creature you damage with this spell for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Episquee" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_EPISQUEE">
+		<supports>Bard, Cleric, Druid, Paladin</supports>
+		<description>
+			<p>You place a hand on a creature and imbue it with reactive, defensive magic. The next time the target takes damage, as long as they are conscious, they immediately gain temporary hit points equal to twice the damage they took. These hit points last for the duration of the spell, or until the target regains any hit points.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, 1 hour</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Into Shadow" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_INTO_SHADOW">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Target creature within range makes a charisma saving throw (it can choose to fail). On a failed save, it is instantly teleported up to 30ft to an unoccupied space you can see. The chosen space must be on a surface or liquid that can support the target without the target having to squeeze.</p>
+			<p class="indent">When the target is teleported, it takes 2d6 necrotic damage.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the target takes an additional 1d6 damage for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">teleport, necrotic</set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Price of Empathy" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PRICE_OF_EMPATHY">
+		<supports>Bard, Cleric, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>When a creature you can see within range takes damage, you attempt to form a link between that creature and another, sharing its pain. Choose another creature within range, that target must make a wisdom saving throw, or take psychic damage equal to half the amount of damage the first creature took.</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic</set>
+			<set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 reaction, which you take when a creature within range takes damage.</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Obsolescence" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_OBSOLESCENCE">
+		<supports>Bard, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You invoke the power of shadow to cause a creature’s spirit to fade from the living world. When you cast this spell, and at the start of each of your turns, the target must make a constitution saving throw. On every failed save, their movement speed is reduced by 10ft, their AC decreases by 1, and their weapon and spell attacks deal 1d4 less damage (but no less than 1).</p>
+			<p class="indent">If you concentrate on this spell for the full duration, the target suffers the changes to its stats for the next 7 days.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">6</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Flaming Binds" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FLAMING_BINDS">
+		<supports>Cleric, Paladin, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>Choose a creature that you can see within range. The target must succeed on a Dexterity saving throw or be restrained for the duration as they are bound in flaming, spectral chains. When it fails this saving throw and at the start of each of its turns, the creature takes 1d8 fire damage. At the end of each of its turns, the target can make another Dexterity saving throw. On a success, the spell ends on the target.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level about 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">fire</set>
+			<set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a small piece of coal</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Bide" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_BIDE">
+		<supports>Bard, Cleric, Druid, Ranger</supports>
+		<description>
+			<p>When you cast this spell, increase your AC by 1.</p>
+			<p class="indent">The first time each round you are hit by an attack, while you are concentrating on this spell, your AC increases by 1.</p>
+			<p class="indent">When this spell ends, you unleash a violent burst of captured kinetic energy at a creature within 30ft of you. That creature takes 2d8 force damage for each point of AC you gained from this spell’s effect while concentrating on it.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a diamond worth at least 50gp</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Precision Bombardment" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PRECISION_BOMBARDMENT">
+		<supports>Sorcerer, Wizard, Ranged, Spell Attack</supports>
+		<description>
+			<p>You let loose a devastating barrage of magical bolts, striking at a creature you can see within range.</p>
+			<p class="indent">Make a ranged attack roll. On a hit, the target takes 3d8 force damage. This attack scores a critical hit on an 18, 19, or 20.</p>
+			<p class="indent">If you cast Precision Bombardment on your previous turn and scored a critical hit, you can cast it again this turn at the same level without expending a spell slot as a bonus action.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 5th level or above, make the attack roll at advantage.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Siphon Essence" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SIPHON_ESSENCE">
+		<supports>Paladin, Warlock, Wizard</supports>
+		<description>
+			<p>You become wreathed in purple, spectral flames.</p>
+			<p class="indent">The next time you inflict damage to a creature with a spell or weapon attack, you deal an extra 2d6 necrotic damage as the flames surrounding you are channeled into the attack. You then gain temporary hit points equal to half the total damage you inflicted.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level about 1st.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">1</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Six Hundred Needles" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SIX_HUNDRED_NEEDLES">
+		<supports>Druid, Ranger, Sorcerer, Wizard</supports>
+		<description>
+			<p>When you cast this spell, and as an action on each of your turns, you can weave a cursed needle mark onto a creature you can see within range, which lasts until the spell ends.</p>
+			<p class="indent">After cursing a target in this way, that creature takes 1d10+1 piercing damage for each needle mark you have cursed them with, as spectral needles fly from your outstretched hand and home in on the target.</p>
+		</description>
+		<setters>
+			<set name="keywords">piercing</set>
+			<set name="level">4</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a knitting needle</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Wall of Slime" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_WALL_OF_SLIME">
+		<supports>Druid, Warlock</supports>
+		<description>
+			<p>An opaque wall of dense green slime springs into existence on a solid surface at an unoccupied point you choose in range. You can choose to make this wall up to 60 feet long, 20 feet high, and 10 feet thick or in a circle that has a 20-foot diameter and is up to 20ft high and 10 feet thick.</p>
+			<p class="indent">A creature can move through the wall, albeit extremely slowly. For every 1 foot the creature moves through the wall, it must spend 10 feet of movement. For as long as a creature is in the wall, it is blinded and deafened, and cannot breathe, speak, or perform the verbal components of spells. It also cannot stand up from being prone, take the dodge or dash action, and has disadvantage on dexterity saving throws. A creature has resistance to all damage types except psychic while it is in the wall of slime.</p>
+			<p class="indent">Non-magical weapon attacks cannot pass through the wall, instead getting caught in the slime.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell with a spell slot of 6th level or higher, you may increase the thickness of the wall by 5ft for each slot level above 5th.</p>
+		</description>
+		<setters>
+			<set name="keywords">wall</set>
+			<set name="level">5</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of powdered snail shell</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Rainfall" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_RAINFALL">
+		<supports>Druid, Ranger, Sorcerer</supports>
+		<description>
+			<p>Gentle rain falls in a 120ft radius from a point you choose within range. The water is pure, clean and drinkable.</p>
+			<p class="indent">While concentrating on this spell, you can influence the rainfall, such as limiting the rain to fall only in certain areas, or use an action to create a simple, sensory effect like a rumble of thunder or flash of lightning.</p>
+			<p class="indent">If you concentrate on this spell for the full duration, the rain continues for the next hour before ending.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 10 minutes.</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Bubble Prison" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_BUBBLE_PRISON">
+		<supports>Druid, Ranger, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to conjure a bubble of water around a huge or smaller creature within range. That creature must make a Dexterity saving throw or become encased in a bubble of water. The bubble moves with them as they move.</p>
+			<p class="indent">While in the bubble, they are completely submerged in water. They can’t breathe, speak, and have a resistance to all fire damage.</p>
+			<p class="indent">In addition, they have disadvantage on all attack rolls, their movement speed is reduced by 10ft, and the first time each turn they take lightning damage, they take an additional 1d8 lightning damage.</p>
+			<p class="indent">A creature can use its action to attempt a Dexterity saving throw, escaping the Bubble Prison on a success. When the creature escapes, the bubble breaks and the spell ends.</p>
+		</description>
+		<setters>
+			<set name="keywords">fire, lightning</set>
+			<set name="level">2</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a drop of clear water</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Ranineamorphosis" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_RANINEAMORPHOSIS">
+		<supports>Bard, Druid, Ranger, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>This spell transforms a creature with at least 1 hit point that you can see within range into a frog or toad. An unwilling creature must make a Constitution saving throw to avoid the effect. A Shapechanger automatically succeeds on this saving throw.</p>
+			<p class="indent">The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The target assumes the form of either a Frog or a Giant Toad (your choice).</p>
+			<p class="indent">Their game statistics are replaced by the statistics of the beast, but they retain their alignment, personality, and Intelligence, Wisdom and Charisma scores.</p>
+			<p class="indent">The target assumes the Hit Points of its new form. When it reverts to its normal form, the creature returns to the number of Hit Points it had before it transformed. If it reverts as a result of dropping to 0 Hit Points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 Hit Points, it isn’t knocked unconscious.</p>
+			<p class="indent">The creature cannot cast spells, speak, or take any action that would be limited by the capabilities of their frog or toad form. Transforming does not break concentration on a spell they have already cast, however, or prevent them from taking actions that are part of a spell, such as Call Lightning, that they have already cast.</p>
+			<p class="indent">The target’s gear melds into the new form. The creature can’t activate, use, wield, or otherwise benefit from any of its Equipment.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a handful of frogspawn</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Blood Bend" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_BLOOD_BEND">
+		<supports>Druid, Warlock, Wizard</supports>
+		<description>
+			<p>You attempt to manipulate the life flow of energy within one huge or smaller creature you can see within range. If the target has 100 hit points or fewer, you take control of its body until the end of the turn.</p>
+			<p class="indent">While you control a creature in this way, it cannot move in any way that you do not allow. You can use your bonus action to take total and precise control of the target, during which time you can force the creature to move up to its movement speed and take an action, but you cannot force the creature to cast a spell.</p>
+			<p class="indent">For example, you might force an Adult Red Dragon to fly 40 feet, use its breath weapon attack, and then fall prone.</p>
+			<p class="indent">And any damage the creature takes while under your control is also dealt to you, as your life force intertwines with its own. At the end of the turn, the creature is freed of your influence.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">8</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Bloodblade" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_BLOODBLADE">
+		<supports>Paladin, Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>You evoke a glistening crimson blade of living blood in your hand. Roll a number of hit dice equal to the spell slot level you cast this spell at. Your maximum hit point total is reduced by that many hit points until the spell ends.</p>
+			<p class="indent">The blade lasts until the spell ends. It counts as a simple melee weapon with which you are proficient. On a hit, it deals 1d8 necrotic damage for each hit die you rolled to create it, and has the finesse, light, and reach properties.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 6th level or higher, you may use your spellcasting modifier for attack and damage rolls with the blade.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a drop of blood</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Insatiable Fury" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_INSATIABLE_FURY">
+		<supports>Bard, Cleric, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to stir an unquenchable fiery fury in a creature you can see within range. Creatures that can’t be Charmed are immune to this effect.</p>
+			<p class="indent">The target must make a Wisdom saving throw. On a failed save, it instantly takes 4d8 necrotic damage and flies into an uncontrollable fury. It has advantage on all weapon attacks made against you, but disadvantage on all other attack rolls and ability checks, and has disadvantage on saving throws to maintain concentration for the duration of this spell. On a successful save, the target takes half as much damage and suffers no other effects.</p>
+			<p class="indent">A creature can use an action to attempt to overcome its fury, repeating the Wisdom saving throw, ending the effects on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Curse of Dehydration" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CURSE_OF_DEHYDRATION">
+		<supports>Bard, Druid, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You weave a vicious curse of dehydration on a target within range, subjecting them to a savage, painful thirst.</p>
+			<p class="indent">The target has disadvantage on all Strength, Dexterity and Intelligence saving throws and can’t concentrate on spells.</p>
+			<p class="indent">At the start of each of its turns, a creature can make a Constitution saving throw, ending the effect on a success. If the target uses an action to drink something after being targeted by this spell, it makes all subsequent saves to end its effects at advantage.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 7th level or higher, you can target one additional creature for each slot level above 6th.</p>
+		</description>
+		<setters>
+			<set name="keywords">curse</set>
+			<set name="level">6</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Divine Flavour" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DIVINE_FLAVOUR">
+		<supports>Bard, Cleric, Druid, Paladin</supports>
+		<description>
+			<p>You lay your hands on one small piece of food, imbuing it with healing magic and incredible flavour.</p>
+			<p class="indent">When you cast this spell, choose one condition from the following list: Blinded, Charmed, Deafened, Frightened, or Poisoned.</p>
+			<p class="indent">Using an action to eat the food cures that condition, and grants the eater advantage on saving throws against that condition for the next 24 hours.</p>
+			<p class="indent">They also gain temporary hit points equal to your spellcasting modifier.</p>
+			<p class="indent">After 24 hours, if uneaten, the food loses all magical properties.</p>
+			<p class="indent">Once a creature gains the benefits of eating a food imbued with Divine Flavour, that creature cannot benefit from the spell again until it completes a long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">25gp worth of powdered diamonds</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Curse of Famine" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CURSE_OF_FAMINE">
+		<supports>Bard, Druid, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You weave a vicious curse of famine on a target within range, subjecting them to a terrible, aching hunger.</p>
+			<p class="indent">The target has disadvantage on all attack rolls and ability checks.</p>
+			<p class="indent">At the start of each of its turns, the creature can make a Constitution saving throw, ending the effect on a success. If the target uses an action to eat something after being targeted by this spell, it makes all subsequent saves to end its effects at advantage.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">curse</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Elisleo’s Invisible Space Hoppers" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ELISLEOS_INVISIBLE_SPACE_HOPPERS">
+		<supports>Bard, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Up to four creatures within range have their jump distance doubled until this spell ends, and they take no fall damage.</p>
+			<p class="indent">In addition, if they fall more than 10 feet, they can use their reaction to immediately bounce a number of feet equal to half the distance they fell in any direction.</p>
+			<p class="indent">If a creature bounces into another creature using this effect, they stop moving, and if the creature they hit is not under the effect of Elisleo’s Invisible Space Hoppers, they must make a Strength Saving Throw or by knocked prone.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a frog</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Miracle Explosion" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_MIRACLE_EXPLOSION">
+		<supports>Bard, Cleric, Sorcerer, Wizard, Warlock</supports>
+		<description>
+			<p>As a reaction, when a creature within 10 feet of you misses with a melee attack roll, you can exploit their momentary vulnerability with a blast of force.</p>
+			<p class="indent">The creature takes 3d8 force damage and is knocked 10 feet away from you.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">1</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 reaction, which you take when a creature within 10 feet of you misses with a melee attack roll</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">10 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Three-for-One" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_THREEFORONE">
+		<supports>Cleric, Paladin, Sorcerer, Wizard, Warlock</supports>
+		<description>
+			<p>The next time you cast a cantrip this turn that targets only one creature and doesn’t have a range of self, you can target three creatures in range with that spell instead of only one.</p>
+			<p class="indent">To be eligible, the cantrip must be incapable of targeting more than one creature at the spell’s current level. For example, Acid Splash isn’t eligible, but Fire Bolt is.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">Bonus Action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Fury of the Raging Tarrasque" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FURY_OF_THE_RAGING_TARRASQUE">
+		<supports>Druid, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>The earth erupts with a calamitous, seismic tear. Each creature on the ground in a 60-foot radius centered on that point must make a Dexterity saving throw. A target takes 4d20 bludgeoning damage and 4d20 force damage and falls prone on a failed save, or half as much damage and doesn’t fall prone on a successful one.</p>
+			<p class="indent">In addition, you are surrounded by a spectral, scaled carapace. Any time you are targeted by a Magic Missile spell, a line spell, or a spell that requires a ranged attack roll, roll a d6. On a 1 to 5, you are unaffected. On a 6, you are unaffected, and the effect is reflected back at the caster as though it originated from you, turning the caster into the target.</p>
+			<p class="indent">This carapace lasts until the spell ends.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a 9th level spell slot, the duration of the spell is increased to 10 minutes.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning, force</set>
+			<set name="level">8</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pebble</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Fury of the Black Dragon" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FURY_OF_THE_BLACK_DRAGON">
+		<supports>Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>A hissing geyser of boiling acid erupts at a point you choose in range. Each creature in a 30-foot radius centered on that point must make a Dexterity saving throw. A target takes 3d12 acid damage and 3d12 fire damage on a failed save, or half as much on a success.</p>
+			<p class="indent">In addition, you gain a resistance to acid damage for the duration of this spell.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 6th level or higher, increase the acid damage by 1d12 for each level above 5th.</p>
+		</description>
+		<setters>
+			<set name="keywords">acid, fire</set>
+			<set name="level">5</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a drop of acid</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Fury of the Frost Giant" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FURY_OF_THE_FROST_GIANT">
+		<supports>Druid, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>A deafening burst of ice and stone erupts at a point you choose in range. Each creature in a 10-foot radius centered on that point must make a Dexterity saving throw. A target takes 3d8 cold damage and 3d8 bludgeoning damage on a failed save, or half as much on a success.</p>
+			<p class="indent">In addition, you gain a resistance to cold damage for the duration of this spell.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, increase the cold damage by 1d8 for each level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">cold, bludgeoning</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a snowflake preserved in resin</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Blade Ward" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_BLADE_WARD">
+		<supports>Bard, Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>You extend your hand and trace a sigil of warding while touching a creature (you can target yourself). Until the end of your next turn, that creature has resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.</p>
+		</description>
+		<setters>
+			<set name="keywords">resistance</set>
+			<set name="level">0</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">1 round</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Druidcraft" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_DRUIDCRAFT">
+		<supports>Druid, Ranger</supports>
+		<description>
+			<p>Whispering to the spirits of nature, you create one of the following effects within range:</p>
+			<ul>
+				<li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 minute. Once created, you can use your action to influence the sensory effect, turning a golden orb into falling snow, etc. If you do, make a Nature skill check (DC20). On a success, the weather at your location shifts over the course of the next 24 hours to reflect the effect you created. You cannot create weather of an intensity that would threaten life in the area. Once you use this feature to attempt to change the weather in your location, you cannot do so again until you finish a long rest.</li>
+				<li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li>
+				<li>You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li>
+				<li>You instantly light or snuff out a candle, a torch, or a small campfire.</li>
+				<li>You instantly know the location of all edible, poisonous, or sentient plants in a 300-foot radius.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Color Spray" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_COLOR_SPRAY">
+		<supports>Bard, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>A dazzling array of flashing, colored light springs into existence at a point you choose in range. Roll 6d10; the total is how many hit points of creatures this spell can effect.</p>
+			<p class="indent">Creatures in a 30 foot radius originating from the point you choose are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can’t see). Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected.</p>
+			<p class="indent">At the end of each of their turns, a creature affected by this spell can make a Constitution saving throw, ending the effect on themselves on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">1</set>
+			<set name="school">Illusion</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Water Walk" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_WATER_WALK">
+		<supports>Cleric, Druid, Ranger, Sorcerer</supports>
+		<description>
+			<p>This spell grants the ability to swiftly move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat).</p>
+			<p class="indent">A creature moving across a liquid surface this way must only expend one foot of movement for every two feet it moves, and does not provoke opportunity attacks while moving on a liquid surface. Up to ten willing creatures you can see within range gain this ability for the duration.</p>
+			<p class="indent">If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 hour</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A piece of cork</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">true</set>
+		</setters>
+	</element>
+
+	<element name="Superior Jump" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_JUMP">
+		<supports>Druid, Ranger, Sorcerer, Wizard</supports>
+		<description>
+			<p>You touch a creature. The creature’s jump distance is tripled until the spell ends and it takes no fall damage if it falls a number of feet fewer than 9 + 3x its strength modifier.</p>
+			<p class="indent">In addition, if that creature runs out of movement mid-jump, they complete the jump as normal, but land prone.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">1</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A grasshopper’s hind leg</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Ground Rotation" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GROUND_ROTATION">
+		<supports>Druid, Ranger, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Choose up to three points on the ground within range. You can cause the earth in a 5-foot radius of that point to shift to another position on the ground within 15 feet.</p>
+			<p class="indent">If a creature is standing on an area of earth you choose, they make a Dexterity saving throw (they can choose to fail). On a success, they manage to step off the moving ground and remain where they are.</p>
+			<p class="indent">On a failed save, they move with the ground up to 15 feet to another point of ground or fall prone where they are (your choice).</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, you can choose an additional point on the ground for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Dimensional Pocket Sand" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DIMENSIONAL_POCKET_SAND">
+		<supports>Bard, Druid, Ranger, Spell Saving Throw</supports>
+		<description>
+			<p>You reach into the void and pull forth a handful of glistening, sharp, white sand to blow into the eyes of a creature within 5 feet.</p>
+			<p class="indent">The target must succeed on a Constitution saving throw or be blinded until the start of its next turn.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">1</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">5 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a grain of sand</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Rock Bombardment" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ROCK_BOMBARDMENT">
+		<supports>Druid, Ranger, Sorcerer, Wizard, Ranged, Spell Attack</supports>
+		<description>
+			<p>You conjure 4 rocks or wrench them from the earth, which hover and rotate in the air around you. Each rock is roughly 1 cubic foot in size.</p>
+			<p class="indent">As a bonus action, you can hurl one of the rocks at a creature within 60 feet of you. Make a ranged spell attack roll against that target. On a hit, the target takes 2d10 bludgeoning damage.</p>
+			<p class="indent">While you have at least 2 of the rocks hovering around you, you have half cover.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, you can conjure an additional rock for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a rare stone worth at least 100gp</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior True Strike" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_TRUE_STRIKE">
+		<supports>Bard, Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target’s defenses.</p>
+			<p class="indent">The next time you make an attack against that creature, the attack hits. You do not make an attack roll, and this attack cannot crit.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Divination</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Illusory Script" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_ILLUSORY_SCRIPT">
+		<supports>Bard, Warlock, Wizard</supports>
+		<description>
+			<p>You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text.</p>
+			<p class="indent">To all others, the writing appears as if it were a message that they would interpret in a manner that would encourage them to deliver the parchment to its intended recipient.</p>
+			<p class="indent">For example, a guard might read an illusory script with a message for an assassin reading “Your next target is the King”, and see the message as: “Please deliver the following message to the intended recipient. They are to accompany a member of the Royal Guard to the Royal Court for urgent business”. The illusion is incapable of replicating or forging sigils and other official means of authentication.</p>
+			<p class="indent">If a creature chooses to do so, they can attempt an Arcana check (DC20) to identify if the parchment carries an illusion. On a success, they become aware that the parchment bears magic, but still cannot read the original message.</p>
+			<p class="indent">Should the spell be dispelled, the original script and the illusion both disappear. A creature with truesight can read the hidden message.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">1</set>
+			<set name="school">Illusion</set>
+			<set name="time">1 minute</set>
+			<set name="duration">10 days</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A bottle of ink</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">true</set>
+		</setters>
+	</element>
+
+	<element name="Superior Grease" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_GREASE">
+		<supports>Druid, Ranger, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.</p>
+			<p class="indent">When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.</p>
+			<p class="indent">The grease is also an object that is highly flammable. If it is dealt fire damage, or a creature or object in its area is dealt fire damage, it ignites. All creatures and objects in the area of the grease take 2d8 fire damage, and the spell ends.</p>
+		</description>
+		<setters>
+			<set name="keywords">fire</set>
+			<set name="level">1</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A bit of pork rind or butter</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Arcane Sword" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_ARCANE_SWORD">
+		<supports>Bard, Wizard, Melee, Spell Attack</supports>
+		<description>
+			<p>You create a sword-shaped plane of force that hovers within range. It lasts for the duration.</p>
+			<p class="indent">When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword, at advantage. On a hit, the target takes 4d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.</p>
+			<p class="indent">If the sword is within 5 feet of you, and another creature hits you with an attack, you can use your reaction to attempt to parry that blow with the sword. Add your proficiency bonus to your AC for that attack, potentially causing the attack to miss you.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">7</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Superior Weird" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUPERIOR_WEIRD">
+		<supports>Bard, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice becomes frightened for the duration.</p>
+			<p class="indent">The illusion calls on the creature’s deepest fears, manifesting its worst nightmares as an implacable threat. The danger appears to surround the creature, rendering it unable to move while frightened.</p>
+			<p class="indent">At the end of each of the frightened creature’s turns, it takes 4d10 psychic damage, and then can attempt a Wisdom saving throw. On a successful save, the spell ends for that creature.</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic</set>
+			<set name="level">9</set>
+			<set name="school">Illusion</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Serpent Appendage" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SERPENT_APPENDAGE">
+		<supports>Druid, Ranger, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>This spell transforms the arms or forelimbs of a creature you can see within range into hissing snakes under their control. An unwilling creature must make a Wisdom saving throw to avoid the effect.</p>
+			<p class="indent">The transformation lasts for the duration of the spell, or until the target falls to 0 hit points or dies.</p>
+			<p class="indent">With snake arms, the target drops anything it is holding. In addition, it can use its action to make two unarmed strikes with the snake arms. These attacks have a reach of 10 feet, use your spellcasting modifier to hit, and deal 2d6 + the target’s Strength modifier piercing damage on a hit. These snake unarmed strikes have advantage on any attack rolls made against a poisoned creature.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> If you cast this spell at 3rd level or higher, the number of attacks the target creature can make with the snake arms as an action increases by 1 for every two slot levels above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">piercing</set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a vial of snake venom</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Shark Head" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SHARK_HEAD">
+		<supports>Bard, Druid, Ranger, Sorcerer, Spell Saving Throw</supports>
+		<description>
+			<p>This spell transforms the head of a humanoid you can see within range into that of a shark. The transformation does not alter the target’s brain or mind, and they can still speak. An unwilling creature must make a Wisdom saving throw to avoid the effect.</p>
+			<p class="indent">The transformation lasts for the duration of the spell, or until the target falls to 0 hit points or dies.</p>
+			<p class="indent">With a shark head, the target can breathe underwater, gains a swim speed equal to its walking speed, and has disadvantage on Charisma (Persuasion) checks and advantage on Charisma (Intimidation) checks.</p>
+			<p class="indent">In addition, it can use its bonus action to make a bite attack against a creature within 5 feet. This attack uses your spellcasting modifier to hit, and deals 3d4 + your spellcasting modifier piercing damage.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> If you cast this spell at 4th level or higher, you can target one additional humanoid for every slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">piercing</set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Spiked Carapace" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SPIKED_CARAPACE">
+		<supports>Druid, Ranger, Sorcerer, Spell Saving Throw</supports>
+		<description>
+			<p>This spell transforms the body of a creature you can see within range, causing them to grow a hard, thick and spiky shell. An unwilling creature must make a Wisdom saving throw to avoid the effect.</p>
+			<p class="indent">The transformation lasts for the duration of the spell, or until the target falls to 0 hit points or dies.</p>
+			<p class="indent">The target gains a +3 bonus to their AC, and when they are hit by a melee weapon attack, they can use their reaction to take the blow on their spiked shell, dealing 1d8 piercing damage to the attacker.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> If you cast this spell at 3rd level or higher, you can target one additional creature for every slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">piercing</set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Ghostrain" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GHOSTRAIN">
+		<supports>Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You conjure a spectral torrent of foul, undead spirits, bursting from your outstretched hands and charging through enemies. Each creature in a 30-foot cone must make a Wisdom Saving Throw. On a failed save, a creature takes 8d6 necrotic damage and is frightened of you for 1 minute. A creature can repeat this saving throw at the end of each of its turns, ending the effect on a success.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 6th level or higher, the damage increases by 2d6 for each slot level above 5th.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">5</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30-foot cone</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of crushed bone</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Eobard’s Friendly Critters" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_EOBARDS_FRIENDLY_CRITTERS">
+		<supports>Bard, Druid, Wizard</supports>
+		<description>
+			<p>You conjure three small, spectral beasts in an unoccupied space within 30 feet of you. You can decide their appearance. They cannot attack, are immune to all damage and conditions, and are friendly to you and your allies.</p>
+			<p class="indent">They take their turn immediately after yours, and can use that turn to move up to 30 feet in any direction and take the help action, assisting an ally. They cannot take actions other than the help action.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, you conjure one additional beast for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Leaden Weight" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_LEADEN_WEIGHT">
+		<supports>Bard, Cleric, Sorcerer, Wizard, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to magically densify a creature within range. That creature must make a Constitution Saving Throw (they can choose to fail).</p>
+			<p class="indent">On a failed save, that creature’s weight is doubled, it has advantage on Athletics checks and on saving throws to resist being forcibly moved or knocked prone, and its Strength-based damage rolls deal an additional 1d8 damage.</p>
+			<p class="indent">In addition, it has disadvantage on Dexterity saving throws, its movement speed is reduced by 10 feet, and its Dexterity-based melee weapon attack rolls deal 1d8 less damage (but no less than 1).</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pebble of lead</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Gaze of the Demon Prince" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GAZE_OF_THE_DEMON_PRINCE">
+		<supports>Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You invoke the abyssal fury of a dominating, demonic entity. When you cast this spell, and as a bonus action on each of your turns, you can focus your gaze on one creature you can see within 120 feet. That creature must make a Constitution, Wisdom, or Charisma saving throw (your choice). On a failed save, it suffers one of the following effects, based on the saving throw you chose.</p>
+			<p class="indent"><strong>Constitution.</strong> The target is stunned until the start of your next turn or until they are no longer within your line of sight.</p>
+			<p class="indent"><strong>Wisdom.</strong> The target suffers the effects of the Confusion spell until the end of their next turn or until they are no longer within your line of sight.</p>
+			<p class="indent"><strong>Charisma.</strong> The target is charmed by you until the end of your next turn or until they are no longer within your line of sight. This effect ends early if you deal damage to that creature.</p>
+			<p class="indent">If you drop concentration on this spell as a result of taking damage, roll a d20. On a 13 or lower, you take 6d6 psychic damage and are corrupted by darkness for the next minute. While corrupted, you can’t differentiate friend from foe, can’t understand what other creatures say, can’t read, can’t cast spells, and speak only gibberish.</p>
+			<p class="indent">A creature can use its action to attempt to help you regain yourself. If they do, roll a d20. On a 13 or higher, you return to your senses. A Greater Restoration spell cast on you also ends the corruption effect.</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic</set>
+			<set name="level">5</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Curse of Orcus" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CURSE_OF_ORCUS">
+		<supports>Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to curse a creature within range with unlife. That creature must succeed on a Constitution saving throw (they can choose to fail), or become an undead, in addition to its current creature type.</p>
+			<p class="indent">While undead, it resists cold damage, necrotic damage, and bludgeoning, slashing, and piercing damage from nonmagical weapons.</p>
+			<p class="indent">In addition, it cannot regain hit points, and it can be targeted by spells and other effects that exclusively target undead creatures.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the spell lasts for the duration, without requiring concentration.</p>
+		</description>
+		<setters>
+			<set name="keywords">curse, cold, necrotic</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of crushed bone</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Orcus’ Dread Command" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ORCUS_DREAD_COMMAND">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You brutally seize control of an undead that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or the creatures that are friendly to you are fighting it, it has advantage on the saving throw.</p>
+			<p class="indent">While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general couse of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive any further direction from you, it takes no actions and does not move until it receives a new order or this spell ends.</p>
+			<p class="indent">You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p>
+			<p class="indent">Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 6th level or above, you can target one additional undead for each slot level above 5th.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Telekinetic Push" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_TELEKINETIC_PUSH">
+		<supports>Paladin, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to telekinetically hurl a large or smaller creature you can see within range through the air. It must succeed on a Constitution saving throw or be pushed 30 feet away from you in a straight line, stopping early if it impacts against a solid surface. If it moves into the space of another creature, that creature can make a Dexterity saving throw to avoid it. On a failed save, the target of this spell impacts that creature and stops moving, and both creatures fall prone. When the creature you pushed strikes something, both the creature and what it strikes each take 1d10 bludgeoning damage.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the spell can target creatures that are huge or smaller. When you cast this spell using a spell slot of 6th level or higher, it can target any creature, regardless of size.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Explosive Ultimatum" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_EXPLOSIVE_ULTIMATUM">
+		<supports>Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>In addition to the spell slot you use to cast this spell, you can expend two additional spell slots of any level.</p>
+			<p class="indent">You detonate an explosive burst of force around a creature you can see within range. That creature must make a Dexterity saving throw, taking Xd12 force damage, where X is the total number of slot levels you expended to cast this spell, on a failed save, or half as much damage on a successful one. For example, if you expend one 5th level spell slot and two 3rd level spell slots, this spell would deal 11d12 force damage.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">5</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a ruby worth at least 200 gold pieces</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Shadow Fortification" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SHADOW_FORTIFICATION">
+		<supports>Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>You wreath yourself in a regenerating armour of shadows. You gain 5 temporary hit points, your AC increases by 2, and you gain 5 temporary hit points at the start of each of your turns.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, you gain an additional 5 temporary hit points at the start of each turn for every second spell level you cast it at above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a drop of ink</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Evocation Roulette" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_EVOCATION_ROULETTE">
+		<supports>Bard, Sorcerer, Wizard</supports>
+		<description>
+			<p>Choose up to three creatures within range, one of which must be you. Each creature makes an Arcana check. The creature with the lowest result takes 12d6 force damage. If the caster takes the damage from this effect, it ignores any resistance or immunity, and cannot be prevented or redirected in any way.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> If you cast this spell with a spell slot of 5th level or above, you can target one additional creature for each slot level above 4th.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">4</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Double or Nothing" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DOUBLE_OR_NOTHING">
+		<supports>Bard, Cleric, Paladin, Ranger, Sorcerer, Wizard</supports>
+		<description>
+			<p>When you miss with an attack roll, you can call upon a surge of magic to improve your odds.</p>
+			<p class="indent">Roll the attack again. On a hit, the attack deals an additional 2d8 force damage. On a miss, you take 1d8 necrotic damage, and your maximum hit point total is reduced by the same amount until you finish a long rest. This necrotic damage ignores resistances and immunities, and can’t be prevented or redirected in any way.</p>
+		</description>
+		<setters>
+			<set name="keywords">force, necrotic</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 reaction, which you take when you miss with an attack roll</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Chaos Roller" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CHAOS_ROLLER">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>When you cast this spell and at the start of your turn, roll 1d8. The result on the die determines the effect that takes place.</p>
+			<h5>Chaos Roller table</h5>
+			<table>
+				<thead>
+					<tr><td>d8</td><td class="left">Effect</td></tr>
+				</thead>
+				<tr><td>1</td><td class="left">Your AC is reduced by 2 until the start of your next turn.</td></tr>
+				<tr><td>2</td><td class="left">Your AC increases by 2 and your walking speed increases by 20 feet until the start of your next turn.</td></tr>
+				<tr><td>3</td><td class="left">Up to one creature of your choice within 60 feet of you must succeed on a Strength saving throw or fall prone and take 2d8 bludgeoning damage.</td></tr>
+				<tr><td>4</td><td class="left">You gain 3d8 temporary hit points.</td></tr>
+				<tr><td>5</td><td class="left">You take 2d8 necrotic damage.</td></tr>
+				<tr><td>6</td><td class="left">Up to one creature of your choice within 60 feet of you must succeed on a Dexterity saving throw or take 3d8 lightning damage.</td></tr>
+				<tr><td>7</td><td class="left">You can add 1d6 to the next ability check, or saving throw you make before the start of your next turn.</td></tr>
+				<tr><td>8</td><td class="left">You gain one point of exhaustion, you take 2d8 necrotic damage, and you can take one additional action this turn. This spell ends.</td></tr>
+			</table>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning, necrotic, lightning</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, 1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Punch Out" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PUNCH_OUT">
+		<supports>Paladin, Ranger, Sorcerer, Warlock</supports>
+		<description>
+			<p>You imbue your body with frenetic energy and make an unarmed strike against one creature within your reach. On a hit, the target suffers the attack’s normal effects and then takes 1d10 force damage and is pushed 10 feet away from you in a straight line.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> At 5th level, the unarmed strike deals an extra 1d10 force damage to the target on a hit (2d10), and the distance the target is pushed back increases by 5 feet (15 feet). The damage and distance pushed increases by 1d10 and 5 feet at 11th level (3d8 and 20 feet), and again at 17th level (4d10 and 25 feet).</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">0</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Echidna Armour" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ECHIDNA_ARMOUR">
+		<supports>Druid, Ranger</supports>
+		<description>
+			<p>You touch a willing creature. Until the spell ends, the target’s skin bristles with pointed, rough quills, and the target’s AC can’t be less than 19, regardless of what kind of armor it is wearing. In addition, a creature grappling the target takes 1d12 piercing damage at the start of its turn, and a creature that hits the target with a melee attack takes 1d6 piercing damage.</p>
+		</description>
+		<setters>
+			<set name="keywords">piercing</set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">an echidna quill</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Prophecy" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PROPHECY">
+		<supports>Bard, Wizard</supports>
+		<description>
+			<p>You wield divination magic to catch a glimpse of the future. Roll one d20 and record the number rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with that prophesied roll. You must choose to do so before the roll, and you can only have one prophesied roll at a time.</p>
+			<p class="indent">Casting this spell again causes the previous prophesied roll to be rewritten.</p>
+			<p class="indent">When you finish a long rest, you lose your unused prophesied roll, as your glimpse of the future fades from memory.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Divination</set>
+			<set name="time">10 minutes</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a glass orb or mirror worth 1,000 gp</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">true</set>
+		</setters>
+	</element>
+
+	<element name="Charge" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CHARGE">
+		<supports>Bard, Cleric, Sorcerer, Wizard</supports>
+		<description>
+			<p>You fortify yourself with magic, building power in preparation for an explosive burst. When you cast this spell, and at the start of each of your turns, you gain 1d4 Temporary Hit Points.</p>
+			<p class="indent">When you cast a levelled spell using an action, you can choose to stop concentrating on this spell. If you do, treat that spell as if it were cast at one level higher than the level of the spell slot you expended to cast it.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">1</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Icicle Lancer" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ICICLE_LANCER">
+		<supports>Druid, Sorcerer, Warlock, Wizard, Ranged, Spell Attack</supports>
+		<description>
+			<p>Roll 1d4. You conjure a number of icicles equal to the result on the die, which you can hurl at targets you can see within 30 feet. You can hurl them at one target or several. Make a ranged spell attack roll for each icicle. On a hit, the icicle deals 2d4 cold damage.</p>
+			<p class="indent"><b><i>At Higher levels.</i></b> When you cast this spell with a spell slot of 3rd-or-4th level, the size of the die you roll to determine how many icicles you conjure and the damage dice of each icicle increase to a d6. These dice increase to a d8 if you cast it with a 5th-or-6th level spell slot, a d10 if you cast it with a 7th-8th level spell slot, and a d12 if you cast it with a 9th level spell slot.</p>
+		</description>
+		<setters>
+			<set name="keywords">cold</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a snowflake preserved in amber</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Trace" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_TRACE">
+		<supports>Bard, Sorcerer, Wizard</supports>
+		<description>
+			<p>You attempt to trace the somatic and verbal components of a spell you can see being cast. If that spell is of a level lower than the slot level you used to cast this spell, and does not require Material components with a monetary value (e.g. a gem worth at least 50 gp), you successfully trace it, and you can cast that spell using this reaction without expending a further spell slot or requiring material components. Your casting of the spell happens immediately after the initial spellcaster casts it. If the spellcaster is casting a spell level equal to or higher than the slot level you used to cast this spell, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a success, you successfully trace the spell.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">4</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 reaction, which you take when a creature you can see within 60 feet casts a spell</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Collective Power" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_COLLECTIVE_POWER">
+		<supports>Bard, Cleric, Druid</supports>
+		<description>
+			<p>Your spirit swells with power and unity, forming a potent magical connection with up to two willing creatures within 30 feet of you that you can see (minimum 1). You and the creatures you choose gain temporary hit points equal to twice your spellcasting modifier.</p>
+			<p class="indent">In addition, creatures with temporary hit points granted by this spell have advantage on their first attack roll each turn, and on saving throws to resist or end the charmed or frightened condition for the duration. This advantage on attack rolls and saving throws ends early if any creature granted temporary hit points by this spell loses those temporary hit points or falls unconscious.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell with a spell slot of 3rd level or above, the maximum number of creatures you can target increases by two for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">10 minutes</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Life Resurgence" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_LIFE_RESURGENCE">
+		<supports>Cleric</supports>
+		<description>
+			<p>With a burst of radiant power, you revitalise creatures on the brink of death. Choose up to two creatures within 30 feet of yourself with 0 hit points. Those creatures gain hit points equal to your level, and can immediately use a reaction to stand up from prone and make a single weapon attack, or stand up from prone and move up to 15 feet without provoking opportunity attacks.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell with a spell slot of 5th or 6th level, the maximum number of creatures you can target increases to three. It increases to four when you use a spell slot of 7th or 8th level, and to five when you use a spell slot of 9th level.</p>
+		</description>
+		<setters>
+			<set name="keywords">radiant</set>
+			<set name="level">4</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a phoenix feather</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Shared Fate" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SHARED_FATE">
+		<supports>Cleric</supports>
+		<description>
+			<p>You tether your life-force to that of a willing creature you touch. The target gains +2 AC and has advantage on saving throws. In addition, while you are conscious, any damage the target takes that would reduce it to 0 hit points reduces it to 1 hit point instead, and any excess damage is dealt to you in its place.</p>
+			<p class="indent">The spell ends early if you fall to 0 hit points, or if you and the target are no longer on the same plane of existence. It also ends if the spell is cast again on either of the connected creatures, or if either of the connected creatures dismiss the connection as a bonus action.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 hour</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Petrificus" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PETRIFICUS">
+		<supports>Bard, Druid, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>A beam of orange light shines from you onto a creature within range. The target must succeed on a Constitution saving throw or it takes 1d10 necrotic damage and its speed reduced by 10 feet until the end of its next turn.</p>
+			<p class="indent">This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">0</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pebble</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Karmic Pendulum" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_KARMIC_PENDULUM">
+		<supports>Cleric, Sorcerer, Wizard</supports>
+		<description>
+			<p>You magically borrow a brush of luck from your future to aid you in the present. Roll 1d6 and record the result. You receive a blessing of fortune in the form of a bonus to the next attack roll you make this turn equal to the result. In addition, you have a penalty to the next attack roll or ability check you make after making that blessed attack roll equal to the result. Once you cast this spell, you can’t cast it again until you have made a penalised attack roll or ability check from the previous casting of it.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Divination</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pair of glass marbles</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Gumdak’s Arcane Foot" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GUMDAKS_ARCANE_FOOT">
+		<supports>Cleric, Melee, Spell Attack, Spell Saving Throw</supports>
+		<description>
+			<p>You create a Large, crystalline foot of translucent force in an unoccupied space that you can see within range. The foot lasts for the duration, and it moves at your command.</p>
+			<p class="indent">The foot is an object that has AC 18 and Hit Points equal to your Hit Point maximum. If it drops to 0 hit points, the spell ends. The foot doesn’t fill its space.</p>
+			<p class="indent">When you cast the spell and as a bonus action on your subsequent turns, you can move the foot up to 60 feet and cause one of the following effects with it.</p>
+			<p class="indent"><strong>Stomp.</strong> The foot stomps down on a creature or object within 5 feet of it. Make a melee spell attack for the foot using your game statistics. On a hit, the target takes 2d6 bludgeoning damage, and if it is a creature, it must succeed on a Strength saving throw or fall prone.</p>
+			<p class="indent"><strong>Boot.</strong> The foot attempts to kick a creature or object within 5 feet of it. Make a melee spell attack for the foot using your game statistics. On a hit, a Huge or smaller target is moved up to 20 feet in a direction of your choice. If the target is Tiny, the distance you can move it is doubled.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the damage from the Stomp increases by 1d6 and the distance a creature can be moved by the Boot increases by 5 feet for every level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a woolen sock</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Osmose" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_OSMOSE">
+		<supports>Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You weave a sapping tendril of magic around a creature you can see within range. The target must succeed on a Charisma saving throw or take 3d10 necrotic damage. In addition, if the target fails the saving throw and can cast spells, or has the innate ability to produce a magical effect (such as a chain devil’s Animate Chains action), you regain one expended spell slot of a level equal to half the slot level you used to cast this spell (rounded down).</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 3rd level or above, it deals an additional 1d10 damage for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a marble of amber</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Word Terror" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_WORD_TERROR">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You utter a word of power that instills dreadful terror in the mind of a creature you can see within range. If the creature has 100 hit points or fewer, it drops whatever it is holding and is frightened of you for the next minute. Otherwise, the spell fails. At the end of each of its turns, a creature can make a Wisdom saving throw, ending the effect on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Word: Hope" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_WORD_HOPE">
+		<supports>Bard, Cleric, Druid</supports>
+		<description>
+			<p>You utter a word of power that nurtures hope in one creature you can see within range those who hear it. That creature gains 5d10 temporary hit points, if it is charmed or frightened, the condition ends, and it is immune to the charmed and frightened conditions for the next minute.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">4</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Word Pacifism" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_WORD_PACIFISM">
+		<supports>Bard, Cleric, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You utter a word of power that compels a creature you can see within range not to harm others. If the creature has 150 hit points or fewer, it cannot take any action that deals damage to another creature. Otherwise, the spell fails. At the end of each of its turns, a creature can make a Wisdom saving throw, ending the frightened condition on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Deanimate" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DEANIMATE">
+		<supports>Cleric, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to steal the vitality of a creature you can see within range. The target must succeed on a Constitution saving throw or its speed falls to 0 until the end of its next turn. If it fails this save by 5 or more, it is also stunned until the end of its next turn.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 3rd level or above, you can target one additional creature for each slot level you cast it at above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a bead of tree sap</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Disapparate" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DISAPPARATE">
+		<supports>Bard, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to magically hurl a creature through space. The target must succeed on a Charisma saving throw or be teleported to an unoccupied space you can see within 90 feet of you that is on the ground or a surface that can support them. If it fails this save by 5 or more, the chosen space can be any unoccupied space you can see, instead.</p>
+		</description>
+		<setters>
+			<set name="keywords">teleport</set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Discombobulate" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DISCOMBOBULATE">
+		<supports>Druid, Sorcerer, Warlock, Melee, Spell Attack</supports>
+		<description>
+			<p>A blast of concussive force bursts from your body, barreling into a creature you touch. Make a melee spell attack against the target. On a hit, the target takes 3d8 bludgeoning damage. If you beat the target’s AC by 5 or more, or you score a critical hit, the target is also discombobulated until the end of its next turn. While discombobulated, a creature has disadvantage on attack rolls and ability checks, and it falls prone if it misses an attack roll or fails an ability check.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 2nd level or above, this spell deals an additional 1d8 bludgeoning damage for each slot level above 1st.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">1</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Fold Person" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FOLD_PERSON">
+		<supports>Cleric, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Choose a humanoid that you can see within range. The target must succeed on a Strength saving throw or fall prone. For the duration of the spell, the target cannot stand up. At the end of each of its turns, the target can make another Strength saving throw. On a success, the spell ends on the target. When the spell ends on a target, it can use its reaction to stand up.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional humanoid for each slot level above 1st. The humanoids must be within 30 feet of each other when you target them.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">1</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Swap" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_SWAP">
+		<supports>Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>Magic surges through your body, radically bolstering your strength. You gain proficiency with martial weapons and your Strength modifier becomes equal to your spellcasting modifier.</p>
+			<p class="indent">In addition, if you hit a creature with a weapon attack, roll 2d8. The creature takes additional force damage equal to the result, and you gain temporary hit points equal to the result.</p>
+			<p class="indent">When this spell ends, roll 1d20. On a 9 or less, you gain 1 point of exhaustion.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Gooify" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GOOIFY">
+		<supports>Druid, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to reduce a creature you can see within range into goo. The target must succeed on a Constitution saving throw, taking 10d12 acid damage on a failed save. If this damage reduces a creature to 0 hit points, it dies, and its corpse is transformed into an ochre jelly. The ochre jelly takes its turn immediately after yours and obeys your commands (no action required). If you do not issue a command, the ochre jelly does nothing. The ochre jelly remains for the next 8 hours, after which it fully dissolves into nothingness and vanishes.</p>
+			<p class="indent">A greater restoration spell cast on an ochre jelly created by this effect within 8 hours restores the creature to its original form.</p>
+		</description>
+		<setters>
+			<set name="keywords">acid</set>
+			<set name="level">6</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a cube of jelly</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Squish" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SQUISH">
+		<supports>Sorcerer, Wizard, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You attempt to crush a creature you can see within range with overwhelming gravitational force. The target makes a Strength saving throw. On a failed save, they take 10d6 force damage and have their size category reduced by 1 for the next minute (from Medium to Small, for example).</p>
+			<p class="indent">Multiple castings of this spell can reduce a creature’s size multiple times. A creature that would have its size category reduced below Tiny by the effect of this spell instead falls to 0 hit points.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">4</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a toy anvil</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Fury Surge" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FURY_SURGE">
+		<supports>Druid, Ranger, Paladin, Spell Saving Throw</supports>
+		<description>
+			<p>Your body becomes inflamed with furious magical energy, which tears into the body of any creatures you are grappling. Creatures you are grappling or grappled by must succeed on a Constitution saving throw, taking 4d10 force damage on a failed save, or half as much on a success.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, it deals an additional 1d10 force damage for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Prepwork" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PREPWORK">
+		<supports>Artificer, Wizard</supports>
+		<description>
+			<p>You carefully inscribe a glyph into a scroll, sealing the magic of one of your prepared spells within. The spell must have a casting time of 1 action, and you expend a spell slot of that spell’s level when you seal it in this way. The scroll disintegrates harmlessly after 8 hours.</p>
+			<p class="indent">While holding the scroll, a creature can cast the spell stored within it as a bonus action. Once it does, the scroll disintegrates immediately. The spell uses your slot level, spell save DC, spell attack bonus, and spellcasting ability, but is otherwise treated as if the creature that activated the scroll cast the spell.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Divination</set>
+			<set name="time">1 hour</set>
+			<set name="duration">8 hours</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">1gp of paper and fine ink, which the spell consumes</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Terrorize" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_TERRORIZE">
+		<supports>Bard, Druid, Ranger, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>In a befuddling haze of fey magic, you take on a terrifying, phantasmal form in the mind of an enemy within 30 feet of you. The target must succeed on a Wisdom saving throw, or be frightened of you for the duration, and take an additional 1d8 psychic damage whenever you hit it with an attack roll. A creature can repeat this saving throw at the end of each of its turns, ending the effect on a success.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic</set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Stolen Glory" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_STOLEN_GLORY">
+		<supports>Bard, Cleric, Paladin, Sorcerer, Wizard, Warlock</supports>
+		<description>
+			<p>As a reaction, when you and another creature you can see within 60 feet of you simultaneously roll a d20 (such as when you both roll for initiative, or you each roll a d20 as part of a contested Athletics check, or roll against the same saving throw), you can swap your results on the d20. The target receives your result, and you receive theirs, before adding any ability score modifiers.</p>
+			<p class="indent">You can cast this spell after seeing the results on the dice, but before success or failure is declared.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 reaction, which you take when both you and another creature simultaneously roll a d20</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Homing Teleportation" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_HOMING_TELEPORTATION">
+		<supports>Bard, Sorcerer, Wizard</supports>
+		<description>
+			<p>Name up to ten creatures within 1,000 feet of you. If a named creature is willing and within range, it is teleported to the nearest unoccupied space within 30 feet of you.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 6th-or-7th level, you can assemble creatures from up to 10 miles away. When you cast this spell using a spell slot of 8th-or-9th level, you can assemble creatures from anywhere on the same plane of existence.</p>
+		</description>
+		<setters>
+			<set name="keywords">teleport</set>
+			<set name="level">5</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a whistle</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">true</set>
+		</setters>
+	</element>
+
+	<element name="Razor Leaf" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_RAZOR_LEAF">
+		<supports>Druid, Ranger, Ranged, Spell Attack</supports>
+		<description>
+			<p>You create a stream of vicious, spinning leaves that fly from your outstretched palm and barrel into a creature within 60 feet. Make a ranged attack roll against the target. This attack scores a critical hit on a d20 roll of 18, 19, or 20. If the attack hits, the creature takes 3d10 slashing damage.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, it deals an additional 1d10 damage for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">slashing</set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a leaf</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Rock Smash" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ROCK_SMASH">
+		<supports>Bard, Druid, Ranger, Sorcerer, Warlock, Wizard, Melee, Weapon Attack</supports>
+		<description>
+			<p>Your body ignites with frenetic energy, which you channel into a magically charged, shattering strike. Make an unarmed strike or melee weapon attack against one creature or object within your reach. If the target is an object or a Construct, you have advantage on the attack roll. On a hit, the target suffers the strike’s normal effects, and its AC is reduced by 1 until the end of its next turn.</p>
+			<p class="indent">This spell’s AC reduction increases when you reach higher levels. At 5th level, the strike imposes an additional penalty of -1 to the target’s AC (-2 AC). The same applies at 11th level (-3 AC) and 17th level (-4 AC).</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a rugged pebble</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Hyper Beam" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_HYPER_BEAM">
+		<supports>Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>A devastating beam of pure energy bursts from your body in a direction you choose, forming a line 90 feet long and 10 feet wide. Each creature in the line must make a Dexterity saving throw. A creature takes 15d10 force damage on a failed save, or half as much on a success. After you cast this spell, a wave of lethargy sweeps through you, and you can’t take actions until the end of your next turn.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 9th level, and you reduce a creature to 0 hit points with the beam, you can take actions as normal on your next turn.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">8</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self (90-foot line)</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Rock Slide" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ROCK_SLIDE">
+		<supports>Druid, Ranger, Sorcerer, Spell Saving Throw</supports>
+		<description>
+			<p>Heavy rocks fall in a 20-foot-tall cylinder with a 10-foot radius centered on a point you choose within range. Each creature in the area of the spell must make a Dexterity saving throw. A target takes 7d6 bludgeoning damage on a failed save, or half as much on a success. If a creature fails its saving throw by 5 or more, it is also stunned until the end of its next turn.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 5th level or higher, the radius of the cylinder increases by 5 feet for each slot level above 4th.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">4</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a spherical pebble</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Magnitude" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_MAGNITUDE">
+		<supports>Druid, Ranger, Spell Saving Throw</supports>
+		<description>
+			<p>You create a chaotic, seismic tremor that ripples through the earth from a point on the ground that you can see within range. The area of ground within a 30-foot-radius circle centered on that point becomes difficult terrain, and each creature in contact with the ground or up to 30 feet below within that area must make a Dexterity saving throw. Creatures below ground make this save at disadvantage.</p>
+			<p class="indent">Roll 2d4 to determine the strength of the tremor you create. On a failed save, creatures take Xd8 bludgeoning damage and fall prone, where X is the result on the 2d4. On a successful save, a creature takes half as much damage and doesn’t fall prone.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of dirt, a piece of rock, and a lump of clay</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Ancient Power" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ANCIENT_POWER">
+		<supports>Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard, Spell Attack</supports>
+		<description>
+			<p>You conjure an ancient, illusory, primal force that barrels into a creature you can see within range. You decide the illusory form that this force takes, such as falling meteors, crushing water, or leaping flames. Make a spell attack roll against the target. On a hit, the target takes 10d8 force damage. If you score a critical hit, you gain a +3 to all attack rolls, ability checks, and saving throws for the next minute, as the primal force engulfs and enhances your body and spirit.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 7th level, the threshold required to score a critical hit on the attack roll is reduced by 1, letting you score a critical hit on a d20 roll of 19 or 20. The same is true for 8th level (scoring a critical hit on a 18, 19, or 20) and 9th level (scoring a critical hit on a 17, 18, 19, or 20).</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">6</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Trineedle" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_TRINEEDLE">
+		<supports>Druid, Ranger, Wizard, Ranged, Spell Attack, Spell Saving Throw</supports>
+		<description>
+			<p>You conjure three poisoned tipped barbs that spiral into a creature you can see within range. Make a ranged spell attack against the target. On a hit, they take 3d6 poison damage. If the result on any of the d6s is a 1, the creature is also Poisoned for the next minute. A creature can make a Constitution saving throw at the end of each of its turns, ending the Poisoned condition on a success.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>
+		</description>
+		<setters>
+			<set name="keywords">poison</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a barbed nettle</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Flash Counter" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FLASH_COUNTER">
+		<supports>Cleric, Paladin, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>When you take bludgeoning, slashing, or piercing damage from an attack, you can conjure a brilliant flash of radiant light, which captures some of the force and sends it barreling back towards the attacker. You have resistance to the triggering damage type until the end of this turn, and the attacker must succeed on a Strength saving throw or take force damage equal to twice the amount you took from the triggering attack.</p>
+		</description>
+		<setters>
+			<set name="keywords">radiant, force</set>
+			<set name="level">1</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 reaction, when you take bludgeoning, slashing, or piercing damage from an attack</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Leeching Sap" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_LEECHING_SAP">
+		<supports>Druid, Ranger, Sorcerer, Wizard, Warlock, Ranged, Spell Attack</supports>
+		<description>
+			<p>An undulating helix of green and white light lurches towards a creature you can see within range, forming a sustained link between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 2d12 necrotic damage, and you regain Hit Points equal to the damage dealt.</p>
+			<p class="indent">At the start of each of your subsequent turns, the target takes 1d12 necrotic damage, and you regain Hit Points equal to the damage dealt.</p>
+			<p class="indent">The spell ends if the target is ever outside the spell’s range or if it has total cover from you.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, the initial damage increases by 1d12 for each slot level above 2nd.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a knotted cherry stem</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Slime Puddle" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SLIME_PUDDLE">
+		<supports>Druid, Ranger, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You conjure a pool of writhing slime on ground you can see within range. Until the spell, the puddle covers the ground in a 5-foot square. Any creature in the puddle’s space when you cast the spell must succeed on a Dexterity saving throw or take 1d4 acid damage and fall prone. A creature must also make the saving throw when it enters the puddle’s space for the first time on a turn or starts its turn there.</p>
+			<p class="indent">This spell’s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>
+		</description>
+		<setters>
+			<set name="keywords">acid</set>
+			<set name="level">0</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a bead of sap</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Torrent of Slime" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_TORRENT_OF_SLIME">
+		<supports>Druid, Ranger, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>Until the spell ends, a deluge of bubbling slime falls in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.</p>
+			<p class="indent">The ground in the area is covered with slime, making it difficult terrain. When a creature enters the spell’s area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it takes 6d4 acid damage and becomes coated in slime for 1 minute, or until it or another creature uses an action to shake off the coating. A creature coated in slime’s speed is halved and it has disadvantage on Dexterity saving throws.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or above, the acid damage increases by 2d4 for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">acid</set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a glob of ectoplasm</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Summon Ooze" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUMMON_OOZE">
+		<supports>Druid, Ranger, Sorcerer, Warlock</supports>
+		<description>
+			<p>You conjure forth an oozing spirit of slime, which manifests in an unoccupied space that you can see within range. This creature uses the Ooze Spirit stat block. When you cast the spell, choose Fungal or Caustic. Your choice determines the creature’s traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.</p>
+			<p class="indent">The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its move to avoid danger.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 3rd level or higher, use the higher level whenever the spell’s level appears in the stat block.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a glob of slime</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Shared Fate" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SHARED_FATE">
+		<supports>Cleric</supports>
+		<description>
+			<p>You tether your life-force to that of a willing creature you touch. The target gains +2 AC and has advantage on saving throws. In addition, while you are conscious, any damage the target takes that would reduce it to 0 hit points reduces it to 1 hit point instead, and any excess damage is dealt to you in its place.</p>
+			<p class="indent">The spell ends early if you fall to 0 hit points, or if you and the target are no longer on the same plane of existence. It also ends if the spell is cast again on either of the connected creatures, or if either of the connected creatures dismiss the connection as a bonus action.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 hour</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Petrificus" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PETRIFICUS">
+		<supports>Bard, Druid, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>A beam of orange light shines from you onto a creature within range. The target must succeed on a Constitution saving throw or it takes 1d10 necrotic damage and its speed reduced by 10 feet until the end of its next turn.</p>
+			<p class="indent">This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">0</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pebble</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Karmic Pendulum" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_KARMIC_PENDULUM">
+		<supports>Cleric, Sorcerer, Wizard</supports>
+		<description>
+			<p>You magically borrow a brush of luck from your future to aid you in the present. Roll 1d6 and record the result. You receive a blessing of fortune in the form of a bonus to the next attack roll you make this turn equal to the result. In addition, you have a penalty to the next attack roll or ability check you make after making that blessed attack roll equal to the result. Once you cast this spell, you can’t cast it again until you have made a penalised attack roll or ability check from the previous casting of it.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Divination</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pair of glass marbles</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Gumdak’s Arcane Foot" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GUMDAKS_ARCANE_FOOT">
+		<supports>Cleric, Melee, Spell Attack, Spell Saving Throw</supports>
+		<description>
+			<p>You create a Large, crystalline foot of translucent force in an unoccupied space that you can see within range. The foot lasts for the duration, and it moves at your command.</p>
+			<p class="indent">The foot is an object that has AC 18 and Hit Points equal to your Hit Point maximum. If it drops to 0 hit points, the spell ends. The foot doesn’t fill its space.</p>
+			<p class="indent">When you cast the spell and as a bonus action on your subsequent turns, you can move the foot up to 60 feet and cause one of the following effects with it.</p>
+			<p class="indent"><strong>Stomp.</strong> The foot stomps down on a creature or object within 5 feet of it. Make a melee spell attack for the foot using your game statistics. On a hit, the target takes 2d6 bludgeoning damage, and if it is a creature, it must succeed on a Strength saving throw or fall prone.</p>
+			<p class="indent"><strong>Boot.</strong> The foot attempts to kick a creature or object within 5 feet of it. Make a melee spell attack for the foot using your game statistics. On a hit, a Huge or smaller target is moved up to 20 feet in a direction of your choice. If the target is Tiny, the distance you can move it is doubled.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the damage from the Stomp increases by 1d6 and the distance a creature can be moved by the Boot increases by 5 feet for every level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a woolen sock</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Word Terror" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_WORD_TERROR">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You utter a word of power that instills dreadful terror in the mind of a creature you can see within range. If the creature has 100 hit points or fewer, it drops whatever it is holding and is frightened of you for the next minute. Otherwise, the spell fails. At the end of each of its turns, a creature can make a Wisdom saving throw, ending the effect on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Word: Hope" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_WORD_HOPE">
+		<supports>Bard, Cleric, Druid</supports>
+		<description>
+			<p>You utter a word of power that nurtures hope in one creature you can see within range those who hear it. That creature gains 5d10 temporary hit points, if it is charmed or frightened, the condition ends, and it is immune to the charmed and frightened conditions for the next minute.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">4</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Power Word Pacifism" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_POWER_WORD_PACIFISM">
+		<supports>Bard, Cleric, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You utter a word of power that compels a creature you can see within range not to harm others. If the creature has 150 hit points or fewer, it cannot take any action that deals damage to another creature. Otherwise, the spell fails. At the end of each of its turns, a creature can make a Wisdom saving throw, ending the frightened condition on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Pledge of True Fellowship" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PLEDGE_OF_TRUE_FELLOWSHIP">
+		<supports>Bard, Cleric, Druid, Sorcerer, Wizard</supports>
+		<description>
+			<p>You forge an incredible bond of power, fortified by fellowship, between two willing creatures. For the duration, as long as the targets are within 10 feet of each other and are both conscious, if either would drop to 0 hit points as a result of taking damage, they fall to 1 hit point instead. When this effect takes place, a string of golden light flashes between the two bonded creatures.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">8</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 minute</set>
+			<set name="duration">8 hours</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">two matching bracelets</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Animate Weapon" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ANIMATE_WEAPON">
+		<supports>Paladin, Ranger</supports>
+		<description>
+			<p>With a burst of silver and crimson sparks, you throw a melee weapon you are holding into the air, where it hovers beside you for the duration. While the weapon hovers, you can use a bonus action to telepathically command it to fly up to 30 feet and attack one creature of your choice that you can see within 5 feet of it. The weapon uses your attack roll and ability score modifier to damage rolls, and deals magical damage. If the weapon is within 30 feet of you, you can recall it to your open hand and make a single attack with it as a bonus action, after which the spell ends.</p>
+			<p class="indent">You can also cast this spell targeting a shield. If you do, the shield hovers in place by your side for the duration, conferring its benefit while leaving your hands free.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 5th level or higher, the weapon you animate can make two attacks as a bonus action, rather than just one, and the shield confers an additional +1 bonus to your AC.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, 1 minute</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Sputter of Hope" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SPUTTER_OF_HOPE">
+		<supports>Bard, Cleric, Druid</supports>
+		<description>
+			<p>As a reaction, you can snatch a creature from the brink of death and fuel them with your own vitality. You take 2d8 necrotic damage, and the target gains hit points equal to the damage you took. If prone, the target can immediately use its reaction to stand up.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 reaction, which you take when a creature you can see within range falls to 0 hit points</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Giant Weapon" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_GIANT_WEAPON">
+		<supports>Artificer, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>One weapon you are touching grows larger for the duration, doubling in size and weight. Only creatures with a Strength score of 17 or above can wield it, otherwise the weapon falls from their grasp.</p>
+			<p class="indent">The reach of the weapon increases by 5 feet, and it deals an additional 2d6 damage on a hit.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of silver powder</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Chaos Light" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CHAOS_LIGHT">
+		<supports>Bard, Cleric, Sorcerer, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You conjure a chaotic helix of light that spirals towards a creature within range. That creature must succeed on a Constitution saving throw or be blinded until the end of your next turn.</p>
+			<p class="indent">The colour of the light is random, and also impacts the spell. Roll on the Chaos Light table to determine the colour of the light and its bonus effect:</p>
+			<h5>Chaos Light Table</h5>
+			<table>
+				<thead>
+					<tr><td>d6</td><td class="left">Colour</td><td class="left">Bonus Effect</td></tr>
+				</thead>
+				<tr><td>1</td><td class="left">Silver</td><td class="left">You turn invisible until the start of your next turn.</td></tr>
+				<tr><td>2</td><td class="left">Purple</td><td class="left">The target takes 2d8 necrotic damage on a failed Constitution save, or half as much on a success.</td></tr>
+				<tr><td>3</td><td class="left">Gold</td><td class="left">You can use your bonus action this turn to cast a cantrip with a casting time of 1 action.</td></tr>
+				<tr><td>4</td><td class="left">Red</td><td class="left">Both you and the target take 2d6 fire damage.</td></tr>
+				<tr><td>5</td><td class="left">Blue</td><td class="left">Both you and the target regain 2d10 hit points.</td></tr>
+				<tr><td>6</td><td class="left">Green</td><td class="left">You can choose to take 1d12 necrotic damage, which cannot be reduced or prevented in any way. If you do, you regain the spell slot used to cast this spell.</td></tr>
+			</table>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, fire</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Summon Object" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SUMMON_OBJECT">
+		<supports>Bard, Wizard</supports>
+		<description>
+			<p>By weaving together wisps of conjuration magic, you conjure a Large or smaller wondrous item or weapon of Common rarity in an unoccupied space within range. The conjured object lasts for the duration before vanishing into mist, or until you lose concentration. If the item or weapon requires attunement, it attunes a willing creature you designate within range.</p>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 4th level or higher, the object conjured can be of Uncommon rarity or below. When you cast it using a spell slot of 7th level or higher, it can be of Rare rarity or below. When you cast it using a spell slot of 9th level, it can be of Very Rare rarity or below.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, 1 minute</set>
+			<set name="range">10 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a sphere of silver worth 100 gold pieces</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Primal Might" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PRIMAL_MIGHT">
+		<supports>Druid, Ranger, Warlock</supports>
+		<description>
+			<p>The ancient strength of a slumbering monstrosity ripples through your body, magnifying your strength and heightening your senses. Until the spell ends, you gain the following benefits:</p>
+			<ul>
+				<li>Your Strength score becomes 23 if it is lower.</li>
+				<li>You have advantage on Wisdom (Perception) checks.</li>
+				<li>Once per turn, on your turn, you can expend 10 feet of movement to leap up to 30 feet.</li>
+				<li>Your Unarmed Strikes can deal bludgeoning damage equal to 1d8 + your Strength modifier on a hit.</li>
+				<li>You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that gives you extra attacks.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, 10 minutes</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Draconic Soul" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DRACONIC_SOUL">
+		<supports>Bard, Druid, Ranger, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You invoke the power of dragons, becoming wreathed in elemental energy. Choose one damage type from among acid, cold, fire, lightning, or poison. You are immune to that damage type for the duration. In addition, until the spell ends, you gain the following benefits:</p>
+			<ul>
+				<li>You gain a fly speed equal to your walking speed, and you can hover.</li>
+				<li>If you are not wearing heavy armour, your AC equals 13 + your Dexterity modifier (shields’ benefits apply as normal).</li>
+				<li>When you take the Attack action, you can replace one attack with an exhalation of draconic energy in a 30-foot cone. Creatures in that area must succeed on a Dexterity saving throw, taking 4d10 damage on a failed save, or half as much on a success. The damage type you deal is the same as the type you choose when you cast this spell.</li>
+				<li>You have blindsight out to 10 feet.</li>
+			</ul>
+			<p class="indent"><b><i>At higher levels.</i></b> When you cast this spell using a spell slot of 5th level or higher, the damage dealt by your draconic exhalation increases by 1d10 for each slot level above 4th.</p>
+		</description>
+		<setters>
+			<set name="keywords">acid, cold, fire, lightning, poison</set>
+			<set name="level">5</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, 1 minute</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a single dragon scale</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Spell Taxation" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SPELL_TAXATION">
+		<supports>Bard, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You weave a spell of magical taxation over a creature you can see within 90 feet. The target makes an Intelligence saving throw, taking 3d10 psychic damage on a failed save or half as much on a success. A creature who fails the save is also cursed for the duration of this spell. While cursed, any time it casts a spell using a spell slot while you are within 90 feet of it, it takes a further 1d10 psychic damage, and you regain one spent spell slot of your choice of a level up to half of the level of the spell slot they expended (rounded down).</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic, curse</set>
+			<set name="level">3</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a scroll of indecipherable, magical legalese</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Creeping Exhaustion" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_CREEPING_EXHAUSTION">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>Undulating tendrils of smoke spiral from your outstretched palm towards a creature you can see within 60 feet. The target must succeed on a Constitution saving throw or be wracked with a curse of lethargy. For the duration, a cursed creature must choose whether it moves, takes an action, or takes a bonus action on each of its turns; it can only perform one of the three without penalty. If the creature performs more than one of the three on a single turn, it takes a point of exhaustion for each one beyond the first. When this spell ends, any levels of exhaustion it caused go away as the curse lifts.</p>
+		</description>
+		<setters>
+			<set name="keywords">curse</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a fistful of butter</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Time Inversion" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_TIME_INVERSION">
+		<supports>Bard, Sorcerer, Wizard</supports>
+		<description>
+			<p>You attempt to subtly subvert the flow of time in your immediate area. At the end of initiative count 0 of this round, if you are concentrating on this spell, the spell ends and initiative order is reversed (creatures with lower initiative act before those with higher). This new initiative order continues for the rest of the encounter.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Divination</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 6 seconds</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pocket watch worth at least 100 gp</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Pillar of Salt" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_PILLAR_OF_SALT">
+		<supports>Cleric, Druid, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>When you cast this spell, you target a creature within 60 feet and magically forbid an Action or behaviour. For example, you might forbid the Attack action, Dodge action, the Magic action, or a behaviour such as telling a lie or donning a shield. The creature magically understands the forbidden Action or behaviour, even if it does not speak your language.</p>
+			<p class="indent">For the duration of the spell, if the target willingly performs the forbidden Action or behaviour under their own power, they must make a Constitution saving throw. On a successful save, they take 20d12 force damage. On a failed save, they are turned into a pillar of salt, dying instantly. A creature killed in this way can only be resurrected by the Wish spell.</p>
+			<p class="indent">The creature is exempt from punishment if the declared behaviour is necessary to prevent it from immediate harm. For example, a creature ordered not to move can move without penalty to avoid being crushed.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">9</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 8 hours</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of salt</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Focused Resilience" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FOCUSED_RESILIENCE">
+		<supports>Bard, Cleric, Sorcerer, Wizard</supports>
+		<description>
+			<p>You place two fingers to the temple of a willing creature that is concentrating on a spell and fortify its mind with magical resilience. For the next minute, that creature has advantage on concentration checks made to maintain concentration on that spell. This spell ends early if that creature loses concentration.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Sure Strike" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SURE_STRIKE">
+		<supports>Bard, Paladin, Ranger, Wizard</supports>
+		<description>
+			<p>A weapon or piece of ammunition you touch becomes blessed with dancing enchantment magic, infusing it with golden light and aiding it striking true. The next attack roll made with that weapon or piece of ammunition deals an additional 3d8 force damage on a hit, and scores a critical hit on a 19 or 20. After it has been used to make an attack, the weapon or ammunition returns to normal and this spell ends.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 2nd level or higher, the force damage increases by 2d8 for each slot level above 1st.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">1</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Wall of Necrosis" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_WALL_OF_NECROSIS">
+		<supports>Cleric, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You create a wall of shadow and corrosive necrotic energy on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 5 feet thick, or a circle up to 20 feet in diameter, 20 feet high, and 5 feet thick. The wall is pitch black, opaque, and lasts for the duration. Creatures and objects can move through the wall; it is composed entirely of magical energy. Creatures are blinded while within the wall.</p>
+			<p class="indent">Each creature within the wall when it appears, or who enters the wall for the first time on a turn or starts its turn there, must make a Constitution saving throw. On a failed save, a creature takes 5d12 necrotic damage and its speed falls to 0 until the end of its next turn. On a successful save, a creature talks half as much damage and its speed isn’t reduced.</p>
+			<p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d12 for each slot level above 5th.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, wall</set>
+			<set name="level">5</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">an imp fang</set>
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Regular Missile" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_REGULAR_MISSILE">
+		<supports>Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You conjure an ordinary, non-magical, theater ballistic missile. If you conjure it on the ground, it detonates immediately. If you conjure it in the air, it emits a piercing whistle and falls at a rate of 500 feet per round, detonating upon contact with the ground or another surface.</p>
+			<p class="indent">When the missile detonates, each creature and object in a 60-foot-radius sphere centered on the point of detonation takes 20d12 bludgeoning damage. Creatures within 250 feet of the detonation that can see it must make a Constitution saving throw. On a failed save, they are bpnded and deafened until the end of their next turn.</p>
+		</description>
+		<setters>
+			<set name="keywords">bludgeoning</set>
+			<set name="level">9</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">600 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Mental Mathematics" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_MENTAL_MATHEMATICS">
+		<supports>Bard, Wizard</supports>
+		<description>
+			<p>You babble a string of numbers at a creature within 30 feet of you that can hear you.</p>
+			<p class="indent">Start a 30 second timer.</p>
+			<p class="indent">Roll 1d4 and record the result. Roll a number of d4s equal to that result. Add those d4s together, and multiply that result by your Intelpgence modifier. Then subtract from this total the number you initially rolled on the d4, plus a number equal to the number of feet the target is away from you divided by 5. The target takes psychic damage equal to the final result.</p>
+			<p class="indent">If the timer runs out before you complete the calculations for this spell, or you perform the calculations with the aid of another person or digital tool, you take 1d6 psychic damage, the spell fails, and you do not expend the spell slot used to attempt its casting.</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Countercounterspell" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_COUNTERCOUNTERSPELL">
+		<supports>Bard, Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>You interrupt a creature in the process of casting counterspell. This spell cannot be countered by counterspell.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 reaction, which you take when you see a creature within 60 feet of you casting counterspell</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Dice Tower" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_DICE_TOWER">
+		<supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+		<description>
+			<p>Start a 30 second timer.</p>
+			<p class="indent">You have until the timer runs out to stack 1d4, 1d6, 1d8, 1d10, 1d12, and 1d20 on top of each other, in any order. The dice must start unstacked.</p>
+			<p class="indent">If the timer goes off with every dice stacked, unsupported by anything other than each other and the surface they are stacked on, you regain all your hit points. If you are charmed, frightened, paralyzed, or stunned, the condition ends. If you are prone, you can use your reaction to stand up.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">5</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Anti-Shield" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_ANTI_SHIELD">
+		<supports>Bard, Cleric, Druid, Warlock, Wizard</supports>
+		<description>
+			<p>When you make a melee weapon attack roll and miss, you can use a reaction to give yourself +5 to all melee weapon attack rolls you make against the target of that attack until the start of your next turn. This bonus applies to the triggering attack, potentially turning a miss into a hit.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 reaction, which you take when you miss a creature with a melee weapon attack roll</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Silvery Flowers" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_SILVERY_FLOWERS">
+		<supports>Bard, Sorcerer, Wizard</supports>
+		<description>
+			<p>You magically encourage the triggering creature and turn its momentary support into a distraction for another creature. The triggering creature can reroll the d20 and use the higher roll.</p>
+			<p class="indent">You can then choose a different creature you can see within range (you can choose yourself). The chosen creature has disadvantage on the next attack roll or ability check it makes within 1 minute. A creature can be disempowered by only one use of this spell at a time.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 reaction, which you take when a creature you can see within 60 feet of yourself fails on an attack roll, an ability check, or a saving throw</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Mr. Stark, I Don’t Feel So Goodberry" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_MR_STARK_I_DONT_FEEL_SO_GOODBERRY">
+		<supports>Druid, Ranger, Wizard, Warlock, Sorcerer</supports>
+		<description>
+			<p>One berry appears in your hand, infused with deadly magic. It appears identical to an ordinary goodberry. A creature can use its action to eat the berry. Alternatively, you can attempt a melee attack roll using the berry (with which you are proficient) against an unwilling creature no more than one size larger than you to force the berry into its mouth, causing it to swallow it (this attack deals no damage). A creature that swallows the berry takes 10d6+40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.</p>
+		</description>
+		<setters>
+			<set name="keywords">force</set>
+			<set name="level">5</set>
+			<set name="school">Transmutation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">an ash leaf</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Unheaping Word" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_UNHEAPING_WORD">
+		<supports>Cleric, Druid</supports>
+		<description>
+			<p>Start a 1 hour timer.</p>
+			<p class="indent">Name a word. For the duration of this spell, anytime a player says that word, they lose one hit point. If the GM says the word, one creature currently under their control loses one hit point (if possible).</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 hour (real time)</set>
+			<set name="range">Meta</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+
+	<element name="Fly (Not that Fly)" type="Spell" source="DM Secret Weapons" id="ID_DMSW_SPELL_FLY_NOT_THAT_FLY">
+		<supports>Druid, Wizard</supports>
+		<description>
+			<p>Conjure one ordinary fly in a space you can see within range. It does not obey your commands.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">0</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a small pot of jam</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+</elements>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Avestrosian Gnome</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-avestrosian-gnome.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-avestrosian-gnome.xml" />
+		</update>
+	</info>
+
+	<element name="Avestrosian Gnome" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_AVESTROSIAN_GNOME">
+		<description>
+			<p>There are few species as wily and bafflingly resilient as the gnome. No matter the form they take (and across the infinite worlds of the multiverse, they take every form imaginable), gnomes exist and flourish in spite of their surroundings. In Avestros, there are two primary types - Shadow and Frost. Each share the immutable gnomish trait of fortitude, although it manifests differently in this world to how it is known to manifest in others.</p>
+			<p>Frost gnomes live in the icy south of the continent, able to survive the harsh conditions through a combination of iron tenacity and innate elemental magic. These gnomes operate in enormous groups— thousands of individuals living, working, and moving together. Amongst their kin, there is little concept of personal space, property, or private family. Every gnome elder sees every child as their responsibility; every frost gnome is kin to be loved and cared for. Interestingly, this often leaves frost gnomes hazy on parentage and direct relations. Bloodlines and other such concerns mean little-to-nothing. To frost gnomes, every other frost gnome is family.</p>
+			<p>Shadow gnomes are the most populous species of the Soul Mountains, though you could travel those vertant peaks for years and never see one. In actuality, the real marvel of Soul is the brilliant network of tunnels that twist and burrow beneath the surface, the domain of the shadow gnomes. Well adapted to live in the dark, shadow gnomes live almost entirely in tight, family units. Upon falling in love, two gnomes will descend into the labyrinthine passages below Soul and live out a quiet life together in perpetual darkness. If blessed with children, the pair will return to the surface to raise them, before retreating once again into the solitude of the mountain’s depths and each other’s company. Few shadow gnomes leave Soul, and most who do plan upon sating their thirst for adventure to one day return to the gentle mountain with a true partner to treasure in isolation for their remaining tranquil years.</p>
+			<h4>GNOME TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Gnomes mature at the same rate humans do. They can live for up to five centuries.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Gnomes are small, even relative to other species of short stature. Fully grown, they can reach up to 3 feet tall. Your size is Small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Gnomish Fortitude.</em></strong> You have advantage on all Strength, Dexterity, and Constitution saving throws.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.</p>
+			<p class="indent"><strong><em>Gnomish Lineage.</em></strong> Choose one of the following gnomish lineages.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Base Gnome Traits -->
+			<stat name="intelligence" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Avestrosian Gnome)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AVESTROSIAN_GNOME_GNOMISH_FORTITUDE" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Avestrosian Gnome)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Gnomish Lineage" supports="Avestrosian Gnome" />
+		</rules>
+	</element>
+
+	<element name="Gnomish Fortitude" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AVESTROSIAN_GNOME_GNOMISH_FORTITUDE">
+		<description>
+			<p>You have advantage on all Strength, Dexterity, and Constitution saving throws.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on all Strength, Dexterity, and Constitution saving throws.</description>
+		</sheet>
+	</element>
+
+	<!-- Frost Gnome Subrace -->
+	<element name="Frost Gnome" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_FROST_GNOME">
+		<supports>Avestrosian Gnome</supports>
+		<description>
+			<p>You resist cold damage. In addition, whenever you cast a spell that deals acid, fire, lightning, or poison damage, you can change the damage type of that spell to cold. You know the fire bolt cantrip. In addition, you always have the Burning Hands spell prepared and can cast it without a spell slot a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest. You can also use any spell slots you have to cast the spell. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait.</p>
+		</description>
+		<sheet>
+			<description>When you cast a spell that deals acid, fire, lightning, or poison damage, you can change it to cold. &#13;
+				You know Fire Bolt and have Burning Hands prepared (cast {{proficiency}} times/long rest without a slot). Your spellcasting ability is {{spellcasting:frost-gnome}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<grant type="Spell" id="ID_PHB_SPELL_FIRE_BOLT" />
+			<grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" />
+			<select type="Racial Trait" name="Spellcasting Ability (Frost Gnome)" supports="Frost Gnome Magic" />
+		</rules>
+	</element>
+	<element name="Frost Gnome Magic (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FROST_GNOME_MAGIC_INT">
+		<supports>Frost Gnome Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:frost-gnome" value="Intelligence" inline="true"/>
+        </rules>
+	</element>
+	<element name="Frost Gnome Magic (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FROST_GNOME_MAGIC_WIS">
+		<supports>Frost Gnome Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:frost-gnome" value="Wisdom" inline="true"/>
+        </rules>
+	</element>
+	<element name="Frost Gnome Magic (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FROST_GNOME_MAGIC_CHA">
+		<supports>Frost Gnome Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:frost-gnome" value="Charisma" inline="true"/>
+        </rules>
+	</element>
+
+	<!-- Shadow Gnome Subrace -->
+	<element name="Shadow Gnome" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SHADOW_GNOME">
+		<supports>Avestrosian Gnome</supports>
+		<description>
+			<p>The range of your darkvision increases to 120 feet, and you can take the Hide action while only lightly obscured by dim light or shadow. You know the minor illusion cantrip. In addition, you always have the Pass without Trace spell prepared and can cast it without a spell slot once per long rest. You can also use any spell slots you have to cast the spell. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait.</p>
+		</description>
+		<sheet>
+			<description>Your darkvision is 120ft. You can Hide when lightly obscured by dim light/shadow. You know Minor Illusion and have Pass without Trace prepared (cast 1/long rest without a slot). Your spellcasting ability is {{spellcasting:shadow-gnome}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
+			<grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_PHB_SPELL_PASS_WITHOUT_TRACE" />
+			<select type="Racial Trait" name="Spellcasting Ability (Shadow Gnome)" supports="Shadow Gnome Magic" />
+		</rules>
+	</element>
+	<element name="Shadow Gnome Magic (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SHADOW_GNOME_MAGIC_INT">
+		<supports>Shadow Gnome Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:shadow-gnome" value="Intelligence" inline="true"/>
+        </rules>
+	</element>
+	<element name="Shadow Gnome Magic (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SHADOW_GNOME_MAGIC_WIS">
+		<supports>Shadow Gnome Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:shadow-gnome" value="Wisdom" inline="true"/>
+        </rules>
+	</element>
+	<element name="Shadow Gnome Magic (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SHADOW_GNOME_MAGIC_CHA">
+		<supports>Shadow Gnome Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:shadow-gnome" value="Charisma" inline="true"/>
+        </rules>
+	</element>
+</elements>

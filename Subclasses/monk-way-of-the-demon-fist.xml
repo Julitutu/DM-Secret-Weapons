@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Monk - Way of the Demon Fist</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="monk-way-of-the-demon-fist.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/monk-way-of-the-demon-fist.xml" />
+		</update>
+	</info>
+
+	<element name="Way of the Demon Fist" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_MONK_WAY_OF_THE_DEMON_FIST">
+		<supports>Monastic Tradition</supports>
+		<description>
+			<p>Monks of the Way of the Demon Fist train ferociously in the art of martial combat. They learn ruthless techniques to grievously wound, incapacitate, or kill their enemies with blinding speed, harnessing their ki as a deadly weapon to bolster their power or devastate their foe.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_THE_HIDDEN_DEMON_TECHNIQUE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FEROCIOUS_STRIKE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FIGHTING_SPIRIT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FURY_OF_THE_DEMON" />
+		</description>
+		<sheet display="false">
+			<description>Monks of the Way of the Demon Fist train ferociously in the art of martial combat.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_THE_HIDDEN_DEMON_TECHNIQUE" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FEROCIOUS_STRIKE" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FIGHTING_SPIRIT" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FURY_OF_THE_DEMON" level="17" />
+		</rules>
+	</element>
+	<element name="The Hidden Demon Technique" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_THE_HIDDEN_DEMON_TECHNIQUE">
+		<description>
+			<p>Starting when you choose this tradition at 3rd level, you can manipulate the flow of your ki to duplicate the effects of certain spells, cursing an enemy or empowering yourself.</p>
+			<p class="indent">As an action, you can spend 2 ki points to cast Hold Person, Blur, Alter Self, or Blindness/Deafness at their lowest level without providing material components.</p>
+			<p class="indent">Additionally, you gain the Thaumaturgy cantrip if you don’t already have it.</p>
+		</description>
+		<sheet action="Action">
+			<description>As an action, you can spend 2 ki points to cast Hold Person, Blur, Alter Self, or Blindness/Deafness at their lowest level without providing material components. Additionally, you gain the Thaumaturgy cantrip if you don’t already have it.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_PERSON" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLUR" />
+			<grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLINDNESS_DEAFNESS" />
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" />
+		</rules>
+	</element>
+	<element name="Ferocious Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FEROCIOUS_STRIKE">
+		<description>
+			<p>At 6th level, your strikes become brutal, targeting pressure points, aiming to grievously wound or kill. You score a critical hit on a 19 or a 20, and any creature you strike with a melee attack can’t regain hit points until the start of your next turn.</p>
+		</description>
+		<sheet>
+			<description>You score a critical hit on a 19 or a 20, and any creature you strike with a melee attack can’t regain hit points until the start of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Fighting Spirit" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FIGHTING_SPIRIT">
+		<description>
+			<p>By 11th level, your fighting spirit has become so intense that pain only fuels your frenzy. When you take damage, you can use your reaction to instantly make two unarmed strikes against any creature within 5ft of you.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When you take damage, you can use your reaction to instantly make two unarmed strikes against any creature within 5ft of you.</description>
+		</sheet>
+	</element>
+	<element name="Fury of the Demon" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEMON_FIST_FURY_OF_THE_DEMON">
+		<description>
+			<p>At 17th level, you gain the ability to devastate a foe by swiftly striking at multiple pressure points. If you hit the same creature with four or more melee attacks in one turn, at the end of that turn, that creature takes an additional 8d10 force damage and falls prone.</p>
+		</description>
+		<sheet>
+			<description>If you hit the same creature with four or more melee attacks in one turn, at the end of that turn, that creature takes an additional 8d10 force damage and falls prone.</description>
+		</sheet>
+	</element>
+</elements>

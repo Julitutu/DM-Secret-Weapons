@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cleric - Plague Doctor</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="cleric-plague-doctor.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/cleric-plague-doctor.xml" />
+		</update>
+	</info>
+
+	<element name="Plague Doctor" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_CLERIC_PLAGUE_DOCTOR">
+		<supports>Divine Domain</supports>
+		<description>
+			<p>The pulse of life beats fast in dark, winding city streets all across Avestros. Millions of lives crammed into ramshackle homes and united in poverty— the city is a breeding ground for desperation and disease. However, in some districts, there are streets where none fall ill— areas of respite where the plague doctors operate.</p>
+			<p class="indent">These holy physicians are masters of medicine, running clinics across the nation that save countless lives. Some roam, following the grim footsteps of plague and curing those afflicted in its wake, others are conscripted in the nation’s army, combating the infection and sickness that runs deadly in war. Many also work as midwives, educators, and city planners.</p>
+			<p class="indent">They use their divine powers to combat the invisible, bacterial horrors of the world, with gods such as Asclepius, Dian Cécht, Sekhmet, Serket, and Eir common among those worshiped by such clerics.</p>
+			<p class="indent">Although loved and respected for their great powers of healing, many are wary of the plague doctors, for one with the power to battle necrosis and poison also has the power to wield it.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_DOMAIN_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_PLAGUE_MEDIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_HUMOR_MANIPULATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_CHANNEL_DIVINITY_AURA_OF_PURIFICATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_PSYCHOSOMATIC_ASSAULT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_DIVINE_STRIKE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_AURA_OF_PUTREFACTION" />
+		</description>
+		<sheet display="false">
+			<description>These holy physicians are masters of medicine, running clinics across the nation that save countless lives.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_DOMAIN_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_PLAGUE_MEDIC" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_HUMOR_MANIPULATION" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_CHANNEL_DIVINITY_AURA_OF_PURIFICATION" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_PSYCHOSOMATIC_ASSAULT" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_DIVINE_STRIKE" level="8" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_AURA_OF_PUTREFACTION" level="17" />
+		</rules>
+	</element>
+	<element name="Domain Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_DOMAIN_SPELLS">
+		<description>
+			<p>You gain domain spells at the cleric levels listed in the Plague Doctor Spells table. See the Divine Domain class feature for how domain spells work.</p>
+			<h5>Plague Doctor Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>detect poison and disease, hex</i></td></tr>
+				<tr><td>3rd</td><td><i>blindness/deafness, spider climb</i></td></tr>
+				<tr><td>5th</td><td><i>gaseous form, stinking cloud</i></td></tr>
+				<tr><td>7th</td><td><i>confusion, death ward</i></td></tr>
+				<tr><td>9th</td><td><i>cloudkill, reincarnate</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DETECT_POISON_AND_DISEASE" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEX" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLINDNESS_DEAFNESS" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIDER_CLIMB" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GASEOUS_FORM" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_STINKING_CLOUD" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONFUSION" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CLOUDKILL" level="9" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_REINCARNATE" level="9" spellcasting="Cleric" prepared="true" />
+		</rules>
+	</element>
+	<element name="Plague Medic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_PLAGUE_MEDIC">
+		<description>
+			<p>You have proficiency with martial weapons and in the Medicine skill, and you have resistance to poison damage and advantage on saving throws to avoid or end the poisoned condition.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws to avoid or end the poisoned condition.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+	<element name="Humor Manipulation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_HUMOR_MANIPULATION">
+		<description>
+			<p>Your magic can manipulate the humors of the body, causing healing or harm. Once on your turn, you can use one of the following effects:</p>
+			<p class="indent"><b>Respite.</b> When you cast a spell or use an item that restores hit points to one or more creatures, choose one target of that spell or item. That creature is also cured of one of the following conditions: blinded, charmed, deafened, or poisoned.</p>
+			<p class="indent"><b>Necrosis.</b> When you damage one or more creatures with a levelled spell or weapon attack, choose one creature damaged by that spell or attack. That creature takes an additional 1d4 necrotic damage and must succeed on a Constitution saving throw or become poisoned until the end of its next turn. The damage dealt by this feature increases by 1d4 at levels 5 (2d4), 11 (3d4), and 17 (4d4).</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>You can use one of the following effects:&#13;
+			• Respite. When you cast a spell or use an item that restores hit points to one or more creatures, choose one target of that spell or item. That creature is also cured of one of the following conditions: blinded, charmed, deafened, or poisoned.&#13;
+			• Necrosis. When you damage one or more creatures with a levelled spell or weapon attack, choose one creature damaged by that spell or attack. That creature takes an additional {{humor manipulation:damage}}d4 necrotic damage and must succeed on a DC {{cleric:spellcasting:dc}} Constitution saving throw or become poisoned until the end of its next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="humor manipulation:damage" value="1" />
+			<stat name="humor manipulation:damage" value="1" level="5" />
+			<stat name="humor manipulation:damage" value="1" level="11" />
+			<stat name="humor manipulation:damage" value="1" level="17" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Aura of Purification" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_CHANNEL_DIVINITY_AURA_OF_PURIFICATION">
+		<supports>Channel Divinity</supports>
+		<description>
+			<p>You can use your Channel Divinity to create a sanctuary of purity and asepsis for those you choose.</p>
+			<p class="indent">As a bonus action, you present your holy symbol, and a sphere of cool, blue light emanates from you. The sphere is centered on you, has a 30-foot radius, and shines dim light. The sphere moves with you, and it lasts for 1 minute or until you are incapacitated or die. Creatures of your choice in the sphere gain the following benefits:</p>
+			<ul>
+				<li>It has immunity to poison damage and the poisoned condition.</li>
+				<li>If it is suffering from a nonmagical illness, the symptoms of that illness are repressed.</li>
+				<li>It can add 1d6 to saving throws made to resist or end the blinded, charmed, deafened, paralyzed, and stunned conditions.</li>
+			</ul>
+		</description>
+		<sheet usage="Channel Divinity" action="Bonus Action">
+			<description>As a bonus action, you present your holy symbol, and a sphere of cool, blue light emanates from you. The sphere is centered on you, has a 30-foot radius, and shines dim light. The sphere moves with you, and it lasts for 1 minute or until you are incapacitated or die. Creatures of your choice in the sphere gain the following benefits:&#13;
+			• It has immunity to poison damage and the poisoned condition.&#13;
+			• If it is suffering from a nonmagical illness, the symptoms of that illness are repressed.&#13;
+			• It can add 1d6 to saving throws made to resist or end the blinded, charmed, deafened, paralyzed, and stunned conditions.</description>
+		</sheet>
+	</element>
+	<element name="Psychosomatic Assault" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_PSYCHOSOMATIC_ASSAULT">
+		<description>
+			<p>When you use the necrosis effect of your Humor Manipulation feature, you can also expend a spell slot. Instead of making a Constitution saving throw to resist the poisoned condition, the target of your necrosis effect must succeed on a Wisdom saving throw or suffer one of the following effects until the end of its next turn, depending on the level of the spell slot you expend:</p>
+			<h5>Psychosomatic Assault table</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Slot Level</td><td>Condition</td></tr>
+				</thead>
+				<tr><td>1st</td><td>frightened</td></tr>
+				<tr><td>2nd</td><td>blinded and deafened</td></tr>
+				<tr><td>3rd</td><td>charmed</td></tr>
+				<tr><td>4th</td><td>stunned</td></tr>
+				<tr><td>5th</td><td>paralysed</td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description>When you use the necrosis effect of your Humor Manipulation feature, you can also expend a spell slot. Instead of making a Constitution saving throw to resist the poisoned condition, the target of your necrosis effect must succeed on a DC {{cleric:spellcasting:dc}} Wisdom saving throw or suffer one of the following effects until the end of its next turn, depending on the level of the spell slot you expend:&#13;
+			• 1st: frightened&#13;
+			• 2nd: blinded and deafened&#13;
+			• 3rd: charmed&#13;
+			• 4th: stunned&#13;
+			• 5th: paralysed</description>
+		</sheet>
+	</element>
+	<element name="Divine Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_DIVINE_STRIKE">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_CLERIC_DIVINE_STRIKE_OR_POTENT_SPELLCASTING</requirements>
+		<description>
+			<p>You gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target.</description>
+			<description level="14">Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 2d8 radiant damage to the target.</description>
+		</sheet>
+	</element>
+	<element name="Aura of Putrefaction" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PLAGUE_DOCTOR_AURA_OF_PUTREFACTION">
+		<description>
+			<p>When you use your Aura of Purification Channel Divinity, you choose to radiate a potent, magical toxin. Creatures that start their turn in the sphere take 5d8 poison damage.</p>
+		</description>
+		<sheet>
+			<description>When you use your Aura of Purification Channel Divinity, you choose to radiate a potent, magical toxin. Creatures that start their turn in the sphere take 5d8 poison damage.</description>
+		</sheet>
+	</element>
+</elements>

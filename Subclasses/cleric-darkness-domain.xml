@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cleric - Darkness Domain</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="cleric-darkness-domain.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/cleric-darkness-domain.xml" />
+		</update>
+	</info>
+
+	<element name="Darkness Domain" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_CLERIC_DARKNESS_DOMAIN">
+		<supports>Divine Domain</supports>
+		<description>
+			<p>It is curious how often the laws of the physical world parallel those of the magical. Just as every action has its equal and opposite force, so too does every faith, every god, every instance of magic. Clerics who serve deities of darkness represent the balance to those who worship the gods of light. While others see darkness as terrifying - a blinding shadow of death and nothingness, clerics of this domain see darkness as the truest form of the universe. Once, all things were darkness. One day, they will be again.</p>
+			<p class="indent">Such clerics have a saying: “even followers of the brightest light cast shadows”. They often reject the rigid dogma of traditional religious orders, seeing them as inflexible and open to corruption. Typically, clerics of this domain are neutral and chaotic-good in alignment, and almost never lawful. They are at home in the darkness and do not fear it, though they respect its power. They seek to protect allies from the great terrors that dwell in the shadows, and weild its horror as a weapon against foes.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_PRIEST_OF_DARKNESS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_ALLY_OF_SHADOW" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_CHANNEL_DIVINITY_AURA_OF_DARKNESS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_DOMAIN_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_BLESSING_OF_THE_SHADOWS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_DIVINE_STRIKE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_ENDLESS_DARKNESS" />
+		</description>
+		<sheet display="false">
+			<description>Clerics who serve deities of darkness represent the balance to those who worship the gods of light.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_PRIEST_OF_DARKNESS" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_ALLY_OF_SHADOW" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_CHANNEL_DIVINITY_AURA_OF_DARKNESS" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_DOMAIN_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_BLESSING_OF_THE_SHADOWS" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_DIVINE_STRIKE" level="8" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_ENDLESS_DARKNESS" level="17" />
+		</rules>
+	</element>
+	<element name="Priest of Darkness" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_PRIEST_OF_DARKNESS">
+		<description>
+			<p>You gain proficiency with martial weapons and heavy armour. Additionally, you gain darkvision out to a range of 30 feet. If you already have darkvision, its range increases by 30 feet.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain proficiency with martial weapons and heavy armour. Additionally, you gain darkvision out to a range of 30 feet. If you already have darkvision, its range increases by 30 feet.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+			<stat name="darkvision:range" value="30" />
+		</rules>
+	</element>
+	<element name="Ally of Shadow" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_ALLY_OF_SHADOW">
+		<description>
+			<p>You resist bludgeoning, slashing, and piercing damage from nonmagical, nonsilvered weapons while in darkness. When you start your turn in darkness, your movement speed increases by 10 feet until the end of that turn.</p>
+		</description>
+		<sheet>
+			<description>You resist bludgeoning, slashing, and piercing damage from nonmagical, nonsilvered weapons while in darkness. When you start your turn in darkness, your movement speed increases by 10 feet until the end of that turn.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Aura of Darkness" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_CHANNEL_DIVINITY_AURA_OF_DARKNESS">
+		<supports>Channel Divinity</supports>
+		<description>
+			<p>You can use your Channel Divinity to cast the spell darkness without expending a spell slot and without material components. When you cast it in this way, it does not require concentration and lasts for the full duration or until you choose to end it as a bonus action. Additionally, the point you choose for the darkness to emenate from must be an object you are wearing or carrying, and you can see through the magical darkness created by this effect.</p>
+			<p class="indent">On the turn you use this Channel Divinity, you can cast one Cleric cantrip or make a single weapon attack as a bonus action.</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Action">
+			<description>As an action, you can cast the spell darkness without expending a spell slot and without material components. When you cast it in this way, it does not require concentration and lasts for the full duration or until you choose to end it as a bonus action. Additionally, the point you choose for the darkness to emenate from must be an object you are wearing or carrying, and you can see through the magical darkness created by this effect.&#13;
+			On the turn you use this Channel Divinity, you can cast one Cleric cantrip or make a single weapon attack as a bonus action.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" />
+		</rules>
+	</element>
+	<element name="Domain Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_DOMAIN_SPELLS">
+		<description>
+			<p>You gain domain spells at the cleric levels listed in the Darkness Domain Spells table. See the Divine Domain class feature for how domain spells work.</p>
+			<h5>Darkness Domain Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>disguise self, sleep</i></td></tr>
+				<tr><td>3rd</td><td><i>darkness, moonbeam</i></td></tr>
+				<tr><td>5th</td><td><i>fear, nondetection</i></td></tr>
+				<tr><td>7th</td><td><i>confusion, phantasmal killer</i></td></tr>
+				<tr><td>9th</td><td><i>antilife shell, modify memory</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SLEEP" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MOONBEAM" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FEAR" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_NONDETECTION" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONFUSION" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_PHANTASMAL_KILLER" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ANTILIFE_SHELL" level="9" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MODIFY_MEMORY" level="9" spellcasting="Cleric" prepared="true" />
+		</rules>
+	</element>
+	<element name="Blessing of the Shadows" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_BLESSING_OF_THE_SHADOWS">
+		<description>
+			<p>If you cast a spell with a spell slot of 1st level or higher that targets a creature, you can infuse an additional fragment of divine power into that spell. Choose one bonus effect from the following list to add to that spell’s effect as you cast it:</p>
+			<ul>
+				<li>The target can see normally in darkness, both magical and nonmagical, to a range of 30 feet for the next minute.</li>
+				<li>The target gains a resistance to radiant and necrotic damage for the next minute.</li>
+				<li>The target takes 1d8 necrotic damage. This damage increases to 2d8 when you reach 10th level.</li>
+			</ul>
+			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of 1). You regain one expended use when you finish a Short Rest, and regain all expended uses when you finish a Long Rest. If the spell targets multiple creatures, you can choose any number of them to affect, expending a use of this ability for each one.</p>
+		</description>
+		<sheet usage="{{blessing of the shadows:uses}}/Long Rest">
+			<description>If you cast a spell with a spell slot of 1st level or higher that targets a creature, you can infuse an additional fragment of divine power into that spell. Choose one bonus effect from the following list to add to that spell’s effect as you cast it:&#13;
+			• The target can see normally in darkness, both magical and nonmagical, to a range of 30 feet for the next minute.&#13;
+			• The target gains a resistance to radiant and necrotic damage for the next minute.&#13;
+			• The target takes {{blessing of the shadows:damage}}d8 necrotic damage.&#13;
+			You regain one expended use when you finish a Short Rest, and regain all expended uses when you finish a Long Rest. If the spell targets multiple creatures, you can choose any number of them to affect, expending a use of this ability for each one.</description>
+		</sheet>
+		<rules>
+			<stat name="blessing of the shadows:uses" value="1" bonus="base" />
+			<stat name="blessing of the shadows:uses" value="wisdom:modifier" bonus="base" />
+			<stat name="blessing of the shadows:damage" value="1" />
+			<stat name="blessing of the shadows:damage" value="1" level="10" />
+		</rules>
+	</element>
+	<element name="Divine Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_DIVINE_STRIKE">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_CLERIC_DIVINE_STRIKE_OR_POTENT_SPELLCASTING</requirements>
+		<description>
+			<p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target. When you reach 14th level, the extra damage increases to 2d8.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target.</description>
+			<description level="14">Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 2d8 psychic damage to the target.</description>
+		</sheet>
+	</element>
+	<element name="Endless Darkness" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DARKNESS_DOMAIN_ENDLESS_DARKNESS">
+		<description>
+			<p>When you cast the spell darkness it doesn’t require concentration and its radius increases to 30 feet. Additionally, allied creatures within magical darkness that you create share your damage resistances.</p>
+		</description>
+		<sheet>
+			<description>When you cast the spell darkness it doesn’t require concentration and its radius increases to 30 feet. Additionally, allied creatures within magical darkness that you create share your damage resistances.</description>
+		</sheet>
+	</element>
+</elements>

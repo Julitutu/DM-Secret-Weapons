@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Chiropine</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-chiropine.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-chiropine.xml" />
+		</update>
+	</info>
+
+	<element name="Chiropine" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CHIROPINE">
+		<description>
+			<p>Chiropine are among the newest known races, emerging in the material world after the Great Convergence synchronised several overlapping planes. As such, their unique customs and “quirky” behaviour are regarded with interest and bemusement by many. Of course, the chiropine view other races as “quirky” instead, their own society having no interest in conquest, wealth, or territorial expansion. They operate at night if possible, relying on echolocation to get by in the dark, and have a preferred diet of fruit, devoting large swathes of land to its production.</p>
+			<p>Chiropine are also known for vivacious explosions of energy—few creatures are as fast, on land or air, as a spriting chiropine.</p>
+			<h4>CHIROPINE TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 2, and your Dexterity score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Chiropine grow rapidly, reaching adulthood at around 12. They typically live up to 80 years old.</p>
+			<p class="indent"><strong><em>Size.</em></strong> You are Medium or Small. Chiropine sizes vary greatly, even within the same family.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet, and you have a fly speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Chiropine Vigor.</em></strong> If you take the Dash action on your turn, you can use your bonus action on that turn to make a single weapon attack or take the Dash, Dodge, or Disengage action. You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses upon finishing a long rest. If you have no uses remaining you can still use this trait, but you gain one level of exhaustion at the end of the turn.</p>
+			<p class="indent"><strong><em>Echolocation.</em></strong> As a bonus action, you can let loose an ultrasonic shriek and listen to the echo. Doing so allows you to identify your immediate surroundings for a moment. You have blindsight out to 10 feet until the end of this turn, as long as you are not deafened.</p>
+			<p class="indent"><strong><em>Sensitive Sight.</em></strong> You have disadvantage on Perception checks while in direct sunlight.</p>
+			<p class="indent"><strong><em>Ultrasonic.</em></strong> You can produce and hear sound waves with a frequency above the upper limit of typical Humanoid hearing. You can hear creatures that produce ultrasonic sounds, and communicate simple signals to such creatures at a frequency undetectable to most Humanoids. Your ultrasonic vocalisations are crude, and cannot form words or the verbal components of spells.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common, and one other language that you and your GM agree is appropriate for your character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="wisdom" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Chiropine)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Chiropine)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Chiropine)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:fly" value="30" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Chiropine)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_CHIROPINE_VIGOR" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_ECHOLOCATION" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_SENSITIVE_SIGHT" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_ULTRASONIC" />
+		</rules>
+	</element>
+
+	<element name="Chiropine Vigor" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_CHIROPINE_VIGOR">
+		<description>
+			<p>If you take the Dash action on your turn, you can use your bonus action on that turn to make a single weapon attack or take the Dash, Dodge, or Disengage action. You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses upon finishing a long rest. If you have no uses remaining you can still use this trait, but you gain one level of exhaustion at the end of the turn.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>If you take the Dash action, you can use your bonus action to make one weapon attack or to Dash, Dodge, or Disengage. If you have no uses left, you can still use this but gain one level of exhaustion.</description>
+		</sheet>
+	</element>
+	<element name="Echolocation" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_ECHOLOCATION">
+		<description>
+			<p>As a bonus action, you can let loose an ultrasonic shriek and listen to the echo. Doing so allows you to identify your immediate surroundings for a moment. You have blindsight out to 10 feet until the end of this turn, as long as you are not deafened.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>You can gain blindsight out to 10 feet until the end of your turn.</description>
+		</sheet>
+	</element>
+	<element name="Sensitive Sight" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_SENSITIVE_SIGHT">
+		<description>
+			<p>You have disadvantage on Perception checks while in direct sunlight.</p>
+		</description>
+		<sheet>
+			<description>You have disadvantage on Perception checks while in direct sunlight.</description>
+		</sheet>
+	</element>
+	<element name="Ultrasonic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHIROPINE_ULTRASONIC">
+		<description>
+			<p>You can produce and hear sound waves with a frequency above the upper limit of typical Humanoid hearing. You can hear creatures that produce ultrasonic sounds, and communicate simple signals to such creatures at a frequency undetectable to most Humanoids. Your ultrasonic vocalisations are crude, and cannot form words or the verbal components of spells.</p>
+		</description>
+		<sheet>
+			<description>You can produce and hear ultrasonic frequencies, allowing simple communication with creatures that do the same.</description>
+		</sheet>
+	</element>
+</elements>

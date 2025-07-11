@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wizard - School of Reverberation</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="wizard-school-of-reverberation.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/wizard-school-of-reverberation.xml" />
+		</update>
+	</info>
+
+	<element name="School of Reverberation" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WIZARD_SCHOOL_OF_REVERBERATION">
+		<supports>Arcane Tradition</supports>
+		<description>
+			<p>Wizards of the School of Reverberation are masters of sound, echo, and vibration magic, commanding oscillating pulses of magical force to produce devastating effects. From calamitous booming shockwaves, to gentle whispers that grow to a furious hurricane, their spells echo across time, rebounding on their targets for brutal damage.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_CACOPHONOUS_SAVANT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_REVERBERANT_ECHO" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_TUNE_UP" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_TREMOR_RESONANCE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_POWER_WORD_MASTERY" />
+		</description>
+		<sheet display="false">
+			<description>Wizards of the School of Reverberation are masters of sound, echo, and vibration magic, commanding oscillating pulses of magical force to produce devastating effects.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_CACOPHONOUS_SAVANT" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_REVERBERANT_ECHO" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_TUNE_UP" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_TREMOR_RESONANCE" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_POWER_WORD_MASTERY" level="14" />
+		</rules>
+	</element>
+	<element name="Cacophonous Savant" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_CACOPHONOUS_SAVANT">
+		<description>
+			<p>When you select this school at 2nd level, you gain a resistance to Thunder damage. Any time and gold you spend to copy a spell that deals Thunder damage or causes the Deafened condition into your spellbook is halved.</p>
+		</description>
+		<sheet>
+			<description>Any time and gold you spend to copy a spell that deals Thunder damage or causes the Deafened condition into your spellbook is halved.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" />
+		</rules>
+	</element>
+	<element name="Reverberant Echo" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_REVERBERANT_ECHO">
+		<description>
+			<p>From 2nd level, when you cast a non-concentration, levelled spell that deals damage, you can overcharge it with reverberant magic, creating a spell echo.</p>
+			<p class="indent">The echo lasts for a number of rounds equal to 1+ the spell’s level, or until you lose concentration (as if concentrating on a spell). While it is active, the sound of the spell can be heard bouncing and shimmering in the air.</p>
+			<p class="indent">As a bonus action on each of your turns, you can choose one creature within 60 feet and unleash the force of the echoed spell upon them. The target makes a constitution saving throw. Roll a number of d8s equal to the level of the echoed spell. The target takes that much damage of the spell’s damage type, or half as much on a successful save.</p>
+			<p class="indent">You can create a spell echo in this way a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>When you cast a non-concentration, levelled spell that deals damage, you can create a spell echo. The echo lasts for a number of rounds equal to 1+ the spell’s level, or until you lose concentration. &#13;
+				As a bonus action on each of your turns, you can choose one creature within 60 feet and unleash the force of the echoed spell upon them. The target must make a DC {{wizard:spellcasting:dc}} Constitution saving throw. Roll a number of d8s equal to the level of the echoed spell. The target takes that much damage of the spell’s damage type, or half as much on a successful save.</description>
+		</sheet>
+	</element>
+	<element name="Tune Up" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_TUNE_UP">
+		<description>
+			<p>Starting at 6th level, you gain the power to synchronise your own magical energy with the area around you. By focusing for 10 minutes, you gain one of the following benefits:</p>
+			<ul>
+				<li>You gain the benefits of a short rest.</li>
+				<li>You have advantage on initiative rolls and perception checks that rely on sound for the next 4 hours.</li>
+				<li>You become acutely aware of the ripples of magic that resonate around this location. For the next 30 minutes, you can sense the presence of magic within 60 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any. This effect can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</li>
+			</ul>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>By focusing for 10 minutes, you gain one of the following benefits&#13;
+			• You gain the benefits of a short rest.&#13;
+			• You have advantage on initiative rolls and perception checks that rely on sound for the next 4 hours.&#13;
+			• You become acutely aware of the ripples of magic that resonate around this location. For the next 30 minutes, you can sense the presence of magic within 60 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.</description>
+		</sheet>
+	</element>
+	<element name="Tremor Resonance" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_TREMOR_RESONANCE">
+		<description>
+			<p>Starting at 10th level, you gain Tremorsense in a 30 foot radius.</p>
+			<p class="indent">In addition, you gain the power to channel magic through vibrations in materials. If you cast a spell with the range of touch, you can increase its range to target a creature or object within 30 feet, as long as both you and the target are touching the same surface.</p>
+		</description>
+		<sheet>
+			<description>If you cast a spell with the range of touch, you can increase its range to target a creature or object within 30 feet, as long as both you and the target are touching the same surface.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_TREMORSENSE" />
+			<stat name="tremorsense:range" value="30" />
+		</rules>
+	</element>
+	<element name="Power Word Mastery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_REVERBERATION_POWER_WORD_MASTERY">
+		<description>
+			<p>Starting at 14th level, your words echo with incredible power and force.</p>
+			<p class="indent">When you cast a spell with “Power Word” in its name, the hit point threshold required for that spell to affect a creature is increased by 50%. For example, when you cast Power Word Stun, it can affect a creature with 225 hit points or fewer.</p>
+			<p class="indent">In addition, you become immune to harmful “Power Word” spells and Thunder damage.</p>
+		</description>
+		<sheet>
+			<description>When you cast a spell with “Power Word” in its name, the hit point threshold required for that spell to affect a creature is increased by 50%. You become immune to harmful “Power Word” spells</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_THUNDER" />
+		</rules>
+	</element>
+</elements>

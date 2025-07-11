@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Feytroll</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-feytroll.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-feytroll.xml" />
+		</update>
+	</info>
+
+	<!-- Feytroll Race -->
+	<element name="Feytroll" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_FEYTROLL">
+		<description>
+			<p>Feytroll are a race of small, solitary creatures native to the forests of the material plane. Zealous collectors, most Feytroll adore shiny objects, regardless of their financial worth, and use them to decorate their nests and clothing. Usually fearful of larger creatures, Feytroll typically protect themselves with illusion magic, choosing to hide away rather than engage with other beings. Brave or curious Feytroll who seek to explore the world and socialise are not unheard of, however.</p>
+			<p>All Feytroll feel a deep connection with the sun and moon, with many choosing to actively worship the heavenly spheres. Names such as Solus, Dusk, Dawn, Luna, Fireborn, Brightborn, Wolfmoon, and Helios are common among Feytroll.</p>
+			<h4>FEYTROLL TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 2, and your Dexterity score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> New Feytroll are born from the earth after two fully matured Feytroll engage in a magical courtship ritual under the gentle glow of dawn’s first light, while both the sun and moon share the sky. They grow to adulthood over the course of 30 years, and then go on to live for several centuries.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Feytroll are around 3 feet tall and weigh between 50-60 pounds. Your size is small.</p>
+			<p class="indent"><strong><em>Fey.</em></strong> Your creature type is Fey, rather than humanoid.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30ft.</p>
+			<p class="indent"><strong><em>Woodland Being.</em></strong> You have proficiency in one of the following skills: Stealth, Animal Handling, or Nature.</p>
+			<p class="indent"><strong><em>Sunborn.</em></strong> You can spend 10 minutes bathing in the light of the sun. If you do, you gain the benefits of a short rest. Once you use this feature, you cannot do so again until you finish a long rest.</p>
+			<p class="indent"><strong><em>Moonborn.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern colour in darkness, only shades of grey.</p>
+			<p class="indent"><strong><em>Natural Illusionist.</em></strong> You know the Minor Illusion cantrip. Starting at 3rd level, you can cast the spell Disguise Self without components with this trait. Starting at 5th level, you can also cast the spell Invisibility without components with this trait. Once you cast Disguise Self or Invisibility with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Wisdom +2, Dexterity +1) -->
+			<stat name="wisdom" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (+2 and +1, or three +1's) -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Feytroll)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Feytroll)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size (Small) -->
+			<grant type="Size" id="ID_SIZE_SMALL" />
+
+			<!-- Fey Creature Type -->
+			<grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FEY" />
+
+			<!-- Speed (30 ft. walking) -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Woodland Being Skill Choice -->
+			<select type="Proficiency" name="Woodland Being" supports="ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_NATURE" />
+
+			<!-- Sunborn Trait -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_SUNBORN" />
+
+			<!-- Moonborn (Darkvision) -->
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<!-- Natural Illusionist Trait -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST" />
+		</rules>
+	</element>
+
+	<element name="Sunborn" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_SUNBORN">
+		<description>
+			<p>You can spend 10 minutes bathing in the light of the sun. If you do, you gain the benefits of a short rest. Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can spend 10 minutes bathing in sunlight to gain the benefits of a short rest.</description>
+		</sheet>
+	</element>
+	<element name="Natural Illusionist" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST">
+		<description>
+			<p>You know the Minor Illusion cantrip. Starting at 3rd level, you can cast the spell Disguise Self without components with this trait. Starting at 5th level, you can also cast the spell Invisibility without components with this trait. Once you cast Disguise Self or Invisibility with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description>You know the Minor Illusion cantrip. Your spellcasting ability for these spells is {{spellcasting:natural illusionist}}.&#13;
+			You can also cast Disguise Self and Invisibility using spell slots you have.</description>
+			<description level="3">You know the Minor Illusion cantrip. You can cast Disguise Self (no components) once per long rest. Your spellcasting ability for these spells is {{spellcasting:natural illusionist}}.&#13;
+			You can also cast Disguise Self and Invisibility using spell slots you have.</description>
+			<description level="5">You know the Minor Illusion cantrip. You can cast Disguise Self (no components) and Invisibility (no components) once per long rest each. Your spellcasting ability for these spells is {{spellcasting:natural illusionist}}.&#13;
+			You can also cast Disguise Self and Invisibility using spell slots you have.</description>
+		</sheet>
+		<rules>
+			<!-- Allows the player to choose their spellcasting ability for this trait -->
+            <select type="Racial Trait" name="Natural Illusionist" supports="Natural Illusionist" />
+			
+			<!-- Grants the spells at the appropriate levels -->
+			<grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+
+    <element name="Natural Illusionist (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST_INTELLIGENCE">
+		<supports>Natural Illusionist</supports>
+		<description>
+			<div element="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat inline="true" name="spellcasting:natural illusionist" value="Intelligence"/>
+		</rules>
+	</element>
+
+    <element name="Natural Illusionist (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST_WISDOM">
+		<supports>Natural Illusionist</supports>
+		<description>
+			<div element="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat inline="true" name="spellcasting:natural illusionist" value="Wisdom"/>
+		</rules>
+	</element>
+
+    <element name="Natural Illusionist (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST_CHARISMA">
+		<supports>Natural Illusionist</supports>
+		<description>
+			<div element="ID_DMSW_RACIAL_TRAIT_FEYTROLL_NATURAL_ILLUSIONIST" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat inline="true" name="spellcasting:natural illusionist" value="Charisma"/>
+		</rules>
+	</element>
+</elements>

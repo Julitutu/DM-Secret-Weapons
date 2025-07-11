@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Barbarian - Spell Rager</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="barbarian-spell-rager.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/barbarian-spell-rager.xml" />
+		</update>
+	</info>
+
+	<element name="Spell Rager" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_BARBARIAN_SPELL_RAGER">
+		<supports>Primal Path</supports>
+		<description>
+			<p>The fury of a Spell Rager is unlike that of any other warrior. Rather than the chaotic, unordered mind of sizzling aggression typical of a barbarian, the spell rager’s Rage ushers in absolute mental focus and magical connection to the energies of the earth. As such, they are the only known path of barbarians able to augment their destructive fury with spellcasting.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELLCASTING" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_PRIMAL_RECOVERY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_MAGIC_IGNITION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELL_FRENZY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_MAGICAL_RESISTANCE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELL_STRIKER" />
+		</description>
+		<sheet display="false">
+			<description>The fury of a Spell Rager is unlike that of any other warrior.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELLCASTING" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_PRIMAL_RECOVERY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_MAGIC_IGNITION" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELL_FRENZY" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_MAGICAL_RESISTANCE" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELL_STRIKER" level="14" />
+		</rules>
+	</element>
+	<element name="Spellcasting" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELLCASTING">
+		<description>
+			<p>Your fury ignites your soul with magic, granting you the ability to cast spells. You can concentrate on spells and cast spells while raging.</p>
+			<p class="indent"><b>Cantrips.</b> You learn three cantrips: thaumaturgy and two cantrips of your choice from the Druid spell list. You learn another druid cantrip of your choice at 10th level. By meditating over the course of a long rest, you can change one chosen cantrip to another from the Druid spell list.</p>
+			<p class="indent"><b>Raging Magic.</b> You have a number of Raging Magic Points equal to twice your Rage Damage bonus. You can spend these points to cast spells from your Raging Magic feature, and you regain all expended Raging Magic Points upon finishing a long rest.</p>
+			<p class="indent"><b>Raging Magic.</b> You learn spells at the barbarian levels listed:</p>
+			<h5>Subclass Spell table</h5>
+			<table>
+				<thead>
+					<tr><td>Barbarian Level</td><td>Spells</td><td>Raging Magic Point Cost</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>hunter’s mark, jump, shield</i></td><td>1</td></tr>
+				<tr><td>7th</td><td><i>enlarge/reduce, fury surge*, mirror image</i></td><td>2</td></tr>
+				<tr><td>13th</td><td><i>blink, fly, haste</i></td><td>3</td></tr>
+				<tr><td>19th</td><td><i>fire shield, polymorph, squish*</i></td><td>4</td></tr>
+			</table>
+			<p class="indent">*See “Fury Surge” on page 10</p>
+			<p class="indent">Any time you gain a Barbarian level, you can swap out one spell from the Subclass Spell table for a spell from the Druid spell list of the same level from the abjuration or transmutation school of magic.</p>
+			<p class="indent"><b>Spellcasting Modifier.</b> Wisdom is your spellcasting ability for your barbarian spells. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a barbarian spell you cast and when making an attack roll with one.</p>
+			<center>
+				<p>Spell save DC = 8 + your proficiency bonus + your Wisdom modifier</p>
+				<p>Spell attack modifier = your proficiency bonus + your Wisdom modifier</p>
+			</center>
+		</description>
+		<sheet usage="{{spell rager:raging magic points}}/Long Rest">
+			<description>You can concentrate on spells and cast spells while raging. You can spend these points to cast spells: &#13;
+				hunter’s mark, jump, shield = 1 Raging Magic Point
+			</description>
+			<description level="7">You can concentrate on spells and cast spells while raging. You can spend these points to cast spells: &#13;
+				hunter’s mark, jump, shield = 1 Raging Magic Point&#13;
+				enlarge/reduce, fury surge*, mirror image = 2 Raging Magic Points
+			</description>
+			<description level="13">You can concentrate on spells and cast spells while raging. You can spend these points to cast spells: &#13;
+				hunter’s mark, jump, shield = 1 Raging Magic Point&#13;
+				enlarge/reduce, fury surge*, mirror image = 2 Raging Magic Points&#13;
+				blink, fly, haste = 3 Raging Magic Points
+			</description>
+			<description level="19">You can concentrate on spells and cast spells while raging. You can spend these points to cast spells: &#13;
+				hunter’s mark, jump, shield = 1 Raging Magic Point&#13;
+				enlarge/reduce, fury surge*, mirror image = 2 Raging Magic Points&#13;
+				blink, fly, haste = 3 Raging Magic Points&#13;
+				fire shield, polymorph, squish* = 4 Raging Magic Points
+			</description>
+		</sheet>
+		<spellcasting name="Spell Rager" ability="Wisdom" prepare="false" allowReplace="true">
+			<list>Druid,(Abjuration||Trasmutation)</list>
+		</spellcasting>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" spellcasting="Spell Rager"/>
+			<select type="Spell" name="Cantrip (Spell Rager)" supports="Druid,0" number="2" />
+			<select type="Spell" name="Cantrip (Spell Rager, 10th level)" supports="Druid,0" level="10" />
+			<grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_JUMP" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_ENLARGE_REDUCE" level="7" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_DMSW_SPELL_FURY_SURGE" level="7" spellcasting="Spell Rager" />
+			<grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="7" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_BLINK" level="13" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_FLY" level="13" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_HASTE" level="13" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="19" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_PHB_SPELL_POLYMORPH" level="19" spellcasting="Spell Rager"/>
+			<grant type="Spell" id="ID_DMSW_SPELL_SQUISH" level="19" spellcasting="Spell Rager"/>
+
+			<stat name="spell rager:raging magic points" value="barbarian rage:damage" />
+			<stat name="spell rager:raging magic points" value="barbarian rage:damage" />
+		</rules>
+	</element>
+	<element name="Primal Recovery" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_PRIMAL_RECOVERY">
+		<description>
+			<p>Over the course of a short rest, you can expend a single use of your Rage to regain a number of expended Raging Magic Points equal to your Barbarian level divided by 3 (rounded down).</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>Over the course of a short rest, you can expend a single use of your Rage to regain a number of expended Raging Magic Points equal to {{primal recovery}}.</description>
+		</sheet>
+		<rules>
+			<stat name="primal recovery" value="1" bonus="base" />
+			<stat name="primal recovery" value="2" level="6" bonus="base" />
+			<stat name="primal recovery" value="3" level="9" bonus="base" />
+			<stat name="primal recovery" value="4" level="12" bonus="base" />
+			<stat name="primal recovery" value="5" level="15" bonus="base" />
+			<stat name="primal recovery" value="6" level="18" bonus="base" />
+		</rules>
+	</element>
+	<element name="Magic Ignition" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_MAGIC_IGNITION">
+		<description>
+			<p>When you enter your Rage as a bonus action, you can cast one spell you know with a casting time of 1 action as a part of that same bonus action. Once you use this feature, you cannot do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>When you enter your Rage as a bonus action, you can cast one spell you know with a casting time of 1 action as a part of that same bonus action.</description>
+		</sheet>
+	</element>
+	<element name="Spell Frenzy" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELL_FRENZY">
+		<description>
+			<p>When you use an action to cast a spell while raging, you can use a bonus action that turn to make a single weapon attack. You can use this feature a number of times equal to your Constitution modifier per long rest.</p>
+		</description>
+		<sheet usage="{{constitution:modifier}}/Long Rest" action="Bonus Action">
+			<description>When you use an action to cast a spell while raging, you can use a bonus action that turn to make a single weapon attack.</description>
+		</sheet>
+	</element>
+	<element name="Magical Resistance" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_MAGICAL_RESISTANCE">
+		<description>
+			<p>You resist damage from spells, and you gain a bonus to saving throws made to resist the effects of spells equal to your Rage damage bonus.</p>
+		</description>
+		<sheet>
+			<description>You resist damage from spells, and you gain a + {{barbarian rage:damage}} bonus to saving throws made to resist the effects of spells.</description>
+		</sheet>
+	</element>
+	<element name="Spell Striker" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPELL_RAGER_SPELL_STRIKER">
+		<description>
+			<p>You can add your Wisdom modifier (minimum of +1) to the damage rolls of your weapon attacks that use Strength while Raging.</p>
+		</description>
+		<sheet>
+			<description>You can add {{spell striker}} to the damage rolls of your weapon attacks that use Strength while Raging.</description>
+		</sheet>
+		<rules>
+			<stat name="spell striker" value="1" bonus="base" />
+			<stat name="spell striker" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+</elements>

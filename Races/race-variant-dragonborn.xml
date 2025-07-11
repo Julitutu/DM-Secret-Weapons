@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Variant Dragonborn</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-variant-dragonborn.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-variant-dragonborn.xml" />
+		</update>
+	</info>
+
+	<element name="Variant Dragonborn" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_VARIANT_DRAGONBORN">
+		<description>
+			<p>The magic of dragons is ancient, mysterious, and tenacious. Eons ago it is said dragons took on humanoid forms and lived among the other races of the world. Other tales speak of ancient wizards and sorcerers conducting dangerous experiments to harness draconic magic. Whatever the origin of their heritage, some humanoids carry draconic blood in their veins.</p>
+			<p>The power of dragons can manifest in any number of incredible ways. Some dragonborn appear as ordinary humans, orcs, elves, and dwarves, blessed with invisible but potent draconic power. For others, a draconic heritage is evident, with dragonborn appearing as lizard-like humanoids with scales, tails, and razor-sharp fangs. No two dragonborn are alike, but all are powerful.</p>
+			<h4>VARIANT DRAGONBORN TRAITS</h4>
+			<p>When creating your dragonborn character, you can use the following traits, which replace all other dragonborn traits.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Increase one ability score of your choice by 2, and another ability score by 1, or increase three ability scores of your choice by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</p>
+			<p class="indent"><strong><em>Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Breath Weapon.</em></strong> When you select this race, choose one damage type from among acid, cold, fire, lighting, or poison. When you take the attack action, you can replace one of your attacks with an exhalation of destructive energy of the damage type you chose in a 15-foot cone or a 30-foot line. Each creature in the area of the exhalation must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus) taking 1d8 damage on a failed save, or half as much on a success. This damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8). You can use this breath weapon a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</p>
+			<p class="indent"><strong><em>Draconic Lineage.</em></strong> The blood of dragons runs through your veins, and can confer many incredible benefits. Choose two traits from the following options that you inherit from your draconic ancestors.</p>
+			<p class="indent"><strong><em>Draconic Magic.</em></strong> All dragons possess an element of natural magic. Choose one trait from the following options to determine how your magic manifests.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<select type="Ability Score Improvement" name="Ability Score Improvement (Variant Dragonborn)" supports="ID_WOTC_ASI_ABILITY_SCORE_IMPROVEMENT_OPTION_1|ID_WOTC_ASI_ABILITY_SCORE_IMPROVEMENT_OPTION_2" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Trait Selections -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON" />
+			<select type="Racial Trait" name="Draconic Lineage" supports="Draconic Lineage" number="2" />
+			<select type="Racial Trait" name="Draconic Magic" supports="Draconic Magic" />
+		</rules>
+	</element>
+
+	<!-- Breath Weapon -->
+	<element name="Breath Weapon" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON">
+		<description>
+			<p>When you select this race, choose one damage type from among acid, cold, fire, lighting, or poison. When you take the attack action, you can replace one of your attacks with an exhalation of destructive energy of the damage type you chose in a 15-foot cone or a 30-foot line. Each creature in the area of the exhalation must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus) taking 1d8 damage on a failed save, or half as much on a success. This damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8). You can use this breath weapon a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Action">
+			<description>As one of your attacks, you exhale destructive energy in a {{breath-weapon:cone}}-ft cone or {{breath-weapon:line}}-ft line. Creatures in the area must make a DC {{breath-weapon:dc}} DEX save, taking {{breath-weapon:damage}}d{{breath-weapon:dice}} {{breath-weapon:type}} damage on a failed save, half on success.</description>
+		</sheet>
+		<rules>
+			<select type="Racial Trait" name="Damage Type (Breath Weapon)" supports="Breath Weapon Damage" />
+
+			<stat name="breath-weapon:dc" value="8" />
+			<stat name="breath-weapon:dc" value="constitution:modifier" />
+			<stat name="breath-weapon:dc" value="proficiency" />
+
+            <stat name="breath-weapon:damage" value="1" />
+            <stat name="breath-weapon:damage" value="1" level="5"/>
+            <stat name="breath-weapon:damage" value="1" level="11"/>
+            <stat name="breath-weapon:damage" value="1" level="17"/>
+
+            <stat name="breath-weapon:dice" value="8" />
+
+            <stat name="breath-weapon:cone" value="15" />
+            <stat name="breath-weapon:line" value="30" />
+		</rules>
+	</element>
+	<element name="Acid" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_ACID">
+        <supports>Breath Weapon Damage</supports>
+        <description>
+            <p>Your breath weapon deals acid damage.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="breath-weapon:type" value="acid" inline="true"/>
+        </rules>
+    </element>
+	<element name="Cold" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_COLD">
+        <supports>Breath Weapon Damage</supports>
+        <description>
+            <p>Your breath weapon deals cold damage.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="breath-weapon:type" value="cold" inline="true"/>
+        </rules>
+    </element>
+	<element name="Fire" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_FIRE">
+        <supports>Breath Weapon Damage</supports>
+        <description>
+            <p>Your breath weapon deals fire damage.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="breath-weapon:type" value="fire" inline="true"/>
+        </rules>
+    </element>
+	<element name="Lightning" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_LIGHTNING">
+        <supports>Breath Weapon Damage</supports>
+        <description>
+            <p>Your breath weapon deals lightning damage.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="breath-weapon:type" value="lightning" inline="true"/>
+        </rules>
+    </element>
+	<element name="Poison" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_POISON">
+        <supports>Breath Weapon Damage</supports>
+        <description>
+            <p>Your breath weapon deals poison damage.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="breath-weapon:type" value="poison" inline="true"/>
+        </rules>
+    </element>
+
+	<!-- Draconic Lineage Options -->
+	<element name="Aquatic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_AQUATIC">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>You can breathe underwater, and you have a swim speed equal to your walking speed.</p>
+        </description>
+		<sheet>
+            <description>You can breathe underwater and have a swim speed of {{innate speed}}ft.</description>
+        </sheet>
+		<rules>
+            <stat name="innate speed:swim" value="innate speed" bonus="base" />
+        </rules>
+	</element>
+	<element name="Hardened Scales" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_HARDENED_SCALES">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>While you aren’t wearing armour, you can calculate your AC as 13 + your Dexterity modifier. A shield’s benefits apply as normal.</p>
+        </description>
+		<sheet alt="Natural Armor">
+            <description>While not wearing armor, your AC is 13 + your Dexterity modifier.</description>
+        </sheet>
+		<rules>
+			<stat name="natural armor:ac" value="13" bonus="base" />
+			<stat name="natural armor:ac" value="dexterity:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="natural armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+	</element>
+	<element name="Damage Resistance" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_DAMAGE_RESISTANCE">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>You have a resistance to the damage type you selected for your Breath Weapon trait.</p>
+        </description>
+		<sheet>
+            <description>You have resistance to the damage type of your Breath Weapon.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" requirements="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_ACID"/>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" requirements="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_COLD" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" requirements="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_FIRE"/>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" requirements="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_LIGHTNING"/>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" requirements="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_BREATH_WEAPON_POISON"/>
+        </rules>
+	</element>
+	<element name="Dragon’s Maw" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_DRAGONS_MAW">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>Your teeth are long and vicious, and you can use them to make unarmed strikes. When you hit an unarmed strike using your bite, it deals 1d6 + your Strength modifier piercing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
+        </description>
+		<sheet>
+            <description>Your bite is a natural weapon that deals 1d6 + {{strength:modifier}} piercing damage.</description>
+        </sheet>
+	</element>
+	<element name="Draconic Mind" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_DRACONIC_MIND">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>You have advantage on saves against the charmed and frightened conditions.</p>
+        </description>
+		<sheet>
+            <description>You have advantage on saves against being charmed and frightened.</description>
+        </sheet>
+	</element>
+	<element name="Draconic Talent" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_DRACONIC_TALENT">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>You have proficiency in two skills from among the following: Deception, History, Insight, Intimidation, Nature, Persuasion, Stealth, and Survival.</p>
+        </description>
+		<sheet display="false" />
+		<rules>
+            <select type="Proficiency" name="Draconic Talent" number="2" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" />
+        </rules>
+	</element>
+	<element name="Natural Warrior" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_NATURAL_WARRIOR">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>You have proficiency with light armour and with two martial weapons of your choice. If you already have proficiency with light armour from another source, such as a class feature, this trait confers proficiency with medium armour instead.</p>
+        </description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+			<select type="Proficiency" name="Natural Warrior" supports="Martial" number="2" />
+		</rules>
+	</element>
+	<element name="Swiftfoot" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_LINEAGE_SWIFTFOOT">
+		<supports>Draconic Lineage, Gift of the Bloodline</supports>
+		<description>
+            <p>Your base walking speed increases to 35 feet.</p>
+        </description>
+		<sheet display="false" />
+		<rules>
+            <stat name="innate speed" value="5" />
+        </rules>
+	</element>
+
+	<!-- Draconic Magic Options -->
+	<element name="Blindsight" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_MAGIC_BLINDSIGHT">
+		<supports>Draconic Magic</supports>
+		<description>
+            <p>You can use a bonus action to quiet your mind and enhance your senses. Until the start of your next turn, you have Blindsight out to 15 feet.</p>
+        </description>
+		<sheet action="Bonus Action">
+            <description>You can gain blindsight out to 15 feet until the start of your next turn.</description>
+        </sheet>
+	</element>
+	<element name="Draconic Resilience" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_MAGIC_DRACONIC_RESILIENCE">
+		<supports>Draconic Magic</supports>
+		<description>
+            <p>When you make a saving throw to resist a spell or magical effect, before you make the save, you can choose to make that roll at advantage. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+        </description>
+		<sheet usage="{{proficiency}}/Long Rest">
+            <description>Before making a save against a spell or magical effect, you can choose to gain advantage on the roll.</description>
+        </sheet>
+	</element>
+	<element name="Gift of the Bloodline" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_MAGIC_GIFT_OF_THE_BLOODLINE">
+		<supports>Draconic Magic</supports>
+		<description>
+            <p>You gain two additional benefits of your choice from your Draconic Lineage trait.</p>
+        </description>
+		<sheet display="false" />
+		<rules>
+            <select type="Racial Trait" name="Gift of the Bloodline" supports="Gift of the Bloodline" number="2" />
+        </rules>
+	</element>
+	<element name="Innate Sorcery" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_MAGIC_INNATE_SORCERY">
+		<supports>Draconic Magic</supports>
+		<description>
+            <p>You learn one cantrip of your choice from the sorcerer spell list. You also learn one first level spell from the sorcerer spell list, and you can cast it without a spell slot once per long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability when you cast these spells (choose when you gain this trait).</p>
+        </description>
+		<sheet>
+            <description>You learn a sorcerer cantrip and a 1st-level sorcerer spell (cast once per long rest). Your spellcasting ability is {{spellcasting:innate sorcery}}.</description>
+        </sheet>
+		<rules>
+			<select type="Spell" name="Cantrip (Innate Sorcery)" supports="Sorcerer,0" />
+			<select type="Spell" name="1st-Level Spell (Innate Sorcery)" supports="Sorcerer,1" />
+			<select type="Racial Trait" name="Spellcasting Ability (Innate Sorcery)" supports="Innate Sorcery Ability" />
+		</rules>
+	</element>
+	<element name="Innate Sorcery (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_INNATE_SORCERY_INTELLIGENCE">
+        <supports>Innate Sorcery Ability</supports>
+        <description/>
+        <sheet display="false"/>
+        <rules>
+            <stat inline="true" name="spellcasting:innate sorcery" value="Intelligence"/>
+        </rules>
+    </element>
+	<element name="Innate Sorcery (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_INNATE_SORCERY_WISDOM">
+        <supports>Innate Sorcery Ability</supports>
+        <description/>
+        <sheet display="false"/>
+        <rules>
+            <stat inline="true" name="spellcasting:innate sorcery" value="Wisdom"/>
+        </rules>
+    </element>
+	<element name="Innate Sorcery (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_INNATE_SORCERY_CHARISMA">
+        <supports>Innate Sorcery Ability</supports>
+        <description/>
+        <sheet display="false"/>
+        <rules>
+            <stat inline="true" name="spellcasting:innate sorcery" value="Charisma"/>
+        </rules>
+    </element>
+	<element name="Limited Flight" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_MAGIC_LIMITED_FLIGHT">
+		<supports>Draconic Magic</supports>
+		<description>
+            <p>As an action, you can grant yourself a flying speed equal to half your walking speed and can hover for the next minute. You can’t use this trait if you are wearing medium or heavy armour. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+        </description>
+		<sheet usage="1/Short Rest" action="Action">
+            <description>You can gain a flying speed of {{innate speed:half}} and can hover for 1 minute. You can't use this while wearing medium or heavy armor.</description>
+        </sheet>
+	</element>
+	<element name="Superior Breath Weapon" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_VARIANT_DRAGONBORN_MAGIC_SUPERIOR_BREATH_WEAPON">
+		<supports>Draconic Magic</supports>
+		<description>
+            <p>The damage dice you roll when calculating the damage of your breath weapon increases from a d8 to a d12, and the area of effect increases to a 30-foot cone or a 60-foot line.</p>
+        </description>
+		<sheet display="false">
+            <description>Your Breath Weapon damage die becomes a d12, and its area increases to a 30-ft cone or 60-ft line.</description>
+        </sheet>
+        <rules>
+            <stat name="breath-weapon:dice" value="4" />
+
+            <stat name="breath-weapon:cone" value="15" />
+            <stat name="breath-weapon:line" value="30" />
+        </rules>
+	</element>
+</elements>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Spectrakin Ancestry</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-spectrakin.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-spectrakin.xml" />
+		</update>
+	</info>
+
+	<element name="Spectrakin Ancestry" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_SPECTRAKIN_ANCESTRY">
+		<description>
+			<p>Souls fraught with fury or inflamed with passion can resist the call of the grave. Such cases are rare, but when the body dies and the spirit lives on, a new, crude being is created: a spectrakin.</p>
+			<p>Ghastly in appearance, possessing a rudimentary body hewn from necrotic, spectral force, spectrakin retain the memories and personality they had in life. They cling to the material world through sheer force of will, and though they do not age, rarely do spectrakin remain for long, often passing from existence when their task is complete or their vengeance sated.</p>
+			<h4>SPECTRAKIN TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Charisma score increases by 1.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. If you are replacing your race with this lineage, you retain any languages you had and gain no new languages.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> Though your spirit clings to life beyond its natural end, you are not a true undead. Your creature type is humanoid.</p>
+			<p class="indent"><strong><em>Size.</em></strong> You are Medium or Small. You choose the size when you gain this lineage.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet, and you have a flying speed equal to half your walking speed.</p>
+			<p class="indent"><strong><em>Ancestral Legacy.</em></strong> If you replace a race with this lineage, you can keep any skill proficiencies you gained from it. If you do not, you gain proficiency in any two skills of your choice.</p>
+			<p class="indent"><strong><em>Inured to Death.</em></strong> When you take necrotic, cold, or poison damage, you can use your reaction to gain resistance to that damage type until the end of this turn. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses on a long rest.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of yourself as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.</p>
+			<p class="indent"><strong><em>Spectral Form.</em></strong> You can temporarily enter a true spectral form. As an action, you can cast the spell etherealness, without expending a spell slot, but the spell ends at the end of the current turn. Once you use this trait, you cannot use it again until you finish a short or long rest.</p>
+			<p class="indent"><strong><em>Spectral Touch.</em></strong> Your unarmed strikes deal 1d4 necrotic damage, in place of the usual bludgeoning damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Spectrakin)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Spectrakin)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Spectrakin)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Spectrakin)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:fly" value="15" bonus="base" />
+
+			<!-- Darkvision -->
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_ANCESTRAL_LEGACY" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_INURED_TO_DEATH" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_SPECTRAL_FORM" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_SPECTRAL_TOUCH" />
+		</rules>
+	</element>
+
+	<element name="Ancestral Legacy" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_ANCESTRAL_LEGACY">
+		<description>
+			<p>If you replace a race with this lineage, you can keep any skill proficiencies you gained from it. If you do not, you gain proficiency in any two skills of your choice.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Ancestral Legacy" supports="Skill" number="2" />
+		</rules>
+	</element>
+	<element name="Inured to Death" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_INURED_TO_DEATH">
+		<description>
+			<p>When you take necrotic, cold, or poison damage, you can use your reaction to gain resistance to that damage type until the end of this turn. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses on a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+			<description>When you take necrotic, cold, or poison damage, you can gain resistance to that damage type until the end of this turn.</description>
+		</sheet>
+	</element>
+	<element name="Spectral Form" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_SPECTRAL_FORM">
+		<description>
+			<p>You can temporarily enter a true spectral form. As an action, you can cast the spell etherealness, without expending a spell slot, but the spell ends at the end of the current turn. Once you use this trait, you cannot use it again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Action">
+			<description>You can cast Etherealness (self only), but the spell ends at the end of the current turn.</description>
+		</sheet>
+	</element>
+	<element name="Spectral Touch" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPECTRAKIN_SPECTRAL_TOUCH">
+		<description>
+			<p>Your unarmed strikes deal 1d4 necrotic damage, in place of the usual bludgeoning damage.</p>
+		</description>
+		<sheet>
+			<description>Your unarmed strikes deal 1d4 necrotic damage.</description>
+		</sheet>
+	</element>
+</elements>

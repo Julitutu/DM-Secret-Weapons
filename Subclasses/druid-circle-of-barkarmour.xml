@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Druid - Circle of Barkarmour</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="druid-circle-of-barkarmour.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/druid-circle-of-barkarmour.xml" />
+		</update>
+	</info>
+
+	<element name="Circle of Barkarmour" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_DRUID_CIRCLE_OF_BARKARMOUR">
+		<supports>Druid Circle</supports>
+		<description>
+			<p>Druids of the Circle of Barkarmour fortify themselves with the immutable power of the Ironthorn Forest. Barkarmour druids are legendary carpenters and fierce warriors, harnessing the abjuration-infused plants native to Ironthorn to fortify their clothing with incredible magic; the result is the legendarily tough and flexible garb known as Barkarmour.</p>
+			<p class="indent">Many druids of this circle tend to forests as guardians, ferociously defending the woodland’s borders from poachers, monsters, and any who would trample the natural world for their own gain. Others of this circle travel the world, sowing the seeds of Ironthron far and wide and cultivating its plants and magic wherever they tread. To all barkarmour druids, the relationship with nature is one of symbiotic protection; the magic of Ironthorn guards and invigorates all who bond with it, and in turn, members of this circle wield its power in staunch defense of the wilds.</p>
+			<p class="indent">If you are using the 2024 rules for character creation, you gain the 2nd level barkarmour druid subclass features at 3rd level instead.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_CIRCLE_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_DRUIDIC_ARMOURCRAFT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_KNIGHT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_FORTIFICATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_VALOR" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_TENACITY_OF_IRONTHORN" />
+		</description>
+		<sheet display="false">
+			<description>Druids of the Circle of Barkarmour fortify themselves with the immutable power of the Ironthorn Forest.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_CIRCLE_SPELLS" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_DRUIDIC_ARMOURCRAFT" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_KNIGHT" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_FORTIFICATION" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_VALOR" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_TENACITY_OF_IRONTHORN" level="14" />
+		</rules>
+	</element>
+	<element name="Circle Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_CIRCLE_SPELLS">
+		<description>
+			<p>The magic of the Ironthorn forest confers unto you the ability to cast certain spells. Once you gain access to a circle spell, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. If you gain access to a spell that doesn’t appear on the druid spell list, the spell is nonetheless a druid spell for you.</p>
+			<h5>Circle of Barkarmour Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Druid Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>2nd</td><td><i>shield, shield of faith</i></td></tr>
+				<tr><td>3rd</td><td><i>aid, mirror image</i></td></tr>
+				<tr><td>5th</td><td><i>dispel magic, spirit guardians</i></td></tr>
+				<tr><td>7th</td><td><i>conjure minor elementals, resilient sphere</i></td></tr>
+				<tr><td>9th</td><td><i>seeming, wall of stone</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_AID" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DISPEL_MAGIC" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIRIT_GUARDIANS" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONJURE_MINOR_ELEMENTALS" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SEEMING" level="9" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_STONE" level="9" spellcasting="Druid" prepared="true" />
+		</rules>
+	</element>
+	<element name="Druidic Armourcraft" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_DRUIDIC_ARMOURCRAFT">
+		<description>
+			<p>You have the knowledge and craftsmanship to create powerful armour from wood and plants blessed with the magic of Ironthorn. You gain proficiency with Carpenter’s Tools, and you can craft a set of magical Light Armour, known as barkarmour, over the course of a Long Rest. The barkarmour you create is tailored specifically to connect with your druidic power; only you can wield it. As you advance in levels, the potency of your barkarmour increases, as shown in the Druidic Armourcraft table below.</p>
+			<h5>Druidic Armourcraft</h5>
+			<table>
+				<thead>
+					<tr><td>Druid Level</td><td>Barkarmour AC</td></tr>
+				</thead>
+				<tr><td>2</td><td>13 + Wisdom modifier</td></tr>
+				<tr><td>6</td><td>14 + Wisdom modifier</td></tr>
+				<tr><td>10</td><td>15 + Wisdom modifier</td></tr>
+				<tr><td>14</td><td>17 + Wisdom modifier</td></tr>
+				<tr><td>18</td><td>18 + Wisdom modifier</td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description>You can craft a set of magical Light Armour, known as barkarmour, over the course of a Long Rest. The barkarmour you create is tailored specifically to connect with your druidic power; only you can wield it. As you advance in levels, the potency of your barkarmour increases.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARPENTERS_TOOLS" />
+			<stat name="ac:druidic armourcraft" value="13" />			
+			<stat name="ac:druidic armourcraft" value="1" level="6" />
+			<stat name="ac:druidic armourcraft" value="1" level="10" />
+			<stat name="ac:druidic armourcraft" value="2" level="14" />
+			<stat name="ac:druidic armourcraft" value="1" level="18" />
+			<stat name="ac:druidic armourcraft" value="wisdom:modifier" />
+			<stat name="ac:calculation" value="ac:druidic armourcraft" bonus="calculation" equipped="[armor:none]" alt="Barkarmour"/>
+		</rules>
+	</element>
+	<element name="Nature’s Knight" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_KNIGHT">
+		<description>
+			<p>You can use your barkarmour as a spellcasting focus for your Druid spells. Additionally, you can perform the Somatic components of spells even when you have weapons or a Shield in one or both hands.</p>
+		</description>
+		<sheet>
+			<description>You can use your barkarmour as a spellcasting focus for your Druid spells. Additionally, you can perform the Somatic components of spells even when you have weapons or a Shield in one or both hands.</description>
+		</sheet>
+	</element>
+	<element name="Nature’s Fortification" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_FORTIFICATION">
+		<description>
+			<p>The magic of your barkarmour extends beyond mere physical protection, vitalising your body with an endless flow of energy in synchronicity with your druidic magic. When you cast a spell that requires concentration, and at the start of each of your turns while you are concentrating on a spell, you gain temporary hit points equal to your Wisdom modifier.</p>
+		</description>
+		<sheet>
+			<description>When you cast a spell that requires concentration, and at the start of each of your turns while you are concentrating on a spell, you gain {{wisdom:modifier}} temporary hit points.</description>
+		</sheet>
+	</element>
+	<element name="Nature’s Valor" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_NATURES_VALOR">
+		<description>
+			<p>The magic that flows through your barkarmour energises your body ever further. While you are wearing barkarmour, your speed increases by 10 feet and you gain proficiency in Dexterity saving throws.</p>
+			<p class="indent">Additionally, when you take the Magic action, you can make one weapon attack or cast a druid cantrip as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (minimum of once) regaining all expended uses upon finishing a long rest.</p>
+		</description>
+		<sheet usage="{{natures valor:uses}}/Long Rest" action="Bonus Action">
+			<description>While you are wearing barkarmour, your speed increases by 10 feet and you gain proficiency in Dexterity saving throws.&#13;
+			Additionally, when you take the Magic action, you can make one weapon attack or cast a druid cantrip as a bonus action.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" />
+			<stat name="natures valor:uses" value="1" bonus="base" />
+			<stat name="natures valor:uses" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+	<element name="Tenacity of Ironthorn" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_BARKARMOUR_TENACITY_OF_IRONTHORN">
+		<description>
+			<p>The immutable abjuration magic of the Ironthorn Forest gleams across your armour. While wearing barkarmour, you resist bludgeoning, piercing, and slashing damage.</p>
+		</description>
+		<sheet>
+			<description>While wearing barkarmour, you resist bludgeoning, piercing, and slashing damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING" />
+		</rules>
+	</element>
+</elements>

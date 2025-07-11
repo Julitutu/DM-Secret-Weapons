@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wizard - Superior Evocation</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="wizard-superior-evocation.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/wizard-superior-evocation.xml" />
+		</update>
+	</info>
+
+	<element name="Superior School of Evocation" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WIZARD_SCHOOL_OF_EVOCATION">
+		<supports>Arcane Tradition</supports>
+		<description>
+			<p>You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_EVOCATION_SAVANT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_SCULPT_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_EMPOWERED_EVOCATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_DETONATE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_OVERCHANNEL" />
+		</description>
+		<sheet display="false">
+			<description>You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_EVOCATION_SAVANT" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_SCULPT_SPELLS" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_EMPOWERED_EVOCATION" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_DETONATE" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_OVERCHANNEL" level="14" />
+		</rules>
+	</element>
+	<element name="Evocation Savant" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_EVOCATION_SAVANT">
+		<description>
+			<p>The gold and time you must spend to copy an evocation spell into your spellbook is halved.</p>
+		</description>
+		<sheet>
+			<description>The gold and time you must spend to copy an evocation spell into your spellbook is halved.</description>
+		</sheet>
+	</element>
+	<element name="Sculpt Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_SCULPT_SPELLS">
+		<description>
+			<p>You have unrivalled command over the destructive force of your spells. Once per turn, when you cast an evocation spell that affects other creatures that you can see, you can choose to sculpt the spell to maximise its potency or protect those caught in the blast. Choose one of the following effects:</p>
+			<ul>
+				<li>Choose a number of creatures equal to 1 + the level of the spell. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.</li>
+				<li>Choose one creature affected by the spell, it has disadvantage on its saving throw against this spell.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When you cast an evocation spell that affects other creatures that you can see, you can choose to sculpt the spell to maximise its potency or protect those caught in the blast. Choose one of the following effects:&#13;
+			• Choose a number of creatures equal to 1 + the level of the spell. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.&#13;
+			• Choose one creature affected by the spell, it has disadvantage on its saving throw against this spell.</description>
+		</sheet>
+	</element>
+	<element name="Empowered Evocation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_EMPOWERED_EVOCATION">
+		<description>
+			<p>Once per turn, when you deal damage to a creature with an Evocation spell, that creature takes additional force damage equal to 1 + your Intelligence modifier</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When you deal damage to a creature with an Evocation spell, that creature takes additional force damage equal to {{empowered evocation:damage}}.</description>
+		</sheet>
+		<rules>
+			<stat name="empowered evocation:damage" value="1" />
+			<stat name="empowered evocation:damage" value="intelligence:modifier"  />
+		</rules>
+	</element>
+	<element name="Detonate" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_DETONATE">
+		<description>
+			<p>When you drop concentration on an Evocation spell, you can detonate the fleeting magical focus as a blast of elemental power. Choose a number of creatures within 60 feet equal to your proficiency bonus. Each must succeed on a Dexterity saving throw, or take Xd4 acid, cold, fire, lightning, poison, or thunder damage (your choice), where X is the level of the spell you were concentrating on.</p>
+		</description>
+		<sheet>
+			<description>When you drop concentration on an Evocation spell, you can detonate the fleeting magical focus as a blast of elemental power. Choose {{proficiency}} within 60 feet. Each must succeed on a DC {{wizard:spellcasting:dc}} Dexterity saving throw, or take Xd4 acid, cold, fire, lightning, poison, or thunder damage (your choice), where X is the level of the spell you were concentrating on.</description>
+		</sheet>
+	</element>
+	<element name="Overchannel" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_EVOCATION_OVERCHANNEL">
+		<description>
+			<p>Starting at 14th level, you can increase the power of your simpler spells. When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell.</p>
+			<p class="indent">The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity.</p>
+		</description>
+		<sheet>
+			<description>When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell.&#13;
+			The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity.</description>
+		</sheet>
+	</element>
+</elements>

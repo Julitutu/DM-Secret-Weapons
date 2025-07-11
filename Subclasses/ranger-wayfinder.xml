@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ranger - Wayfinder</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="ranger-wayfinder.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/ranger-wayfinder.xml" />
+		</update>
+	</info>
+
+	<element name="Wayfinder" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_RANGER_WAYFINDER">
+		<supports>Ranger Archetype</supports>
+		<description>
+			<p>In a sprawling, infinite multiverse, there are infinite sprawling paths. Wayfinders are the conclave of rangers dedicated to setting out into the unknown, charting the first maps and breaching the boundaries of untouched planes of existence.</p>
+			<p class="indent">Such rangers are true explorers, ever seeking new magic, knowledge, and cultures across the multiverse. A wayfinder must truly be ready for anything, for stepping into the unknown means risking horrors and dangers as yet unimagined. Adaptability and cunning are at the heart of the conclave; without them, no ranger will last long in the uncharted depths of wild and mysterious lands. Despite the dangers, heroes of this conclave are drawn ever onward by the spirit of adventure. To the wayfinder, there is no path more tempting than the path yet untravelled.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDER_MAGIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDERS_PREPARATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_VIRTUOSIC_EXPLORER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_BRANCHING_MAGIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDERS_INSTINCT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_DIMENSION_HOPPER" />
+		</description>
+		<sheet display="false">
+			<description>Wayfinders are the conclave of rangers dedicated to setting out into the unknown, charting the first maps and breaching the boundaries of untouched planes of existence.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDER_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDERS_PREPARATION" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_VIRTUOSIC_EXPLORER" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_BRANCHING_MAGIC" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDERS_INSTINCT" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_DIMENSION_HOPPER" level="15" />
+		</rules>
+	</element>
+	<element name="Wayfinder Magic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDER_MAGIC">
+		<description>
+			<p>You learn the guidance cantrip if you don’t already know it. You also learn an additional spell of 1st level or higher when you reach certain levels in this class, as shown in the Wayfinder Spells table. Each spell counts as a ranger spell for you, but it doesn’t count against the number of ranger spells you know.</p>
+			<h5>Wayfinder Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Ranger Level</td><td>Spell</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>protection from evil and good</i></td></tr>
+				<tr><td>5th</td><td><i>enhance ability</i></td></tr>
+				<tr><td>9th</td><td><i>hypnotic pattern</i></td></tr>
+				<tr><td>13th</td><td><i>banishment</i></td></tr>
+				<tr><td>17th</td><td><i>hold monster</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+			<grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="5" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" level="9" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="13" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="17" spellcasting="Ranger" prepared="true" />
+		</rules>
+	</element>
+	<element name="Wayfinder’s Preparation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDERS_PREPARATION">
+		<description>
+			<p>When you finish a long rest, you can choose one damage type from among acid, cold, fire, lightning, necrotic, poison, psychic, radiant, or thunder. You resist that damage type until you use this feature again.</p>
+			<p class="indent">Additionally, the first time each turn you deal damage to a creature marked by your hunter’s mark, that creature takes an additional 1d6 damage of the chosen damage type.</p>
+		</description>
+		<sheet>
+			<description>When you finish a long rest, you can choose one damage type from among acid, cold, fire, lightning, necrotic, poison, psychic, radiant, or thunder. You resist that damage type until you use this feature again.&#13;
+			Additionally, the first time each turn you deal damage to a creature marked by your hunter’s mark, that creature takes an additional 1d6 damage of the chosen damage type.</description>
+		</sheet>
+	</element>
+	<element name="Virtuosic Explorer" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_VIRTUOSIC_EXPLORER">
+		<description>
+			<p>You know the spell comprehend languages, and can cast it without a spell slot or components, and you have proficiency in the Survival skill or one other skill of your choice.</p>
+		</description>
+		<sheet>
+			<description>You know the spell comprehend languages, and can cast it without a spell slot or components, and you have proficiency in the Survival skill or one other skill of your choice.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_COMPREHEND_LANGUAGES" />
+			<select type="Proficiency" name="Skill Proficiency (Virtuosic Explorer)" supports="Skill" default="ID_PROFICIENCY_SKILL_SURVIVAL" />
+		</rules>
+	</element>
+	<element name="Branching Magic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_BRANCHING_MAGIC">
+		<description>
+			<p>While concentrating on a spell from your Wayfinder Magic table, you can cast hunter’s mark using a spell slot of 2nd level or above. When you do, it does not require concentration, and it lasts for the duration or until the spell you are currently concentrating on ends.</p>
+		</description>
+		<sheet>
+			<description>While concentrating on a spell from your Wayfinder Magic table, you can cast hunter’s mark using a spell slot of 2nd level or above. When you do, it does not require concentration, and it lasts for the duration or until the spell you are currently concentrating on ends.</description>
+		</sheet>
+	</element>
+	<element name="Wayfinder’s Instinct" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_WAYFINDERS_INSTINCT">
+		<description>
+			<p>Your honed instincts give you a split second advantage when facing danger. When you roll for initiative or for a saving throw, you can give yourself and creatures of your choice within 5 feet that make the same check or saving throw a bonus to that roll equal to your Wisdom modifier.</p>
+			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier, regaining all expended uses upon finishing a long rest.</p>
+		</description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest">
+			<description>When you roll for initiative or for a saving throw, you can give yourself and creatures of your choice within 5 feet that make the same check or saving throw a +{{wisdom:modifier}} bonus to that roll.</description>
+		</sheet>
+	</element>
+	<element name="Dimension Hopper" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_WAYFINDER_DIMENSION_HOPPER">
+		<description>
+			<p>When you take damage or cast hunter’s mark, you can use a reaction to teleport up to 90 feet to an unoccupied space you can see. You can make a single weapon attack before or after you teleport as part of the same reaction. You can use this feature once. You regain a use of it upon finishing a short or long rest, or upon expending a spell slot of 3rd level or higher (no action required).</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Reaction">
+			<description>When you take damage or cast hunter’s mark, you can use a reaction to teleport up to 90 feet to an unoccupied space you can see. You can make a single weapon attack before or after you teleport as part of the same reaction. You regain a use of it upon finishing a short or long rest, or upon expending a spell slot of 3rd level or higher (no action required).</description>
+		</sheet>
+	</element>
+</elements>

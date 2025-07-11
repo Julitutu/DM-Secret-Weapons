@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Monk - Way of the Iron Mind</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="monk-way-of-the-iron-mind.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/monk-way-of-the-iron-mind.xml" />
+		</update>
+	</info>
+
+	<element name="Way of the Iron Mind" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_MONK_WAY_OF_THE_IRON_MIND">
+		<supports>Monastic Tradition</supports>
+		<description>
+			<p>With willpower as inflexible and sturdy as plate mail, Monks of the Way of the Iron Mind are masters of both physical and mental durability. Able to manifest their ki as mighty, spectral armor, they shield themselves from harm whilst channelling a flow of power that enhances their combat capabilities. Monks who walk this path are typically unflinching and resolute, rarely changing their mind or shifting their perspective. They dedicate themselves to a singular purpose and see it done, wielding ki as a mighty shield and crushing weapon to smash through any who stand in their way.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_MARTIAL_DEDICATION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_ARMOR_OF_KI" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_WILL_OF_IRON" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_KI_FUELLED_STRIKE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_KI_DETONATION" />
+		</description>
+		<sheet display="false">
+			<description>With willpower as inflexible and sturdy as plate mail, Monks of the Way of the Iron Mind are masters of both physical and mental durability.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_MARTIAL_DEDICATION" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_ARMOR_OF_KI" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_WILL_OF_IRON" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_KI_FUELLED_STRIKE" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_KI_DETONATION" level="17" />
+		</rules>
+	</element>
+	<element name="Martial Dedication" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_MARTIAL_DEDICATION">
+		<description>
+			<p>You gain proficiency with light and medium armor, and you retain the benefits of your Martial Arts and Unarmored Movement features even if you are wearing armor.</p>
+		</description>
+		<sheet>
+			<description>You retain the benefits of your Martial Arts and Unarmored Movement features even if you are wearing armor.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+
+			<stat name="innate speed:misc" value="monk:unarmored movement" bonus="unarmored movement" requirements="[innate speed:1]" />
+			<stat name="innate speed:climb:misc" value="monk:unarmored movement" bonus="unarmored movement" requirements="[innate speed:climb:1]" />
+			<stat name="innate speed:fly:misc" value="monk:unarmored movement" bonus="unarmored movement" requirements="[innate speed:fly:1]" />
+			<stat name="innate speed:swim:misc" value="monk:unarmored movement" bonus="unarmored movement" requirements="[innate speed:swim:1]" />
+			<stat name="innate speed:burrow:misc" value="monk:unarmored movement" bonus="unarmored movement" requirements="[innate speed:burrow:1]" />
+		</rules>
+	</element>
+	<element name="Armor of Ki" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_ARMOR_OF_KI">
+		<description>
+			<p>At the start of your turn, you can expend two ki points to manifest magnificent, spectral armor. You decide what your armor looks like; for some monks, it may appear as a gleaming sheen of plate mail, for others, a writhing fortification of darkness.</p>
+			<p class="indent">When you manifest the armor, you gain a number of temporary hit points equal to 5 + your Wisdom modifier + your Monk level. The armor lasts for 1 minute, or until you have no more temporary hit points remaining. While the armor is active, you also gain the following benefits.</p>
+			<ul>
+				<li>You gain a bonus to your AC equal to your half proficiency bonus rounded up.</li>
+				<li>You can use your Flurry of Blows, Step of the Wind, and Patient Defense features without expending a ki point.</li>
+			</ul>
+			<p class="indent">You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>At the start of your turn, you can expend two ki points to manifest magnificent, spectral armor. When you manifest the armor, you gain {{armor of ki:thp}} temporary hit points. The armor lasts for 1 minute, or until you have no more temporary hit points remaining. While the armor is active, you also gain the following benefits.&#13;
+			• You gain a bonus to your AC equal to {{proficiency:half:up}}.&#13;
+			• You can use your Flurry of Blows, Step of the Wind, and Patient Defense features without expending a ki point.</description>
+		</sheet>
+		<rules>
+			<stat name="armor of ki:thp" value="5" />
+			<stat name="armor of ki:thp" value="wisdom:modifier" />
+			<stat name="armor of ki:thp" value="level:monk" />
+		</rules>
+	</element>
+	<element name="Will of Iron" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_WILL_OF_IRON">
+		<description>
+			<p>While your Armor of Ki is manifested, you resist Bludgeoning, Slashing, and Piercing damage, and can add your Wisdom modifier to Intelligence and Charisma saving throws.</p>
+		</description>
+		<sheet>
+			<description>While your Armor of Ki is manifested, you resist Bludgeoning, Slashing, and Piercing damage, and can add your Wisdom modifier to Intelligence and Charisma saving throws.</description>
+		</sheet>
+	</element>
+	<element name="Ki-Fuelled Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_KI_FUELLED_STRIKE">
+		<description>
+			<p>While your Armor of Ki is manifested, your damage rolls deal additional force damage equal to half your proficiency bonus rounded up.</p>
+		</description>
+		<sheet>
+			<description>While your Armor of Ki is manifested, your damage rolls deal additional force damage equal to {{proficiency:half:up}}.</description>
+		</sheet>
+	</element>
+	<element name="Ki Detonation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_IRON_MIND_KI_DETONATION">
+		<description>
+			<p>When the temporary hit points granted by your Armor of Ki feature are depleted, you can expend 5 ki points to detonate your armor with explosive force. Creatures of your choice within 15 feet must make a Dexterity saving throw, taking 10d10 force damage on failed save, or half as much on a success.</p>
+		</description>
+		<sheet>
+			<description>When the temporary hit points granted by your Armor of Ki feature are depleted, you can expend 5 ki points to detonate your armor with explosive force. Creatures of your choice within 15 feet must make a DC {{ki:dc}} Dexterity saving throw, taking 10d10 force damage on failed save, or half as much on a success.</description>
+		</sheet>
+	</element>
+</elements>

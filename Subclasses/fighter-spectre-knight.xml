@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Fighter - Spectre Knight</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="fighter-spectre-knight.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/fighter-spectre-knight.xml" />
+		</update>
+	</info>
+
+	<element name="Spectre Knight" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FIGHTER_SPECTRE_KNIGHT">
+		<supports>Martial Archetype</supports>
+		<description>
+			<p>Many warriors kill, but none harness the dread powers of death itself like the Spectre Knight. Forever walking the twilight expanse that stretches between the living and the dead, Spectre Knights are imbued with supernatural, unknowable forces from beyond the realms of natural magic.</p>
+			<p class="indent">Not all Spectre Knight’s are agents of chaos and evil, but the inky blackness of death that haunts their journey can push even the most noble warriors down a cruel, dark path.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_SPECTRAL_MAGIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_MERCILESS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_ONE_WITH_THE_FALLEN" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_SPECTRAL_COMMAND" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_ECTOPLASMIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_FROM_BEYOND" />
+		</description>
+		<sheet display="false">
+			<description>Many warriors kill, but none harness the dread powers of death itself like the Spectre Knight.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_SPECTRAL_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_MERCILESS" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_ONE_WITH_THE_FALLEN" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_SPECTRAL_COMMAND" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_ECTOPLASMIC" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_FROM_BEYOND" level="18" />
+		</rules>
+	</element>
+	<element name="Spectral Magic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_SPECTRAL_MAGIC">
+		<description>
+			<p>At 3rd level, you learn to manifest the power of the dead within yourself. This power is represented in your Spectral Energy dice, which are a d6. You have a number of these dice equal to 1 + your proficiency bonus, and they fuel the powers you have, which are detailed below.</p>
+			<p class="indent">Some of your powers expend the Spectral Energy die they use, as specified in a power’s description, and you can’t use a power if it requires you to use a die when your dice are all expended. You regain all your expended Spectral Energy dice when you finish a long rest.</p>
+			<p class="indent">In addition, when you reduce a hostile, enemy creature to 0 hit points, you can use your reaction to channel their fleeting vitality into yourself, regaining one expended Spectral Energy die. You can regain a number of Spectral Energy dice this way equal to your proficiency bonus per long rest.</p>
+			<p class="indent">When you reach certain levels in this class, the size of your Spectral Energy dice increases: at 5th level (d8), 11th level (d10), and 17th level (d12).</p>
+			<p class="indent">The powers below use your Spectral Energy Dice.</p>
+			<p class="indent"><b>Necrotic Slash.</b> When you make an attack roll against a creature, you can imbue your strike with ghastly necrotic energy. Expend one Spectral Energy die, and add the number you rolled to your attack and damage rolls of this attack. The extra damage dealt by this ability is necrotic damage.</p>
+			<p class="indent"><b>Ghost Barrier.</b> As a reaction, when you are hit by an attack, you can expend one Spectral Energy die and gain AC equal to that roll until the start of your next turn, potentially turning a hit into a miss.</p>
+			<p class="indent"><b>Invoke Terror.</b> As a bonus action, you can expend one Spectral Energy die to cause your form to crackle with necrotic energy. All creatures of your choice within 15ft must make a Wisdom saving throw (DC= 8 + your Constitution modifier + Proficiency Bonus) or become frightened of you until the end of your next turn.</p>
+		</description>
+		<sheet usage="{{spectral magic:dice count}}/Long Rest">
+			<description>You have {{spectral magic:dice count}} of Spectral Energy dices, which are a d{{spectral magic:dice}}. You regain all your expended Spectral Energy dice when you finish a long rest.&#13;
+			• Necrotic Slash. When you make an attack roll against a creature, you can imbue your strike with ghastly necrotic energy. Expend one Spectral Energy die, and add the number you rolled to your attack and damage rolls of this attack. The extra damage dealt by this ability is necrotic damage.&#13;
+			• Ghost Barrier. As a reaction, when you are hit by an attack, you can expend one Spectral Energy die and gain AC equal to that roll until the start of your next turn, potentially turning a hit into a miss.&#13;
+			• Invoke Terror. As a bonus action, you can expend one Spectral Energy die to cause your form to crackle with necrotic energy. All creatures of your choice within 15ft must make a DC {{spectral magic:dc}} Wisdom saving throw or become frightened of you until the end of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="spectral magic:dice count" value="1" />
+			<stat name="spectral magic:dice count" value="proficiency" />
+			<stat name="spectral magic:dice" value="6" />
+			<stat name="spectral magic:dice" value="2" level="5" />
+			<stat name="spectral magic:dice" value="2" level="11" />
+			<stat name="spectral magic:dice" value="2" level="17" />
+			<stat name="spectral magic:dc" value="8" />
+			<stat name="spectral magic:dc" value="constitution:modifier" />
+			<stat name="spectral magic:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Merciless" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_MERCILESS">
+		<description>
+			<p>Also starting at 3rd level, you have advantage on attack rolls against creatures who are frightened.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on attack rolls against creatures who are frightened.</description>
+		</sheet>
+	</element>
+	<element name="One With The Fallen" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_ONE_WITH_THE_FALLEN">
+		<description>
+			<p>Starting at 7th level, you unlock new Spectral abilities.</p>
+			<p class="indent"><b>Vanishment.</b> You unlock the power to turn intangible for a short time. As an action, you and all objects you are wearing and carrying become spectral in form, and you can move through objects and other creatures as though they were difficult terrain. While in this form, you resist all damage except force damage. This transformation lasts for 1 minute or until you attack, cast a spell, or force a creature to make a saving throw. Once you use this feature, you cannot do so again unless you expend one Spectral Energy die.</p>
+			<p class="indent"><b>Spectral Guidance.</b> As a reaction, immediately after you fail a Strength, Constitution or Charisma saving throw, you can roll a Spectral Energy die and add that result to the total, potentially turning failure into success. If you still fail that saving throw, your Spectral Energy die is not expended by using this ability.</p>
+		</description>
+		<sheet>
+			<description>You unlock new Spectral abilities&#13;
+				• Vanishment. As an action, you and all objects you are wearing and carrying become spectral in form, and you can move through objects and other creatures as though they were difficult terrain. While in this form, you resist all damage except force damage. This transformation lasts for 1 minute or until you attack, cast a spell, or force a creature to make a saving throw. Once you use this feature, you cannot do so again unless you expend one Spectral Energy die.&#13;
+				• Spectral Guidance. As a reaction, immediately after you fail a Strength, Constitution or Charisma saving throw, you can roll a Spectral Energy die and add that result to the total, potentially turning failure into success. If you still fail that saving throw, your Spectral Energy die is not expended by using this ability.</description>
+		</sheet>
+	</element>
+	<element name="Spectral Command" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_SPECTRAL_COMMAND">
+		<description>
+			<p>Starting at 10th level, you can cast the spell Animate Dead without requiring material components, and its casting time is reduced to 1 action when you cast it using this feature.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>You can cast the spell Animate Dead without requiring material components, and its casting time is reduced to 1 action when you cast it using this feature.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_DEAD" />
+		</rules>
+	</element>
+	<element name="Ectoplasmic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_ECTOPLASMIC">
+		<description>
+			<p>At 15th level, you gain the strength to expand your necrotic powers beyond your form. As a bonus action, you cause your form to glow, shedding dim green light in a 30ft radius for the next minute.</p>
+			<p class="indent">Other creatures of your choice within the light have advantage on Constitution and Death saving throws, and gain temporary hit points equal to your constitution modifier at the start of their turns.</p>
+			<p class="indent">Once you take this bonus action, you can’t do so again until you finish a long rest, unless you expend a Spectral Energy die to do it again.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+			<description>As a bonus action, you cause your form to glow, shedding dim green light in a 30ft radius for the next minute. Other creatures of your choice within the light have advantage on Constitution and Death saving throws, and gain {{constitution:modifier}} temporary hit points at the start of their turns. Once you take this bonus action, you can’t do so again until you finish a long rest, unless you expend a Spectral Energy die to do it again</description>
+		</sheet>
+	</element>
+	<element name="From Beyond" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SPECTRE_KNIGHT_FROM_BEYOND">
+		<description>
+			<p>At 18th level, when you fall to 0 hit points, your spirit can leave your unconscious form and continue to fight. You appear as a translucent, white shade of your living self, complete with your equipment.</p>
+			<p class="indent">While in this form your statistics remain the same, but the only actions you can take on your turn are the help action and the attack action. In addition, whenever you make a Death saving throw, you can treat a d20 roll of 9 or lower as a 10.</p>
+			<p class="indent">You cannot cast spells or manipulate objects in this form, and you are immune to poison, cold, and necrotic damage. In addition, your weapon attacks deal an extra 1d8 necrotic damage.</p>
+			<p class="indent">Any damage dealt to your spirit form or your unconscious body causes a failed death saving throw as usual.</p>
+			<p class="indent">You can remain in spirit form for upto 10 minutes, or until your body regains consciousness, or you die, at which time your spirit form instantly vanishes.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you complete a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>When you fall to 0 hit points, your spirit can leave your unconscious form and continue to fight. You appear as a translucent, white shade of your living self, complete with your equipment.&#13;
+			While in this form your statistics remain the same, but the only actions you can take on your turn are the help action and the attack action. In addition, whenever you make a Death saving throw, you can treat a d20 roll of 9 or lower as a 10.&#13;
+			You cannot cast spells or manipulate objects in this form, and you are immune to poison, cold, and necrotic damage. In addition, your weapon attacks deal an extra 1d8 necrotic damage.&#13;
+			Any damage dealt to your spirit form or your unconscious body causes a failed death saving throw as usual.&#13;
+			You can remain in spirit form for upto 10 minutes, or until your body regains consciousness, or you die, at which time your spirit form instantly vanishes.</description>
+		</sheet>
+	</element>
+</elements>

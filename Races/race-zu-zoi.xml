@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Zu-Zoi</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-zu-zoi.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-zu-zoi.xml" />
+		</update>
+	</info>
+
+	<!-- Base Zu-Zoi Race -->
+	<element name="Zu-Zoi" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_ZU_ZOI">
+		<description>
+			<p>The Zu-Zoi are a jungle dwelling species of sentient, insectoid humanoids. Once a slave-race, Zu-Zoi are intensely aggressive and territorial, having learned to fear and despise outsiders. They trade with other species only as a necessity, as they lack the resources and knowledge to produce complex mechanical or magical objects. However, they are not primitive. Zu-Zoi are beyond virtuosic in the fields of agriculture, survivalism and combat. It’s said Zu-Zoi can turn a barren wasteland to a thriving, luscious forest in a single generation. There are two primary subraces which co-exist peacefully: the Zu-Zoi-Zat and Zu-Zoi-Zen.</p>
+			<h4>ZU-ZOI TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution, Strength and Wisdom scores increase by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Zu-Zoi have shorter lifespans than humans, laying eggs that hatch and mature in a single year, and go on to live for roughly half a century. They show few internal or external signs of age, as healthy and intelligent in their second year as in their last.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Most Zu-Zoi stand a little shorter than a typical human, at around 5 feet. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Many Eyes.</em></strong> You gain proficiency in either Insight or Perception (your choice).</p>
+			<p class="indent"><strong><em>One with the Land.</em></strong> You gain proficiency in either Nature or Survival (your choice).</p>
+			<p class="indent"><strong><em>Steadfast Spirit.</em></strong> You have advantage on saving throws to resist Exhaustion.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong> Two primary subraces of Zu-Zoi exist: the venomous Zu-Zoi-Zat and the resilient Zu-Zoi-Zen. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Str +1, Con +1, Wis +1) -->
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (three +1's) -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Zu-Zoi)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size (Medium) -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed (30 ft. walking, assumed standard) -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Skill Proficiencies -->
+			<select type="Proficiency" name="Many Eyes" supports="ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<select type="Proficiency" name="One with the Land" supports="ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_SURVIVAL" />
+
+			<!-- Steadfast Spirit Trait -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_STEADFAST_SPIRIT" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Zu-Zoi Subrace" supports="Zu-Zoi" />
+		</rules>
+	</element>
+
+	<!-- Zu-Zoi-Zat Subrace -->
+	<element name="Zu-Zoi-Zat" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_ZU_ZOI_ZAT">
+		<supports>Zu-Zoi</supports>
+		<description>
+			<p class="indent"><strong><em>Venom Blood.</em></strong> You have resistance to poison damage and are immune to the poisoned condition.</p>
+			<p class="indent"><strong><em>Living Weapon.</em></strong> As a bonus action, you can coat a single piercing or slashing melee weapon you are holding with your natural venom. Once applied, this venom remains potent for the next minute, or until the weapon hits another creature. A creature hit by this weapon must make a constitution saving throw (DC = 8 + your proficiency bonus + your constitution modifier) or take an additional 1d10 poison damage. This damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. You can use this feature a number of times equal to your constitution modifier per long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_VENOM_BLOOD" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_LIVING_WEAPON" />
+		</rules>
+	</element>
+
+	<!-- Zu-Zoi-Zen Subrace -->
+	<element name="Zu-Zoi-Zen" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_ZU_ZOI_ZEN">
+		<supports>Zu-Zoi</supports>
+		<description>
+			<p class="indent"><strong><em>Hard Earned Freedom.</em></strong> You have advantage on saving throws against being Charmed or Frightened.</p>
+			<p class="indent"><strong><em>Adaptive Carapace.</em></strong> When you take damage, you can use your reaction to grant yourself resistance to that damage type for the next minute. Once you use this trait, you can’t do so again until you finish a short rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_HARD_EARNED_FREEDOM" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_ADAPTIVE_CARAPACE" />
+		</rules>
+	</element>
+
+	<!-- Base Zu-Zoi Traits -->
+	<element name="Steadfast Spirit" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_STEADFAST_SPIRIT">
+		<description>
+			<p>You have advantage on saving throws to resist Exhaustion.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws to resist Exhaustion.</description>
+		</sheet>
+	</element>
+
+	<!-- Zu-Zoi-Zat Traits -->
+	<element name="Venom Blood" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_VENOM_BLOOD">
+		<description>
+			<p>You have resistance to poison damage and are immune to the poisoned condition.</p>
+		</description>
+		<sheet>
+			<description>You have resistance to poison damage and immunity to the poisoned condition.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+	<element name="Living Weapon" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_LIVING_WEAPON">
+		<description>
+			<p>As a bonus action, you can coat a single piercing or slashing melee weapon you are holding with your natural venom. Once applied, this venom remains potent for the next minute, or until the weapon hits another creature. A creature hit by this weapon must make a constitution saving throw (DC = 8 + your proficiency bonus + your constitution modifier) or take an additional 1d10 poison damage. This damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. You can use this feature a number of times equal to your constitution modifier per long rest.</p>
+		</description>
+		<sheet usage="{{constitution:modifier}}/Long Rest" action="Bonus Action">
+			<description>You can coat a piercing or slashing melee weapon with venom. It lasts 1 minute or until it hits. On a hit, the target must make a CON save (DC {{living-weapon:dc}}) or take 1d10 poison damage.</description>
+			<description level="5">You can coat a piercing or slashing melee weapon with venom. It lasts 1 minute or until it hits. On a hit, the target must make a CON save (DC {{living-weapon:dc}}) or take 2d10 poison damage.</description>
+			<description level="11">You can coat a piercing or slashing melee weapon with venom. It lasts 1 minute or until it hits. On a hit, the target must make a CON save (DC {{living-weapon:dc}}) or take 3d10 poison damage.</description>
+			<description level="17">You can coat a piercing or slashing melee weapon with venom. It lasts 1 minute or until it hits. On a hit, the target must make a CON save (DC {{living-weapon:dc}}) or take 4d10 poison damage.</description>
+		</sheet>
+		<rules>
+			<stat name="living-weapon:dc" value="8" />
+			<stat name="living-weapon:dc" value="proficiency" />
+			<stat name="living-weapon:dc" value="constitution:modifier" />
+		</rules>
+	</element>
+
+	<!-- Zu-Zoi-Zen Traits -->
+	<element name="Hard Earned Freedom" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_HARD_EARNED_FREEDOM">
+		<description>
+			<p>You have advantage on saving throws against being Charmed or Frightened.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against being Charmed or Frightened.</description>
+		</sheet>
+	</element>
+	<element name="Adaptive Carapace" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ZU_ZOI_ADAPTIVE_CARAPACE">
+		<description>
+			<p>When you take damage, you can use your reaction to grant yourself resistance to that damage type for the next minute. Once you use this trait, you can’t do so again until you finish a short rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Reaction">
+			<description>When you take damage, you can use your reaction to grant yourself resistance to that damage type for 1 minute.</description>
+		</sheet>
+	</element>
+</elements>

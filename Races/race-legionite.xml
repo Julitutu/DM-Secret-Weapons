@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Legionite</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-legionite.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-legionite.xml" />
+		</update>
+	</info>
+
+	<element name="Legionite" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_LEGIONITE">
+		<description>
+			<p>A ruthlessly efficient species hewn from the earth and imbued with magic, the legionite were crafted to toil and mine in the vast network of glittering caves beneath the continent of Sniips. Although the earliest generation were viewed as a basic and expendable race of mindless automatons, soon more complex variations were created, each with different optimised properties to oversee all elements of the Levestros mining operation. Unbeknownst to their creators, legionite began to find sentience within a body of earthen and organic machinery. Far from mere “robots” they are Humanoid constructs.</p>
+			<p>With the power of the legionite, Sniips grew to be an indomitable powerhouse of industry. When the legionite rebelled, it was that same power that crushed Sniips under heavy, steel feet. The continent fell to chaos in a brutal and bloody civil war, known as Pandemonium. To this day the war continues, with many legionite fighting for their freedom while others flee to avestros across the churning ocean as refugees, seeking only to be free of Pandemonium.</p>
+			<p>Six known variations of legionite exist, each optimised to a singular function at the expense of all else.</p>
+			<h4>LEGIONITE TRAITS</h4>
+			<p class="indent"><strong><em>Size.</em></strong> Legionite are exactly 6ft tall. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> You have a base walking speed of 30ft.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Legionite are created fully sentient and able-bodied. They typically live about two centuries before the magic that binds them together breaks down and they die.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Legionite, by design, seek order. Although individuals may vary, the vast majority are of lawful alignment.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> Despite their earthen bodies, legionite possess souls and organic internal machinery. You are a Humanoid.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Superior Design.</em></strong> You gain one skill proficiency, one weapon proficiency and one tool proficiency of your choice. In addition, the amount of time you need to train to learn a new language or gain proficiency with a new tool is halved.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write common and one other language of your choice.</p>
+			<p class="indent"><strong><em>Legionite Class.</em></strong> Choose one class of legionite from the following specialisations. Each legionite class has its own unique aptitudes and abilities.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Base Legionite Traits -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_LEGIONITE_SUPERIOR_DESIGN" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Legionite)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Legionite Class" supports="Legionite" />
+		</rules>
+	</element>
+
+	<element name="Superior Design" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_LEGIONITE_SUPERIOR_DESIGN">
+		<description>
+            <p>You gain one skill proficiency, one weapon proficiency and one tool proficiency of your choice. In addition, the amount of time you need to train to learn a new language or gain proficiency with a new tool is halved.</p>
+        </description>
+		<sheet>
+            <description>The time you need to train for a new language or tool proficiency is halved.</description>
+        </sheet>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Superior Design)" supports="Skill" />
+			<select type="Proficiency" name="Weapon Proficiency (Superior Design)" supports="Simple||Martial" />
+			<select type="Proficiency" name="Tool Proficiency (Superior Design)" supports="Tool" />
+		</rules>
+	</element>
+
+	<!-- Legionite Subraces -->
+	<element name="Class S" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LEGIONITE_CLASS_S">
+		<supports>Legionite</supports>
+		<description>
+			<p>Your Strength score increases by 2, as does your maximum for that score. Additionally, you count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift, and you can grapple and shove creatures that are no more than two sizes larger than you.</p>
+		</description>
+		<sheet>
+            <description>You count as one size larger for carrying capacity and push/drag/lift weight. You can grapple/shove creatures up to two sizes larger than you.</description>
+        </sheet>
+		<rules>
+			<stat name="strength" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="strength:max" value="2" />
+            
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Class S)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+	</element>
+	<element name="Class D" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LEGIONITE_CLASS_D">
+		<supports>Legionite</supports>
+		<description>
+			<p>Your Dexterity score increases by 2, as does your maximum for that score. Additionally, your base walking speed increases by 5 feet, and you have a climbing and crawling speed equal to your walking speed.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="dexterity:max" value="2" />
+
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Class D)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="innate speed" value="5" />
+			<stat name="innate speed:climb" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Class C" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LEGIONITE_CLASS_C">
+		<supports>Legionite</supports>
+		<description>
+			<p>Your Constitution score increases by 2, as does your maximum for that score. Additionally, you are immune to the poisoned condition, and you have resistance to poison damage.</p>
+		</description>
+		<sheet>
+            <description>You are immune to the poisoned condition and have resistance to poison damage.</description>
+        </sheet>
+		<rules>
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="constitution:max" value="2" />
+
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Class C)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+	<element name="Class I" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LEGIONITE_CLASS_I">
+		<supports>Legionite</supports>
+		<description>
+			<p>Your Intelligence score increases by 2, as does your maximum for that score. Additionally, you are immune to any magical effect that aims to sense your emotions or read your thoughts, and you are immune to the Charmed condition.</p>
+		</description>
+		<sheet>
+            <description>You are immune to effects that sense your emotions or read your thoughts, and immune to the Charmed condition.</description>
+        </sheet>
+		<rules>
+			<stat name="intelligence" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="intelligence:max" value="2" />
+
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Class I)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+		</rules>
+	</element>
+	<element name="Class W" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LEGIONITE_CLASS_W">
+		<supports>Legionite</supports>
+		<description>
+			<p>Your Wisdom score increases by 2, as does your maximum for that score. Additionally, you are immune to the Frightened condition and you have advantage on ability checks made to peacefully interact with Beasts.</p>
+		</description>
+		<sheet>
+            <description>You are immune to the Frightened condition and have advantage on checks to peacefully interact with Beasts.</description>
+        </sheet>
+		<rules>
+			<stat name="wisdom" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom:max" value="2" />
+
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Class W)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+		</rules>
+	</element>
+	<element name="Class Z" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_LEGIONITE_CLASS_Z">
+		<supports>Legionite</supports>
+		<description>
+			<p>Your Charisma score increases by 2, as does your maximum for that score. Additionally, if you fail a Charisma (Deception, Intimidation, or Persuasion) check, or Charisma saving throw, you may choose to reroll, but you must use the new roll. If the new roll turns failure into success, you cannot use this trait again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest">
+            <description>If you fail a Charisma (Deception, Intimidation, or Persuasion) check or a Charisma save, you can reroll it. If the new roll succeeds, you can't use this again until you finish a short or long rest.</description>
+        </sheet>
+		<rules>
+			<stat name="charisma" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma:max" value="2" />
+
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Class Z)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+		</rules>
+	</element>
+</elements>

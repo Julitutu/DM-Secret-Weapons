@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Rogue - Vigilante</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="rogue-vigilante.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/rogue-vigilante.xml" />
+		</update>
+	</info>
+
+	<element name="Vigilante" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_ROGUE_VIGILANTE">
+		<supports>Roguish Archetype</supports>
+		<description>
+			<p>The world is dangerous. Every shadow hides thieves, murderers, devils, and monsters, lurking in wait to prey on the weak. Kings, generals, and priests speak of their power to protect from such evils, but you know they are just as cruel and oppressive as the monsters they claim to oppose. No matter where you look, the vulnerable are deceived, exploited, and thrown aside. In such a world, where corruption and greed rule, the only way to stand up for the innocent is to stand against the system.</p>
+			<p class="indent">You are a vigilante. You operate outside the law, governed by nothing but your own moral compass. You act in anonymity, living in the shadows and striking against wrongdoers. Noble folk call you a common criminal—a thug no better than the monsters you seek to destroy. To the evildoers you punish, you are a phantom—a nightmare of vengeance that haunts their every step. To the downtrodden, the helpless, and the desperate, you are a hero—a symbol of their discontent and righteous fury. Your methods may be frightening, perhaps even savage, but you act in the hope that when your work is done, and the darkness of night gives way to the delicate rays of dawn, the sun rises on a safer, virtuous world.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_ONE_WITH_SHADOW" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_FRIGHTFUL_STRIKE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_CHILLING_PRESENCE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_STREET_TACTICS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_SWIFT_VENGEANCE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_MASTER_OF_FEAR" />
+		</description>
+		<sheet display="false">
+			<description>You operate outside the law, governed by nothing but your own moral compass. You act in anonymity, living in the shadows and striking against wrongdoers.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_ONE_WITH_SHADOW" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_FRIGHTFUL_STRIKE" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_CHILLING_PRESENCE" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_STREET_TACTICS" level="9" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_SWIFT_VENGEANCE" level="13" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_MASTER_OF_FEAR" level="17" />
+		</rules>
+	</element>
+	<element name="One With Shadow" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_ONE_WITH_SHADOW">
+		<description>
+			<p>Anonymity, stealth, and surprise are vital to your survival. You can attempt to hide even when you are only lightly obscured (such as by dim light, heavy rain, light smoke, or other such effects).</p>
+		</description>
+		<sheet>
+			<description>You can attempt to hide even when you are only lightly obscured (such as by dim light, heavy rain, light smoke, or other such effects).</description>
+		</sheet>
+	</element>
+	<element name="Frightful Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_FRIGHTFUL_STRIKE">
+		<description>
+			<p>If you score a critical hit against a creature, or hit a creature with an attack roll while hidden from it, that creature is frightened by you for the next minute. A creature can make a Wisdom saving throw (DC = 8 + your Charisma modifier + your Proficiency Bonus) at the end of each of its turns, ending the effect on a success.</p>
+		</description>
+		<sheet>
+			<description>If you score a critical hit against a creature, or hit a creature with an attack roll while hidden from it, that creature is frightened by you for the next minute. A creature can make a DC {{frightful strike:dc}} Wisdom saving throw at the end of each of its turns, ending the effect on a success.</description>
+		</sheet>
+		<rules>
+			<stat name="frightful strike:dc" value="8" />
+			<stat name="frightful strike:dc" value="charisma:modifier" />
+			<stat name="frightful strike:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Chilling Presence" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_CHILLING_PRESENCE">
+		<description>
+			<p>You wield shadows as both a shield and a weapon, misdirecting and terrifying your enemies. If a creature is frightened of you and cannot see you, it has disadvantage on ability checks and attack rolls and it moves cautiously, expending 2 feet of movement for every 1 foot it moves.</p>
+		</description>
+		<sheet>
+			<description>If a creature is frightened of you and cannot see you, it has disadvantage on ability checks and attack rolls and it moves cautiously, expending 2 feet of movement for every 1 foot it moves.</description>
+		</sheet>
+	</element>
+	<element name="Street Tactics" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_STREET_TACTICS">
+		<description>
+			<p>Hardened by brutal experience, you have learned there is no tactic too dirty to grant you an edge in battle. When you make a melee attack roll against a creature, you can choose to enhance that strike with a burst of sand, glass, or acidic fumes. If your attack hits, that creature must succeed on a Constitution saving throw (DC = 8 + your Dexterity modifier + your Proficiency Bonus) or be blinded until the end of its next turn. You can use this feature a number of times equal to your Dexterity modifier, regaining all expended uses upon finishing a long rest.</p>
+		</description>
+		<sheet usage="{{dexterity:modifier}}/Long Rest">
+			<description>When you make a melee attack roll against a creature, you can choose to enhance that strike with a burst of sand, glass, or acidic fumes. If your attack hits, that creature must succeed on a DC {{street tactics:dc}} Constitution saving throw or be blinded until the end of its next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="street tactics:dc" value="8" />
+			<stat name="street tactics:dc" value="dexterity:modifier" />
+			<stat name="street tactics:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Swift Vengeance" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_SWIFT_VENGEANCE">
+		<description>
+			<p>Your retribution is swift and fierce against those who harm others. When a creature you can see within 30 feet of you makes an attack roll against a creature other than you, you can use your reaction to make one weapon attack against the attacking creature.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When a creature you can see within 30 feet of you makes an attack roll against a creature other than you, you can use your reaction to make one weapon attack against the attacking creature.</description>
+		</sheet>
+	</element>
+	<element name="Master of Fear" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_VIGILANTE_MASTER_OF_FEAR">
+		<description>
+			<p>Once per turn, when you take the attack action and hit a creature that is frightened of you with an attack roll, that creature must succeed on a Wisdom saving throw (DC = 8 + your Charisma modifier + your Proficiency Bonus) to avoid being totally overcome with fear. On a failed save, the target is paralyzed for as long as it is frightened of you.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When you take the attack action and hit a creature that is frightened of you with an attack roll, that creature must succeed on a DC {{frightful strike:dc}} Wisdom saving throw to avoid being totally overcome with fear. On a failed save, the target is paralyzed for as long as it is frightened of you.</description>
+		</sheet>
+	</element>
+</elements>

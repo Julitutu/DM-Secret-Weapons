@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Spellforged</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-spellforged.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-spellforged.xml" />
+		</update>
+	</info>
+
+	<element name="Spellforged" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_SPELLFORGED">
+		<description>
+			<p>Either through chaotic, explosive interactions of latent magic, or through the meticulous design of a powerful spellcaster, Spellforged are the very essence of the weave forged into consciousness. Spellforged created by spellcasters like liches and dracomages are often mindless servants who only gain control of their mind and destiny upon their master’s destruction. Even while thralls to a greater being, however, these beings of pure magical energy feel emotion, pain and pleasure the same as any other creature.</p>
+			<p>The life of a free spellforged is often as chaotic as the explosive interactions that brought about their birth. Lacking any parents, culture, heritage, or purpose, they often wander the world, seeking fulfillment in any way they can find it. This may mean helping the vulnerable, forming communities with other spellforged, or gathering personal power. Their unstable ties to the weave tend spellforged toward Chaotic alignments.</p>
+			<h4>SPELLFORGED TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma or Wisdom score increases by 2, and Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Spellforged vary in size, but typically take a humanoid appearance, with two legs, two arms, and a head. Your size is Medium or Small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Into the Weave.</em></strong> As a bonus action, you can magically teleport yourself or one willing creature within 5ft of you up to 30 feet to an unoccupied space you can see. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</p>
+			<p class="indent"><strong><em>Magical Form.</em></strong> As a being of energy, you have limited control over your form. You know the spell alter self and can cast it without a spell slot. Once you cast it in this way, you cannot do so again until you finish a long rest.</p>
+			<p class="indent"><strong><em>Magical Resilience.</em></strong> You are a being born from magic, which confers the following benefits: You have proficiency in the Arcana skill. You are immune to disease and the poisoned condition. You don’t need to eat, drink, or breathe. You are immune to spells and effects that would dispel the magic that binds you together.</p>
+			<p class="indent"><strong><em>Spellborne.</em></strong> The magic that bound you together grants you access to elemental power. Choose one damage type from among acid, cold, fire, lightning, poison, or thunder. You gain a resistance to the chosen damage type, and your unarmed strikes deal 1d6 + your Strength modifier of the chosen damage type. You glow and pulse with magical energy that reflects your chosen elemental power. You might radiate heat as a fire spellforged, or crackle with a static energy as a lightning one.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read and write Common and Primordial.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Increase (Spellforged)" supports="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_WISDOM_INCREASE_2|ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_CHARISMA_INCREASE_2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Spellforged)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Spellforged)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Spellforged)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<grant type="Language" id="ID_LANGUAGE_PRIMORDIAL" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPELLFORGED_INTO_THE_WEAVE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPELLFORGED_MAGICAL_FORM" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPELLFORGED_MAGICAL_RESILIENCE" />
+			<select type="Racial Trait" name="Spellborne" supports="Spellborne" />
+		</rules>
+	</element>
+
+	<element name="Into the Weave" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLFORGED_INTO_THE_WEAVE">
+		<description>
+            <p>As a bonus action, you can magically teleport yourself or one willing creature within 5ft of you up to 30 feet to an unoccupied space you can see. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</p>
+        </description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+            <description>You teleport yourself or a willing creature within 5ft up to 30ft to an unoccupied space you can see.</description>
+        </sheet>
+	</element>
+	<element name="Magical Form" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLFORGED_MAGICAL_FORM">
+		<description>
+            <p>As a being of energy, you have limited control over your form. You know the spell alter self and can cast it without a spell slot. Once you cast it in this way, you cannot do so again until you finish a long rest.</p>
+        </description>
+		<sheet usage="1/Long Rest">
+            <description>You can cast Alter Self without a spell slot.</description>
+        </sheet>
+		<rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" />
+        </rules>
+	</element>
+	<element name="Magical Resilience" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLFORGED_MAGICAL_RESILIENCE">
+		<description>
+            <p>You are a being born from magic, which confers the following benefits: You have proficiency in the Arcana skill. You are immune to disease and the poisoned condition. You don’t need to eat, drink, or breathe. You are immune to spells and effects that would dispel the magic that binds you together.</p>
+        </description>
+		<sheet>
+            <description>You are immune to disease and poison, don't need to eat, drink, or breathe, and are immune to being dispelled.</description>
+        </sheet>
+		<rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+        </rules>
+	</element>
+
+	<!-- Spellborne Options -->
+	<element name="Acid" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLBORNE_ACID">
+		<supports>Spellborne</supports>
+		<description>
+            <p>You have resistance to acid damage, and your unarmed strikes deal 1d6 + your Strength modifier acid damage.</p>
+        </description>
+		<sheet alt="Spellborne">
+            <description>Your unarmed strikes deal 1d6 + {{strength:modifier}} acid damage.</description>
+        </sheet>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+        </rules>
+	</element>
+	<element name="Cold" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLBORNE_COLD">
+		<supports>Spellborne</supports>
+		<description>
+            <p>You have resistance to cold damage, and your unarmed strikes deal 1d6 + your Strength modifier cold damage.</p>
+        </description>
+		<sheet alt="Spellborne">
+            <description>Your unarmed strikes deal 1d6 + {{strength:modifier}} cold damage.</description>
+        </sheet>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+        </rules>
+	</element>
+	<element name="Fire" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLBORNE_FIRE">
+		<supports>Spellborne</supports>
+		<description>
+            <p>You have resistance to fire damage, and your unarmed strikes deal 1d6 + your Strength modifier fire damage.</p>
+        </description>
+		<sheet alt="Spellborne">
+            <description>Your unarmed strikes deal 1d6 + {{strength:modifier}} fire damage.</description>
+        </sheet>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+        </rules>
+	</element>
+	<element name="Lightning" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLBORNE_LIGHTNING">
+		<supports>Spellborne</supports>
+		<description>
+            <p>You have resistance to lightning damage, and your unarmed strikes deal 1d6 + your Strength modifier lightning damage.</p>
+        </description>
+		<sheet alt="Spellborne">
+            <description>Your unarmed strikes deal 1d6 + {{strength:modifier}} lightning damage.</description>
+        </sheet>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+        </rules>
+	</element>
+	<element name="Poison" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLBORNE_POISON">
+		<supports>Spellborne</supports>
+		<description>
+            <p>You have resistance to poison damage, and your unarmed strikes deal 1d6 + your Strength modifier poison damage.</p>
+        </description>
+		<sheet alt="Spellborne">
+            <description>Your unarmed strikes deal 1d6 + {{strength:modifier}} poison damage.</description>
+        </sheet>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+	</element>
+	<element name="Thunder" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPELLBORNE_THUNDER">
+		<supports>Spellborne</supports>
+		<description>
+            <p>You have resistance to thunder damage, and your unarmed strikes deal 1d6 + your Strength modifier thunder damage.</p>
+        </description>
+		<sheet alt="Spellborne">
+            <description>Your unarmed strikes deal 1d6 + {{strength:modifier}} thunder damage.</description>
+        </sheet>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" />
+        </rules>
+	</element>
+</elements>

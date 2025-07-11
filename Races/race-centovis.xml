@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Centovis</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-centovis.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-centovis.xml" />
+		</update>
+	</info>
+
+	<element name="Centovis" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CENTOVIS">
+		<description>
+			<p>Joyously peeling back and forth on a winding journey down Abrax, the tallest mountain in Avestros, flows the Pathis River. Along its banks from icy crest to gentle foothill live the centovium: a wool-coated, hooved, quadruped race, cousins of the famous centaurs. While alike their distant kin in stature and physique, centovium could not differ more from centaurs in attitude to outsiders. While few centaurs would ever suffer the indignity of bearing another on their back, a typical centovis takes delight in acting as a mount for others. In centovis culture, the mount, bearing the wounded or weary on their body, is a position of bravery and dominance, and a powerful protection magic is woven between rider and bearer when the centovium charge.</p>
+			<h4>CENTOVIS TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Centovis mature slower than humans, reaching adulthood at around 25. They can go on to live for up to 300 years.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Your size is Medium. Fully grown centovis stand between 6 feet tall.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 40 feet.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> Your creature type is Fey.</p>
+			<p class="indent"><strong><em>Fluffy.</em></strong> Your woolen coat grants you a measure of protection from the elements. You resist cold damage.</p>
+			<p class="indent"><strong><em>Hooves.</em></strong> You can use your hooves to make unarmed strikes, which deal 1d6 + your Strength modifier bludgeoning damage on a hit. You have advantage on unarmed strikes using your hooves made against prone creatures.</p>
+			<p class="indent"><strong><em>Shared Vitality.</em></strong> A bipedal, medium-sized creature can ride you as a mount, if you are willing. When it does so, you share a bond of vitality. On its turn, a rider can transfer its energy to you. You move as it dictates, if you are willing, using its movement speed.</p>
+			<p class="indent"><strong><em>Powerful Build.</em></strong> You count as one size larger when determining your carrying capacity and the weight you can push or drag.</p>
+			<p class="indent"><strong><em>Willing Mount.</em></strong> A willing creature mounted on you has a bonus to its attack rolls and saving throws equal to half your proficiency bonus while you are concious.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language that you and your GM agree is appropriate for your character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Centovis)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Centovis)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="40" bonus="base" />
+
+			<!-- Creature Type -->
+			<grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FEY" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Centovis)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_HOOVES" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_SHARED_VITALITY" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_POWERFUL_BUILD" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_WILLING_MOUNT" />
+		</rules>
+	</element>
+
+	<element name="Hooves" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_HOOVES">
+		<description>
+			<p>You can use your hooves to make unarmed strikes, which deal 1d6 + your Strength modifier bludgeoning damage on a hit. You have advantage on unarmed strikes using your hooves made against prone creatures.</p>
+		</description>
+		<sheet>
+			<description>Your hooves are natural weapons that deal 1d6 + {{strength:modifier}} bludgeoning damage. You have advantage on these attacks against prone creatures.</description>
+		</sheet>
+	</element>
+	<element name="Shared Vitality" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_SHARED_VITALITY">
+		<description>
+			<p>A bipedal, medium-sized creature can ride you as a mount, if you are willing. When it does so, you share a bond of vitality. On its turn, a rider can transfer its energy to you. You move as it dictates, if you are willing, using its movement speed.</p>
+		</description>
+		<sheet>
+			<description>A willing Medium bipedal creature can ride you. It can use its movement to move you.</description>
+		</sheet>
+	</element>
+	<element name="Powerful Build" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_POWERFUL_BUILD">
+		<description>
+			<p>You count as one size larger when determining your carrying capacity and the weight you can push or drag.</p>
+		</description>
+		<sheet>
+			<description>You count as one size larger for carrying capacity and push/drag/lift weight.</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+	</element>
+	<element name="Willing Mount" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CENTOVIS_WILLING_MOUNT">
+		<description>
+			<p>A willing creature mounted on you has a bonus to its attack rolls and saving throws equal to half your proficiency bonus while you are concious.</p>
+		</description>
+		<sheet>
+			<description>A willing creature mounted on you has a +{{proficiency:half}} bonus to its attack rolls and saving throws.</description>
+		</sheet>
+	</element>
+</elements>

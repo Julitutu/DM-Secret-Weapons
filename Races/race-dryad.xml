@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Dryad</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-dryad.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-dryad.xml" />
+		</update>
+	</info>
+
+	<element name="Dryad" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_DRYAD">
+		<description>
+			<p>From tempestuous ocean, to trembling forest, to stark, belligerent mountainside, anywhere the natural world breathes freely, dryads call home. Typically solitary folk, dryads are most content among the company of one another and the solace of nature.</p>
+			<p>Throughout history, most clashes between dryads and other species have been in response to the other’s aspirations of conquest and domination negatively impacting the natural world. Dryads have a reputation for civility and patience, but it swiftly veers into ruinous fury and retribution when harm is done to nature. Many dryads proudly declare themselves as protectors of The World, and value the lives of simple beasts, plants, and even mountains as equal to those of “intelligent” beings.</p>
+			<h4>DRYAD TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 2 and your Constition score increases by 1.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Dryads mature slower than humans, reaching adulthood at around 30 years of age. They can live for up to 300 years.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Dryads vary greatly in size. Your size is Small or Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Chlorophyll.</em></strong> If you start your turn in direct sunlight, your base walking speed increases by 10 feet until the end of that turn.</p>
+			<p class="indent"><strong><em>Nature’s Magician.</em></strong> You know one cantrip of your choice from the Druid spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this species).</p>
+			<p class="indent"><strong><em>Possess Plant.</em></strong> As an action, you can possess a non-magical plant within 5 feet of you, meddling your body and gear into the body of the plant. While possessing it, you cannot move or talk, but you can hear and see as normal. You can’t take actions, except to use a bonus action to leave the plant, at which time you appear in an unoccupied space within 5 feet of it. While possessed, the plant gains the awakened shrub stat block, except its size changes to match the size of the plant you possessed, and it shares your place in initiative and obeys your mental commands (no action required). If the plant is reduced to 0 hit points, you are ejected from it, landing prone in an unoccupied space within 5 feet of it.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.</p>
+			<p class="indent"><strong><em>Dryad Lineage.</em></strong> There are many types of Dryad. Choose your lineage from one of the following lineages and gain its benefits.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Base Dryad Traits -->
+			<stat name="wisdom" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Dryad)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Dryad)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Racial Trait" name="Size (Dryad)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DRYAD_CHLOROPHYLL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DRYAD_NATURES_MAGICIAN" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DRYAD_POSSESS_PLANT" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Dryad)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Dryad Lineage" supports="Dryad Lineage" />
+		</rules>
+	</element>
+
+	<element name="Chlorophyll" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DRYAD_CHLOROPHYLL">
+		<description>
+            <p>If you start your turn in direct sunlight, your base walking speed increases by 10 feet until the end of that turn.</p>
+        </description>
+		<sheet>
+            <description>If you start your turn in direct sunlight, your speed increases by 10 feet until the end of the turn.</description>
+        </sheet>
+	</element>
+	<element name="Nature’s Magician" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DRYAD_NATURES_MAGICIAN">
+		<description>
+            <p>You know one cantrip of your choice from the Druid spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this species).</p>
+        </description>
+		<sheet>
+            <description>You know a Druid cantrip. Your spellcasting ability is {{spellcasting:natures-magician}}.</description>
+        </sheet>
+		<rules>
+			<select type="Spell" name="Cantrip (Nature's Magician)" supports="Druid,0" />
+			<select type="Racial Trait" name="Spellcasting Ability (Nature's Magician)" supports="Nature's Magician Ability" />
+		</rules>
+	</element>
+	<element name="Nature's Magician (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DRYAD_NATURES_MAGICIAN_INT">
+		<supports>Nature's Magician Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:natures-magician" value="Intelligence" inline="true"/>
+        </rules>
+	</element>
+	<element name="Nature's Magician (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DRYAD_NATURES_MAGICIAN_WIS">
+		<supports>Nature's Magician Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:natures-magician" value="Wisdom" inline="true"/>
+        </rules>
+	</element>
+	<element name="Nature's Magician (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DRYAD_NATURES_MAGICIAN_CHA">
+		<supports>Nature's Magician Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:natures-magician" value="Charisma" inline="true"/>
+        </rules>
+	</element>
+	<element name="Possess Plant" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DRYAD_POSSESS_PLANT">
+		<description>
+            <p>As an action, you can possess a non-magical plant within 5 feet of you, meddling your body and gear into the body of the plant. While possessing it, you cannot move or talk, but you can hear and see as normal. You can’t take actions, except to use a bonus action to leave the plant, at which time you appear in an unoccupied space within 5 feet of it. While possessed, the plant gains the awakened shrub stat block, except its size changes to match the size of the plant you possessed, and it shares your place in initiative and obeys your mental commands (no action required). If the plant is reduced to 0 hit points, you are ejected from it, landing prone in an unoccupied space within 5 feet of it.</p>
+        </description>
+		<sheet action="Action">
+            <description>You can possess a non-magical plant within 5ft. While possessed, you can't move, talk, or take actions (except a bonus action to leave). The plant uses the awakened shrub stat block, shares your initiative, and obeys your mental commands. If it drops to 0 HP, you are ejected prone.</description>
+        </sheet>
+	</element>
+
+	<!-- Dryad Subraces -->
+	<element name="Woodland Dryad" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_WOODLAND_DRYAD">
+		<supports>Dryad Lineage</supports>
+		<description>
+			<p>You have proficiency in the Nature skill. Starting at 3rd level, you can cast the Cure Wounds spell with this trait. Starting at 5th level, you can also cast Enhance Ability with this trait. Once you cast Cure Wounds or Enhance Ability with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this species).</p>
+		</description>
+		<sheet>
+			<description level="3">You can cast Cure Wounds once per long rest. Your spellcasting ability is {{spellcasting:natures-magician}}.</description>
+			<description level="5">You can cast Cure Wounds and Enhance Ability once per long rest each. Your spellcasting ability is {{spellcasting:natures-magician}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="5" />
+		</rules>
+	</element>
+	
+	<element name="Desert Dryad" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_DESERT_DRYAD">
+		<supports>Dryad Lineage</supports>
+		<description>
+			<p>You have proficiency in the Stealth skill. Starting at 3rd level, you can cast the Silent Image spell with this trait. Starting at 5th level, you can also cast Heat Metal with this trait. Once you cast Silent Image or Heat Metal with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this species).</p>
+		</description>
+		<sheet>
+			<description level="3">You are proficient in Stealth. You can cast Silent Image once per long rest. Your spellcasting ability is {{spellcasting:natures-magician}}.</description>
+			<description level="5">You are proficient in Stealth. You can cast Silent Image and Heat Metal once per long rest each. Your spellcasting ability is {{spellcasting:desert-dryad}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<grant type="Spell" id="ID_PHB_SPELL_SILENT_IMAGE" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEAT_METAL" level="5" />
+		</rules>
+	</element>
+	
+	<element name="Coastline Dryad" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_COASTLINE_DRYAD">
+		<supports>Dryad Lineage</supports>
+		<description>
+			<p>You have a swim speed equal to your walking speed. Starting at 3rd level, you can cast the Fog Cloud spell with this trait. Starting at 5th level, you can also cast Lesser Restoration with this trait. Once you cast Fog Cloud or Lesser Restoration with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this species).</p>
+		</description>
+		<sheet>
+			<description level="3">You can cast Fog Cloud once per long rest. Your spellcasting ability is {{spellcasting:natures-magician}}.</description>
+			<description level="5">You can cast Fog Cloud and Lesser Restoration once per long rest each. Your spellcasting ability is {{spellcasting:natures-magician}}.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+			<grant type="Spell" id="ID_PHB_SPELL_FOG_CLOUD" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" level="5" />
+		</rules>
+	</element>
+</elements>

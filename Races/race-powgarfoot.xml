@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Powgarfoot</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-powgarfoot.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-powgarfoot.xml" />
+		</update>
+	</info>
+    <!-- POWGARFOOT RACE -->
+
+	<element name="Powgarfoot" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_POWGARFOOT">
+		<description>
+			<p>Making their home in the temperate, mountainous forests of Avestros, Powgarfoot are an ursine race of humanoids. Hulking, sociable, and independant, they typically prefer to keep out of conflict, unfettered by the politics and warfare of other races. All are welcome in a Powgarfoot village, free to stay as long as they wish, and to take as much food as they desire.</p>
+			<p>Powgarfoot take enormous pleasure in food. Eating, cooking, sharing, and storing it are acts of delight and great cultural significance. All events, be they funerals, weddings, birthdays, weekends, or weekdays, are marked with a great feast. Their cuisine is famous across the land as delicious and eclectic. There is no dish a Powgarfoot will not sample, and very few meals they will not enjoy.</p>
+			<h4>POWGARFOOT TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> One ability score of your choice increases by 2, one other ability score of your choice increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Powgarfoot are naturally beefy folk, reaching up to 8 feet tall. Your size is medium.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Powgarfoot mature quickly, and live slightly shorter lives than humans, reaching up to 70 years old.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet, and you have a climb speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Delightful Appetite.</em></strong> When you spend at least 5 minutes eating, you can expend a number of hit dice up to your proficiency modifier, roll them, add your constitution modifier, and regain that many hit points.</p>
+			<p class="indent"><strong><em>Strong Stomach.</em></strong> You are immune to the negative effects of poisons, toxins, and other harmful substances that you ingest.</p>
+			<p class="indent"><strong><em>Resolute Mind.</em></strong> You are immune to the Charmed condition.</p>
+			<p class="indent"><strong><em>Skilled Paws.</em></strong> You have proficiency with Cook’s Utensils and in one skill of your choice from among Acrobatics, Animal Handling, Athletics, Insight, Nature, or Survival.</p>
+			<p class="indent"><strong><em>Powerful Build.</em></strong> You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<select type="Ability Score Improvement" name="Ability Score Improvement +2 (Powgarfoot)" supports="Custom Ability Score Increase 2" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement +1 (Powgarfoot)" supports="Custom Ability Score Increase 1" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="innate speed" bonus="base" />
+
+			<!-- Vision -->
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_DELIGHTFUL_APPETITE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_STRONG_STOMACH" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_RESOLUTE_MIND" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS" />
+			<select type="Proficiency" name="Skilled Paws" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_POWERFUL_BUILD" />
+		</rules>
+	</element>
+	<element name="Delightful Appetite" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_DELIGHTFUL_APPETITE">
+		<description>
+			<p>When you spend at least 5 minutes eating, you can expend a number of hit dice up to your proficiency modifier, roll them, add your constitution modifier, and regain that many hit points.</p>
+		</description>
+		<sheet>
+			<description>When you spend at least 5 minutes eating, you can expend a number of hit dice up to your proficiency modifier, roll them, add {{constitution:modifier}}, and regain that many hit points.</description>
+		</sheet>
+	</element>
+	<element name="Strong Stomach" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_STRONG_STOMACH">
+		<description>
+			<p>You are immune to the negative effects of poisons, toxins, and other harmful substances that you ingest.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the negative effects of ingested poisons and toxins.</description>
+		</sheet>
+	</element>
+	<element name="Resolute Mind" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_RESOLUTE_MIND">
+		<description>
+			<p>You are immune to the Charmed condition.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the Charmed condition.</description>
+		</sheet>
+	</element>
+	<element name="Powerful Build" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_POWGARFOOT_POWERFUL_BUILD">
+		<description>
+			<p>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+		</description>
+		<sheet>
+			<description>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+	</element>
+</elements>

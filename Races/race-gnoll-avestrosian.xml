@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Gnoll (Avestrosian)</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-gnoll-avestrosian.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-gnoll-avestrosian.xml" />
+		</update>
+	</info>
+
+	<element name="Gnoll (Avestrosian)" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_GNOLL_AVESTROSIAN">
+		<description>
+			<p>Legends speak of gnolls spread across the all planes of existence: demonic, snarling, bloodthirsty creatures under the command of a terrifying demon lord. The first gnolls to fall through the Shimmering Veil into Avestros might have been of such savage and mindless character, but after millenia apart from the rest of the multiverse, and the oversight and influence of their vicious creator, Avestrosian gnolls have grown to overcome their feral instinct and craft their own destiny.</p>
+			<p>Similar in appearance and power to the gnolls feared on other planes, the life of an Avestrosian gnoll is one of restless temperance—an eternal balancing act between an ancient, clawing instinct for destruction and a blossoming desire for freedom, kinship, and peace. A great deal of gnoll art and contemporary philosophy explores this discordance at the heart of each individual’s soul, and the journey of each gnoll is one of self-discovery and exploration a quest to turn a killer instinct to the pursuit of a life beyond mayhem and revelry. Those who succeed rise to greatness as true masters of themselves and their own destiny. The few gnoll who fail are as deadly as they are tragic—fallen monstrosities who roam the lands as slaves to their own monstrous instinct.</p>
+			<h4>GNOLL TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 2, and your Dexterity score increases by 1.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid. You are also considered a goblinoid for any prerequisite or effect that requires you to be a goblinoid.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Avestrosian gnolls typically reach 5-6 feet in height. Your size is medium.</p>
+			<p class="indent"><strong><em>Bite.</em></strong> You have a fierce jaw that you can use to make unarmed strikes. When you hit with it, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
+			<p class="indent"><strong><em>Iron Composure.</em></strong> Avestrosian gnolls have evolved to overcome their innate, ferocious temperament through incredible self-discipline. This iron composure gives you advantage on Wisdom saving throws.</p>
+			<p class="indent"><strong><em>Goblinoid Guile.</em></strong> You have proficiency in two of the following skills of your choice: Animal Handling, Athletics, Insight, Investigation, Perception, Persuasion, Stealth, Survival.</p>
+			<p class="indent"><strong><em>Pack Attack.</em></strong> In place of one of your attacks when you take the Attack action, you can let loose a primal roar. One creature of your choice within 30 feet of you that can hear you can use its reaction to move up to half its movement speed and make a single weapon attack. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong><em>Rampage.</em></strong> When you score a critical hit, or reduce a creature to 0 hit points with an attack roll on your turn, you can use your bonus action to move up to half your speed and make a single Bite attack.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> Your character can speak, read, and write Common and one other language that you and your GM agree is appropriate for the character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="strength" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Gnoll)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Gnoll)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Gnoll)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_GNOLL_BITE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_IRON_COMPOSURE" />
+			<select type="Proficiency" name="Goblinoid Guile" number="2" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_PACK_ATTACK" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_RAMPAGE" />
+		</rules>
+	</element>
+
+	<element name="Bite" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_GNOLL_BITE">
+		<description>
+			<p>You have a fierce jaw that you can use to make unarmed strikes. When you hit with it, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
+		</description>
+		<sheet>
+			<description>Your bite is a natural weapon that deals 1d6 + {{strength:modifier}} slashing damage.</description>
+		</sheet>
+	</element>
+	<element name="Iron Composure" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_IRON_COMPOSURE">
+		<description>
+			<p>Avestrosian gnolls have evolved to overcome their innate, ferocious temperament through incredible self-discipline. This iron composure gives you advantage on Wisdom saving throws.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on Wisdom saving throws.</description>
+		</sheet>
+	</element>
+	<element name="Pack Attack" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_PACK_ATTACK">
+		<description>
+			<p>In place of one of your attacks when you take the Attack action, you can let loose a primal roar. One creature of your choice within 30 feet of you that can hear you can use its reaction to move up to half its movement speed and make a single weapon attack. You can use this trait a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Action">
+			<description>In place of one of your attacks, you can roar. An ally within 30ft can use its reaction to move up to half its speed and make one weapon attack.</description>
+		</sheet>
+	</element>
+	<element name="Rampage" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GNOLL_AVESTROSIAN_RAMPAGE">
+		<description>
+			<p>When you score a critical hit, or reduce a creature to 0 hit points with an attack roll on your turn, you can use your bonus action to move up to half your speed and make a single Bite attack.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>When you score a critical hit or reduce a creature to 0 HP on your turn, you can use your bonus action to move up to half your speed and make a Bite attack.</description>
+		</sheet>
+	</element>
+</elements>

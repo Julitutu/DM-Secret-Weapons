@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ranger - Flame Weaver Conclave</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="ranger-flame-weaver-conclave.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/ranger-flame-weaver-conclave.xml" />
+		</update>
+	</info>
+
+	<element name="Flame Weaver Conclave" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_RANGER_FLAME_WEAVER_CONCLAVE">
+		<supports>Ranger Archetype</supports>
+		<description>
+			<p>With hearts and magic inflamed with passion, Flame Weavers wield fire as a living weapon, directing its destructive energy to incinerate foes. Rangers of this conclave seek to command the most raw, explosive force of nature, and prioritise offensive magic and high-risk battle strategies. However, the conclave is not mindless. They understand the devastating potential of a flame unchecked, wielding fire magic with respect, caution, and subtlety when such virtues are called for. Flame Weavers are highly sought after as professional assassins, as a master of the technique can reduce a target to ashes while leaving the surrounding area unblemished.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_FLAME_WEAVER_MAGIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_FLAME_INFUSION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_INCINERATION_SPECIALIST" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_JET_OF_FLAME" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_BURNING_FORM" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_HEART_OF_FLAME" />
+		</description>
+		<sheet display="false">
+			<description>Flame Weavers wield fire as a living weapon, directing its destructive energy to incinerate foes.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_FLAME_WEAVER_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_FLAME_INFUSION" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_INCINERATION_SPECIALIST" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_JET_OF_FLAME" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_BURNING_FORM" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_HEART_OF_FLAME" level="15" />
+		</rules>
+	</element>
+	<element name="Flame Weaver Magic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_FLAME_WEAVER_MAGIC">
+		<description>
+			<p>You learn an additional spell when you reach certain levels in this class, as shown in the Flame Weaver Spells table. The spell counts as a ranger spell for you, but it doesn’t count against the number of ranger spells you know.</p>
+			<h5>Flame Weaver Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Ranger Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>firebolt, burning hands</i></td></tr>
+				<tr><td>5th</td><td><i>flame blade</i></td></tr>
+				<tr><td>9th</td><td><i>fireball</i></td></tr>
+				<tr><td>13th</td><td><i>wall of fire</i></td></tr>
+				<tr><td>17th</td><td><i>conjure elemental</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_FIRE_BOLT" level="3" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" level="3" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FLAME_BLADE" level="5" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="9" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FIRE" level="13" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONJURE_ELEMENTAL" level="17" spellcasting="Ranger" prepared="true" />
+		</rules>
+	</element>
+	<element name="Flame Infusion" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_FLAME_INFUSION">
+		<description>
+			<p>Fire magic ripples through your body and bursts when you strike. The first time you hit a creature each turn with a weapon attack, the creature takes an additional 1d6 fire damage. When you reach 11th level in this class, the extra damage increases to 2d6.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>The first time you hit a creature each turn with a weapon attack, the creature takes an additional {{flame infusion:damage}}d6 fire damage.</description>
+		</sheet>
+		<rules>
+			<stat name="flame infusion:damage" value="1" />
+			<stat name="flame infusion:damage" value="1" level="11" />
+		</rules>
+	</element>
+	<element name="Incineration Specialist" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_INCINERATION_SPECIALIST">
+		<description>
+			<p>Your mastery of fire magic grants your spells extra potency, and offers some guard against flames. Your weapon attacks, spells, and abilities that deal damage to other creatures ignore any resistance to fire damage, and you have a resistance to fire damage.</p>
+		</description>
+		<sheet>
+			<description>Your weapon attacks, spells, and abilities that deal damage to other creatures ignore any resistance to fire damage, and you have a resistance to fire damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+		</rules>
+	</element>
+	<element name="Jet of Flame" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_JET_OF_FLAME">
+		<description>
+			<p>As a bonus action, you can teleport up to 15 feet to an unoccupied space you can see in a burst of flame. Other creatures within 5 feet of you when you appear must succeed on a Dexterity Saving Throw (DC = your Ranger spellcasting DC), or take 1d8 fire damage. When you reach 11th level in this class, the damage increases to 2d8. You can use this feature once per long rest, unless you expend a spell slot of 2nd level or above to do it again.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+			<description>You can teleport up to 15 feet to an unoccupied space you can see in a burst of flame. Other creatures within 5 feet of you when you appear must succeed on a DC {{ranger:spellcasting:dc}} Dexterity Saving Throw, or take {{jet of flame:damage}}d8 fire damage. You can use this feature once per long rest, unless you expend a spell slot of 2nd level or above to do it again.</description>
+		</sheet>
+		<rules>
+			<stat name="jet of flame:damage" value="1" />
+			<stat name="jet of flame:damage" value="1" level="11" />
+		</rules>
+	</element>
+	<element name="Burning Form" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_BURNING_FORM">
+		<description>
+			<p>Your blistering reactions and blazing magic serve to protect you at a moment’s notice. You learn the fire shield spell. In addition, when you roll initiative, you can use a reaction to cast the spell fire shield on yourself, without expending a spell slot.</p>
+			<p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Reaction">
+			<description>When you roll initiative, you can use a reaction to cast the spell fire shield on yourself, without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" />
+		</rules>
+	</element>
+	<element name="Heart of Flame" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_FLAME_WEAVER_HEART_OF_FLAME">
+		<description>
+			<p>You are one with flame, and your command over fire is absolute and devastating. Your weapon attacks, spells, and abilities that deal fire damage ignore any target’s immunity to fire damage.</p>
+			<p class="indent">In addition, when you cast a spell or use an ability that deals fire damage and forces other creatures to make a saving throw, you can choose a number of those creatures up to your Wisdom modifier (minimum of one). You bend the spell in such a manner as to avoid harming the chosen creatures, and they take no fire damage from that spell or ability.</p>
+		</description>
+		<sheet>
+			<description>Your weapon attacks, spells, and abilities that deal fire damage ignore any target’s immunity to fire damage.&#13;
+			In addition, when you cast a spell or use an ability that deals fire damage and forces other creatures to make a saving throw, you can choose a number of those creatures up to {{heart of flame:creatures}}. You bend the spell in such a manner as to avoid harming the chosen creatures, and they take no fire damage from that spell or ability.</description>
+		</sheet>
+		<rules>
+			<stat name="heart of flame:creatures" value="1" bonus="base" />
+			<stat name="heart of flame:creatures" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+</elements>

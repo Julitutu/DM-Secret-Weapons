@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Monk - Warrior of the Radiant Soul</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="monk-warrior-of-the-radiant-soul.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/monk-warrior-of-the-radiant-soul.xml" />
+		</update>
+	</info>
+
+	<element name="Warrior of the Radiant Soul" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_MONK_WARRIOR_OF_THE_RADIANT_SOUL">
+		<supports>Monastic Tradition</supports>
+		<description>
+			<p>Across all times and cultures, warriors have fought and died in the name of the gods. There are few, however, who can truly claim to be chosen by them. Monks of the Radiant Soul infuse their blistering agility and technique with the divine power of the Higher Planes. Some such warriors are chosen from birth, while others find relationships with Higher Beings through deep, transcendent meditation. In all cases, they are fearsome in battle, fortified and bolstered by the holy power of the gods.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_DIVINE_SHELTER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_DIVINE_RETRIBUTION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_SHINING_SOUL" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_TRANSCENDENT_WINGS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_SHARED_BLESSING" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_RAPTUROUS_SURGE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_ETERNAL_BLESSING" />
+		</description>
+		<sheet display="false">
+			<description>Monks of the Radiant Soul infuse their blistering agility and technique with the divine power of the Higher Planes.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_DIVINE_SHELTER" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_DIVINE_RETRIBUTION" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_SHINING_SOUL" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_TRANSCENDENT_WINGS" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_SHARED_BLESSING" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_RAPTUROUS_SURGE" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_ETERNAL_BLESSING" level="17" />
+		</rules>
+	</element>
+	<element name="Divine Shelter" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_DIVINE_SHELTER">
+		<description>
+			<p>Once per turn, when you deal damage to a creature with an unarmed strike or Monk weapon, you can shield yourself in an aura of divine light. If you do, you gain Temporary Hit Points equal to your Proficiency Bonus + your Wisdom modifier.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When you deal damage to a creature with an unarmed strike or Monk weapon, you can shield yourself in an aura of divine light. If you do, you gain {{divine shelter:thp}} Temporary Hit Points.</description>
+		</sheet>
+		<rules>
+			<stat name="divine shelter:thp" value="proficiency" />
+			<stat name="divine shelter:thp" value="wisdom:modifier" />
+		</rules>
+	</element>
+	<element name="Divine Retribution" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_DIVINE_RETRIBUTION">
+		<description>
+			<p>Once per turn, if a creature within 60 feet of you hits you with an attack while you have temporary hit points, you can use a reaction to retaliate with a bolt of fiery radiance. Choose one or more of the following effects:</p>
+			<ul>
+				<li>That creature takes radiant damage equal to two rolls of your Martial Arts die.</li>
+				<li>Expend 1 Ki point, your AC increases by an amount equal to your Wisdom modifier, potentially turning a hit into a miss. This AC increase lasts until the end of this turn.</li>
+				<li>Expend 2 Ki points, that creature is Blinded until the end of your next turn.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Turn" action="Reaction">
+			<description>If a creature within 60 feet of you hits you with an attack while you have temporary hit points, you can use a reaction to retaliate with a bolt of fiery radiance. Choose one or more of the following effects:&#13;
+			• That creature takes radiant damage equal to two rolls of your Martial Arts die. (d{{martial arts:dice}})&#13;
+			• Expend 1 Ki point, your AC increases by {{wisdom:modifier}}, potentially turning a hit into a miss. This AC increase lasts until the end of this turn.&#13;
+			• Expend 2 Ki points, that creature is Blinded until the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Shining Soul" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_SHINING_SOUL">
+		<description>
+			<p>You have proficiency in the Religion and Nature skills, and when you make an ability check using either skill, you can make it as a Wisdom check, rather than Intelligence.</p>
+		</description>
+		<sheet>
+			<description>When you make an ability check using either skill, you can make it as a Wisdom check, rather than Intelligence.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<stat name="religion:misc" value="-intelligence:modifier" />
+			<stat name="nature:misc" value="-intelligence:modifier" />
+			<stat name="religion:misc" value="wisdom:modifier"/>
+			<stat name="nature:misc" value="wisdom:modifier"/>
+		</rules>
+	</element>
+	<element name="Transcendent Wings" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_TRANSCENDENT_WINGS">
+		<description>
+			<p>While you have temporary hit points, you have a fly speed equal to your walking speed, and you can hover.</p>
+		</description>
+		<sheet>
+			<description>While you have temporary hit points, you have a fly speed equal to your walking speed, and you can hover.</description>
+		</sheet>
+	</element>
+	<element name="Shared Blessing" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_SHARED_BLESSING">
+		<description>
+			<p>Once per turn, when you gain Temporary Hit Points, you can choose one creature you can see within 60 feet of yourself. They gain Temporary Hit Points equal to your Wisdom modifier (minimum of +1).</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When you gain Temporary Hit Points, you can choose one creature you can see within 60 feet of yourself. They gain {{shared blessing:thp}} Temporary Hit Points.</description>
+		</sheet>
+		<rules>
+			<stat name="shared blessing:thp" value="1" bonus="base" />
+			<stat name="shared blessing:thp" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+	<element name="Rapturous Surge" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_RAPTUROUS_SURGE">
+		<description>
+			<p>On your turn, when you use your Divine Shelter feature, you can forgo gaining Temporary Hit Points to take an additional bonus action this turn instead. Once you use this feature, it cannot be used again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>On your turn, when you use your Divine Shelter feature, you can forgo gaining Temporary Hit Points to take an additional bonus action this turn instead.</description>
+		</sheet>
+	</element>
+	<element name="Eternal Blessing" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_RADIANT_SOUL_ETERNAL_BLESSING">
+		<description>
+			<p>When you would gain Temporary Hit Points, you gain that many plus your Wisdom Modifier instead.</p>
+			<p class="indent">While you have Temporary Hit Points, you can add your Wisdom modifier (minimum of +1) to the damage of your Unarmed Strikes and Monk weapons.</p>
+		</description>
+		<sheet>
+			<description>When you would gain Temporary Hit Points, you gain that many plus your Wisdom Modifier instead.&#13;
+			While you have Temporary Hit Points, you can add +{{shared blessing:thp}} to the damage of your Unarmed Strikes and Monk weapons.</description>
+		</sheet>
+	</element>
+</elements>

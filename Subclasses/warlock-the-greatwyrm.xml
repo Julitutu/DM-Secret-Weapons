@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Warlock - The Greatwyrm</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="warlock-the-greatwyrm.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/warlock-the-greatwyrm.xml" />
+		</update>
+	</info>
+
+	<element name="The Greatwyrm" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WARLOCK_THE_GREATWYRM">
+		<supports>Otherworldly Patron</supports>
+		<description>
+			<p>Your patron is an ancient greatwyrm: a gargantuan dragon of godlike power. That primal power now flows through you, enhancing your body with the strength and fortitude of dragons, and granting you the ability to unleash your spells as a devastating wave of dragon’s breath. Often, the true nature of a draconic patron, their colour, motivations, and goals, are a mystery even to those who wield their strength.</p>
+			<p class="indent">In rarer cases, a greatwyrm may seek a more active role in the lives of a warlock, conversing with them regularly and directing them as emissaries through which the greatwyrm can interact with the world. In any case, the towering might of dragonkind slumbers within you, and the ancient fury of the greatwyrm is yours to command.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_DRACONIC_GIFT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_EXPANDED_SPELL_LIST" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_SPELLBREATH" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_FORM_OF_THE_DRAGON" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_SUPERIOR_SPELLBREATH" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_DRACONIC_FORTITUDE" />
+		</description>
+		<sheet display="false">
+			<description>Your patron is an ancient greatwyrm: a gargantuan dragon of godlike power.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_DRACONIC_GIFT" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_EXPANDED_SPELL_LIST" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_SPELLBREATH" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_FORM_OF_THE_DRAGON" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_SUPERIOR_SPELLBREATH" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_DRACONIC_FORTITUDE" level="14" />
+		</rules>
+	</element>
+	<element name="Draconic Gift" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_DRACONIC_GIFT">
+		<description>
+			<p>Your draconic patron enhances your physiology and strength. You gain proficiency with medium armour, and you have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn’t behind total cover, even if you’re blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
+		</description>
+		<sheet>
+			<description>You have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn’t behind total cover, even if you’re blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+			<stat name="blindsight:range" value="10" bonus="base" />
+		</rules>
+	</element>
+	<element name="Expanded Spell List" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_EXPANDED_SPELL_LIST">
+		<description>
+			<p>The Greatwyrm lets you choose from an expanded list of spells when you learn a warlock spell. The Greatwyrm Expanded Spells table shows the spells that are added to the warlock spell list for you.</p>
+			<h5>Greatwyrm Expanded Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>cure wounds, inflict wounds</i></td></tr>
+				<tr><td>2nd</td><td><i>darkness, scorching ray</i></td></tr>
+				<tr><td>3rd</td><td><i>fear, vampiric touch</i></td></tr>
+				<tr><td>4th</td><td><i>fire shield, polymorph</i></td></tr>
+				<tr><td>5th</td><td><i>legend lore, telekinesis</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<spellcasting name="Warlock" extend="true">
+			<extend>ID_PHB_SPELL_CURE_WOUNDS</extend>
+			<extend>ID_PHB_SPELL_INFLICT_WOUNDS</extend>
+			<extend>ID_PHB_SPELL_DARKNESS</extend>
+			<extend>ID_PHB_SPELL_SCORCHING_RAY</extend>
+			<extend>ID_PHB_SPELL_FEAR</extend>
+			<extend>ID_PHB_SPELL_VAMPIRIC_TOUCH</extend>
+			<extend>ID_PHB_SPELL_FIRE_SHIELD</extend>
+			<extend>ID_PHB_SPELL_POLYMORPH</extend>
+			<extend>ID_PHB_SPELL_LEGEND_LORE</extend>
+			<extend>ID_PHB_SPELL_TELEKINESIS</extend>
+		</spellcasting>
+	</element>
+	<element name="Spellbreath" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_SPELLBREATH">
+		<description>
+			<p>Your pact magic bubbles and simmers in a well of power within your body, and you have been granted the ability to expel that magic in a terrible burst of draconic breath. If you make an attack roll as part of a spell, such as one of the attacks made when casting eldritch blast, scorching ray, or vampiric touch, you can replace that attack roll with a 15-foot-cone breath weapon attack. Creatures in that cone must succeed on a Dexterity saving throw, or take damage equal to the damage that would be dealt by that attack roll on a hit, or half as much on a successful save.</p>
+			<p class="indent">Alternatively, if you cast a spell that restores hit points to a single target, you can instead expel that rejuvenating magic in a 15-foot-cone of invigorating breath. Creatures of your choice within the area of your breath regain hit points equal to the hit points that would be bestowed to a single target of that spell.</p>
+			<p class="indent">You can use this feature a number of times equal to your Charisma modifier. You regain all expended uses of this feature upon finishing a long rest.</p>
+		</description>
+		<sheet usage="{{charisma:modifier}}/Long Rest">
+			<description>If you make an attack roll as part of a spell, you can replace that attack roll with a {{spellbreath:range}}-foot-cone breath weapon attack. Creatures in that cone must succeed on a DC {{warlock:spellcasting:dc}} Dexterity saving throw, or take damage equal to the damage that would be dealt by that attack roll on a hit, or half as much on a successful save.&#13;
+			Alternatively, if you cast a spell that restores hit points to a single target, you can instead expel that rejuvenating magic in a 15-foot-cone of invigorating breath. Creatures of your choice within the area of your breath regain hit points equal to the hit points that would be bestowed to a single target of that spell.</description>
+		</sheet>
+		<rules>
+			<stat name="spellbreath:range" value="15" />
+		</rules>
+	</element>
+	<element name="Form of the Dragon" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_FORM_OF_THE_DRAGON">
+		<description>
+			<p>As a bonus action, you can sprout spectral, draconic wings. You gain a fly speed equal to your walking speed for 10 minutes, during which time you can also hover, and you have advantage on Intimidation checks and Strength saving throws.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>As a bonus action, you can sprout spectral, draconic wings. You gain a fly speed equal to your walking speed for 10 minutes, during which time you can also hover, and you have advantage on Intimidation checks and Strength saving throws.</description>
+		</sheet>
+	</element>
+	<element name="Superior Spellbreath" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_SUPERIOR_SPELLBREATH">
+		<description>
+			<p>The well of power inside you has grown. When you use your Spellbreath feature, the size of the cone increases to 30 feet. In addition, any creature you damage with it takes additional damage equal to your Charisma modifier, and any creature you heal with this feature gains temporary hit points equal to twice your Charisma modifier.</p>
+		</description>
+		<sheet>
+			<description>Any creature you damage with it takes {{charisma:modifier}}, and any creature you heal with this feature gains temporary hit points equal to {{superior spellbreath:heal}}.</description>
+		</sheet>
+		<rules>
+			<stat name="spellbreath:range" value="15" />
+			<stat name="superior spellbreath:heal" value="charisma:modifier" />
+			<stat name="superior spellbreath:heal" value="charisma:modifier" />
+		</rules>
+	</element>
+	<element name="Draconic Fortitude" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_GREATWYRM_DRACONIC_FORTITUDE">
+		<description>
+			<p>You are blessed with a fragment of your patron’s incredible fortitude. Your maximum hit points increases by an amount equal to your Warlock level, and you gain one Legendary Resistance.</p>
+			<p class="indent">If you fail a saving throw, you can choose to succeed instead. Once you use this feature, you can’t do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You gain one Legendary Resistance. If you fail a saving throw, you can choose to succeed instead.</description>
+		</sheet>
+		<rules>
+			<stat name="hp" value="level:warlock" />
+		</rules>
+	</element>
+</elements>

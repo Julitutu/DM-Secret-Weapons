@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ichorborne</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-ichorborne.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-ichorborne.xml" />
+		</update>
+	</info>
+
+	<!-- Ichorborne Race -->
+	<element name="Ichorborne" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_ICHORBORNE">
+		<description>
+			<p>Legends tell of the Ichorborne, a cursed race hewn from dark magic. Walking abominations, held together without skin or sinew; a swirling mist of blood and terror. They take humanoid form, with crimson flesh and scent of iron. The air about them ripples with the taste of blood. These are the tales the people tell.</p>
+			<p>As sentient and capable of goodness as any other race, the Ichorborne are so rare, and so feared, they struggle to find acceptance in the wider world. Formed from the memories of innocents whose blood has been shed, they emerge into the world fully formed and sentient. A chaotic amalgamation of personalities bound to a single mind.</p>
+			<p>Many Ichorborne isolate themselves entirely, or disguise themselves as hooded, masked travellers, attempting to live a quiet existence among the rest of the world. Some seek vengeance on those who harm the innocent. Unless an individual can somehow prove themselves to a community and receive acceptance, the life of the Ichorborne is forever one of suspicion, persecution, and secrecy.</p>
+			<h4>ICHORBORNE TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Charisma score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Ichorborne come into being at sites of great bloodshed. They have no childhood and show no signs of ageing. Their bodies last roughly a century before breaking down.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Ichorborne vary wildly in size, from as small as 3 feet all the way up to 8 feet tall. Your size is medium or small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Ichoral Intuition.</em></strong> You gain proficiency in the Medicine skill.</p>
+			<p class="indent"><strong><em>Humoural Tampering.</em></strong> Once per turn, when you come into physical contact with a creature, you can force that creature to make a Constitution saving throw (DC = 8 + your Constitution modifier + Proficiency Bonus). On a failed save, that creature is poisoned until the end of its next turn.</p>
+			<p class="indent"><strong><em>Bloodmist.</em></strong> As an action, you can shift your form and any everything you are wearing and carrying into a misty cloud of red vapour. While in this form, your only method of movement is a flying speed of 10 ft. You can enter and occupy the space of another creature. You resist nonmagical damage, and can pass through small holes, narrow openings, and even mere cracks, but you treat liquids as though they were solid surfaces. While in this form you can’t fall, and remain hovering in the air even when Stunned or otherwise Incapacitated. While in Bloodmist form, you can’t talk or manipulate objects, and any objects you were carrying or holding can’t be dropped, used, or otherwise interacted with. You can’t attack or cast spells. This transformation lasts for 10 minutes, or until you use a bonus action to end it. It ends early if you are knocked unconscious. Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Constitution +2, Charisma +1) -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (+2 and +1, or three +1's) -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Ichorborne)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Ichorborne)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Ichorborne)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+            <!-- Proficiencies -->
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ICHORBORNE_HUMOURAL_TAMPERING" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ICHORBORNE_BLOODMIST" />
+		</rules>
+	</element>
+
+	<!-- Trait Definitions -->
+	<element name="Humoural Tampering" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ICHORBORNE_HUMOURAL_TAMPERING">
+		<description>
+			<p>Once per turn, when you come into physical contact with a creature, you can force that creature to make a Constitution saving throw (DC = 8 + your Constitution modifier + Proficiency Bonus). On a failed save, that creature is poisoned until the end of its next turn.</p>
+		</description>
+		<sheet>
+			<description>Once per turn, when you touch a creature, you can force it to make a DC {{humoural-tampering:dc}} CON save or be poisoned until the end of its next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="humoural-tampering:dc" value="8" />
+			<stat name="humoural-tampering:dc" value="constitution:modifier" />
+			<stat name="humoural-tampering:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Bloodmist" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ICHORBORNE_BLOODMIST">
+		<description>
+			<p>As an action, you can shift your form and any everything you are wearing and carrying into a misty cloud of red vapour. While in this form, your only method of movement is a flying speed of 10 ft. You can enter and occupy the space of another creature. You resist nonmagical damage, and can pass through small holes, narrow openings, and even mere cracks, but you treat liquids as though they were solid surfaces. While in this form you can’t fall, and remain hovering in the air even when Stunned or otherwise Incapacitated. While in Bloodmist form, you can’t talk or manipulate objects, and any objects you were carrying or holding can’t be dropped, used, or otherwise interacted with. You can’t attack or cast spells. This transformation lasts for 10 minutes, or until you use a bonus action to end it. It ends early if you are knocked unconscious. Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>You can transform into a misty cloud for 10 min. You gain a fly speed of 10ft, can occupy other creatures' spaces, pass through cracks, and resist nonmagical damage. You can't talk, manipulate objects, attack, or cast spells. You can end the effect with a bonus action.</description>
+		</sheet>
+	</element>
+</elements>

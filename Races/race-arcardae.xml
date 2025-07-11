@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Arcardae</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-arcardae.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-arcardae.xml" />
+		</update>
+	</info>
+
+	<element name="Arcardae" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_ARCARDAE">
+		<description>
+			<p>Across the infinite multiverse, life blooms in every imaginable biome, and in every imaginable shape. Of all the sentient forms life takes, there is perhaps no greater mismatch in disposition and physiology than the terrifying arcardae. Gruesomely ugly spider-folk, arcardae have the upper torso of a humanoid sat atop the bulbous, bloated abdomen of a colossal spider. Similar in appearance to the demonic driders of the underworld, arcardae inspire understandable revulsion and terror in the eyes of most they meet.</p>
+			<p>Fortunately, however, arcardae prove the old adage correct: one cannot judge a book by its cover. A gentle, herbivorous species, these spider-folk are well regarded by those who know them as naturally thoughtful, tolerant, and open-minded people. Though their monstrous form provides them ample power to defend themselves if attacked, arcardae philosophy touts the virtues of nonviolence. Their society boasts very few soldiers and no war industry, and yet history carries few accounts of aggression from other species aiming to exploit their pacifistic ways. Many scholars posit that the arcardae’s hideous appearance acts as a natural deterrent to potential invaders, who assume the spider-folk to be mighty, flesh-eating monsters not worth tangling with.</p>
+			<h4>ARCARDAE TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength, Constitution, and Wisdom scores increase 1.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Arcardae have a humanoid torso that sits atop a large, arachnid abdomen. Reaching up to 8 feet tall fully grown, your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 35 feet, and you have a climbing speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Many Limbs.</em></strong> You have two humanoid arms and six insectoid legs. You can grapple up to six creatures at a time.</p>
+			<p class="indent"><strong><em>Spider Climb.</em></strong> You have the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.</p>
+			<p class="indent"><strong><em>Spider’s Cunning.</em></strong> Arcardae’s arachnid physiology manifests in a variety of curious powers, which vary among individuals. Choose one of the following legacy options for your arcardae.</p>
+			<p class="indent"><strong><em>Powerful Build.</em></strong> You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+			<p class="indent"><strong><em>Terrifying Form.</em></strong> You are proficient in the Intimidation skill.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Arcardae)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="35" bonus="base" />
+			<stat name="innate speed:climb" value="35" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Arcardae)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_MANY_LIMBS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_SPIDER_CLIMB" />
+			<select type="Racial Trait" name="Spider's Cunning" supports="Spider's Cunning" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_POWERFUL_BUILD" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+		</rules>
+	</element>
+
+	<element name="Many Limbs" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_MANY_LIMBS">
+		<description>
+			<p>You have two humanoid arms and six insectoid legs. You can grapple up to six creatures at a time.</p>
+		</description>
+		<sheet>
+			<description>You have two humanoid arms and six insectoid legs. You can grapple up to six creatures at once.</description>
+		</sheet>
+	</element>
+    <element name="Spider Climb" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_SPIDER_CLIMB">
+		<description>
+			<p>You have the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.</p>
+		</description>
+		<sheet>
+			<description>You have the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.</description>
+		</sheet>
+	</element>
+	<element name="Powerful Build" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_POWERFUL_BUILD">
+		<description>
+			<p>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+		</description>
+		<sheet>
+			<description>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+	</element>
+	<!-- Spider's Cunning Options -->
+	<element name="Spider Senses" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_SPIDER_SENSES">
+		<supports>Spider's Cunning</supports>
+		<description>
+			<p>You are able to detect minute vibrations through the earth at your feet. You have tremorsense out to 10 feet, and you have proficiency in the Perception skill. While you are in contact with a web, your tremorsense extends across the entire area of that webbing.</p>
+		</description>
+		<sheet>
+			<description>You have tremorsense out to 10 feet. While in contact with a web, your tremorsense extends across the entire web.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<stat name="tremorsense:range" value="10" />
+		</rules>
+	</element>
+	<element name="Stinger" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_STINGER">
+		<supports>Spider's Cunning</supports>
+		<description>
+			<p>You have a venomous stinger, which you can use to make unarmed strikes. When you hit with it, the strike deals 1d6 + your Strength modifier piercing damage, instead of the bludgeoning damage normal for an unarmed strike. If you roll a 6 or above on the damage roll for an attack made with your stinger, the target is also poisoned until the end of your next turn.</p>
+		</description>
+		<sheet>
+			<description>Your stinger is a natural weapon that deals 1d6 + {{strength:modifier}} piercing damage. If you roll 6 or higher on the damage roll, the target is poisoned until the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Webweaver" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_WEBWEAVER">
+		<supports>Spider's Cunning</supports>
+		<description>
+			<p>You have the ability to create webbing to ensnare and restrain enemies. You can cast the spell Web with this trait. You can cast a number of times equal to your Constitution modifier, regaining all expended uses when you finish a long rest. You can also cast it with any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability when you cast Web with this trait (choose when you select this race).</p>
+		</description>
+		<sheet usage="{{constitution:modifier}}/Long Rest">
+			<description>You can cast Web. Your spellcasting ability is {{spellcasting:webweaver}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_WEB" />
+			<select type="Racial Trait" name="Spellcasting Ability (Webweaver)" supports="Webweaver Ability" />
+		</rules>
+	</element>
+	<element name="Webweaver (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_WEBWEAVER_INTELLIGENCE">
+		<supports>Webweaver Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:webweaver" value="Intelligence" inline="true"/>
+        </rules>
+	</element>
+	<element name="Webweaver (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_WEBWEAVER_WISDOM">
+		<supports>Webweaver Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:webweaver" value="Wisdom" inline="true"/>
+        </rules>
+	</element>
+	<element name="Webweaver (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_ARCARDAE_WEBWEAVER_CHARISMA">
+		<supports>Webweaver Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:webweaver" value="Charisma" inline="true"/>
+        </rules>
+	</element>
+</elements>

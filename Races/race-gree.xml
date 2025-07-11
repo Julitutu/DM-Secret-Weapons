@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Gree</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-gree.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-gree.xml" />
+		</update>
+	</info>
+
+	<element name="Gree" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_GREE">
+		<description>
+			<p>Across the lands of Avestros, there is no community of people so naturally dispossessed to cheer and playful mischief as the gree. A nocturnal, hatchling race, born from mysterious eggs which magically appear where gree gather together, they are famous across the land for their highly idiosyncratic and, at times, baffling fashion sense. Each gree crafts their own unique costume upon reaching adulthood, a magical garment designed to aid them in whatever path they choose to take in life.</p>
+			<p>A gree’s costume is sacred and personal, a reflection of that which they are and that which they hope to be. Simultaneously, the gree are a race that takes being silly very seriously, and so an individual’s costume will often celebrate their playful nature with outlandish design philosophy. They often take inspiration from mighty creatures, terrifying folktales, or tasty foods, and costumes feature heavily in their many cultural traditions, festivals, and rituals.</p>
+			<h4>GREE TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Charisma score increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Gree are born between 3-4 feet tall and do not naturally grow across their lives. Your size is Small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Gree are born fully sized, hatched from eggs that magically appear in gree communities where resources are plentiful enough to facilitate population growth. They are swift learners, considered adults from age 14, and live to be up to 50 years old.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Accustomed to hunting and roaming at night, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern colour in darkness, only shades of grey.</p>
+			<p class="indent"><strong><em>Lantern Bearer.</em></strong> You know the Produce Flame cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this race).</p>
+			<p class="indent"><strong><em>Trick-or-Treat.</em></strong> As a bonus action, you can attempt to frighten or support a creature you can see within 30 feet of you. If you choose to frighten that creature, it must succeed on a Wisdom saving throw (DC = 8 + your Charisma or Strength modifier + your Proficiency Bonus) or become frightened of you for the next minute. A creature surprised by you makes this save at a disadvantage. The target can repeat this save at the end of each of its turns, ending the effect on a success. If you choose to support a creature, it gains a bonus to the next attack roll, ability check, or save throw it makes before the start of your next turn equal to your Proficiency Bonus. You can use this feature a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong><em>Utilitarian Fashion.</em></strong> When you came of age, you crafted a costume that is significant and personal to you, and harbours some innate magical properties. You can don or doff your costume as an action, even if you are wearing armour or other clothing. In addition, while wearing your costume, you have expertise in one skill (choose when you pick this race), and you have advantage on saving throws to resist or end the frightened condition. If your costume is destroyed, you can make another one over the course of a week’s work and with 50gp worth of materials. You can only have one costume at a time.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language of your choice.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Gree)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Gree)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_SMALL" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Darkvision -->
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Gree)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GREE_LANTERN_BEARER" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GREE_TRICK_OR_TREAT" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_GREE_UTILITARIAN_FASHION" />
+		</rules>
+	</element>
+
+	<element name="Lantern Bearer" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GREE_LANTERN_BEARER">
+		<description>
+			<p>You know the Produce Flame cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description>You know the Produce Flame cantrip. Your spellcasting ability is {{spellcasting:lantern bearer}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_PRODUCE_FLAME" />
+			<select type="Racial Trait" name="Spellcasting Ability (Lantern Bearer)" supports="Lantern Bearer Ability" />
+		</rules>
+	</element>
+	<element name="Lantern Bearer (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GREE_LANTERN_BEARER_INTELLIGENCE">
+		<supports>Lantern Bearer Ability</supports> <description/> <sheet display="false"/>
+		<rules>
+            <stat inline="true" name="spellcasting:lantern bearer" value="Intelligence"/>
+        </rules>
+	</element>
+	<element name="Lantern Bearer (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GREE_LANTERN_BEARER_WISDOM">
+		<supports>Lantern Bearer Ability</supports> <description/> <sheet display="false"/>
+		<rules>
+            <stat inline="true" name="spellcasting:lantern bearer" value="Wisdom"/>
+        </rules>
+	</element>
+	<element name="Lantern Bearer (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GREE_LANTERN_BEARER_CHARISMA">
+		<supports>Lantern Bearer Ability</supports> <description/> <sheet display="false"/>
+		<rules>
+            <stat inline="true" name="spellcasting:lantern bearer" value="Charisma"/>
+        </rules>
+	</element>
+	<element name="Trick-or-Treat" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GREE_TRICK_OR_TREAT">
+		<description>
+			<p>As a bonus action, you can attempt to frighten or support a creature you can see within 30 feet of you. If you choose to frighten that creature, it must succeed on a Wisdom saving throw (DC = 8 + your Charisma or Strength modifier + your Proficiency Bonus) or become frightened of you for the next minute. A creature surprised by you makes this save at a disadvantage. The target can repeat this save at the end of each of its turns, ending the effect on a success. If you choose to support a creature, it gains a bonus to the next attack roll, ability check, or save throw it makes before the start of your next turn equal to your Proficiency Bonus. You can use this feature a number of times equal to your Proficiency Bonus, regaining all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You can target a creature within 30ft.&#13;
+			• Frighten: It must make a DC {{trick-or-treat:dc}} WIS save or be frightened for 1 min (can repeat this save at the end of each of its turns, save ends). A creature surprised by you makes this save at a disadvantage.&#13;
+			• Support: It gains a bonus equal to {{proficiency}} to its next attack, check, or save.</description>
+		</sheet>
+        <rules>
+            <select type="Racial Trait" name="Trick-or-Treat Ability" supports="Trick or Treat" />
+            <stat name="trick-or-treat:dc" value="8" />
+            <stat name="trick-or-treat:dc" value="proficiency" />
+			<stat name="trick-or-treat:dc" value="trick-or-treat:dc:ability" />
+
+			<stat name="trick-or-treat:dc:ability" value="strength:modifier" bonus="ability" />
+			<stat name="trick-or-treat:dc:ability" value="charisma:modifier" bonus="ability" />
+        </rules>
+    </element>    
+	<element name="Utilitarian Fashion" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_GREE_UTILITARIAN_FASHION">
+		<description>
+			<p>When you came of age, you crafted a costume that is significant and personal to you, and harbours some innate magical properties. You can don or doff your costume as an action, even if you are wearing armour or other clothing. In addition, while wearing your costume, you have expertise in one skill (choose when you pick this race), and you have advantage on saving throws to resist or end the frightened condition. If your costume is destroyed, you can make another one over the course of a week’s work and with 50gp worth of materials. You can only have one costume at a time.</p>
+		</description>
+		<sheet>
+			<description>While wearing your costume, you have expertise in one skill and advantage on saves against being frightened.</description>
+		</sheet>
+	</element>
+</elements>

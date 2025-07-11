@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Druid - Circle of the Coven</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="druid-circle-of-the-coven.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/druid-circle-of-the-coven.xml" />
+		</update>
+	</info>
+
+	<element name="Circle of the Coven" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_DRUID_CIRCLE_OF_THE_COVEN">
+		<supports>Druid Circle</supports>
+		<description>
+			<p>Druids within the Circle of the Witch understand and uphold the cycle of life and death. Both are essential, beautiful, and powerful forces, and form the cycle that drives all existence in the multiverse. They are also adept healers and brewers of magic. Many Druids are isolationist, but “Witch Druids” have been known to gather and travel together in small covens, typically numbering thirteen.</p>
+			<p class="indent">Their ability to exert influence over the undead has led many to fear them; the word “witch” is a whispered slur on the lips of many commoners. However, although they can command powerful necromancy magic, they are not inherently “evil”, and some are widely known and beloved as respected healers, shamans and counselors.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_COVEN_CIRCLE_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_COVEN_DEADLY_POTIONIER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_COVEN_VILE_SHAPE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_COVEN_ONE_WITH_THE_AZURE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_COVEN_GIFT_OF_LIFE_AND_DEATH" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_COVEN_COVEN" />
+		</description>
+		<sheet display="false">
+			<description>Druids within the Circle of the Witch understand and uphold the cycle of life and death.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_CIRCLE_SPELLS" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_DEADLY_POTIONIER" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_VILE_SHAPE" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_ONE_WITH_THE_AZURE" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_GIFT_OF_LIFE_AND_DEATH" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_COVEN" level="14" />
+		</rules>
+	</element>
+	<element name="Circle Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_CIRCLE_SPELLS">
+		<description>
+			<p>When you join this circle at 2nd level, you receive secret knowledge on necromantic and conjuration magics. This grants you access to some spells when you reach certain levels in this class, as shown on the Circle of the Witch Spells table.</p>
+			<p class="indent">Once you gain access to one of these spells, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. If you gain access to a spell that doesn’t appear on the Druid Spell List, the spell is nonetheless a druid spell for you.</p>
+			<h5>Circle of the Coven Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Druid Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>2nd</td><td><i>Find Familiar, Cure Wounds</i></td></tr>
+				<tr><td>3rd</td><td><i>Aid, Darkness</i></td></tr>
+				<tr><td>5th</td><td><i>Animate Dead, Revivify</i></td></tr>
+				<tr><td>7th</td><td><i>Death Ward, Blight</i></td></tr>
+				<tr><td>9th</td><td><i>Raise Dead, Modify Memory</i></td></tr>
+				<tr><td>17th</td><td><i>True Resurrection</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_FIND_FAMILIAR" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_AID" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_DEAD" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_REVIVIFY" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLIGHT" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_RAISE_DEAD" level="9" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MODIFY_MEMORY" level="9" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_TRUE_RESURRECTION" level="17" spellcasting="Druid" prepared="true" />
+		</rules>
+	</element>
+	<element name="Deadly Potionier" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_DEADLY_POTIONIER">
+		<description>
+			<p>Also at 2nd level, at the end of a long rest, you can use natural materials you have foraged from an area of wilderness you are familiar with to brew dangerous, volatile potions.</p>
+			<p class="indent">You can create enough potions to fill a number of vials equal to your proficiency bonus. These potions harbor fleeting magic, and lose all abilities after 24 hours.</p>
+			<p class="indent">A creature can use an action to hurl a potion vial up to 30 feet, which shatters on contact with the ground or an object or creature.</p>
+			<p class="indent">All creatures in a 5-foot radius of that point must succeed on a saving throw against your Spell Save DC, or suffer a negative effect, dictated by the potion you brewed.</p>
+			<p class="indent">These effects are also activated if a creature ingests the potion. If a creature drinks one, they make any saving throw to resist its effects at disadvantage.</p>
+			<table>
+				<thead>
+					<tr><td>Potion</td><td>Effect</td><td>Saving Throw</td></tr>
+				</thead>
+				<tr><td>Scent of the Venom Bloom</td><td>You take 2d10 poison damage. This damage increases to 3d10 at level 5, 4d10 at level 11, and 5d10 at level 17.</td><td>Constitution</td></tr>
+				<tr><td>Sap Sipper</td><td>You have disadvantage on all Strength checks, Strength saving throws, and your movement speed is reduced by 15 feet for one minute. A creature suffering this effect can use its action to make a Constitution saving throw against your spell save DC, ending the effect on a success.</td><td>Constitution</td></tr>
+				<tr><td>Burden of Night</td><td>You fall unconscious for the next minute, or until you take next damage, or a creature uses an action to shake or slap you awake.</td><td>Wisdom</td></tr>
+				<tr><td>Grasp of Thorns</td><td>You become entangled in grasping vines that sprout from the area the potion spilled. You are restrained. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself. The vines wither away after 1 minute.</td><td>Strength</td></tr>
+				<tr><td>Kashthar’s Tender Kiss</td><td>You become befuddled. Words and thoughts are difficult to articulate. You have disadvantage on all Charisma and Intelligence checks for the next minute.</td><td>Charisma</td></tr>
+				<tr><td>Lonefire’s Blossom</td><td>You are engulfed in flame. You take 1d6 fire damage at the start of each of your turns for the next minute. A creature can end this damage by using its Action to make a Dexterity check to extinguish the flames, or by fully submerging themselves in water. The damage dealt by this potion increases to 2d6 at level 5, 3d6 at level 11, and 4d6 at level 17.</td><td>Dexterity</td></tr>
+			</table>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Action">
+			<description>At the end of a long rest, you can use natural materials you have foraged from an area of wilderness you are familiar with to brew dangerous, volatile potions. You can create {{proficiency}} vials. These potions harbor fleeting magic, and lose all abilities after 24 hours.&#13;
+			A creature can use an action to hurl a potion vial up to 30 feet, which shatters on contact with the ground or an object or creature. All creatures in a 5-foot radius of that point must succeed on a DC {{druid:spellcasting:dc}} saving throw against, or suffer a negative effect, dictated by the potion you brewed. These effects are also activated if a creature ingests the potion. If a creature drinks one, they make any saving throw to resist its effects at disadvantage.&#13;
+			• Scent of the Venom Bloom: CON Save: You take {{scent of the venom blood}}d10 poison damage &#13;
+			• Sap Sipper: CON Save: DISADV on all Strength checks, Strength saving throws, and your movement speed is reduced by 15 feet for one minute. Can use an action to make a make a save ending the effect on a success
+			• Burden of Night: WIS Save: You fall unconscious for the next minute, or until you take next damage, or a creature uses an action to shake or slap you awake.&#13;
+			• Grasp of Thorns: STR Save: You become entangled in grasping vines that sprout from the area the potion spilled. You are restrained. A creature restrained by the plants can use its action to make a Strength check DC {{druid:spellcasting:dc}}. On a success, it frees itself. The vines wither away after 1 minute.
+			• Kashthar’s Tender Kiss: CHA Save: You become befuddled. Words and thoughts are difficult to articulate. You have disadvantage on all Charisma and Intelligence checks for the next minute.
+			• Lonefire’s Blossom: DEX Save: You are engulfed in flame. You take {{lonesfire blossom}}d6 fire damage at the start of each of your turns for the next minute. A creature can end this damage by using its Action to make a Dexterity check to extinguish the flames, or by fully submerging themselves in water.</description>
+		</sheet>
+		<rules>
+			<stat name="scent of the venom blood" value="2" />
+			<stat name="scent of the venom blood" value="1" level="5"/>
+			<stat name="scent of the venom blood" value="1" level="11"/>
+			<stat name="scent of the venom blood" value="1" level="17"/>
+			<stat name="lonesfire blossom" value="1" />
+			<stat name="lonesfire blossom" value="1" level="5"/>
+			<stat name="lonesfire blossom" value="1" level="11"/>
+			<stat name="lonesfire blossom" value="1" level="17"/>
+		</rules>
+	</element>
+	<element name="Vile Shape" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_VILE_SHAPE">
+		<description>
+			<p>Also at 2nd level, when you wild shape, you retain the ability to talk.</p>
+			<p class="indent">In addition, if you choose, you can wild shape into an undead, zombified or skeletal form of the beast you change into.</p>
+			<p class="indent">While in that form you gain proficiency in the intimidation skill, and your creature type becomes undead, not beast.</p>
+		</description>
+		<sheet>
+			<description>When you wild shape, you retain the ability to talk. In addition, if you choose, you can wild shape into an undead, zombified or skeletal form of the beast you change into. While in that form you gain proficiency in the intimidation skill, and your creature type becomes undead, not beast.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+		</rules>
+	</element>
+	<element name="One With The Azure" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_ONE_WITH_THE_AZURE">
+		<description>
+			<p>At 6th level, you can choose a small, inanimate object that you own, like a broomstick, hat, or cloak, and infuse it with magic.</p>
+			<p class="indent">As a bonus action, if you are carrying or wearing that object on your person, you can invoke the magic stored within to gain a flying speed equal to your walking speed for the next 10 minutes.</p>
+			<p class="indent">You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You can choose a small, inanimate object that you own, like a broomstick, hat, or cloak, and infuse it with magic. As a bonus action, if you are carrying or wearing that object on your person, you can invoke the magic stored within to gain a flying speed equal to your walking speed for the next 10 minutes.</description>
+		</sheet>
+	</element>
+	<element name="Gift of Life and Death" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_GIFT_OF_LIFE_AND_DEATH">
+		<description>
+			<p>At 10th level, you gain the power to infuse your spells with necromantic powers. Whenever you cast a spell that targets only one creature, choose one of the following effects:</p>
+			<ul>
+				<li>That spell deals an additional 1d12 necrotic damage.</li>
+				<li>The spell grants the target a number of temporary hit points equal to 1d12 + their constitution modifier.</li>
+			</ul>
+			<p class="indent">You can only use this feature once per turn.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>Whenever you cast a spell that targets only one creature, choose one of the following effects:&#13;
+			• That spell deals an additional 1d12 necrotic damage.&#13;
+			• The spell grants the target a number of temporary hit points equal to 1d12 + their constitution modifier.</description>
+		</sheet>
+	</element>
+	<element name="Coven" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_COVEN_COVEN">
+		<description>
+			<p>Starting at 14th level, when you finish a long rest, you can choose a number of creatures within 60 feet of you up to your Wisdom modifier. They gain the following benefits for the next 12 hours as long as they are within 30 feet of you or another creature you choose with this feature:</p>
+			<ul>
+				<li>You gain +1 to your AC.</li>
+				<li>Your walking speed increases by 10 feet.</li>
+				<li>You can add 1d12 to an attack roll or ability check. Once you use this feature, you cannot do so again until you finish a long rest.</li>
+				<li>Once per turn, when you hit a creature with an attack roll and deal damage to it, you can roll 1d6 and add that bonus to the damage.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you finish a long rest, you can choose a number of creatures within 60 feet of you up to your Wisdom modifier. They gain the following benefits for the next 12 hours as long as they are within 30 feet of you or another creature you choose with this feature:&#13;
+			• You gain +1 to your AC.&#13;
+			• Your walking speed increases by 10 feet.&#13;
+			• You can add 1d12 to an attack roll or ability check. Once you use this feature, you cannot do so again until you finish a long rest.&#13;
+			• Once per turn, when you hit a creature with an attack roll and deal damage to it, you can roll 1d6 and add that bonus to the damage.</description>
+		</sheet>
+	</element>
+</elements>

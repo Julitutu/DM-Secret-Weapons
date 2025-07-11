@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Avestrosian Tiefling</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-avestrosian-tiefling.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-avestrosian-tiefling.xml" />
+		</update>
+	</info>
+
+	<element name="Avestrosian Tiefling" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_AVESTROSIAN_TIEFLING">
+		<description>
+			<p>Across the multiverse, there is no land where things are quite so different whilst being the same as Avestros. Tieflings exist on many worlds and planes, with many forms and powers granted by a fiendish lineage. In Avestros, they appear much the same as their brothers and sisters on other worlds, complete with horns, tails and humanoid stature. There is, however, one key difference.</p>
+			<p>In Avestros, intent matters more than bloodline. It doesn’t matter what type of creature the ancestor that grants you power is. What matters is their alignment. Descendants of magical chaotic beings live with a spark of that chaos within. The ambition and iron will of lawful beings can manifest in a creature’s family years down the line, and so too can the virtue of good and the vice of evil. Avestrosian tieflings have unique powers based on the alignment of the ancestor through whom they draw magic.</p>
+			<p>This isn’t to say every tiefling shares the alignment and beliefs of their ancestors. It’s common for tieflings blessed with power of chaos and evil to be lawful-good alligned in themselves. Sadly, the inverse is often also true, with some wielding the magic of order and goodness passed down across generations for their own devious ends.</p>
+			<h4>TIEFLING TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma score increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Tieflings are about the same size and build as humans. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Ancestral Flight.</em></strong> Starting at 5th level, you can use a bonus action to call upon the magic of your ancestor. For the next minute, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can’t do so again until you finish a long rest.</p>
+			<p class="indent"><strong><em>Ancestral Gifts.</em></strong> The values and character of your magical ancestor ripple across generations, granting you special power. You gain one boon from each table, depending on the alignment you decide from your ancestor. Some choices grant you the ability to cast a spell: Intelligence, Wisdom, or Charisma is your spellcasting modifier for these spells (choose when you select this species).</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Base Tiefling Traits -->
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_AVESTROSIAN_TIEFLING_ANCESTRAL_FLIGHT" level="5" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Avestrosian Tiefling)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Ancestral Gifts Selections -->
+			<select type="Racial Trait" name="Ancestral Gift (Order)" supports="Tiefling Order Alignment" />
+			<select type="Racial Trait" name="Ancestral Gift (Moral)" supports="Tiefling Moral Alignment" />
+			<select type="Racial Trait" name="Spellcasting Ability (Ancestral Gifts)" supports="Tiefling Ancestral Magic" />
+		</rules>
+	</element>
+
+	<element name="Ancestral Flight" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_AVESTROSIAN_TIEFLING_ANCESTRAL_FLIGHT">
+		<description>
+            <p>Starting at 5th level, you can use a bonus action to call upon the magic of your ancestor. For the next minute, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can’t do so again until you finish a long rest.</p>
+        </description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+            <description>You gain a flying speed equal to your walking speed and can hover for 1 minute.</description>
+        </sheet>
+	</element>
+
+	<!-- Order Alignment Options -->
+	<element name="Chaotic (Order)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_ORDER_CHAOTIC">
+		<supports>Tiefling Order Alignment</supports>
+		<description>
+            <p>Increase your Dexterity or Charisma score by 1. You know the Minor Illusion and Vicious Mockery cantrips.</p>
+        </description>
+		<sheet>
+            <description>You know the Minor Illusion and Vicious Mockery cantrips. Your spellcasting ability is {{spellcasting:ancestral-gifts}}</description>
+        </sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score (Chaotic)" supports="ID_WOTC_ASI_DEXTERITY|ID_WOTC_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_PHB_SPELL_VICIOUS_MOCKERY" />
+            <select type="Alignment" name="Alignment" supports="ID_ALIGNMENT_CHAOTIC_EVIL|ID_ALIGNMENT_CHAOTIC_GOOD" />
+		</rules>
+	</element>
+	<element name="Lawful (Order)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_ORDER_LAWFUL">
+		<supports>Tiefling Order Alignment</supports>
+		<description>
+            <p>Increase your Wisdom or Constitution score by 1. You know the Guidance and Sacred Flame cantrips.</p>
+        </description>
+		<sheet>
+            <description>You know the Guidance and Sacred Flame cantrips. Your spellcasting ability is {{spellcasting:ancestral-gifts}}</description>
+        </sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score (Lawful)" supports="ID_WOTC_ASI_WISDOM|ID_WOTC_ASI_CONSTITUTION" />
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+			<grant type="Spell" id="ID_PHB_SPELL_SACRED_FLAME" />
+            <select type="Alignment" name="Alignment" supports="ID_ALIGNMENT_LAWFUL_GOOD|ID_ALIGNMENT_LAWFUL_EVIL" />
+		</rules>
+	</element>
+	<element name="Neutral (Order)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_ORDER_NEUTRAL">
+		<supports>Tiefling Order Alignment</supports>
+		<description>
+            <p>Increase your Intelligence or Constitution score by 1. You know the Mending and True Strike cantrips.</p>
+        </description>
+		<sheet>
+            <description>You know the Mending and True Strike cantrips. Your spellcasting ability is {{spellcasting:ancestral-gifts}}</description>
+        </sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score (Neutral)" supports="ID_WOTC_ASI_INTELLIGENCE|ID_WOTC_ASI_CONSTITUTION" />
+			<grant type="Spell" id="ID_PHB_SPELL_MENDING" />
+			<grant type="Spell" id="ID_PHB_SPELL_TRUE_STRIKE" />
+            <select type="Alignment" name="Alignment" supports="ID_ALIGNMENT_NEUTRAL_GOOD|ID_ALIGNMENT_NEUTRAL_EVIL" />
+		</rules>
+	</element>
+
+	<!-- Moral Alignment Options -->
+	<element name="Good (Moral)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_MORAL_GOOD">
+		<supports>Tiefling Moral Alignment</supports>
+		<description>
+            <p>Increase your Wisdom or Charisma score by 1. You know the Spare the Dying and Word of Radiance cantrips.</p>
+        </description>
+		<sheet>
+            <description>You know the Spare the Dying and Word of Radiance cantrips. Your spellcasting ability is {{spellcasting:ancestral-gifts}}</description>
+        </sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score (Good)" supports="ID_WOTC_ASI_WISDOM|ID_WOTC_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPARE_THE_DYING" />
+			<grant type="Spell" id="ID_XGTE_SPELL_WORD_OF_RADIANCE" />
+            <select type="Alignment" name="Alignment" supports="ID_ALIGNMENT_LAWFUL_GOOD||ID_ALIGNMENT_NEUTRAL_GOOD||ID_ALIGNMENT_CHAOTIC_GOOD" />
+		</rules>
+	</element>
+	<element name="Evil (Moral)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_MORAL_EVIL">
+		<supports>Tiefling Moral Alignment</supports>
+		<description>
+            <p>Increase your Dexterity or Intelligence score by 1. You know the Chill Touch and Toll the Dead cantrips.</p>
+        </description>
+		<sheet>
+            <description>You know the Chill Touch and Toll the Dead cantrips. Your spellcasting ability is {{spellcasting:ancestral-gifts}}</description>
+        </sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score (Evil)" supports="ID_WOTC_ASI_DEXTERITY|ID_WOTC_ASI_INTELLIGENCE" />
+			<grant type="Spell" id="ID_PHB_SPELL_CHILL_TOUCH" />
+			<grant type="Spell" id="ID_XGTE_SPELL_TOLL_THE_DEAD" />
+            <select type="Alignment" name="Alignment" supports="ID_ALIGNMENT_LAWFUL_EVIL||ID_ALIGNMENT_NEUTRAL_EVIL||ID_ALIGNMENT_CHAOTIC_EVIL" />
+		</rules>
+	</element>
+	<element name="Neutral (Moral)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_MORAL_NEUTRAL">
+		<supports>Tiefling Moral Alignment</supports>
+		<description>
+            <p>Increase your Strength or Constitution score by 1. You know the Resistance and Poison Spray cantrips.</p>
+        </description>
+		<sheet>
+            <description>You know the Resistance and Poison Spray cantrips. Your spellcasting ability is {{spellcasting:ancestral-gifts}}</description>
+        </sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score (Neutral)" supports="ID_WOTC_ASI_STRENGTH|ID_WOTC_ASI_CONSTITUTION" />
+			<grant type="Spell" id="ID_PHB_SPELL_RESISTANCE" />
+			<grant type="Spell" id="ID_PHB_SPELL_POISON_SPRAY" />
+            <select type="Alignment" name="Alignment" supports="ID_ALIGNMENT_NEUTRAL_GOOD||ID_ALIGNMENT_NEUTRAL_EVIL" />
+		</rules>
+	</element>
+
+	<!-- Spellcasting Ability Options -->
+	<element name="Ancestral Magic (Intelligence)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_ANCESTRAL_MAGIC_INT">
+		<supports>Tiefling Ancestral Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:ancestral-gifts" value="Intelligence" inline="true"/>
+        </rules>
+	</element>
+	<element name="Ancestral Magic (Wisdom)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_ANCESTRAL_MAGIC_WIS">
+		<supports>Tiefling Ancestral Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:ancestral-gifts" value="Wisdom" inline="true"/>
+        </rules>
+	</element>
+	<element name="Ancestral Magic (Charisma)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_TIEFLING_ANCESTRAL_MAGIC_CHA">
+		<supports>Tiefling Ancestral Magic</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="spellcasting:ancestral-gifts" value="Charisma" inline="true"/>
+        </rules>
+	</element>
+</elements>

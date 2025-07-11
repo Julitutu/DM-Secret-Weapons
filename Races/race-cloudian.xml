@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cloudian</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-cloudian.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-cloudian.xml" />
+		</update>
+	</info>
+
+	<element name="Cloudian" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CLOUDIAN">
+		<description>
+			<p>The breath of creation reverberates through all things, even natural phenomena. In rare instances, where the breath of life sings deep and loud, conscious thought is born, forming a body from the fundamental force it once was. Cloudians are one such race of people, born eons ago from clouds who sought to live among the creatures they gazed down upon.</p>
+			<p>A typically affable and peaceful folk, cloudians claim no region or country as their own, effortlessly integrating among other peoples all across the globe as they see fit. This “open borders’’ approach to territory has been known to vex more isolationist countries where cloudians settle, but the soporific speech and affable character of cloudians is so disarming that even the most hardline separatist societies have come to accept their presence without protest. As such, with only a gentle smile and spectacular inability to comprehend they might not be welcome, many cloudians have peacefully settled in lands that armies have failed to conquer for millenia.</p>
+			<h4>CLOUDIAN TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Dexterity score increases by 2, and your Wisdom score increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Cloudian’s vary greatly in size, with adults ranging anywhere between 3-8 feet tall. Your size is Medium or Small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Atmospheric Adaptation.</em></strong> You resist lightning damage.</p>
+			<p class="indent"><strong><em>Into Vapour.</em></strong> You have the power to shift your body, along with what you are wearing and carrying, into vapour. You can cast the spell gaseous form with this trait, but it can only target yourself. Once you cast gaseous form with this trait, you can’t cast it with this trait again until you finish a long rest. You can also cast it using any spell slots you have of the appropriate level.</p>
+			<p class="indent"><strong><em>Fogmask.</em></strong> You can attempt to hide even when you are only lightly obscured by fog, rain, falling snow, mist, and other natural phenomena.</p>
+			<p class="indent"><strong><em>Skyborne Senses.</em></strong> You have proficiency in the Nature and Perception skills.</p>
+			<p class="indent"><strong><em>Silver Lining.</em></strong> Whenever you roll natural 1 on a saving throw, you immediately gain temporary hit points equal to your level + your Constitution modifier. In addition, your melee weapon attacks and unarmed strikes are considered silvered for the purpose of overcoming damage immunities and resistances.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Cloudian)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Cloudian)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Cloudian)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLOUDIAN_INTO_VAPOUR" />
+			<grant type="Racial Trait" name="Fogmask" id="ID_RACIAL_TRAIT_MASK_OF_THE_WILD" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLOUDIAN_SILVER_LINING" />
+		</rules>
+	</element>
+
+	<element name="Into Vapour" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLOUDIAN_INTO_VAPOUR">
+		<description>
+			<p>You have the power to shift your body, along with what you are wearing and carrying, into vapour. You can cast the spell gaseous form with this trait, but it can only target yourself. Once you cast gaseous form with this trait, you can’t cast it with this trait again until you finish a long rest. You can also cast it using any spell slots you have of the appropriate level.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can cast Gaseous Form (self only) once per long rest. You can also cast it using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_GASEOUS_FORM" />
+		</rules>
+	</element>
+	<element name="Silver Lining" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLOUDIAN_SILVER_LINING">
+		<description>
+			<p>Whenever you roll natural 1 on a saving throw, you immediately gain temporary hit points equal to your level + your Constitution modifier. In addition, your melee weapon attacks and unarmed strikes are considered silvered for the purpose of overcoming damage immunities and resistances.</p>
+		</description>
+		<sheet>
+			<description>When you roll a 1 on a saving throw, you gain {{silver-lining}} temporary HP. Your melee attacks are considered silvered.</description>
+		</sheet>
+        <rules>
+            <stat name="silver-lining" value="constitution:modifier" />
+            <stat name="silver-lining" value="level" />
+        </rules>
+	</element>
+</elements>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Paladin - Oath of the Infinite Heavens</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="paladin-oath-of-the-infinite-heavens.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/paladin-oath-of-the-infinite-heavens.xml" />
+		</update>
+	</info>
+
+	<element name="Oath of the Infinite Heavens" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_PALADIN_OATH_OF_THE_INFINITE_HEAVENS">
+		<supports>Sacred Oath</supports>
+		<description>
+			<p>Oath of the Infinite Heavens is a Celestail seasoning of the Oath of the Nine Hells subclass.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_OATH_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_SMITING_AURA" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_DIVINE_GIFTS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_HOLY_TRANSFORMATION" />
+		</description>
+		<sheet display="false">
+			<description>Oath of the Infinite Heavens is a Celestail seasoning of the Oath of the Nine Hells subclass.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_OATH_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_SMITING_AURA" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_DIVINE_GIFTS" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_HOLY_TRANSFORMATION" level="20" />
+		</rules>
+	</element>
+	<element name="Oath Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_OATH_SPELLS">
+		<description>
+			<p>You gain the following oath spells at the paladin levels listed.</p>
+			<h5>Oath of the Infinite Heavens Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>command, shield</i></td></tr>
+				<tr><td>5th</td><td><i>calm emotions, enhance ability</i></td></tr>
+				<tr><td>9th</td><td><i>daylight, spirit guardians</i></td></tr>
+				<tr><td>13th</td><td><i>death ward, greater invisibility</i></td></tr>
+				<tr><td>17th</td><td><i>planar binding, wall of force</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_COMMAND" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CALM_EMOTIONS" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DAYLIGHT" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIRIT_GUARDIANS" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_PLANAR_BINDING" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+	<element name="Channel Divinity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY">
+		<description>
+			<p>When you take this oath, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b>Divine Strike.</b> As a bonus action, you imbue a weapon you are holding with the burning radiance of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of divine light, and the target takes additional radiant damage equal to 10 + your Paladin level (whether the attack hits or misses).</p>
+			<p class="indent"><b>Turn Fiend.</b> As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a Wisdom saving throw. Creatures that are the Fiend (Devil) type or are of a CR or Level lower than your paladin level have disadvantage on this Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain the following two Channel Divinity options.&#13;
+			• Divine Strike. As a bonus action, you imbue a weapon you are holding with the burning radiance of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of divine light, and the target takes additional radiant damage equal to 10 + your Paladin level (whether the attack hits or misses).&#13;
+			• Turn Fiend. As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a Wisdom saving throw. Creatures that are the Fiend (Devil) type or are of a CR or Level lower than your paladin level have disadvantage on this Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY_DIVINE_STRIKE" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY_TURN_FIEND" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Divine Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY_DIVINE_STRIKE">
+		<description>
+			<p>As a bonus action, you imbue a weapon you are holding with the burning radiance of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of divine light, and the target takes additional radiant damage equal to 10 + your Paladin level (whether the attack hits or misses).</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Bonus Action" alt="Divine Strike">
+			<description>As a bonus action, you imbue a weapon you are holding with the burning radiance of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of divine light, and the target takes additional {{divine strike:damage}} radiant damage (whether the attack hits or misses).</description>
+		</sheet>
+		<rules>
+			<stat name="divine strike:damage" value="10" />
+			<stat name="divine strike:damage" value="level:paladin" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Turn Fiend" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_CHANNEL_DIVINITY_TURN_FIEND">
+		<description>
+			<p>As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a Wisdom saving throw. Creatures that are the Fiend (Devil) type or are of a CR or Level lower than your paladin level have disadvantage on this Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.</p>
+			<p class="indent">A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Action" alt="Turn Fiend">
+			<description>As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a DC {{paladin:spellcasting:dc}} Wisdom saving throw. Creatures that are the Fiend (Devil) type or are of a CR or Level lower than your paladin level have disadvantage. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.&#13;
+			A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</description>
+		</sheet>
+	</element>
+	<element name="Smiting Aura" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_SMITING_AURA">
+		<description>
+			<p>You radiate an aura of vengeful, radiant magic. Creatures of your choice within 10 feet of you take an additional 1d4 radiant damage when hit by a weapon attack.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
+		</description>
+		<sheet>
+			<description>You radiate an aura of vengeful, radiant magic. Creatures of your choice within {{smiting aura:range}} feet of you take an additional 1d4 radiant damage when hit by a weapon attack.</description>
+		</sheet>
+		<rules>
+			<stat name="smiting aura:range" value="10" />
+			<stat name="smiting aura:range" value="20" level="18" />
+		</rules>
+	</element>
+	<element name="Divine Gifts" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_DIVINE_GIFTS">
+		<description>
+			<p>You are immune to radiant damage and the charmed condition, and you have a flying speed equal to your walking speed.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the charmed condition, and you have a flying speed equal to your walking speed.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_RADIANT" />
+			<stat name="innate speed:fly" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Holy Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_INFINITE_HEAVENS_HOLY_TRANSFORMATION">
+		<description>
+			<p>As an action on your turn, you can cast the shapechange spell with this feature, without expending a spell slot, but the creature you shapechange into must be a Celestial.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>As an action on your turn, you can cast the shapechange spell with this feature, without expending a spell slot, but the creature you shapechange into must be a Celestial.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHAPECHANGE" />
+		</rules>
+	</element>
+</elements>

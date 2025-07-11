@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Paladin - Oath of the Nine Hells</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="paladin-oath-of-the-nine-hells.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/paladin-oath-of-the-nine-hells.xml" />
+		</update>
+	</info>
+
+	<element name="Oath of the Nine Hells" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_PALADIN_OATH_OF_THE_NINE_HELLS">
+		<supports>Sacred Oath</supports>
+		<description>
+			<p>Forged in fire and desperation, far from the golden skies and stifling tranquility of the higher planes, warriors battle endlessly for the fate of all realms. Devils, demons, and other unimaginable creatures run rampant across the underworlds, each faction a world-devouring force, like a great colossal hydra, ready to conquer all if not for the interference of each other.</p>
+			<p class="indent">In this eternal battleground, some warriors find meaning. Those who take the Oath of the Nine Hells pledge themselves to the underworld, wielding the strength of devils. Some do this for selfish reasons, eager to harness the fiery power of hell, while others see it as the lesser of two evils, fighting fire with hellfire. In all cases, Oath of the Nine Hells Paladins are ferocious, brave, and blessed with devilish ambition and cunning. They despise demons, recognising the threat they pose to the entire multiverse, and channel infernal magic to utterly incinerate any foe who stands in their way.</p>
+			<p class="indent"><b>Tenets of the Nine Hells</b></p>
+			<p class="indent"><b>Ambition.</b> It is every creature’s duty to seek power, be it for the good of others, or only themselves.</p>
+			<p class="indent"><b>Hierarchy.</b> The universe spins around a static pillar of ultimate authority. There will always be a top and a bottom of society, and only those too weak to climb it complain.</p>
+			<p class="indent"><b>Law.</b> The word of the law is paramount and must be upheld. Without it, chaos reigns.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_OATH_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_DEVILISH_AURA" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_HELLISH_GIFTS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_INFERNAL_TRANSFORMATION" />
+		</description>
+		<sheet display="false">
+			<description>Those who take the Oath of the Nine Hells pledge themselves to the underworld, wielding the strength of devils.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_OATH_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_DEVILISH_AURA" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_HELLISH_GIFTS" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_INFERNAL_TRANSFORMATION" level="20" />
+		</rules>
+	</element>
+	<element name="Oath Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_OATH_SPELLS">
+		<description>
+			<p>You gain the following oath spells at the paladin levels listed.</p>
+			<h5>Oath of the Nine Hells Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>command, hellish rebuke</i></td></tr>
+				<tr><td>5th</td><td><i>enlarge/reduce, suggestion</i></td></tr>
+				<tr><td>9th</td><td><i>fireball, magic circle</i></td></tr>
+				<tr><td>13th</td><td><i>banishment, wall of fire</i></td></tr>
+				<tr><td>17th</td><td><i>geas, planar binding</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_COMMAND" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HELLISH_REBUKE" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENLARGE_REDUCE" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SUGGESTION" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MAGIC_CIRCLE" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FIRE" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GEAS" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_PLANAR_BINDING" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+	<element name="Channel Divinity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY">
+		<description>
+			<p>When you take this oath, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b>Hellish Strike.</b> As a bonus action, you imbue a weapon you are holding with the living inferno of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of unholy flame, and the target takes additional fire damage equal to 10 + your Paladin level (whether the attack hits or misses).</p>
+			<p class="indent"><b>Turn Fiend.</b> As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a Wisdom saving throw. Creatures that are the Fiend (Demon) type or are of a CR or Level lower than your paladin level have disadvantage on this Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain the following two Channel Divinity options.&#13;
+			• Hellish Strike. As a bonus action, you imbue a weapon you are holding with the living inferno of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of unholy flame, and the target takes additional fire damage equal to 10 + your Paladin level (whether the attack hits or misses).&#13;
+			• Turn Fiend. As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a Wisdom saving throw. Creatures that are the Fiend (Demon) type or are of a CR or Level lower than your paladin level have disadvantage on this Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY_HELLISH_STRIKE" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY_TURN_FIEND" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Hellish Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY_HELLISH_STRIKE">
+		<description>
+			<p>As a bonus action, you imbue a weapon you are holding with the living inferno of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of unholy flame, and the target takes additional fire damage equal to 10 + your Paladin level (whether the attack hits or misses).</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Bonus Action" alt="Hellish Strike">
+			<description>As a bonus action, you imbue a weapon you are holding with the living inferno of the nine hells. The next time you make an attack roll against a creature with that weapon within the next minute, the weapon lets loose a burst of unholy flame, and the target takes additional {{hellish strike:damage}} fire damage (whether the attack hits or misses).</description>
+		</sheet>
+		<rules>
+			<stat name="hellish strike:damage" value="10" />
+			<stat name="hellish strike:damage" value="level:paladin" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Turn Fiend" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_CHANNEL_DIVINITY_TURN_FIEND">
+		<description>
+			<p>As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a Wisdom saving throw. Creatures that are the Fiend (Demon) type or are of a CR or Level lower than your paladin level have disadvantage on this Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.</p>
+			<p class="indent">A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Action" alt="Turn Fiend">
+			<description>As an action, you present your holy symbol and utter a ferocious battlecry. Each Fiend that can see or hear you within 30 feet of you must make a DC {{paladin:spellcasting:dc}} Wisdom saving throw. Creatures that are the Fiend (Demon) type or are of a CR or Level lower than your paladin level have disadvantage. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.&#13;
+			A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.</description>
+		</sheet>
+	</element>
+	<element name="Devilish Aura" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_DEVILISH_AURA">
+		<description>
+			<p>You radiate an aura of spiteful, living fire magic. Creatures of your choice within 10 feet of you take an additional 1d4 fire damage when hit by a weapon attack.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
+		</description>
+		<sheet>
+			<description>You radiate an aura of spiteful, living fire magic. Creatures of your choice within {{devilish aura:range}} feet of you take an additional 1d4 fire damage when hit by a weapon attack.</description>
+		</sheet>
+		<rules>
+			<stat name="devilish aura:range" value="10" />
+			<stat name="devilish aura:range" value="20" level="18" />
+		</rules>
+	</element>
+	<element name="Hellish Gifts" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_HELLISH_GIFTS">
+		<description>
+			<p>You are immune to fire damage and the frightened condition.</p>
+			<p class="indent">In addition, you learn one Eldritch Invocation of your choice from the Warlock class. You must still meet the prerequisites to learn it (if any).</p>
+			<p class="indent">You can swap the Eldritch Invocation you gained from this feature for another by performing a 1 hour ritual. Once you perform this ritual, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the frightened condition.&#13;
+			In addition, you learn one Eldritch Invocation of your choice from the Warlock class. You must still meet the prerequisites to learn it (if any).&#13;
+			You can swap the Eldritch Invocation you gained from this feature for another by performing a 1 hour ritual. Once you perform this ritual, you cannot do so again until you finish a long rest.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" />
+			<select type="Class Feature" name="Eldritch Invocation (Hellish Gifts)" supports="Eldritch Invocation" />
+		</rules>
+	</element>
+	<element name="Infernal Transformation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_NINE_HELLS_INFERNAL_TRANSFORMATION">
+		<description>
+			<p>As an action on your turn, you can cast the shapechange spell with this feature, without expending a spell slot, but the creature you shapechange into must be a Fiend (Devil).</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>As an action on your turn, you can cast the shapechange spell with this feature, without expending a spell slot, but the creature you shapechange into must be a Fiend (Devil).</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHAPECHANGE" />
+		</rules>
+	</element>
+</elements>

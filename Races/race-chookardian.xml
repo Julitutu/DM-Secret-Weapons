@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Chookardian</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-chookardian.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-chookardian.xml" />
+		</update>
+	</info>
+
+	<element name="Chookardian" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CHOOKARDIAN">
+		<description>
+			<p>In a bustling, ancient, criss-cross network of caverns and tunnels, the Chookardian build homes, raise livestock, and thrive beneath the notice of most surface dwellers.</p>
+			<p>Happily beating a peaceful existence largely removed from the rest of the world, only rarely do Chookardian meet with surface dwellers to trade materials, knowledge, and stories. These cultural exchanges are deeply significant, with the Chookardian sending an honoured expedition party to the surface world, resplendent with the finest works of Chookardian craft to barter for supplies for the tribe.</p>
+			<p>Occasionally, a Chookardian may choose to stay above ground, either to fulfil a personal goal or to embark a self-imposed mission to obtain wondrous resources to improve the life of their kin.</p>
+			<h4>CHOOKARDIAN TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Chookardian vary in size from between three and five feet tall. Your size is small or medium.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Chookardian mature quickly and live fairly short lives, reaching up to 40 years old.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet, you have a burrow speed of 5 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern colour in darkness, only shades of grey.</p>
+			<p class="indent"><strong><em>Horns.</em></strong> Your horns are a natural weapon, and you can use them to make unarmed strikes. When you do, the unarmed strike deals 1d6 piercing damage plus your constitution modifier.</p>
+			<p class="indent"><strong><em>Light Magic.</em></strong> You know the Light cantrip, and Constitution is your spellcasting ability for this spell.</p>
+			<p class="indent"><strong><em>Knack For Survival.</em></strong> You have proficiency in the Animal Handling and Survival skills, as well as with one type of Artisan’s Tools of your choice.</p>
+			<p class="indent"><strong><em>Expert Rider.</em></strong> If you are mounted on a beast or a creature you have summoned with a spell, that creature’s movement increases by 10 feet and it gains a bonus to its Armour Class and saving throws equal to half your proficiency bonus (rounded down).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Constitution +2, Strength +1, assumed) -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Chookardian)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Chookardian)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Chookardian)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:burrow" value="5" bonus="base" />
+
+			<!-- Darkvision -->
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHOOKARDIAN_CHOOKARDIAN_HORNS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHOOKARDIAN_LIGHT_MAGIC" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ANIMALHANDLING" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<select type="Proficiency" name="Knack for Survival (Artisan's Tools)" supports="Artisan tools" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CHOOKARDIAN_EXPERT_RIDER" />
+		</rules>
+	</element>
+
+	<element name="Horns" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHOOKARDIAN_CHOOKARDIAN_HORNS">
+		<description>
+			<p>Your horns are a natural weapon, and you can use them to make unarmed strikes. When you do, the unarmed strike deals 1d6 piercing damage plus your constitution modifier.</p>
+		</description>
+		<sheet>
+			<description>Your horns are a natural weapon that deal 1d6 + {{constitution:modifier}} piercing damage.</description>
+		</sheet>
+	</element>
+	<element name="Light Magic" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHOOKARDIAN_LIGHT_MAGIC">
+		<description>
+			<p>You know the Light cantrip, and Constitution is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet>
+			<description>You know the Light cantrip. Constitution is your spellcasting ability for it.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_LIGHT" />
+		</rules>
+	</element>
+	<element name="Expert Rider" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CHOOKARDIAN_EXPERT_RIDER">
+		<description>
+			<p>If you are mounted on a beast or a creature you have summoned with a spell, that creature’s movement increases by 10 feet and it gains a bonus to its Armour Class and saving throws equal to half your proficiency bonus (rounded down).</p>
+		</description>
+		<sheet>
+			<description>If you are mounted on a beast or summoned creature, its movement increases by 10 feet and it gains a bonus to its AC and saving throws equal to {{proficiency:half}}.</description>
+		</sheet>
+	</element>
+</elements>

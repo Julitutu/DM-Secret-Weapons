@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.1.0">
+			<file name="source.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/source.xml" />
+		</update>
+	</info>	
+	<element name="Dm Secret Weapons" type="Source" source="Core" id="ID_DM_SECRET_WEAPONS">
+		<description>			
+			<p>This is a compilation of DM's Secret Weapons magazines from January 2022 to May 2025. As I get new issues, I'll try to update them with new ones. I hope you enjoy it!</p>
+		</description>
+		<setters>
+			<set name="abbreviation">DMSW</set>
+			<set name="url">https://dndshorts.myshopify.com/collections/digital-content</set>
+			<set name="image">https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/secret-weapon.png</set>
+			<set name="author" abbreviation="DMSW" url="https://dndshorts.myshopify.com">D&amp;D Shorts</set>
+			<set name="third-party">true</set>
+		</setters>
+	</element>
+</elements>

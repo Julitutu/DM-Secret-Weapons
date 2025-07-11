@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Bard - College of Mime</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="bard-college-of-mime.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/bard-college-of-mime.xml" />
+		</update>
+	</info>
+
+	<element name="College of Mime" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_BARD_COLLEGE_OF_MIME">
+		<supports>Bard College</supports>
+		<description>
+			<p>Bards of the College of Mime are masters of motion, movement and physical performance. An unusual school of magic, Mime Bards seek to channel powerful magic through gesture, rather than words. Stealth, speed, enchantment and abjuration are the tools through which they weave spells.</p>
+			<p class="indent">The most powerful Mime Bards can form unbreakable structures from nothing, cure lethal curses with a touch, banish creatures with a wipe of the hand, and even make a semi-decent living as a performing street artist on the side.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MIME_VOICELESS_WHISPER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MIME_ENSNARING_MIMICRY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MIME_MASTER_OF_MOTION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MIME_GESTICULATED_MANIFESTATION" />
+		</description>
+		<sheet display="false">
+			<description>Bards of the College of Mime are masters of motion, movement and physical performance.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_VOICELESS_WHISPER" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_ENSNARING_MIMICRY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_MASTER_OF_MOTION" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_GESTICULATED_MANIFESTATION" level="14" />
+		</rules>
+	</element>
+	<element name="Voiceless Whisper" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_VOICELESS_WHISPER">
+		<description>
+			<p>When you take this subclass at level 3, your training in the art of physical performance allows you to channel magic through gestures, rather than your words.</p>
+			<p class="indent">You can cast spells without performing the verbal components, as long as you aren’t restrained or incapacitated, and you can inspire others with your Bardic Inspiration even if they can’t hear you, as long as they can see you.</p>
+		</description>
+		<sheet>
+			<description>You can cast spells without performing the verbal components, as long as you aren’t restrained or incapacitated, and you can inspire others with your Bardic Inspiration even if they can’t hear you, as long as they can see you.</description>
+		</sheet>
+	</element>
+	<element name="Ensnaring Mimicry" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_ENSNARING_MIMICRY">
+		<description>
+			<p>Also at level 3 you gain the power to form magical connections with other creatures through the art of mimicry.</p>
+			<p class="indent">As an action, choose one creature you can see within 60 feet of you. You spend your action and half of your movement speed mimicking its movements with uncanny accuracy, forming a magical connection. This link lasts for the next minute, or until you lose concentration (as if concentrating on a spell).</p>
+			<p class="indent">While linked with a creature this way, you can use your bonus action to influence its behaviour in one of the following ways:</p>
+			<p class="indent"><b>Comedic Mimicry.</b> The linked creature must make a Wisdom saving throw. On a failed save, both you and it fall prone.</p>
+			<p class="indent"><b>Tragic Mimicry.</b> The linked creature must make a Charisma saving throw. On a failed save, until the start of your next turn, it suffers a negative modifier to all Strength, Dexterity, and Constitution saving throws equal to your proficiency bonus.</p>
+			<p class="indent"><b>Unified Motion.</b> The linked creature must make a Constitution saving throw. On a failed save, its movement becomes tied to yours. Until the end of this turn, as you move using your movement speed, the creature also moves that number of feet in any direction that you choose. You can’t force the creature to move through obviously dangerous ground, such as a fire or off a cliff.</p>
+		</description>
+		<sheet action="Action">
+			<description>As an action, choose one creature you can see within 60 feet of you. You spend your action and half of your movement speed mimicking its movements with uncanny accuracy, forming a magical connection. This link lasts for the next minute, or until you lose concentration (as if concentrating on a spell).&#13;
+			While linked with a creature this way, you can use your bonus action to influence its behaviour in one of the following ways:&#13;
+			• Comedic Mimicry. The linked creature must make a DC {{bard:spellcasting:dc}} Wisdom saving throw. On a failed save, both you and it fall prone.&#13;
+			• Tragic Mimicry. The linked creature must make a DC {{bard:spellcasting:dc}} Charisma saving throw. On a failed save, until the start of your next turn, it suffers a -{{proficiency}} modifier to all Strength, Dexterity, and Constitution saving throws.&#13;
+			• Unified Motion. The linked creature must make a DC {{bard:spellcasting:dc}} Constitution saving throw. On a failed save, its movement becomes tied to yours. Until the end of this turn, as you move using your movement speed, the creature also moves that number of feet in any direction that you choose. You can’t force the creature to move through obviously dangerous ground, such as a fire or off a cliff.</description>
+		</sheet>
+	</element>
+	<element name="Master of Motion" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_MASTER_OF_MOTION">
+		<description>
+			<p>Beginning at 6th level, your growing mastery of movement and performance begin to intertwine, enhancing your body with incredible grace and speed.</p>
+			<p class="indent">Your movement speed increases by 10 feet, and your proficiency bonus is doubled for any ability check or saving throw you are proficient in that uses your Dexterity modifier.</p>
+		</description>
+		<sheet>
+			<description>Your proficiency bonus is doubled for any ability check or saving throw you are proficient in that uses your Dexterity modifier.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" />
+			<stat name="dexterity:save:misc" value="proficiency" bonus="double" requirements="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY"/>
+			<grant type="Class Feature" id="ID_EXPERTISE_SKILL_ACROBATICS" requirements="ID_PROFICIENCY_SKILL_ACROBATICS" />
+			<grant type="Class Feature" id="ID_EXPERTISE_SKILL_SLEIGHTOFHAND" requirements="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+			<grant type="Class Feature" id="ID_EXPERTISE_SKILL_STEALTH" requirements="ID_PROFICIENCY_SKILL_STEALTH" />
+		</rules>
+	</element>
+	<element name="Gesticulated Manifestation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MIME_GESTICULATED_MANIFESTATION">
+		<description>
+			<p>When you reach 14th level, once per long rest, you can use this trait to cast any Abjuration or Illusion spell of a level for which you have a spell slot with a casting time of one action. You cast it without performing its verbal components and doing so consumes a spell slot of that level.</p>
+			<p class="indent">If that spell normally requires concentration, it doesn’t when you cast it using this feature, and instead lasts for the full duration. The spell ends early if you are knocked unconscious or audibly speak.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can use this trait to cast any Abjuration or Illusion spell of a level for which you have a spell slot with a casting time of one action. You cast it without performing its verbal components and doing so consumes a spell slot of that level.&#13;
+			If that spell normally requires concentration, it doesn’t when you cast it using this feature, and instead lasts for the full duration. The spell ends early if you are knocked unconscious or audibly speak.</description>
+		</sheet>
+	</element>
+</elements>

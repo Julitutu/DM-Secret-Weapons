@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ranger - Tomb Raider</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="ranger-tomb-raider.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/ranger-tomb-raider.xml" />
+		</update>
+	</info>
+
+	<element name="Tomb Raider" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_RANGER_TOMB_RAIDER">
+		<supports>Ranger Archetype</supports>
+		<description>
+			<p>Tomb Raiders are explorers. They are hunters of fantastical treasures and guardians of ancient relics. They seek to plum the depths of history by hand, protecting the historic artefacts of immemorial cultures. They strive to educate, discover and preserve; a tomb raider is far from a common thief.</p>
+			<p class="indent">Exploring long forgotten dungeons and deep burial sites is risky business. Foolish Tomb Raiders don’t live long. Adventuring parties and expeditions will often seek the aid of a Tomb Raider to guide them through dangerous dungeons, disarming traps and removing curses. A combination of warrior, locksmith, cursebreaker and artist; a wise Tomb Raider is the difference between a party finding untold magical secrets and items, or finding certain death in the forgotten, dark tombs of the old world.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_FAVOURED_WEAPON" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_LOST_KNOWLEDGE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_RAIDERS_FORTUNE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_RAIDERS_INSTINCT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_UNORTHODOX_WEAPON_MASTER" />
+		</description>
+		<sheet display="false">
+			<description>Tomb Raiders are explorers. They are hunters of fantastical treasures and guardians of ancient relics.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_FAVOURED_WEAPON" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_LOST_KNOWLEDGE" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_RAIDERS_FORTUNE" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_RAIDERS_INSTINCT" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_UNORTHODOX_WEAPON_MASTER" level="15" />
+		</rules>
+	</element>
+	<element name="Favoured Weapon" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_FAVOURED_WEAPON">
+		<description>
+			<p>At third level, choose a Favoured Weapon from the following list. You gain additional benefits while wielding your Favoured Weapon. You can swap a Favoured Weapon choice to another option any time you gain a Ranger Level:</p>
+			<p class="indent"><b>Whip</b> - Your attacks with a whip deal 2d4 slashing damage. In addition, when you hit a creature with an attack using a whip, if they are large or smaller, you can use your bonus action to attempt to pull them off their balance. They make a Strength saving throw (DC 8+ your Dex or Strength modifier+Proficiency Bonus) or fall prone.</p>
+			<p class="indent"><b>Blowgun</b> - You ignore the loading property of the blowgun, and attacks at long range don’t impose disadvantage. In addition, as a bonus action, you can coat the tip of a number of blowgun darts equal to your proficiency bonus in a simple poison. You have the knowledge on how to harvest this poison from natural resources found in your favoured terrain. Poisoned darts remain venomous for one minute or until they strike a creature. On a hit, the target takes one point of piercing damage and makes a Constitution saving throw (DC = 8+your Wisdom modifier +Proficiency Bonus), taking an additional 2d6 poison damage on a failed save.</p>
+			<p class="indent"><b>Net</b> - You ignore the restriction on nets preventing you from making multiple attacks in a turn. In addition, making an attack roll with a net while standing within 5ft of a hostile creature doesn’t impose disadvantage on your roll, and attacks at long range also don’t impose disadvantage. Finally, your skill with net craftsmanship allows you to create more sturdy and powerful nets. You can craft a sturdy net in one hour of work at the cost of 10 gold pieces. It has an AC of 15, requires 15 slashing damage to break, and requires a strength check (DC 15) to escape from.</p>
+		</description>
+		<sheet display="false">
+			<description>Choose a Favoured Weapon from the following list. You gain additional benefits while wielding your Favoured Weapon. You can swap a Favoured Weapon choice to another option any time you gain a Ranger Level:&#13;
+			• Whip - Your attacks with a whip deal 2d4 slashing damage. In addition, when you hit a creature with an attack using a whip, if they are large or smaller, you can use your bonus action to attempt to pull them off their balance. They make a Strength saving throw (DC 8+ your Dex or Strength modifier+Proficiency Bonus) or fall prone.&#13;
+			• Blowgun - You ignore the loading property of the blowgun, and attacks at long range don’t impose disadvantage. In addition, as a bonus action, you can coat the tip of a number of blowgun darts equal to your proficiency bonus in a simple poison. You have the knowledge on how to harvest this poison from natural resources found in your favoured terrain. Poisoned darts remain venomous for one minute or until they strike a creature. On a hit, the target takes one point of piercing damage and makes a Constitution saving throw (DC = 8+your Wisdom modifier +Proficiency Bonus), taking an additional 2d6 poison damage on a failed save.&#13;
+			• Net - You ignore the restriction on nets preventing you from making multiple attacks in a turn. In addition, making an attack roll with a net while standing within 5ft of a hostile creature doesn’t impose disadvantage on your roll, and attacks at long range also don’t impose disadvantage. Finally, your skill with net craftsmanship allows you to create more sturdy and powerful nets. You can craft a sturdy net in one hour of work at the cost of 10 gold pieces. It has an AC of 15, requires 15 slashing damage to break, and requires a strength check (DC 15) to escape from.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Favoured Weapon" supports="Favoured Weapon" />
+		</rules>
+	</element>
+	<element name="Lost Knowledge" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_LOST_KNOWLEDGE">
+		<description>
+			<p>Also at 3rd level, you gain proficiency in either history, investigation, or thieves’ tools. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain proficiency in either history, investigation, or thieves’ tools. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Lost Knowledge" supports="Lost Knowledge" />
+		</rules>
+	</element>
+	<!-- Lost Knowledge -->
+	<element name="History" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_LOST_KNOWLEDGE_HISTORY">
+		<supports>Lost Knowledge</supports>
+		<description>
+			<p>Also at 3rd level, you gain proficiency in either history. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</p>
+		</description>
+		<sheet>
+			<description>You gain proficiency in either history. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+			<grant type="Class Feature" id="ID_EXPERTISE_SKILL_HISTORY" />
+		</rules>
+	</element>
+	<element name="Investigation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_LOST_KNOWLEDGE_INVESTIGATION">
+		<supports>Lost Knowledge</supports>
+		<description>
+			<p>Also at 3rd level, you gain proficiency in either investigation. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</p>
+		</description>
+		<sheet>
+			<description>You gain proficiency in either investigation. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+			<grant type="Class Feature" id="ID_EXPERTISE_SKILL_INVESTIGATION" />
+		</rules>
+	</element>
+	<element name="Thieves Tools" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_LOST_KNOWLEDGE_THIEVES_TOOLS">
+		<supports>Lost Knowledge</supports>
+		<description>
+			<p>Also at 3rd level, you gain proficiency in either thieves’ tools. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</p>
+		</description>
+		<sheet>
+			<description>You gain proficiency in either thieves’ tools. Your proficiency bonus is doubled for any ability check you make which uses that proficiency.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+			<grant type="Class Feature" id="ID_EXPERTISE_TOOL_THIEVES_TOOLS" />
+		</rules>
+	</element>
+
+	<element name="Raider’s Fortune" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_RAIDERS_FORTUNE">
+		<description>
+			<p>From 6th level, you have advantage on saving throws to avoid or end the poisoned condition, and advantage on saving throws to avoid or resist the effects of curses and cursed magical items.</p>
+			<p class="indent">In addition, you can cast the spells Detect Magic, Remove Curse and Identify once each per long rest without expending a spell slot. You can also cast these spells with any available spell slots you have of the appropriate level.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You have advantage on saving throws to avoid or end the poisoned condition, and advantage on saving throws to avoid or resist the effects of curses and cursed magical items.&#13;
+			In addition, you can cast the spells Detect Magic, Remove Curse and Identify once each per long rest without expending a spell slot. You can also cast these spells with any available spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" />
+			<grant type="Spell" id="ID_PHB_SPELL_REMOVE_CURSE" />
+			<grant type="Spell" id="ID_PHB_SPELL_IDENTIFY" />
+		</rules>
+	</element>
+	<element name="Raider’s Instinct" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_RAIDERS_INSTINCT">
+		<description>
+			<p>Starting at 11th level, you can add your wisdom modifier to any Arcana, Stealth, or Investigation check.</p>
+			<p class="indent">In addition, you may choose an additional weapon from the Favoured Weapon list to act as a second Favoured Weapon, and you gain a +1 to attack rolls with your Favoured Weapons.</p>
+		</description>
+		<sheet>
+			<description>You may choose an additional weapon from the Favoured Weapon list to act as a second Favoured Weapon, and you gain a +1 to attack rolls with your Favoured Weapons.</description>
+		</sheet>
+		<rules>
+			<stat name="arcana:misc" value="wisdom:modifier" />
+			<stat name="stealth:misc" value="wisdom:modifier" />
+			<stat name="investigation:misc" value="wisdom:modifier" />
+			<select type="Archetype Feature" name="Favoured Weapon (11th level)" supports="Favoured Weapon" />
+		</rules>
+	</element>
+	<element name="Unorthodox Weapon Master" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_TOMB_RAIDER_UNORTHODOX_WEAPON_MASTER">
+		<description>
+			<p>Starting at 15th level, the maximum number of magical items you can attune to increases by one. In addition, when you use the attack action to attack with a Favoured Weapon, you can use your bonus action to make a single attack with a Favoured Weapon.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>The maximum number of magical items you can attune to increases by one. In addition, when you use the attack action to attack with a Favoured Weapon, you can use your bonus action to make a single attack with a Favoured Weapon.</description>
+		</sheet>
+		<rules>
+			<stat name="attunement:max" value="1" />
+		</rules>
+	</element>
+
+	<!-- Favoured Weapon -->
+	<element name="Whip" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_FAVOURED_WEAPON_WHIP">
+		<supports>Favoured Weapon</supports>
+		<description>
+			<p>Your attacks with a whip deal 2d4 slashing damage. In addition, when you hit a creature with an attack using a whip, if they are large or smaller, you can use your bonus action to attempt to pull them off their balance. They make a Strength saving throw (DC 8 + your Dex or Strength modifier+ Proficiency Bonus) or fall prone.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>Your attacks with a whip deal 2d4 slashing damage. In addition, when you hit a creature with an attack using a whip, if they are large or smaller, you can use your bonus action to attempt to pull them off their balance. They make a DC {{favoured weapon:whip:dc}} Strength saving throw or fall prone.</description>
+		</sheet>
+		<rules>
+			<stat name="favoured weapon:whip:dc" value="8" />
+			<stat name="favoured weapon:whip:dc" value="proficiency" />
+			<stat name="favoured weapon:whip:dc:ability" value="strength:modifier" bonus="ability" />
+			<stat name="favoured weapon:whip:dc:ability" value="dexterity:modifier" bonus="ability" />
+			<stat name="favoured weapon:whip:dc" value="favoured weapon:whip:dc:ability" />
+		</rules>
+	</element>
+	<element name="Blowgun" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_FAVOURED_WEAPON_BLOWGUN">
+		<supports>Favoured Weapon</supports>
+		<description>
+			<p>You ignore the loading property of the blowgun, and attacks at long range don’t impose disadvantage.</p>
+			<p class="indent">In addition, as a bonus action, you can coat the tip of a number of blowgun darts equal to your proficiency bonus in a simple poison. You have the knowledge on how to harvest this poison from natural resources found in your favoured terrain. Poisoned darts remain venomous for one minute or until they strike a creature. On a hit, the target takes one point of piercing damage and makes a Constitution saving throw (DC = 8 + your Wisdom modifier + Proficiency Bonus), taking an additional 2d6 poison damage on a failed save.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>You ignore the loading property of the blowgun, and attacks at long range don’t impose disadvantage.&#13;
+			In addition, as a bonus action, you can coat the tip of a number of blowgun darts equal to your proficiency bonus in a simple poison. You have the knowledge on how to harvest this poison from natural resources found in your favoured terrain. Poisoned darts remain venomous for one minute or until they strike a creature. On a hit, the target takes one point of piercing damage and makes a DC {{favoured weapon:blowgun:dc}} Constitution saving throw, taking an additional 2d6 poison damage on a failed save.</description>
+		</sheet>
+		<rules>
+			<stat name="favoured weapon:blowgun:dc" value="8" />
+			<stat name="favoured weapon:blowgun:dc" value="wisdom:modifier" />
+			<stat name="favoured weapon:blowgun:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Net" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_FAVOURED_WEAPON_NET">
+		<supports>Favoured Weapon</supports>
+		<description>
+			<p>You ignore the restriction on nets preventing you from making multiple attacks in a turn. In addition, making an attack roll with a net while standing within 5ft of a hostile creature doesn’t impose disadvantage on your roll, and attacks at long range also don’t impose disadvantage.</p>
+			<p class="indent">Finally, your skill with net craftsmanship allows you to create more sturdy and powerful nets. You can craft a sturdy net in one hour of work at the cost of 10 gold pieces. It has an AC of 15, requires 15 slashing damage to break, and requires a strength check (DC 15) to escape from.</p>
+		</description>
+		<sheet>
+			<description>You ignore the restriction on nets preventing you from making multiple attacks in a turn. In addition, making an attack roll with a net while standing within 5ft of a hostile creature doesn’t impose disadvantage on your roll, and attacks at long range also don’t impose disadvantage.&#13;
+			Finally, your skill with net craftsmanship allows you to create more sturdy and powerful nets. You can craft a sturdy net in one hour of work at the cost of 10 gold pieces. It has an AC of 15, requires 15 slashing damage to break, and requires a strength check (DC 15) to escape from.</description>
+		</sheet>
+	</element>
+</elements>

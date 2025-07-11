@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Serparvus</name>
+        <description>Serparvus from DM's Secret Weapons.</description>
+        <author>DM's Secret Weapons</author>
+        <update version="0.1.0">
+            <file name="serparvus.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Familiars/serparvus.xml" />
+        </update>
+    </info>
+
+    <element name="Serparvus" type="Companion" source="DM Secret Weapons" id="ID_DMSW_COMPANION_SERPARVUS">
+        <supports>Familiar</supports>
+        <description>
+            <p>At your DM’s discretion, the serparvus can be your familiar, and can be summoned via the Find Familiar spell.</p>
+        </description>
+        <setters>
+            <set name="strength">12</set>
+            <set name="dexterity">12</set>
+            <set name="constitution">13</set>
+            <set name="intelligence">6</set>
+            <set name="wisdom">12</set>
+            <set name="charisma">11</set>
+            <set name="ac">11 (Natural Armour)</set>
+            <set name="hp">8 (1d12 + 2)</set>
+            <set name="speed">30 ft., climb 20 ft.</set>
+            <set name="senses">Darkvision 60ft., Passive Perception 13</set>
+            <set name="languages">Draconic</set>
+            <set name="skills">Perception +3, Stealth +3</set>
+            <set name="immunities">Lightning</set>
+            <set name="type">Monstrosity</set>
+            <set name="size">Small</set>
+            <set name="alignment">neutral evil</set>
+            <set name="challenge">0</set>
+            <set name="proficiency">2</set>
+            <set name="traits">ID_DMSW_COMPANION_TRAIT_SERPARVUS_LIGHTNING_GLOW</set>
+            <set name="actions">ID_DMSW_COMPANION_ACTION_SERPARVUS_BITE,ID_DMSW_COMPANION_ACTION_SERPARVUS_SHOCK</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="11" />
+            <stat name="companion:hp:max" value="8" bonus="base" />
+            <stat name="companion:speed" value="30" bonus="base" />
+            <stat name="companion:speed:climb" value="20" bonus="base" />
+            <stat name="companion:perception:proficiency" value="companion:proficiency" bonus="base" />
+            <stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Lightning Glow" type="Companion Trait" source="DM Secret Weapons" id="ID_DMSW_COMPANION_TRAIT_SERPARVUS_LIGHTNING_GLOW">
+        <description>
+            <p>The serparvus charges itself with power and radiates a glow of vivid blue light. It shines bright light in a 20 ft radius and dim light for a further 20 ft.</p>
+        </description>
+        <sheet>
+            <description>The serparvus charges itself with power and radiates a glow of vivid blue light. It shines bright light in a 20 ft radius and dim light for a further 20 ft.</description>
+        </sheet>
+    </element>
+
+    <element name="Bite" type="Companion Action" source="DM Secret Weapons" id="ID_DMSW_COMPANION_ACTION_SERPARVUS_BITE">
+        <description>
+            <p>Melee Weapon Attack: +3 to hit, reach 5ft., one target. Hit: 2 (1d1+1) piercing damage.</p>
+        </description>
+        <sheet>
+            <description>Melee Weapon Attack: +3 to hit, reach 5ft., one target. Hit: 2 (1d1+1) piercing damage.</description>
+        </sheet>
+    </element>
+
+    <element name="Shock" type="Companion Action" source="DM Secret Weapons" id="ID_DMSW_COMPANION_ACTION_SERPARVUS_SHOCK">
+        <description>
+            <p>The serparvus deals 2 (1d4) lightning damage to any creature it is making contact with. This jolt can serve to jumpstart the mind and nervous system. Any creature hit by the serparvus’ Shock while suffering the charmed, stunned, or paralysed condition immediately makes a wisdom (charmed) or constitution (stunned or paralysed) saving throw with advantage to resist that condition, ending the effect on itself with a successful save.</p>
+        </description>
+        <sheet usage="Recharge 6">
+            <description>The serparvus deals 2 (1d4) lightning damage to any creature it is making contact with. This jolt can serve to jumpstart the mind and nervous system. Any creature hit by the serparvus’ Shock while suffering the charmed, stunned, or paralysed condition immediately makes a wisdom (charmed) or constitution (stunned or paralysed) saving throw with advantage to resist that condition, ending the effect on itself with a successful save.</description>
+        </sheet>
+    </element>
+</elements>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Fighter - Portal Knight</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="fighter-portal-knight.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/fighter-portal-knight.xml" />
+		</update>
+	</info>
+
+	<element name="Portal Knight" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FIGHTER_PORTAL_KNIGHT">
+		<supports>Martial Archetype</supports>
+		<description>
+			<p>Portal Knights are an elite order of warriors who blend martial virtuosity with conjuration magic— their most revered and mysterious power is the ability to summon portals. In battle, they wield this magic as unpredictable and deadly combatants, a legendary force of trickery and versatility. Their unique magical gifts serve Portal Knights well in many subtler facets of warfare and adventuring. Far from crude, brute warriors, they excel in the arts of infiltration, assassination, and espionage.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_CREATE_PORTAL" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_ASTRAL_GIFT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_GUARDIAN" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_ENERGY_OF_THE_ETHEREAL" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_TRICKSTER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_WARRIOR" />
+		</description>
+		<sheet display="false">
+			<description>Portal Knights are an elite order of warriors who blend martial virtuosity with conjuration magic.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_CREATE_PORTAL" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_ASTRAL_GIFT" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_GUARDIAN" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_ENERGY_OF_THE_ETHEREAL" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_TRICKSTER" level="14" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_WARRIOR" level="18" />
+		</rules>
+	</element>
+	<element name="Create Portal" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_CREATE_PORTAL">
+		<description>
+			<p>As a bonus action you can create two intangible, linked portals. They remain for 1 minute, or until you dismiss them as a bonus action, or you use this feature again. Choose two points that you can see within 60 feet of you. A circular portal, 10 feet in diameter, opens at each point. You cannot open a portal in a space occupied by another creature.</p>
+			<p class="indent">The portals are glowing rings that shed dim light in a 10-foot radius and float perpendicular to the ground. They are magically linked in space—each portal acts as a window that you can look, move, or pass objects through. A Large or smaller willing creature or an object that moves through a portal is teleported, exiting from the other portal’s space as though the two portals were adjacent to one another.</p>
+			<p class="indent">Creatures within 5 feet of a portal can make melee attacks through it, striking at a target within 5 feet of the linked portal. Ammunition from a ranged weapon that passes through the portal’s space is teleported, allowing ranged weapons to target creatures on the other side of the linked portal. Magical effects, such as the ranged attack roll from the firebolt cantrip or the damaging area of effect of a fireball spell do not pass through the portals.</p>
+			<p class="indent">Huge or larger creatures and objects, creatures who do not wish to teleport, or creatures that are unable to teleport can move through a portal’s space without teleporting to its counterpart.</p>
+			<p class="indent">Once a creature has teleported through a portal, it cannot teleport through a portal again until the start of its next turn.</p>
+			<p class="indent">You can create portals in this way a number of times equal to your Charisma modifier, regaining all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{charisma:modifier}}/Long Rest" action="Bonus Action">
+			<description>As a bonus action you can create two intangible, linked portals. They remain for 1 minute, or until you dismiss them as a bonus action, or you use this feature again. Choose two points that you can see within 60 feet of you. A circular portal, 10 feet in diameter, opens at each point. You cannot open a portal in a space occupied by another creature.&#13;
+			The portals are glowing rings that shed dim light in a 10-foot radius and float perpendicular to the ground. They are magically linked in space—each portal acts as a window that you can look, move, or pass objects through. A Large or smaller willing creature or an object that moves through a portal is teleported, exiting from the other portal’s space as though the two portals were adjacent to one another.&#13;
+			Creatures within 5 feet of a portal can make melee attacks through it, striking at a target within 5 feet of the linked portal. Ammunition from a ranged weapon that passes through the portal’s space is teleported, allowing ranged weapons to target creatures on the other side of the linked portal. Magical effects, such as the ranged attack roll from the firebolt cantrip or the damaging area of effect of a fireball spell do not pass through the portals.&#13;
+			Huge or larger creatures and objects, creatures who do not wish to teleport, or creatures that are unable to teleport can move through a portal’s space without teleporting to its counterpart.&#13;
+			Once a creature has teleported through a portal, it cannot teleport through a portal again until the start of its next turn.</description>
+		</sheet>
+	</element>
+	<element name="Astral Gift" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_ASTRAL_GIFT">
+		<description>
+			<p>You learn two cantrips of your choice from the Sorcerer spell list. Charisma is the spellcasting modifier you use for these cantrips. You can exchange one chosen cantrip for another applicable choice any time you gain a level in this subclass.</p>
+		</description>
+		<sheet display="false">
+			<description>You learn two cantrips of your choice from the Sorcerer spell list. Charisma is the spellcasting modifier you use for these cantrips. You can exchange one chosen cantrip for another applicable choice any time you gain a level in this subclass.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cantrip (Astral Gift)" supports="Sorcerer,0" number="2" />
+		</rules>
+	</element>
+	<element name="Portal Guardian" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_GUARDIAN">
+		<description>
+			<p>If a creature you can see attempts to teleport through a portal you have created, you can use a reaction to try and shut it out. The triggering creature must make a Charisma saving throw (DC = 8 + your Charisma modifier + your Proficiency Bonus). On a failed save, it cannot teleport through the portal until the start of its next turn.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>If a creature you can see attempts to teleport through a portal you have created, you can use a reaction to try and shut it out. The triggering creature must make a DC {{portal guardian:dc}} Charisma saving throw. On a failed save, it cannot teleport through the portal until the start of its next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="portal guardian:dc" value="8" />
+			<stat name="portal guardian:dc" value="charisma:modifier" />
+			<stat name="portal guardian:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Energy of the Ethereal" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_ENERGY_OF_THE_ETHEREAL">
+		<description>
+			<p>Whenever you teleport through a portal you have created, you gain temporary hit points equal to twice your Charisma modifier.</p>
+		</description>
+		<sheet>
+			<description>Whenever you teleport through a portal you have created, you gain {{energy of the ethereal:thp}} temporary hit points.</description>
+		</sheet>
+		<rules>
+			<stat name="energy of the ethereal:thp" value="charisma:modifier" />
+			<stat name="energy of the ethereal:thp" value="charisma:modifier" />
+		</rules>
+	</element>
+	<element name="Portal Trickster" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_TRICKSTER">
+		<description>
+			<p>Your portals are now powerful enough to teleport unwilling creatures who pass through their space. An unwilling creature that enters a portal’s space can attempt a Charisma saving throw (Save DC = 8 + your Charisma modifier + your Proficiency Bonus) to avoid being teleported. On a successful save, that creature moves through the portal’s space without being teleported, and is immune to the effects of the portal until the start of its next turn. On a failed save, it is teleported.</p>
+		</description>
+		<sheet>
+			<description>Your portals are now powerful enough to teleport unwilling creatures who pass through their space. An unwilling creature that enters a portal’s space can attempt a DC {{portal guardian:dc}} Charisma saving throw to avoid being teleported. On a successful save, that creature moves through the portal’s space without being teleported, and is immune to the effects of the portal until the start of its next turn. On a failed save, it is teleported.</description>
+		</sheet>
+	</element>
+	<element name="Portal Warrior" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_PORTAL_KNIGHT_PORTAL_WARRIOR">
+		<description>
+			<p>You have advantage on attack rolls you make through a portal, and your attacks made through portals deal additional damage equal to your Charisma modifier on a hit. In addition, attack rolls made against you through your portals have disadvantage.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on attack rolls you make through a portal, and your attacks made through portals deal additional {{charisma:modifier}} damage on a hit. In addition, attack rolls made against you through your portals have disadvantage.</description>
+		</sheet>
+	</element>
+</elements>

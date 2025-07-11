@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Paladin - Oath of Merriment</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="paladin-oath-of-merriment.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/paladin-oath-of-merriment.xml" />
+		</update>
+	</info>
+
+	<element name="Oath of Merriment" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_PALADIN_OATH_OF_MERRIMENT">
+		<supports>Sacred Oath</supports>
+		<description>
+			<p>Many Paladins seek to protect the innocent, but those who take the Oath of Merriment seek more. They aim not to only save lives, but give them purpose and meaning; to spread merriment and joy.</p>
+			<p class="indent">The Oath of Merriment pledges equal worth to physical and emotional freedom. Paladins of this order spread goodwill and companionship to all those they meet. After all, what is the gift of life for but to be enjoyed?</p>
+			<p class="indent">Spreading this message, Merriment Paladins oppose agents of misery, cruelty and suffering wherever they find them, and take pride in finding reasons to live well, even in the darkest of times.</p>
+			<p class="indent"><b>Tenets of Merriment</b></p>
+			<p class="indent"><b>Joy.</b> To live well means to live with joy. All sentient life has a right to happiness, and you strive to build a world where none are condemned to misery and hopelessness.</p>
+			<p class="indent"><b>Safety.</b> To live well means to feel secure. Protecting the innocent is paramount, and you protect others by being powerful yourself.</p>
+			<p class="indent"><b>Companionship.</b> To live well means to share life with others. You are a uniter of all peoples, and place great importance on bonds of friendship and family.</p>
+			<p class="indent"><b>Acceptance.</b> To live well means allowing all to live well. You need not understand the ways of people to respect them. As long as they don’t spread misery or pain, you seek to defend the cultures and beliefs of all people.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_OATH_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_AURA_OF_MIRACLES" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_DIVINE_FESTIVITIES" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_MIRACLE_STRIKE" />
+		</description>
+		<sheet display="false">
+			<description>The Oath of Merriment pledges equal worth to physical and emotional freedom.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_OATH_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_AURA_OF_MIRACLES" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_DIVINE_FESTIVITIES" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_MIRACLE_STRIKE" level="20" />
+		</rules>
+	</element>
+	<element name="Oath Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_OATH_SPELLS">
+		<description>
+			<p>You gain oath spells at the Paladin levels listed.</p>
+			<h5>Oath of Merriment Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>Bless, Goodberry</i></td></tr>
+				<tr><td>5th</td><td><i>Aid, Enhance Ability</i></td></tr>
+				<tr><td>9th</td><td><i>Conjure Animals, Revivify</i></td></tr>
+				<tr><td>13th</td><td><i>Secret Chest, Ice Storm</i></td></tr>
+				<tr><td>17th</td><td><i>Animate Objects, Awaken</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GOODBERRY" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_AID" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONJURE_ANIMALS" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_REVIVIFY" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_LEOMUNDS_SECRET_CHEST" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_OBJECTS" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_AWAKEN" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+	<element name="Channel Divinity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY">
+		<description>
+			<p>When you take this Oath at 3rd level, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b>The Right Path.</b> As an action, you place your hand on a non-hostile creature and bless them with divine energy. You have advantage on all Charisma (persuasion) checks against that creature for the next minute. In addition, if that creature was originally good-aligned and its alignment has changed, it is restored to its original alignment.</p>
+			<p class="indent"><b>Divine Gift.</b> As a bonus action, you conjure a number of tiny magic boxes equal to your charisma modifier, which appear in unoccupied spaces within 30 ft of you. Choose a creature within range when you conjure each box. That box can only be opened by the chosen creature. As an action, the chosen creature can open a box to receive a benefit, and the box then vanishes. If unopened, the boxes disappear after 24 hours, or when you use this feature again. When you create each box, choose one of the following benefits to store within:</p>
+			<ul>
+				<li>Soul. The creature gains temporary hit points equal to half your paladin level (rounded up) + charisma modifier.</li>
+				<li>Spirit. The creature gains a point of inspiration.</li>
+				<li>Heart. Opening the gift cures one of the following conditions affecting a creature (their choice when they open it): Charmed, Frightened, Poisoned, Blinded, or Deafened.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>You gain the following two Channel Divinity options.&#13;
+			• The Right Path. As an action, you place your hand on a non-hostile creature and bless them with divine energy. You have advantage on all Charisma (persuasion) checks against that creature for the next minute. In addition, if that creature was originally good-aligned and its alignment has changed, it is restored to its original alignment.&#13;
+			• Divine Gift. As a bonus action, you conjure a number of tiny magic boxes equal to your charisma modifier, which appear in unoccupied spaces within 30 ft of you. Choose a creature within range when you conjure each box. That box can only be opened by the chosen creature. As an action, the chosen creature can open a box to receive a benefit, and the box then vanishes. If unopened, the boxes disappear after 24 hours, or when you use this feature again. When you create each box, choose one of the following benefits to store within:&#13;
+			- Soul. The creature gains temporary hit points equal to half your paladin level (rounded up) + charisma modifier.&#13;
+			- Spirit. The creature gains a point of inspiration.&#13;
+			- Heart. Opening the gift cures one of the following conditions affecting a creature (their choice when they open it): Charmed, Frightened, Poisoned, Blinded, or Deafened.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY_THE_RIGHT_PATH" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY_DIVINE_GIFT" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: The Right Path" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY_THE_RIGHT_PATH">
+		<description>
+			<p>As an action, you place your hand on a non-hostile creature and bless them with divine energy. You have advantage on all Charisma (persuasion) checks against that creature for the next minute. In addition, if that creature was originally good-aligned and its alignment has changed, it is restored to its original alignment.</p>
+		</description>
+		<sheet usage="Channel Divinity" action="Action" alt="The Right Path">
+			<description>As an action, you place your hand on a non-hostile creature and bless them with divine energy. You have advantage on all Charisma (persuasion) checks against that creature for the next minute. In addition, if that creature was originally good-aligned and its alignment has changed, it is restored to its original alignment.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Divine Gift" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_CHANNEL_DIVINITY_DIVINE_GIFT">
+		<description>
+			<p>As a bonus action, you conjure a number of tiny magic boxes equal to your charisma modifier, which appear in unoccupied spaces within 30 ft of you. Choose a creature within range when you conjure each box. That box can only be opened by the chosen creature.</p>
+			<p class="indent">As an action, the chosen creature can open a box to receive a benefit, and the box then vanishes. If unopened, the boxes disappear after 24 hours, or when you use this feature again. When you create each box, choose one of the following benefits to store within:</p>
+			<ul>
+				<li>Soul. The creature gains temporary hit points equal to half your paladin level (rounded up) + charisma modifier.</li>
+				<li>Spirit. The creature gains a point of inspiration.</li>
+				<li>Heart. Opening the gift cures one of the following conditions affecting a creature (their choice when they open it): Charmed, Frightened, Poisoned, Blinded, or Deafened.</li>
+			</ul>
+		</description>
+		<sheet usage="Channel Divinity" action="Bonus Action" alt="Divine Gift">
+			<description>As a bonus action, you conjure a number of tiny magic boxes equal to {{charisma:modifier}}, which appear in unoccupied spaces within 30 ft of you. Choose a creature within range when you conjure each box. That box can only be opened by the chosen creature.&#13;
+			As an action, the chosen creature can open a box to receive a benefit, and the box then vanishes. If unopened, the boxes disappear after 24 hours, or when you use this feature again. When you create each box, choose one of the following benefits to store within:&#13;
+			• Soul. The creature gains {{divine gift:thp}} temporary hit points.&#13;
+			• Spirit. The creature gains a point of inspiration.&#13;
+			• Heart. Opening the gift cures one of the following conditions affecting a creature (their choice when they open it): Charmed, Frightened, Poisoned, Blinded, or Deafened.</description>
+		</sheet>
+		<rules>
+			<stat name="divine gift:thp" value="level:paladin:half:up" />
+			<stat name="divine gift:thp" value="charisma:modifier" />
+		</rules>
+	</element>
+	<element name="Aura of Miracles" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_AURA_OF_MIRACLES">
+		<description>
+			<p>Starting at 7th level, your spirit hums with a magical aura of fortune and jollity, heartening all those around you. Whenever you or an ally within 10 feet of you rolls a natural 1 on an attack roll, ability check, or saving throw, you can use your reaction to let that creature reroll the die. They must use the new roll.</p>
+			<p class="indent">At 18th level, the range of this aura increases to 30 feet.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>Whenever you or an ally within {{aura of miracles:range}} feet of you rolls a natural 1 on an attack roll, ability check, or saving throw, you can use your reaction to let that creature reroll the die. They must use the new roll.</description>
+		</sheet>
+		<rules>
+			<stat name="aura of miracles:range" value="10" />
+			<stat name="aura of miracles:range" value="20" level="18" />
+		</rules>
+	</element>
+	<element name="Divine Festivities" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_DIVINE_FESTIVITIES">
+		<description>
+			<p>Starting at 15th level, you can cast the spell Heroes’ Feast, without expending a spell slot.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can cast the spell Heroes’ Feast, without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_HEROES_FEAST" />
+		</rules>
+	</element>
+	<element name="Miracle Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MERRIMENT_MIRACLE_STRIKE">
+		<description>
+			<p>At 20th level, your fervent embrace of life grants you moments of spectacular fortune. You can use an action to gain the following benefits for one hour.</p>
+			<ul>
+				<li>Once, when you make a death saving throw, you can treat any roll on the die as a natural 20.</li>
+				<li>Once, when you hit a creature with an attack roll while you have only 1 hit point, you can treat the number rolled on the die for that attack roll as a natural 20.</li>
+				<li>Once, when a creature you can see within 30 feet of you falls to zero hit points, you can use your reaction to expend a spell slot. That creature regains hit points equal to twice the level of the spell slot you expended + your charisma modifier.</li>
+			</ul>
+		</description>
+		<sheet action="Action">
+			<description>You can use an action to gain the following benefits for one hour.&#13;
+			• Once, when you make a death saving throw, you can treat any roll on the die as a natural 20.&#13;
+			• Once, when you hit a creature with an attack roll while you have only 1 hit point, you can treat the number rolled on the die for that attack roll as a natural 20.&#13;
+			• Once, when a creature you can see within 30 feet of you falls to zero hit points, you can use your reaction to expend a spell slot. That creature regains hit points equal to twice the level of the spell slot you expended + your charisma modifier.</description>
+		</sheet>
+	</element>
+</elements>

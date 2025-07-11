@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Druid - Circle of Machines</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="druid-circle-of-machines.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/druid-circle-of-machines.xml" />
+		</update>
+	</info>
+
+	<element name="Circle of Machines" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_DRUID_CIRCLE_OF_MACHINES">
+		<supports>Druid Circle</supports>
+		<description>
+			<p>Oft labeled as iconoclasts and mavericks, Druids of the Circle of Machines are fascinated with the malleable essence of the natural world, and the myriad of shapes it can take. A tree is a tree, but in the paws of a beaver it becomes a dam—bowerbirds build structures for courtship, and octopi crack and customise coconuts for shelter.</p>
+			<p class="indent">Druids of this order believe the essence of the natural world is giving, not immutable. The raw materials of the earth and sky are sacred, no matter the shape they are born with, or the form they become. Guided by this philosophy, druids of this circle are the ultimate artisans of creation, crafting the magical from the mundane.</p>
+			<p class="indent">The creations of such druids are prized - exquisitely crafted magical objects that enhance the abilities of the wielder. It’s easy to spot a village home to a circle of machines druid; every hunter wields a spear blessed with the sting of a wasp and every scout carries an eyepiece granting the sight of a hawk. Druids of this order even pass their own magic into automaton creations, blessing crafted creatures with a brief breath of life. Mavericks among druids they may be, but none question the communal benefit of a kindly circle of machines druid, and none doubt the danger of an angered one.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CIRCLE_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_COMPANION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_ENHANCEMENTS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_CASTING" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_MECHANISTS_BLESSING" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_MASTERWORK" />
+		</description>
+		<sheet display="false">
+			<description>Druids of the Circle of Machines are fascinated with the malleable essence of the natural world, and the myriad of shapes it can take.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CIRCLE_SPELLS" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_COMPANION" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_ENHANCEMENTS" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_CASTING" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_MECHANISTS_BLESSING" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_MASTERWORK" level="14" />
+		</rules>
+	</element>
+	<element name="Circle Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CIRCLE_SPELLS">
+		<description>
+			<p>When you join this circle, you gain knowledge of arcane secrets, granting access to spells when you reach certain levels in this class, as shown in the Circle of Machines spells table.</p>
+			<p class="indent">Once you gain access to one of these spells, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. If you gain access to a spell that doesn’t appear on the Druid Spell List, the spell is nonetheless a druid spell for you.</p>
+			<h5>Circle of Machines spells</h5>
+			<table>
+				<thead>
+					<tr><td>Druid Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>2nd</td><td><i>alarm, mending, unseen servant</i></td></tr>
+				<tr><td>3rd</td><td><i>hold person, rope trick</i></td></tr>
+				<tr><td>5th</td><td><i>dispel magic, haste</i></td></tr>
+				<tr><td>7th</td><td><i>fabricate, resilient sphere</i></td></tr>
+				<tr><td>9th</td><td><i>animate objects, wall of stone</i></td></tr>
+			</table>
+			<p class="indent">Your study also grants you proficiency with two artisan’s tools of your choice.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ALARM" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MENDING" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_UNSEEN_SERVANT" level="2" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_PERSON" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ROPE_TRICK" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DISPEL_MAGIC" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HASTE" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FABRICATE" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_OBJECTS" level="9" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_STONE" level="9" spellcasting="Druid" prepared="true" />
+			<select type="Proficiency" name="Artisan’s Tools (Circle of Machines)" supports="Artisan tools" number="2" />
+		</rules>
+	</element>
+	<element name="Clockwork Companion" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_COMPANION">
+		<description>
+			<p>Over the course of a long rest, you can construct a Clockwork Companion. Once constructed, you can animate it for up to 1 hour by expanding a use of your Wild Shape (no action required). While unanimated, the companion folds into a tiny sphere that can be carried. Once you have crafted a Clockwork Companion, you cannot create another unless your current one is destroyed, or you disassemble it to craft a new one over the course of a long rest.</p>
+			<p class="indent">The animated Clockwork Companion is friendly to you and your companions and obeys your commands. See this creature’s game statistics in the Clockwork Companion stat block, which uses your proficiency bonus (PB) in several places.</p>
+			<p class="indent">You determine the construct’s appearance and size (Tiny or Small) when you build it. Clockwork Companions are magical - some fly with the aid of stunningly crafted, articulated wings, others through magic.</p>
+			<p class="indent">In combat, the companion shares your initiative count, but takes its turn immediately after yours. The only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the companion can take any action of its choice, not just Dodge.</p>
+			<div class="reference">
+				<div element="ID_DMSW_INFORMATION_COMPANION_CLOCKWORK" />
+			</div>
+		</description>
+		<sheet>
+			<description>Over the course of a long rest, you can construct a Clockwork Companion. Once constructed, you can animate it for up to 1 hour by expanding a use of your Wild Shape (no action required). While unanimated, the companion folds into a tiny sphere that can be carried. Once you have crafted a Clockwork Companion, you cannot create another unless your current one is destroyed, or you disassemble it to craft a new one over the course of a long rest.&#13;
+			The animated Clockwork Companion is friendly to you and your companions and obeys your commands.&#13;
+			You determine the construct’s appearance and size (Tiny or Small) when you build it. Clockwork Companions are magical - some fly with the aid of stunningly crafted, articulated wings, others through magic.&#13;
+			In combat, the companion shares your initiative count, but takes its turn immediately after yours. The only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the companion can take any action of its choice, not just Dodge.</description>
+		</sheet>
+		<rules>
+			<select type="Companion" name="Clockwork Companion" supports="Familiar" default="ID_DMSW_COMPANION_CLOCKWORK_COMPANION"/>	
+		</rules>
+	</element>
+	<element name="Clockwork Enhancements" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_ENHANCEMENTS">
+		<description>
+			<p>Over the course of a long rest, you can create a number of clockwork enhancements equal to your Proficiency Bonus. These are magic items that require attunement. You determine their appearance - some druids craft exquisite, complex magical contraptions, others simple, magically infused rings that impart power to their wearer.</p>
+			<p class="indent">Blessed with eager but fleeting nature magic, a willing creature can attune to one by focusing on it for 1 minute. These magic items disintegrate when you finish your next long rest.</p>
+			<p class="indent">When you craft your clockwork enhancements, choose from the options in your Clockwork Enhancements table. Some of the enhancements reference Proficiency Bonus (P.B.), in these cases, use your proficiency bonus, not the Proficiency Bonus of the creature attuned to the item.</p>
+			<h5>Clockwork Enhancements</h5>
+			<table>
+				<thead>
+					<tr><td>Name</td><td>Effect</td></tr>
+				</thead>
+				<tr><td>Clockwork Rabbittwitch</td><td>You have a +P.B. bonus to initiative rolls</td></tr>
+				<tr><td>Clockwork Catsight</td><td>You have darkvision out to 120 feet</td></tr>
+				<tr><td>Clockwork Harefoot</td><td>Once per turn, you can jump up to 30 feet using only 10 feet of movement</td></tr>
+				<tr><td>Clockwork Gazellespeed</td><td>Your walking speed increases by 20 feet</td></tr>
+				<tr><td>Clockwork Owlguile</td><td>Choose one skill when you attune to this item. You have a +P.B. bonus to any checks using that skill</td></tr>
+				<tr><td>Clockwork Bearsmight</td><td>You have a bonus to attack and damage rolls equal to half P.B. (rounded down)</td></tr>
+				<tr><td>Clockwork Salmonspeed</td><td>You have a swim speed equal to your walking speed</td></tr>
+				<tr><td>Clockwork Squirrelspeed</td><td>You have a climb speed equal to your walking speed</td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description>Over the course of a long rest, you can create a number of clockwork enhancements equal to your Proficiency Bonus. These are magic items that require attunement. You determine their appearance.&#13;
+			Blessed with eager but fleeting nature magic, a willing creature can attune to one by focusing on it for 1 minute. These magic items disintegrate when you finish your next long rest.&#13;
+			When you craft your clockwork enhancements, choose from the options in your Clockwork Enhancements table:
+			• Clockwork Rabbittwitch: You have a +{{proficiency}} bonus to initiative rolls &#13;
+			• Clockwork Catsight: You have darkvision out to 120 feet &#13;
+			• Clockwork Harefoot: Once per turn, you can jump up to 30 feet using only 10 feet of movement&#13;
+			• Clockwork Gazellespeed: Your walking speed increases by 20 feet &#13;
+			• Clockwork Owlguile: Choose one skill when you attune to this item. You have a +{{proficiency}} bonus to any checks using that skill&#13;
+			• Clockwork Bearsmight: You have a bonus to attack and damage rolls equal {{proficiency:half}}
+			• Clockwork Salmonspeed: You have a swim speed equal to your walking speed&#13;
+			• Clockwork Squirrelspeed: You have a climb speed equal to your walking speed</description>
+		</sheet>
+	</element>
+	<element name="Clockwork Casting" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_CASTING">
+		<description>
+			<p>When you animate your Clockwork Companion, choose one 1st level spell you can cast. Your companion can cast that spell once without a spell slot while animated for the next hour. You can expend a 1st-level spell slot (no action required) to allow it to cast that spell again.</p>
+		</description>
+		<sheet>
+			<description>When you animate your Clockwork Companion, choose one 1st level spell you can cast. Your companion can cast that spell once without a spell slot while animated for the next hour. You can expend a 1st-level spell slot (no action required) to allow it to cast that spell again.</description>
+		</sheet>
+	</element>
+	<element name="Mechanist’s Blessing" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_MECHANISTS_BLESSING">
+		<description>
+			<p>You gain one additional attunement slot, but this attunement slot can only be used to attune to one of your Clockwork Enhancements.</p>
+		</description>
+		<sheet>
+			<description>You gain one additional attunement slot, but this attunement slot can only be used to attune to one of your Clockwork Enhancements.</description>
+		</sheet>
+		<rules>
+			<stat name="attunement:max" value="1" />
+		</rules>
+	</element>
+	<element name="Clockwork Masterwork" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MACHINES_CLOCKWORK_MASTERWORK">
+		<description>
+			<p>The following options are added to your Clockwork Enhancements table:</p>
+			<h5>Clockwork Enhancements</h5>
+			<table>
+				<thead>
+					<tr><td>Name</td><td>Effect</td></tr>
+				</thead>
+				<tr><td>Clockwork Hawkspeed</td><td>You have a flying speed equal to your walking speed</td></tr>
+				<tr><td>Clockwork Oxmight</td><td>You have a bonus to saving throws rolls equal to half P.B. (rounded down)</td></tr>
+				<tr><td>Clockwork Wormsense</td><td>You have tremorsense out to 30 feet</td></tr>
+				<tr><td>Clockwork Rhinohide</td><td>While you aren’t wearing heavy armour, you have a bonus to your AC equal to half P.B. (rounded down)</td></tr>
+				<tr><td>Clockwork Foxguile</td><td>Your spell save DC increases by 1</td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description>The following options are added to your Clockwork Enhancements table:&#13;
+			• Clockwork Hawkspeed: You have a flying speed equal to your walking speed&#13;
+			• Clockwork Oxmight: You have a bonus to saving throws rolls equal to {{proficiency:half}}&#13;
+			• Clockwork Wormsense: You have tremorsense out to 30 feet&#13;
+			• Clockwork Rhinohide: While you aren’t wearing heavy armour, you have a bonus to your AC equal to {{proficiency:half}}&#13;
+			• Clockwork Foxguile: Your spell save DC increases by 1</description>
+		</sheet>
+	</element>
+
+	<!-- Clockwork Companion -->
+	<element name="Clockwork Companion" type="Companion" source="DM Secret Weapons" id="ID_DMSW_COMPANION_CLOCKWORK_COMPANION">
+        <supports>Familiar, Companion</supports>
+        <description>
+            <p>A clockwork companion, often created by druids of the Circle of Machines, serves as a loyal and adaptable ally.</p>
+        </description>
+        <setters>
+            <set name="strength">7</set>
+            <set name="dexterity">16</set>
+            <set name="constitution">10</set>
+            <set name="intelligence">16</set>
+            <set name="wisdom">10</set>
+            <set name="charisma">5</set>
+            <set name="ac">12</set>
+            <set name="hp">1</set>
+            <set name="speed">30 ft., fly 30 ft. (hover)</set>
+            <set name="senses">Darkvision 60 ft., Passive Perception 10</set>
+            <set name="languages">understands the languages you speak</set>
+            <set name="immunities">poison, psychic</set>
+            <set name="condition immunities">charmed, exhaustion, frightened, paralyzed, petrified, poisoned</set>
+            <set name="type">Construct</set>
+            <set name="size">Small or Tiny</set>
+            <set name="alignment">unaligned</set>
+			<set name="challenge">-</set>
+            <set name="traits">ID_DMSW_COMPANION_TRAIT_CLOCKWORK_MAGIC_RESISTANCE,ID_DMSW_COMPANION_TRAIT_CLOCKWORK_MAGICAL_DETONATOR</set>
+            <set name="actions">ID_DMSW_COMPANION_ACTION_CLOCKWORK_PISTON_DRIVER,ID_DMSW_COMPANION_ACTION_CLOCKWORK_SPECIALISED_ASSISTANCE</set>
+            <set name="bonus actions">ID_DMSW_COMPANION_BONUS_ACTION_CLOCKWORK_OVERCLOCK</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="12" />
+            <stat name="companion:ac" value="proficiency" />
+            <stat name="companion:hp:max" value="1" bonus="base" />
+            <stat name="companion:hp:max" value="level:druid" />
+            <stat name="companion:hp:max" value="level:druid" />
+            <stat name="companion:hp:max" value="level:druid" />
+            <stat name="companion:hp:max" value="level:druid" />
+            <stat name="companion:hp:max" value="level:druid" />
+            <stat name="companion:speed" value="30" bonus="base" />
+            <stat name="companion:speed:fly" value="30" bonus="base" />
+            <stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+        </rules>
+    </element>
+
+    <element name="Magic Resistance" type="Companion Trait" source="DM Secret Weapons" id="ID_DMSW_COMPANION_TRAIT_CLOCKWORK_MAGIC_RESISTANCE">
+        <description>
+            <p>The construct has advantage on saving throws against spells and other magical effects.</p>
+        </description>
+        <sheet>
+            <description>The construct has advantage on saving throws against spells and other magical effects.</description>
+        </sheet>
+    </element>
+
+    <element name="Magical Detonator" type="Companion Trait" source="DM Secret Weapons" id="ID_DMSW_COMPANION_TRAIT_CLOCKWORK_MAGICAL_DETONATOR">
+        <description>
+            <p>When the construct falls to 0 hit points, it can choose to burst into fragments of magical energy. If it does so, each creature within 15 feet of it must succeed on a Dexterity saving throw (DC = your spell save DC) or take a number of d10s of fire damage equal to your proficiency bonus.</p>
+        </description>
+        <sheet>
+            <description>When the construct falls to 0 hit points, it can choose to burst into fragments of magical energy. If it does so, each creature within 15 feet of it must succeed on a Dexterity saving throw (DC = your spell save DC) or take a number of PBd10s of fire damage.</description>
+        </sheet>
+    </element>
+
+    <element name="Piston Driver" type="Companion Action" source="DM Secret Weapons" id="ID_DMSW_COMPANION_ACTION_CLOCKWORK_PISTON_DRIVER">
+        <compendium display="false" />
+        <description>
+            <p>Ranged Weapon Attack: your spell attack modifier to hit, range 30 ft., one target you can see. Hit: (1d6 + your proficiency bonus) bludgeoning damage.</p>
+        </description>
+        <sheet>
+            <description>Ranged Weapon Attack: your spell attack modifier to hit, range 30 ft., one target you can see. Hit: (1d6 + PB) bludgeoning damage.</description>
+        </sheet>
+    </element>
+
+    <element name="Specialised Assistance" type="Companion Action" source="DM Secret Weapons" id="ID_DMSW_COMPANION_ACTION_CLOCKWORK_SPECIALISED_ASSISTANCE">
+        <compendium display="false" />
+        <description>
+            <p>The companion takes the Help action, and the creature it helps can also add your Proficiency Bonus to its attack roll or ability check.</p>
+        </description>
+        <sheet usage="PB/Long Rest">
+            <description>The companion takes the Help action, and the creature it helps can also add your Proficiency Bonus to its attack roll or ability check.</description>
+        </sheet>
+    </element>
+
+    <element name="Overclock" type="Companion Bonus Action" source="DM Secret Weapons" id="ID_DMSW_COMPANION_BONUS_ACTION_CLOCKWORK_OVERCLOCK">
+        <compendium display="false" />
+        <description>
+            <p>The clockwork companion can take an additional action this turn, and takes fire damage equal to a number of d4s equal to your proficiency bonus at the end of this turn.</p>
+        </description>
+        <sheet usage="PB/Long Rest">
+            <description>The clockwork companion can take an additional action this turn, and takes fire damage equal to a number of d4s equal to your proficiency bonus at the end of this turn.</description>
+        </sheet>
+    </element>
+	<element name="Clockwork Companion" type="Information" source="Grim Hollow - The Players Guide" id="ID_DMSW_INFORMATION_COMPANION_CLOCKWORK">
+		<description>
+			<p style="margin-bottom:-5px"><em>Small or Tiny Construct, Unaligned</em></p>
+			<h4 style="margin-top:5px" />
+			<ul class="unstyled">
+				<li><strong>Armor Class</strong> 12 + PB</li>
+				<li><strong>Hit Points</strong> 1 + 5 x your druid level</li>
+				<li><strong>Speed</strong> 30 ft., fly 30 ft. (hover)</li>
+			</ul>
+                <table style="text-align:center;margin-top:10px;margin-bottom:10px">
+				<thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
+				<tr><td>7 (-2)</td><td>16 (+3)</td><td>10 (+0)</td><td>16 (+3)</td><td>10 (+0)</td><td>5 (-3)</td></tr>
+			</table>
+			<ul class="unstyled">
+                <li><strong>Saving Throws</strong> Dex +1 plus PB, Con +1 plus PB</li>
+                <li><strong>Skills</strong> Acrobatics +1 plus PB, Perception +0 plus PB, Stealth +1 plus PB</li>
+				<li><strong>Damage Immunities</strong> poison, psychic</li>
+				<li><strong>Condition Immunities</strong> charmed, exhaustion, frightened, paralyzed, petrified, poisoned</li>
+				<li><strong>Senses</strong> Darkvision 60 ft., Passive Perception 10</li>
+				<li><strong>Languages</strong>understands the languages you speak</li>
+				<li><strong>Challenge</strong> - <strong>Proficiency Bonus</strong> equals your PB</li>
+			</ul>
+			<h4 style="margin-top:5px; margin-bottom:10px" />
+			<ul class="unstyled">
+				<li><strong><em>Magic Resistance.</em></strong> he construct has advantage on saving throws against spells and other magical effects.</li>
+                <li><strong><em>Magical Detonator.</em></strong> When the construct falls to 0 hit points, it can choose to burst into fragments of magical energy. If it does so, each creature within 15 feet of it must succeed on a Dexterity saving throw (DC = your spell save DC) or take PBd10 fire damage</li>
+			</ul>
+			<h4 style="margin-top:10px">Actions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Piston Driver.</strong> Ranged Weapon Attack:</em> your spell attack modifier to hit, range 30 ft., one target you can see. <em>Hit:</em> (1d6 + PB) bludgeoning damage.</li>
+				<li><em><strong>Specialised Assistance (PB/Long Rest).</strong> The companion takes the Help action, and the creature it helps can also add your Proficiency Bonus to its attack roll or ability check.</em></li>
+			</ul>
+			<h4 style="margin-top:10px">Bonus Actions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Overclock (PB/Long Rest).</strong> The clockwork companion can take an addition action this turn, and takes PBd4 fire damage at the end of this turn.</em></li>
+			</ul>
+		</description>
+	</element>
+</elements>

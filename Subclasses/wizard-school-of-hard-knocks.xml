@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wizard - School of Hard Knocks</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="wizard-school-of-hard-knocks.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/wizard-school-of-hard-knocks.xml" />
+		</update>
+	</info>
+
+	<element name="School of Hard Knocks" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WIZARD_SCHOOL_OF_HARD_KNOCKS">
+		<supports>Arcane Tradition</supports>
+		<description>
+			<p>Wizardry requires years of training and careful study to cultivate. Even then, most wizards only truly master a single discipline of magic. However, away from the universities and textbooks, there exist other, less refined ways to develop a connection with the arcane. Through diligent observation of the other more fortunate students, and the magic of the everyday world, self-taught Wizards have been known to emerge. These selfstarters are referred to scathingly by some and proudly by others as Wizards of the School of Hard Knocks.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_OBSERVATIONAL_SAVANT" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_RUNNING_ON_EMPTY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_HARD_KNOCK_LIFE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_STREETWISE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_SELF_MADE_MAGE" />
+		</description>
+		<sheet display="false">
+			<description>Through diligent observation of the other more fortunate students, and the magic of the everyday world, self-taught Wizards have been known to emerge.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_OBSERVATIONAL_SAVANT" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_RUNNING_ON_EMPTY" level="2" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_HARD_KNOCK_LIFE" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_STREETWISE" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_SELF_MADE_MAGE" level="14" />
+		</rules>
+	</element>
+	<element name="Observational Savant" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_OBSERVATIONAL_SAVANT">
+		<description>
+			<p>Starting at level 2, you have developed an incredible awareness and connection to magic after years of observation and personal study. Whenever you see a spell cast by another spellcaster, you may roll an arcana check (DC = 10 + that spell’s level). On a success, if that spell is a Wizard spell, you may copy it into your spellbook within the next 48 hours, after which time you forget the details of the spell if it goes uncopied. The time and gold you spend to copy a spell in this manner is halved.</p>
+		</description>
+		<sheet>
+			<description>Whenever you see a spell cast by another spellcaster, you may roll an arcana check (DC = 10 + that spell’s level). On a success, if that spell is a Wizard spell, you may copy it into your spellbook within the next 48 hours. The time and gold you spend to copy a spell in this manner is halved.</description>
+		</sheet>
+	</element>
+	<element name="Running on Empty" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_RUNNING_ON_EMPTY">
+		<description>
+			<p>Starting at 2nd level, when you cast a spell using your final spell slot, or cast a cantrip while you have no remaining spell slots, you can instantly recover any number of spell slots that have a combined level equal to or less than half your wizard level, rounded up.</p>
+			<p class="indent">Regaining spells in this way is extremely taxing. When you do so, you gain one point of exhaustion and cannot use this feature again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>When you cast a spell using your final spell slot, or cast a cantrip while you have no remaining spell slots, you can instantly recover any number of spell slots that have a combined level equal to or less than {{level:wizard:half:up}}. When you do so, you gain one point of exhaustion.</description>
+		</sheet>
+	</element>
+	<element name="Hard Knock Life" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_HARD_KNOCK_LIFE">
+		<description>
+			<p>Beginning at 6th level, you gain resistance to bludgeoning damage, your current hit point maximum increases by 6, and whenever you gain a wizard level, your hit point maximum increases by an additional 1 point.</p>
+		</description>
+		<sheet display="false">
+			<description>Your maximum hit points increases by an amount equal to your wizard level.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+			<stat name="hp" value="level:wizard" />
+		</rules>
+	</element>
+	<element name="Streetwise" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_STREETWISE">
+		<description>
+			<p>Beginning at 10th level, you may add your intelligence modifier to wisdom checks and wisdom saving throws. In addition, when you take the help action, the creature you are helping may add your intelligence modifier to their check.</p>
+		</description>
+		<sheet>
+			<description>You may add your intelligence modifier to wisdom checks and wisdom saving throws. When you take the help action, the creature you are helping may add +{{intelligence:modifier}} to their check.</description>
+		</sheet>
+		<rules>
+			<stat name="wisdom:save:misc" value="intelligence:modifier" />
+			<stat name="animal handling:misc" value="intelligence:modifier" />
+			<stat name="insight:misc" value="intelligence:modifier" />
+			<stat name="medicine:misc" value="intelligence:modifier" />
+			<stat name="perception:misc" value="intelligence:modifier" />
+			<stat name="survival:misc" value="intelligence:modifier" />
+		</rules>
+	</element>
+	<element name="Self-Made Mage" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_HARD_KNOCKS_SELF_MADE_MAGE">
+		<description>
+			<p>Starting at 14th level, as an action, you can draw on your vast, worldly experience to produce a single, empowering burst of magic. Chose one of the following effects:</p>
+			<ul>
+				<li>You gain immunity to a damage type of your choice for one minute.</li>
+				<li>You gain a flying speed, swimming speed, and burrow speed equal to your walking speed for 10 minutes.</li>
+				<li>You have advantage on all saving throws for one minute.</li>
+				<li>You have advantage on all ranged attack rolls for one minute.</li>
+				<li>When you next cast a spell that requires a creature to make a saving throw, treat that creature’s result on the die as a 1.</li>
+			</ul>
+			<p class="indent">Once you use this feature, you can’t do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>As an action, you can draw on your vast, worldly experience to produce a single, empowering burst of magic. Chose one of the following effects:&#13;
+			• You gain immunity to a damage type of your choice for one minute.&#13;
+			• You gain a flying speed, swimming speed, and burrow speed equal to your walking speed for 10 minutes.&#13;
+			• You have advantage on all saving throws for one minute.&#13;
+			• You have advantage on all ranged attack rolls for one minute.&#13;
+			• When you next cast a spell that requires a creature to make a saving throw, treat that creature’s result on the die as a 1.</description>
+		</sheet>
+	</element>
+</elements>

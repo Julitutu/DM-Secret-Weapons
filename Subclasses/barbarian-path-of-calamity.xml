@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Barbarian - Path of Calamity</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="barbarian-path-of-calamity.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/barbarian-path-of-calamity.xml" />
+		</update>
+	</info>
+
+	<element name="Path of Calamity" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_BARBARIAN_PATH_OF_CALAMITY">
+		<supports>Primal Path</supports>
+		<description>
+			<p>Calamity Barbarians draw upon the raw, primal energies of the material plane. They embrace the reality that the forces of nature rule above all. Earthquakes topple the mightiest of kingdoms; tidal waves decimate the greatest fleets.</p>
+			<p class="indent">Contrary to what the cruellest tyrants and noblest kings may wish to believe, there are no heights mortals can reach that cannot be torn asunder by natural disaster.</p>
+			<p class="indent">Embracing this chaotic power, a Calamity Barbarian’s greataxe may be struck by lightning as it falls in a blast of power, or a javelin may ignite in flame as it soars through the air. When angered, they are a walking natural disaster, channelling the immeasurable wrath of a calamity.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_IMBUED_CALAMITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_DISASTER_STRIKE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_INVOKE_CALAMITY" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_CALAMITY_INCARNATE" />
+		</description>
+		<sheet display="false">
+			<description>Calamity Barbarians draw upon the raw, primal energies of the material plane.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_IMBUED_CALAMITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_DISASTER_STRIKE" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_INVOKE_CALAMITY" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_CALAMITY_INCARNATE" level="14" />
+		</rules>
+	</element>
+	<element name="Imbued Calamity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_IMBUED_CALAMITY">
+		<description>
+			<p>When you take this path at 3rd level, choose one calamity through which you channel your power. Each calamity has an associated damage type, which empowers some of your other abilities, and confers a special benefit to you.</p>
+			<p class="indent"><b>Earthquake (Bludgeoning Damage)</b> - Your base your walking speed increases by 5ft.</p>
+			<p class="indent"><b>Volcano (Fire Damage)</b> - You gain a resistance to fire damage.</p>
+			<p class="indent"><b>Hurricane (Lightning Damage)</b> - You gain a resistance to lightning damage.</p>
+			<p class="indent"><b>Tsunami (Cold Damage)</b> - You gain a resistance to cold damage.</p>
+		</description>
+		<sheet display="false">
+			<description>Choose one calamity through which you channel your power. Each calamity has an associated damage type, which empowers some of your other abilities, and confers a special benefit to you.&#13;
+			• Earthquake (Bludgeoning Damage) - Your base your walking speed increases by 5ft.&#13;
+			• Volcano (Fire Damage) - You gain a resistance to fire damage.&#13;
+			• Hurricane (Lightning Damage) - You gain a resistance to lightning damage.&#13;
+			• Tsunami (Cold Damage) - You gain a resistance to cold damage.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Imbued Calamity" supports="Imbued Calamity" />
+		</rules>
+	</element>
+	<element name="Disaster Strike" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_DISASTER_STRIKE">
+		<description>
+			<p>Also at level 3, while you are raging, when you hit a creature with a melee weapon attack, you can channel a calamitous strike, dealing 4d4 additional damage of your associated calamity type.</p>
+			<p class="indent">You can only use this feature once per long rest, unless you expend one use of your rage to do it again.</p>
+			<p class="indent">The damage of your Disaster Strike increases to 4d6 at level 6, 4d8 at level 10, and 4d10 at level 14.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>While you are raging, when you hit a creature with a melee weapon attack, you can channel a calamitous strike, dealing 4d{{disaster strike:dice}} {{disaster strike:damage}} damage. You can only use this feature once per long rest, unless you expend one use of your rage to do it again.</description>
+		</sheet>
+		<rules>
+			<stat name="disaster strike:dice" value="4" />
+			<stat name="disaster strike:dice" value="2" level="6" />
+			<stat name="disaster strike:dice" value="2" level="10" />
+			<stat name="disaster strike:dice" value="2" level="14" />
+		</rules>
+	</element>
+	<element name="Oncoming Calamity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY">
+		<description>
+			<p>Beginning at 6th level, your calamitous power grows. You gain an additional power related to your associated calamity type.</p>
+			<p class="indent"><b>Earthquake</b> - You gain the ability to sense the vibrations and tremors in the earth around you. You have Tremorsense in a 10ft range.</p>
+			<p class="indent"><b>Volcano</b> - You glow red hot while raging. Any creature grappling or grappled by you takes fire damage at the start of each of its turns equal to twice your proficiency bonus. You have resistance to cold damage.</p>
+			<p class="indent"><b>Tsunami</b> - You are a devastating threat in water. You gain a swim speed equal to twice your walking speed, and can hold your breath for up to an hour below water. You have resistance to fire damage.</p>
+			<p class="indent"><b>Hurricane</b> - You are empowered by the force of winds. While raging, you can choose to hover 5ft above the ground. In addition, as a bonus action while raging, you can leap through the air supported by a conjured gale. You can leap a number of feet equal to 3x your proficiency bonus in this way. This movement does not provoke opportunity attacks.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain an additional power related to your associated calamity type.&#13;
+			• Earthquake - You gain the ability to sense the vibrations and tremors in the earth around you. You have Tremorsense in a 10ft range.&#13;
+			• Volcano - You glow red hot while raging. Any creature grappling or grappled by you takes fire damage at the start of each of its turns equal to twice your proficiency bonus. You have resistance to cold damage.&#13;
+			• Tsunami - You are a devastating threat in water. You gain a swim speed equal to twice your walking speed, and can hold your breath for up to an hour below water. You have resistance to fire damage.&#13;
+			• Hurricane - You are empowered by the force of winds. While raging, you can choose to hover 5ft above the ground. In addition, as a bonus action while raging, you can leap through the air supported by a conjured gale. You can leap a number of feet equal to 3x your proficiency bonus in this way. This movement does not provoke opportunity attacks.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_EARTHQUAKE" requirements="ID_DMSW_IMBUED_CALAMITY_EARTHQUAKE" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_VOLCANO" requirements="ID_DMSW_IMBUED_CALAMITY_VOLCANO" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_TSUNAMI" requirements="ID_DMSW_IMBUED_CALAMITY_TSUNAMI" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_HURRICANE" requirements="ID_DMSW_IMBUED_CALAMITY_HURRICANE" />
+		</rules>
+	</element>
+	<element name="Invoke Calamity" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_INVOKE_CALAMITY">
+		<description>
+			<p>Starting at 10th level, your connection with the forces of elemental chaos allows you to force calamities on others.</p>
+			<p class="indent">When a creature within 15ft of you makes an attack roll against a creature other than you, you can use your reaction to impose disadvantage on that attack (before the roll). If that attack misses, the attacking creature takes magical damage of your associated calamity damage type equal to half your barbarian level.</p>
+			<p class="indent">You can use this feature a number of times equal to your Proficiency Bonus per Long Rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+			<description>When a creature within 15ft of you makes an attack roll against a creature other than you, you can use your reaction to impose disadvantage on that attack (before the roll). If that attack misses, the attacking creature takes {{level:barbarian:half}} {{disaster strike:damage}} damage .</description>
+		</sheet>
+	</element>
+	<element name="Calamity Incarnate" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_CALAMITY_INCARNATE">
+		<description>
+			<p>At 14th level, while raging, once per long rest, you use a bonus action to expend an additional use of your rage and transcend into a maelstrom of living elemental power; a natural disaster incarnate.</p>
+			<p class="indent">This transformation lasts for as long as you are raging. You gain the following benefits:</p>
+			<ul>
+				<li>When you invoke this transformation, creatures of your choice within 10ft of you take 2d6 magical damage of your calamity damage type.</li>
+				<li>Your movement speed increases by 10ft.</li>
+				<li>The area in a 15ft radius of you becomes difficult terrain for any creature other than yourself.</li>
+				<li>Your weapon attacks deal an extra 1d6 magical damage of your calamity damage type.</li>
+				<li>Once per turn, when you hit a creature with an attack, that creature must make a Strength saving throw (DC 8 + Strength Modifier + Proficiency Bonus) or fall prone.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+			<description>While raging, once per long rest, you use a bonus action to expend an additional use of your rage and transcend into a maelstrom of living elemental power; a natural disaster incarnate.&#13;
+			This transformation lasts for as long as you are raging. You gain the following benefits:&#13;
+			• When you invoke this transformation, creatures of your choice within 10ft of you take 2d6 {{disaster strike:damage}} damage.&#13;
+			• Your movement speed increases by 10ft.&#13;
+			• The area in a 15ft radius of you becomes difficult terrain for any creature other than yourself.&#13;
+			• Your weapon attacks deal an extra 1d6 magical damage of your calamity damage type.&#13;
+			• Once per turn, when you hit a creature with an attack, that creature must make a DC {{calamity incarnate:dc}} Strength saving throw or fall prone.</description>
+		</sheet>
+		<rules>
+			<stat name="calamity incarnate:dc" value="8" />
+			<stat name="calamity incarnate:dc" value="strength:modifier" />
+			<stat name="calamity incarnate:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<!-- Imbued Calamity -->
+	<element name="Earthquake" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_IMBUED_CALAMITY_EARTHQUAKE">
+		<supports>Imbued Calamity</supports>
+		<description>
+			<p>Your base your walking speed increases by 5ft.</p>
+		</description>
+		<sheet>
+			<description>Your base your walking speed increases by 5ft.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="5" />
+			<stat name="disaster strike:damage" inline="true" value="bludgeoning" />
+		</rules>
+	</element>
+	<element name="Volcano" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_IMBUED_CALAMITY_VOLCANO">
+		<supports>Imbued Calamity</supports>
+		<description>
+			<p>You gain a resistance to fire damage.</p>
+		</description>
+		<sheet>
+			<description>You gain a resistance to fire damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			<stat name="disaster strike:damage" inline="true" value="fire" />
+		</rules>
+	</element>
+	<element name="Hurricane" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_IMBUED_CALAMITY_HURRICANE">
+		<supports>Imbued Calamity</supports>
+		<description>
+			<p>You gain a resistance to lightning damage.</p>
+		</description>
+		<sheet>
+			<description>You gain a resistance to lightning damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			<stat name="disaster strike:damage" inline="true" value="lightning" />
+		</rules>
+	</element>
+	<element name="Tsunami" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_IMBUED_CALAMITY_TSUNAMI">
+		<supports>Imbued Calamity</supports>
+		<description>
+			<p>You gain a resistance to cold damage.</p>
+		</description>
+		<sheet>
+			<description>You gain a resistance to cold damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<stat name="disaster strike:damage" inline="true" value="cold" />
+		</rules>
+	</element>
+
+	<!-- Oncoming Calamity -->
+	<element name="Earthquake" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_EARTHQUAKE">
+		<description>
+			<p>You gain the ability to sense the vibrations and tremors in the earth around you. You have Tremorsense in a 10ft range.</p>
+		</description>
+		<sheet>
+			<description>You have Tremorsense in a 10ft range.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_TREMORSENSE" />
+			<stat name="tremorsense:range" value="10" />
+		</rules>
+	</element>
+	<element name="Volcano" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_VOLCANO">
+		<description>
+			<p>You glow red hot while raging. Any creature grappling or grappled by you takes fire damage at the start of each of its turns equal to twice your proficiency bonus. You have resistance to cold damage.</p>
+		</description>
+		<sheet>
+			<description>You glow red hot while raging. Any creature grappling or grappled by you takes fire damage at the start of each of its turns equal to {{oncoming calamity:volcano}}.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<stat name="oncoming calamity:volcano" value="proficiency" />
+			<stat name="oncoming calamity:volcano" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Tsunami" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_TSUNAMI">
+		<description>
+			<p>You are a devastating threat in water. You gain a swim speed equal to twice your walking speed, and can hold your breath for up to an hour below water. You have resistance to fire damage.</p>
+		</description>
+		<sheet>
+			<description>You gain a swim speed equal to twice your walking speed, and can hold your breath for up to an hour below water. You have resistance to fire damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			<stat name="innate speed:swim" value="innate speed" />
+			<stat name="innate speed:swim" value="innate speed" />
+		</rules>
+	</element>
+	<element name="Hurricane" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CALAMITY_ONCOMING_CALAMITY_HURRICANE">
+		<description>
+			<p>You are empowered by the force of winds. While raging, you can choose to hover 5ft above the ground. In addition, as a bonus action while raging, you can leap through the air supported by a conjured gale. You can leap a number of feet equal to 3x your proficiency bonus in this way. This movement does not provoke opportunity attacks.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>While raging, you can choose to hover 5ft above the ground. In addition, as a bonus action while raging, you can leap through the air supported by a conjured gale. You can leap a number of feet equal to {{oncoming calamity:hurricane}} in this way. This movement does not provoke opportunity attacks.</description>
+		</sheet>
+		<rules>
+			<stat name="oncoming calamity:hurricane" value="proficiency" />
+			<stat name="oncoming calamity:hurricane" value="proficiency" />
+			<stat name="oncoming calamity:hurricane" value="proficiency" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Clagborne Lineage</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-clagborne.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-clagborne.xml" />
+		</update>
+	</info>
+
+	<!-- Clagborne Lineage -->
+	<element name="Clagborne Lineage" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CLAGBORNE_LINEAGE">
+		<description>
+			<p>A peculiar species of subterranean magical ooze, Clagborne are a deeply mysterious race. Unique in that they are fully amorphous and brainless until they find a host, almost nothing is known of a Clagborne’s early life or origin, as even they remember nothing of it.</p>
+			<p>What is known is that these brainless oozes slime their way through caverns and dungeons on instinct, until they come upon a humanoid corpse. At this point, the Clagborne strips the body of its flesh and tissue, magically absorbing all chemical and electrical information, and is “born” as a new entity, complete with all the memories of its fallen host.</p>
+			<p>The ooze wraps around the skeleton, forming a new body in the model of the old. A Clagborne can alter the transparency and colour of its slime flesh to suit its wishes.</p>
+			<p>Although a Clagborne retains the memories their original form had in life and are functionally identical in personality, desires and ability, they are a distinct creature. The soul of the departed does not return to the Clagborne, and many struggle coming to terms with their identity. Are they the same person as they were in life? Or an abominable walking undead, host to a parasitic, brainless monster?</p>
+			<h4>CLAGBORNE TRAITS</h4>
+			<p>Clagborne are formed by a brainless ooze melding with a humanoid corpse. You may choose the humanoid race your Clagborne melded with, and use some of its statistics in your stat block. At your DMs discretion, you may become a Clagborne after your player character dies and melds with the ooze.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2 and another ability score of your choice increases by 1. If you are replacing your race with this lineage, replace any Ability Score Increases you previously had with this.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write any languages your original race knew in life, or you can speak, read, and write Common and one other language of your choice.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are an Ooze.</p>
+			<p class="indent"><strong><em>Size.</em></strong> You are the same size as your original race, or your size can be medium or small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet. Even if your base race had a natural flying or swimming speed, you do not.</p>
+			<p class="indent"><strong><em>Unusual Nature.</em></strong> You don’t need to breathe and you do not age.</p>
+			<p class="indent"><strong><em>Clagborne Legacy.</em></strong> If you replace a race with this lineage, you can retain any skill proficiencies you gained from it. If not, you gain proficiency in two skills of your choice. In addition, if your original race could take a feat with a racial prerequisite, you can still take it as a Clagborne.</p>
+			<p class="indent"><strong><em>Ooze.</em></strong> You have a climb speed equal to your walking speed, and can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.</p>
+			<p class="indent"><strong><em>Natural Armor.</em></strong> While you aren’t wearing armor, your AC is 13 + your constitution modifier. A shield’s benefits apply as normal while you use your natural armor.</p>
+			<p class="indent"><strong><em>Malleable Form.</em></strong> You can move through the space of any creature that is of a size equal to or larger than yours.</p>
+			<p class="indent"><strong><em>Translucency.</em></strong> As a bonus action, you can alter the translucency of your ooze body, potentially frightening an enemy by revealing the skeleton within. When you do so, one creature of your choice with 15ft who can see you must make a Wisdom saving throw (DC = 8 + your constitution modifier + your proficiency bonus) or become frightened of you until the end of your next turn. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+			<p class="indent"><strong><em>Regeneration.</em></strong> Whenever you roll a hit dice to recover hit points, treat any number rolled on that dice as the maximum. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase (Constitution +2, Choice +1) -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement +1 (Clagborne)" supports="Custom Ability Score Increase 1" />
+			<!-- Tasha's Cauldron of Everything: Custom Ability Score Increase (three +1's) -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Clagborne)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Clagborne)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Creature Type (Ooze) -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_CREATURE_TYPE_OOZE" />
+
+			<!-- Size Choice -->
+			<select type="Racial Trait" name="Size (Clagborne)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_UNUSUAL_NATURE" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_CLAGBORNE_LEGACY" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_OOZE_CLIMB" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_CLAGBORNE_NATURAL_ARMOR" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_MALLEABLE_FORM" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_TRANSLUCENCY" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_REGENERATION" />
+		</rules>
+	</element>
+
+	<!-- Trait Definitions -->
+	<element name="Creature Type: Ooze" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_CREATURE_TYPE_OOZE">
+		<description>
+			<p>Your creature type is Ooze.</p>
+		</description>
+		<sheet alt="Creature Type">
+			<description>Ooze.</description>
+		</sheet>
+	</element>
+	<element name="Unusual Nature" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_UNUSUAL_NATURE">
+		<description>
+			<p>You don’t need to breathe and you do not age.</p>
+		</description>
+		<sheet>
+			<description>You don’t need to breathe and you do not age.</description>
+		</sheet>
+	</element>
+	<element name="Clagborne Legacy" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_CLAGBORNE_LEGACY">
+		<description>
+			<p>If you replace a race with this lineage, you can retain any skill proficiencies you gained from it. If not, you gain proficiency in two skills of your choice. In addition, if your original race could take a feat with a racial prerequisite, you can still take it as a Clagborne.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Clagborne Legacy" supports="Skill" number="2" />
+		</rules>
+	</element>
+	<element name="Ooze" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_OOZE_CLIMB">
+		<description>
+			<p>You have a climb speed equal to your walking speed, and can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.</p>
+		</description>
+		<sheet display="false">
+			<description>You have a climb speed equal to your walking speed ({{innate speed}}ft).</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:climb" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Natural Armor" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_CLAGBORNE_NATURAL_ARMOR">
+		<description>
+			<p>While you aren’t wearing armor, your AC is 13 + your constitution modifier. A shield’s benefits apply as normal while you use your natural armor.</p>
+		</description>
+		<sheet>
+			<description>While you aren’t wearing armor, your AC is 13 + your Constitution modifier.</description>
+		</sheet>
+		<rules>
+			<stat name="natural armor:ac" value="13" bonus="base" />
+			<stat name="natural armor:ac" value="constitution:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="natural armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+	</element>
+	<element name="Malleable Form" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_MALLEABLE_FORM">
+		<description>
+			<p>You can move through the space of any creature that is of a size equal to or larger than yours.</p>
+		</description>
+		<sheet>
+			<description>You can move through the space of any creature that is of a size equal to or larger than yours.</description>
+		</sheet>
+	</element>
+	<element name="Translucency" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_TRANSLUCENCY">
+		<description>
+			<p>As a bonus action, you can alter the translucency of your ooze body, potentially frightening an enemy by revealing the skeleton within. When you do so, one creature of your choice with 15ft who can see you must make a Wisdom saving throw (DC = 8 + your constitution modifier + your proficiency bonus) or become frightened of you until the end of your next turn. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You can reveal your skeleton to a creature within 15ft. It must make a DC {{translucency:dc}} WIS save or be frightened of you until the end of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="translucency:dc" value="8" />
+			<stat name="translucency:dc" value="constitution:modifier" />
+			<stat name="translucency:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Regeneration" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CLAGBORNE_REGENERATION">
+		<description>
+			<p>Whenever you roll a hit dice to recover hit points, treat any number rolled on that dice as the maximum. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you roll a hit die to recover hit points, you can choose to treat the number rolled as the maximum.</description>
+		</sheet>
+	</element>
+</elements>

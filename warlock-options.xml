@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>New Warlock Options</name>
+		<description>New Warlock options from DM's Secret Weapons.</description>
+		<update version="0.1.0">
+			<file name="warlock-options.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/warlock-options.xml" />
+		</update>
+	</info>
+	<!-- New Pacts -->
+	<element name="Pact of the Shield" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHIELD">
+		<supports>Pact Boon</supports>
+		<description>
+			<p>You gain proficiency with shields and medium armour, and wearing medium armour doesn’t impose disadvantage on your Dexterity (Stealth) checks.</p>
+			<p class="indent">Over the course of a long rest, you can attune to a shield, bonding to it as you imbue it with eldritch magic. While holding that shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free. You can still only benefit from one shield at a time. Once you you command your shield to animate in this way, you cannot do so again until you finish a short or long rest.</p>
+			<p class="indent">If your bonded shield is destroyed or is more than 5-feet away from you, you can perform a 1-hour ceremony to conjure it in your hands, unharmed.</p>
+		</description>
+		<sheet>
+			<description>Wearing medium armour doesn’t impose disadvantage on your Dexterity (Stealth) checks. &#13;
+			Over the course of a long rest, you can attune to a shield, bonding to it as you imbue it with eldritch magic. While holding that shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free. You can still only benefit from one shield at a time. Once you you command your shield to animate in this way, you cannot do so again until you finish a short or long rest.&#13;
+			If your bonded shield is destroyed or is more than 5-feet away from you, you can perform a 1-hour ceremony to conjure it in your hands, unharmed.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+		</rules>
+	</element>
+	<element name="Pact of the Shadow" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHADOW">
+		<supports>Pact Boon</supports>
+		<description>
+			<p>As an action, you or a creature you touch turns invisible for a number of minutes equal to your Warlock level. This invisibility ends early if the invisible creature makes an attack roll, casts a spell, uses a bonus action to end the effect, or you use this feature again. You can use this feature a number of times equal to your Charisma modifier, regaining all expended uses when you finish a long rest.</p>
+			<p class="indent">You gain a bonus to Insight, Perception and Stealth checks equal to your Charisma modifier.</p>
+			<p class="indent">You learn the Devil’s Sight eldritch invocation or another eldritch invocation of your choice. This invocation doesn’t count against the number of invocations you can learn.</p>
+		</description>
+		<sheet action="Action" usage="{{charisma:modifier}}/Long Rest"> 
+			<description>As an action, you or a creature you touch turns invisible for {{level:warklock}} minutes. This invisibility ends early if the invisible creature makes an attack roll, casts a spell, uses a bonus action to end the effect, or you use this feature again. You can use this feature a number of times equal to your Charisma modifier, regaining all expended uses when you finish a long rest.</description>
+		</sheet>
+		<rules>
+			<stat name="insight:misc" value="charisma:modifier" />
+			<stat name="perception:misc" value="charisma:modifier" />
+			<stat name="stealth:misc" value="charisma:modifier" />
+
+			<select type="Class Feature" name="Eldritch Invocation (Pact of the Shadow" supports="Eldritch Invocation" default="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_DEVILS_SIGHT"/>
+		</rules>
+	</element>
+
+	<!-- New Invocations -->
+	<element name="Eldritch Fortification" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_ELDRITCH_FORTIFICATION">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>Pact of the Shield feature</prerequisite>
+		<requirements>ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHIELD</requirements>
+		<description>
+			<p><em>Prerequisite: Pact of the Shield feature</em></p>
+			<p>You can cast the <em>shield of faith</em> at will, without expending a spell slot.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_SHIELD_OF_FAITH" />
+			</div>
+		</description>
+		<sheet>
+			<description>You can cast the shield of faith at will, without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" />
+		</rules>
+	</element>
+
+	<element name="Eldritch Abjuration" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_ELDRITCH_ABJURATION">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>7th level, Pact of the Shield feature</prerequisite>
+		<requirements>[level:7], ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHIELD</requirements>
+		<description>
+			<p><em>Prerequisite: 7th level, Pact of the Shield feature</em></p>
+			<p>You can cast the spell <em>shield</em>, a number of times equal to your Charisma modifier, without expending a spell slot. You regain all expended uses of this feature when you finish a long rest.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_SHIELD" />
+			</div>
+		</description>
+		<sheet usage="{{charisma:modifier}}/Long Rest">
+			<description>You can cast the spell shield, a number of times equal to your Charisma modifier, without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" />
+		</rules>
+	</element>
+
+	<element name="Advanced Eldritch Fortification" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_ADVANCED_ELDRITCH_FORTIFICATION">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>9th level, Pact of the Shield feature</prerequisite>
+		<requirements>[level:9],ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHIELD</requirements>
+		<description>
+			<p><em>Prerequisite: 9th level, Pact of the Shield feature</em></p>
+			<p> Your AC increases by 1.</p>
+		</description>
+		<sheet>
+			<description> Your AC increases by 1.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:misc" value="1" />
+		</rules>
+	</element>
+
+	<element name="Eyes of Night" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_EYES_OF_NIGHT">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>5th level, Pact of the Shadow feature</prerequisite>
+		<requirements>[level:5],ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHADOW</requirements>
+		<description>
+			<p><em>Prerequisite: 5th level, Pact of the Shadow feature</em></p>
+			<p>You can cast the spell <em>darkvision</em>at will, without
+    expending a spell slot.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_DARKVISION" />
+			</div>
+		</description>
+		<sheet>
+			<description>You can cast the spell darkvision at will, without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DARKVISION" />
+		</rules>
+	</element>
+
+	<element name="Gift of Shadows" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_GIFT_OF_SHADOWS">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>9th level, Pact of the Shadow feature</prerequisite>
+		<requirements>[level:9],ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHADOW</requirements>
+		<description>
+			<p><em>Prerequisite: 9th level, Pact of the Shadow feature</em></p>
+			<p>You have a flying speed equal to your walking speed while in dim light or darkness.</p>
+		</description>
+		<sheet>
+			<description>You have a flying speed equal to your walking speed while in dim light or darkness.</description>
+		</sheet>
+	</element>
+
+	<element name="Shadow Vanishing" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_SHADOW_VANISHING">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>Pact of the Shadow feature</prerequisite>
+		<requirements>ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHADOW</requirements>
+		<description>
+			<p><em>Prerequisite: Pact of the Shadow feature</em></p>
+			<p>When you are hit by an attack roll, you can use a reaction to gain resistance to all damage from the triggering attack. You can then teleport up to 60 feet to an unoccupied space you can see. Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short Rest">
+			<description>When you are hit by an attack roll, you can use a reaction to gain resistance to all damage from the triggering attack. You can then teleport up to 60 feet to an unoccupied space you can see</description>
+		</sheet>
+	</element>
+
+	<element name="Shroud" type="Class Feature" source="DM's Secret Weapons" id="ID_DMSW_CLASS_FEATURE_ELDRITCH_INVOCATION_SHROUD">
+		<supports>Eldritch Invocation</supports>
+		<prerequisite>7th level, Pact of the Shadow feature</prerequisite>
+		<requirements>[level:7],ID_DMSW_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_SHADOW</requirements>
+		<description>
+			<p><em>Prerequisite: 7th level, Pact of the Shadow feature</em></p>
+			<p>You can cast the spell <em>darkness</em>at will, without expending a spell slot.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_DARKNESS" />
+			</div>
+		</description>
+		<sheet>
+			<description>You can cast the spell darkness at will, without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Fighter - Superior Champion</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="fighter-superior-champion.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/fighter-superior-champion.xml" />
+		</update>
+	</info>
+
+	<element name="Superior Champion" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FIGHTER_SUPERIOR_CHAMPION">
+		<supports>Martial Archetype</supports>
+		<description>
+			<p>The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_DEVASTATING_CRITICAL" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_REMARKABLE_ATHLETE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_FIGHTER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_RUINOUS_CRITICAL" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_SURVIVOR" />
+		</description>
+		<sheet display="false">
+			<description>The archetypal Champion focuses on the development of raw physical power honed to deadly perfection.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_DEVASTATING_CRITICAL" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_REMARKABLE_ATHLETE" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_FIGHTER" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_RUINOUS_CRITICAL" level="15" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_SURVIVOR" level="18" />
+		</rules>
+	</element>
+	<element name="Devastating Critical" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_DEVASTATING_CRITICAL">
+		<description>
+			<p>Your weapon attacks score a critical hit on a roll of 19 or 20.</p>
+			<p class="indent">In addition, when you score a critical hit, you can choose to forgo the extra damage to instead choose one of the following effects.</p>
+			<ul>
+				<li>The target is frightened of you until the end of your next turn.</li>
+				<li>The target falls prone.</li>
+				<li>You push the target up to 15 feet horizontally to an unoccupied space you can see.</li>
+				<li>You can take the Disengage or Dodge action as a bonus action on this turn.</li>
+				<li>A surge of adrenaline rushes through your body. You gain temporary hit points equal to 1d10 + your Constitution modifier.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Your weapon attacks score a critical hit on a roll of 19 or 20.&#13;
+			In addition, when you score a critical hit, you can choose to forgo the extra damage to instead choose one of the following effects.&#13;
+			• The target is frightened of you until the end of your next turn.&#13;
+			• The target falls prone.&#13;
+			• You push the target up to 15 feet horizontally to an unoccupied space you can see.&#13;
+			• You can take the Disengage or Dodge action as a bonus action on this turn.&#13;
+			• A surge of adrenaline rushes through your body. You gain temporary hit points equal to 1d10 + your Constitution modifier.</description>
+		</sheet>
+	</element>
+	<element name="Remarkable Athlete" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_REMARKABLE_ATHLETE">
+		<description>
+			<p>You can add half your proficiency bonus (rounded up) to any Strength, Dexterity, or Constitution check or saving throw you make that doesn’t already use your proficiency bonus.</p>
+			<p class="indent">In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength or Dexterity modifier (your choice).</p>
+		</description>
+		<sheet>
+			<description>You can add half your proficiency bonus (rounded up) to any Strength, Dexterity, or Constitution check or saving throw you make that doesn’t already use your proficiency bonus.&#13;
+			In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength or Dexterity modifier (your choice).</description>
+		</sheet>
+		<rules>
+			<stat name="strength:save:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SAVINGTHROW_STRENGTH" />
+			<stat name="dexterity:save:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" />
+			<stat name="constitution:save:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION" />
+			<stat name="acrobatics:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SKILL_ACROBATICS" />
+			<stat name="athletics:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<stat name="sleight of hand:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+			<stat name="stealth:misc" value="proficiency:half:up" requirements="!ID_PROFICIENCY_SKILL_STEALTH" />
+		</rules>
+	</element>
+	<element name="Ultimate Fighter" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_FIGHTER">
+		<description>
+			<p>You can choose a second option from the Fighting Style class feature or an additional feat.</p>
+			<p class="indent">In addition, the maximum threshold for your Strength, Constitution, and Dexterity scores increases by 2.</p>
+		</description>
+		<sheet>
+			<description>You can choose a second option from the Fighting Style class feature or an additional feat. In addition, the maximum threshold for your Strength, Constitution, and Dexterity scores increases by 2.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Ultimate Fighter" supports="Ultimate Fighter" />
+			<stat name="strength:max" value="2" />
+			<stat name="constitution:max" value="2" />
+			<stat name="dexterity:max" value="2" />
+		</rules>
+	</element>
+	<!-- Ultimate Fighter -->
+	<element name="Ultimate Fighter (Fighting Style)" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_FIGHTER_FIGHTING_STYLE">
+		<requirements>Ultimate Fighter</requirements>
+		<description>
+			<p>You can choose a second option from the Fighting Style class feature or an additional feat.</p>
+			<p class="indent">In addition, the maximum threshold for your Strength, Constitution, and Dexterity scores increases by 2.</p>
+		</description>
+		<sheet display="false">
+			<description>You can choose a second option from the Fighting Style class feature or an additional feat. In addition, the maximum threshold for your Strength, Constitution, and Dexterity scores increases by 2.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Ultimate Fighter" supports="Fighting Style,Fighter" />
+		</rules>
+	</element>
+	<element name="Ultimate Fighter (Feat)" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_FIGHTER_FEAT">
+		<requirements>Ultimate Fighter</requirements>
+		<description>
+			<p>You can choose a second option from the Fighting Style class feature or an additional feat.</p>
+			<p class="indent">In addition, the maximum threshold for your Strength, Constitution, and Dexterity scores increases by 2.</p>
+		</description>
+		<sheet display="false">
+			<description>You can choose a second option from the Fighting Style class feature or an additional feat. In addition, the maximum threshold for your Strength, Constitution, and Dexterity scores increases by 2.</description>
+		</sheet>
+		<rules>
+			<select type="Feat" name="Ultimate Fighter" />
+		</rules>
+	</element>
+	<element name="Ruinous Critical" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_RUINOUS_CRITICAL">
+		<description>
+			<p>Your weapon attacks score a critical hit on a roll of 18–20.</p>
+			<p class="indent">In addition, when you score a critical hit, you can forgo dealing damage to choose two options from your Devestating Critical feature, not just one.</p>
+		</description>
+		<sheet>
+			<description>Your weapon attacks score a critical hit on a roll of 18–20. In addition, when you score a critical hit, you can forgo dealing damage to choose two options from your Devestating Critical feature, not just one.</description>
+		</sheet>
+	</element>
+	<element name="Ultimate Survivor" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_CHAMPION_ULTIMATE_SURVIVOR">
+		<description>
+			<p>You have attained the pinnacle of resilience in battle. At the start of each of your turns, you regain Hit Points equal to 5 + your Constitution modifier if you have no more than half of your Hit Points left.</p>
+			<p class="indent">You don’t gain this benefit if you have 0 Hit Points.</p>
+		</description>
+		<sheet>
+			<description>At the start of each of your turns, you regain {{ultimate survivor:hp}} Hit Points if you have no more than half of your Hit Points left. You don’t gain this benefit if you have 0 Hit Points.</description>
+		</sheet>
+		<rules>
+			<stat name="ultimate survivor:hp" value="5" />
+			<stat name="ultimate survivor:hp" value="constitution:modifier" />
+		</rules>
+	</element>
+</elements>

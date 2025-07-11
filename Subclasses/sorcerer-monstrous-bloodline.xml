@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Sorcerer - Monstrous Bloodline</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="sorcerer-monstrous-bloodline.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/sorcerer-monstrous-bloodline.xml" />
+		</update>
+	</info>
+
+	<element name="Monstrous Bloodline" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_SORCERER_MONSTROUS_BLOODLINE">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Through dangerous, magical experimentation, the meddling of a powerful deity, or some other means, your bloodline is twisted with the blood of monstrosities. You draw a vivid and brutal magic from the savage energy that courses through your veins, manifesting itself in powerful and unpredictable ways.</p>
+			<p class="indent">Some Sorcerers of the Monstrous Bloodline are cursed to bear the physical attributes of their heritage, drawing ire and suspicion wherever they roam. Others appear ordinary, able to manifest their power in battle and then slip back into society, anxiously guarding the secret origin of their power, a slumbering well of monstrous force simmering within.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_SPELLS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_HERITAGE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_GIFT_OF_THE_BLOODLINE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_CONNECTION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_MANIFESTATION" />
+		</description>
+		<sheet display="false">
+			<description>Through dangerous, magical experimentation, the meddling of a powerful deity, or some other means, your bloodline is twisted with the blood of monstrosities.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_HERITAGE" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_GIFT_OF_THE_BLOODLINE" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_CONNECTION" level="14" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_MANIFESTATION" level="18" />
+		</rules>
+	</element>
+	<element name="Monstrous Spells" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown on the Monstrous Spellcasting table. Each of these spells counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the sorcerer, warlock, or druid spell list.</p>
+			<h5>Monstrous Spellcasting</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>Poison Spray, Faerie Fire, Speak With Animals</i></td></tr>
+				<tr><td>3rd</td><td><i>Enhance Ability, Enlarge/Reduce</i></td></tr>
+				<tr><td>5th</td><td><i>Fear, Vampiric Touch</i></td></tr>
+				<tr><td>7th</td><td><i>Dominate Beast, Stoneskin</i></td></tr>
+				<tr><td>9th</td><td><i>Contagion, Hold Monster</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_POISON_SPRAY" level="1" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" level="1" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" level="1" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENLARGE_REDUCE" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FEAR" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_VAMPIRIC_TOUCH" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_BEAST" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_STONESKIN" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONTAGION" level="9" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="9" spellcasting="Sorcerer" prepared="true" />
+		</rules>
+	</element>
+	<element name="Monstrous Heritage" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_HERITAGE">
+		<description>
+			<p>Monstrous power runs through your bloodline. Choose one of the following monsters from which you draw power and gain that feature:</p>
+			<p class="indent"><b>Mimic.</b> You can cast the spell Disguise Self at will without a spell slot or components. When you cast it in this way, any creature that makes an investigation checks to perceive through the illusion makes that check at disadvantage. In addition, you are immune to acid damage. You may also choose to have your skin become slightly sticky and acidic to the touch when you gain this feature.</p>
+			<p class="indent"><b>Drider.</b> You have darkvision out to a range of 120 feet, and you can add your Charisma modifier to your Stealth and Perception checks. You may also choose to have your limbs lengthen slightly and grow an additional pair of eyes directly above your current ones when you gain this feature.</p>
+			<p class="indent"><b>Hydra.</b> You gain a bonus to any saving throws you make to avoid or end the blinded, charmed, deafened, or stunned conditions, or to maintain concentration on a spell. This bonus is equal to half your sorcerer level (rounded up). You may also choose to grow a second head when you gain this feature.</p>
+		</description>
+		<sheet display="false">
+			<description>Choose one of the following monsters from which you draw power and gain that feature:&#13;
+			• Mimic. You can cast the spell Disguise Self at will without a spell slot or components. When you cast it in this way, any creature that makes an investigation checks to perceive through the illusion makes that check at disadvantage. In addition, you are immune to acid damage.&#13;
+			• Drider. You have darkvision out to a range of 120 feet, and you can add your Charisma modifier to your Stealth and Perception checks.&#13;
+			• Hydra. You gain a bonus to any saving throws you make to avoid or end the blinded, charmed, deafened, or stunned conditions, or to maintain concentration on a spell. This bonus is equal to half your sorcerer level (rounded up).</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Monstrous Heritage" supports="Monstrous Heritage" />
+		</rules>
+	</element>
+	<element name="Gift of the Bloodline" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_GIFT_OF_THE_BLOODLINE">
+		<description>
+			<p>Choose another benefit from the options below. The monster you inherit this power from can be the same as the one you chose for your 1st-level feature, or a different one.</p>
+			<p class="indent"><b>Mimic.</b> As an action, you can alter your body on a molecular level to gain an immunity to one damage type for the next 10 minutes. Once you use this feature, you cannot do so again until you finish a short rest.</p>
+			<p class="indent"><b>Drider.</b> Your base movement speed increases by 10 feet, and you gain the ability to move up, down, and across vertical surfaces upside down while leaving your hands free. You also gain a climb speed equal to your walking speed.</p>
+			<p class="indent"><b>Hydra.</b> By dividing your focus as a dual mind, you can take one additional reaction per round (but never more than once on a single turn).</p>
+		</description>
+		<sheet display="false">
+			<description>Choose another benefit from the options below. The monster you inherit this power from can be the same as the one you chose for your 1st-level feature, or a different one.&#13;
+			• Mimic. As an action, you can alter your body on a molecular level to gain an immunity to one damage type for the next 10 minutes. Once you use this feature, you cannot do so again until you finish a short rest.&#13;
+			• Drider. Your base movement speed increases by 10 feet, and you gain the ability to move up, down, and across vertical surfaces upside down while leaving your hands free. You also gain a climb speed equal to your walking speed.&#13;
+			• Hydra. By dividing your focus as a dual mind, you can take one additional reaction per round (but never more than once on a single turn).</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Gift of the Bloodline" supports="Gift of the Bloodline" />
+		</rules>
+	</element>
+	<element name="Monstrous Connection" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_CONNECTION">
+		<description>
+			<p>You have an innate connection with monstrosities. Once per turn, if a spell you cast forces a monstrosity to make a saving throw, that monster rolls 1d6 and subtracts the result from its save.</p>
+			<p class="indent">In addition, spells you cast that can normally target only beasts (Speak With Animals, Dominate Beast, etc.) can also target monstrosities when you cast them.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>If a spell you cast forces a monstrosity to make a saving throw, that monster rolls 1d6 and subtracts the result from its save.&#13;
+			In addition, spells you cast that can normally target only beasts (Speak With Animals, Dominate Beast, etc.) can also target monstrosities when you cast them.</description>
+		</sheet>
+	</element>
+	<element name="Monstrous Manifestation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_MONSTROUS_BLOODLINE_MONSTROUS_MANIFESTATION">
+		<description>
+			<p>Choose a final, monstrous benefit from the options below. The monster you inherit this power from can be the same as the one you chose for a previous feature, or a different one.</p>
+			<p class="indent"><b>Mimic.</b> You learn the Shapechange spell, and if you cast it, you automatically succeed on any Constitution saving throws to maintain concentration on that spell that are triggered by taking damage.</p>
+			<p class="indent"><b>Drider.</b> As a bonus action, can sprout four more limbs. This transformation lasts for the next 10 minutes, unless you extend duration by using this feature again. You can end the transformation early by using an action to retract your extra limbs into your body. While in this form, your movement speed increases by 30 feet, you gain a climb speed equal to your walking speed, you ignore difficult terrain created by spells, your AC increases by 3, and you can cast the spell Web as a bonus action without expending a spell slot. If cast Web using this feature, it does not require concentration, and lasts for the full duration. You can use this feature a number of times equal to your Charisma Modifier per long rest.</p>
+			<p class="indent"><b>Hydra.</b> As long as you have at least 1 hit point, you regain 10 hit points at the start of each of your turns. If you took fire damage since the end of your last turn, this ability does not trigger.</p>
+		</description>
+		<sheet display="false">
+			<description>Choose a final, monstrous benefit from the options below. The monster you inherit this power from can be the same as the one you chose for a previous feature, or a different one.&#13;
+			• Mimic. You learn the Shapechange spell, and if you cast it, you automatically succeed on any Constitution saving throws to maintain concentration on that spell that are triggered by taking damage.&#13;
+			• Drider. As a bonus action, can sprout four more limbs. This transformation lasts for the next 10 minutes, unless you extend duration by using this feature again. You can end the transformation early by using an action to retract your extra limbs into your body. While in this form, your movement speed increases by 30 feet, you gain a climb speed equal to your walking speed, you ignore difficult terrain created by spells, your AC increases by 3, and you can cast the spell Web as a bonus action without expending a spell slot. If cast Web using this feature, it does not require concentration, and lasts for the full duration. You can use this feature a number of times equal to your Charisma Modifier per long rest.&#13;
+			• Hydra. As long as you have at least 1 hit point, you regain 10 hit points at the start of each of your turns. If you took fire damage since the end of your last turn, this ability does not trigger.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Monstrous Manifestation" supports="Monstrous Manifestation" />
+		</rules>
+	</element>
+
+	<!-- Monstrous Heritage -->
+	<element name="Mimic Heritage" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_MONSTROUS_HERITAGE_MIMIC">
+		<supports>Monstrous Heritage</supports>
+		<description>
+			<p>You can cast the spell Disguise Self at will without a spell slot or components. When you cast it in this way, any creature that makes an investigation checks to perceive through the illusion makes that check at disadvantage. In addition, you are immune to acid damage. You may also choose to have your skin become slightly sticky and acidic to the touch when you gain this feature.</p>
+		</description>
+		<sheet>
+			<description>You can cast the spell Disguise Self at will without a spell slot or components. When you cast it in this way, any creature that makes an investigation checks to perceive through the illusion makes that check at disadvantage. In addition, you are immune to acid damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_ACID" />
+		</rules>
+	</element>
+	<element name="Drider Heritage" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_MONSTROUS_HERITAGE_DRIDER">
+		<supports>Monstrous Heritage</supports>
+		<description>
+			<p>You have darkvision out to a range of 120 feet, and you can add your Charisma modifier to your Stealth and Perception checks. You may also choose to have your limbs lengthen slightly and grow an additional pair of eyes directly above your current ones when you gain this feature.</p>
+		</description>
+		<sheet>
+			<description>You may choose to have your limbs lengthen slightly and grow an additional pair of eyes directly above your current ones when you gain this feature.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="120" bonus="base" />
+			<stat name="stealth:misc" value="charisma:modifier" />
+			<stat name="perception:misc" value="charisma:modifier" />
+		</rules>
+	</element>
+	<element name="Hydra Heritage" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_MONSTROUS_HERITAGE_HYDRA">
+		<supports>Monstrous Heritage</supports>
+		<description>
+			<p>You gain a bonus to any saving throws you make to avoid or end the blinded, charmed, deafened, or stunned conditions, or to maintain concentration on a spell. This bonus is equal to half your sorcerer level (rounded up). You may also choose to grow a second head when you gain this feature.</p>
+		</description>
+		<sheet>
+			<description>You gain a bonus to any saving throws you make to avoid or end the blinded, charmed, deafened, or stunned conditions, or to maintain concentration on a spell. This bonus is equal to {{level:sorcerer:half:up}}. You may also choose to grow a second head when you gain this feature.</description>
+		</sheet>
+	</element>
+
+	<!-- Gift of the Bloodline -->
+	<element name="Mimic Gift" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_GIFT_OF_THE_BLOODLINE_MIMIC">
+		<supports>Gift of the Bloodline</supports>
+		<description>
+			<p>As an action, you can alter your body on a molecular level to gain an immunity to one damage type for the next 10 minutes. Once you use this feature, you cannot do so again until you finish a short rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Action">
+			<description>As an action, you can alter your body on a molecular level to gain an immunity to one damage type for the next 10 minutes.</description>
+		</sheet>
+	</element>
+	<element name="Drider Gift" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_GIFT_OF_THE_BLOODLINE_DRIDER">
+		<supports>Gift of the Bloodline</supports>
+		<description>
+			<p>Your base movement speed increases by 10 feet, and you gain the ability to move up, down, and across vertical surfaces upside down while leaving your hands free. You also gain a climb speed equal to your walking speed.</p>
+		</description>
+		<sheet>
+			<description>You gain the ability to move up, down, and across vertical surfaces upside down while leaving your hands free.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" />
+			<stat name="innate speed:climb" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Hydra Gift" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_GIFT_OF_THE_BLOODLINE_HYDRA">
+		<supports>Gift of the Bloodline</supports>
+		<description>
+			<p>By dividing your focus as a dual mind, you can take one additional reaction per round (but never more than once on a single turn).</p>
+		</description>
+		<sheet>
+			<description>By dividing your focus as a dual mind, you can take one additional reaction per round (but never more than once on a single turn).</description>
+		</sheet>
+	</element>
+
+	<!-- Monstrous Manifestation -->
+	<element name="Mimic Manifestation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_MONSTROUS_MANIFESTATION_MIMIC">
+		<supports>Monstrous Manifestation</supports>
+		<description>
+			<p>You learn the Shapechange spell, and if you cast it, you automatically succeed on any Constitution saving throws to maintain concentration on that spell that are triggered by taking damage.</p>
+		</description>
+		<sheet>
+			<description>You learn the Shapechange spell, and if you cast it, you automatically succeed on any Constitution saving throws to maintain concentration on that spell that are triggered by taking damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHAPECHANGE" />
+		</rules>
+	</element>
+	<element name="Drider Manifestation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_MONSTROUS_MANIFESTATION_DRIDER">
+		<supports>Monstrous Manifestation</supports>
+		<description>
+			<p>As a bonus action, can sprout four more limbs. This transformation lasts for the next 10 minutes, unless you extend duration by using this feature again. You can end the transformation early by using an action to retract your extra limbs into your body.</p>
+			<p class="indent">While in this form, your movement speed increases by 30 feet, you gain a climb speed equal to your walking speed, you ignore difficult terrain created by spells, your AC increases by 3, and you can cast the spell Web as a bonus action without expending a spell slot. If cast Web using this feature, it does not require concentration, and lasts for the full duration.</p>
+			<p class="indent">You can use this feature a number of times equal to your Charisma Modifier per long rest.</p>
+		</description>
+		<sheet usage="{{charisma:modifier}}/Long Rest" action="Bonus Action">
+			<description>As a bonus action, can sprout four more limbs. This transformation lasts for the next 10 minutes, unless you extend duration by using this feature again. You can end the transformation early by using an action to retract your extra limbs into your body.&#13;
+			While in this form, your movement speed increases by 30 feet, you gain a climb speed equal to your walking speed, you ignore difficult terrain created by spells, your AC increases by 3, and you can cast the spell Web as a bonus action without expending a spell slot. If cast Web using this feature, it does not require concentration, and lasts for the full duration.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_WEB" />
+		</rules>
+	</element>
+	<element name="Hydra Manifestation" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_MONSTROUS_MANIFESTATION_HYDRA">
+		<supports>Monstrous Manifestation</supports>
+		<description>
+			<p>As long as you have at least 1 hit point, you regain 10 hit points at the start of each of your turns. If you took fire damage since the end of your last turn, this ability does not trigger.</p>
+		</description>
+		<sheet>
+			<description>As long as you have at least 1 hit point, you regain 10 hit points at the start of each of your turns. If you took fire damage since the end of your last turn, this ability does not trigger.</description>
+		</sheet>
+	</element>
+</elements>

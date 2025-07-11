@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Bard - Death Caller</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="bard-death-caller.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/bard-death-caller.xml" />
+		</update>
+	</info>
+
+	<element name="Death Caller" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_BARD_DEATH_CALLER">
+		<supports>Bard College</supports>
+		<description>
+			<p>Every living person likes to dance, but the dead love it. Death Caller bards are magical performers with the power to commune with the departed—weaving music so vibrant it warms lost spirits, and invites them to move within the corporeal world, for a time. They are often seen performing at funerals, or memorial services in remembrance of terrible battles and bloodshed. But art with the power to move the dead can have terrible effects on the living.</p>
+			<p class="indent">Death Callers are widely respected, but rarely welcomed, with a repertoire of terrifying dirges and murder ballads that falls far from the breezy folk songs of popular traveling minstrels and troubadours. The magic such music spins is cruel and lethal if turned to nefarious ends, and many tales tell of evil Death Callers spreading dancing plagues and deadly fevers through villages. Armed with naught but a haunting, dissonant, irresistible melody, they compel victims to dance in a desperate frenzy until they die on their aching feet… and then compel their corpses to dance still further.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DIRGE_DANCER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DEATH_RATTLER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_SPIRIT_GUIDANCE" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_SPIRIT_CALLER" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DANCE_OF_DEATH" />
+		</description>
+		<sheet display="false">
+			<description>Death Caller bards are magical performers with the power to commune with the departed.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DIRGE_DANCER" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DEATH_RATTLER" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_SPIRIT_GUIDANCE" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_SPIRIT_CALLER" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DANCE_OF_DEATH" level="14" />
+		</rules>
+	</element>
+	<element name="Dirge Dancer" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DIRGE_DANCER">
+		<description>
+			<p>As an action, you can begin a magical performance of death, which lasts for one minute or until you end it as a bonus action. As part of the action when you begin this performance, and as a bonus action on subsequent turns, you can choose one creature of your choice that can hear you within 30 feet as the focus of your magical performance. That target must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn. Undead creatures have disadvantage on this saving throw.</p>
+		</description>
+		<sheet action="Action">
+			<description>You can begin a magical performance of death, which lasts for one minute or until you end it as a bonus action. As part of the action when you begin this performance, and as a bonus action on subsequent turns, you can choose one creature of your choice that can hear you within 30 feet as the focus of your magical performance. That target must succeed on a DC {{bard:spellcasting:dc}} Wisdom saving throw or be frightened of you until the end of your next turn. Undead creatures have disadvantage on this saving throw.</description>
+		</sheet>
+	</element>
+	<element name="Death Rattler" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DEATH_RATTLER">
+		<description>
+			<p>Creatures frightened of you have disadvantage on saving throws while you’re within 30 feet of them and you aren’t incapacitated.</p>
+		</description>
+		<sheet>
+			<description>Creatures frightened of you have disadvantage on saving throws while you’re within 30 feet of them and you aren’t incapacitated.</description>
+		</sheet>
+	</element>
+	<element name="Spirit Guidance" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_SPIRIT_GUIDANCE">
+		<description>
+			<p>You are guided by the spirits of those who have died. You learn the guidance cantrip or one cantrip of your choice from the Cleric spell list.</p>
+		</description>
+		<sheet display="false">
+			<description>You learn the guidance cantrip or one cantrip of your choice from the Cleric spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cantrip (Spirit Guidance)" supports="Cleric,0" default="ID_PHB_SPELL_GUIDANCE" spellcasting="Bard"/>
+		</rules>
+	</element>
+	<element name="Spirit Caller" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_SPIRIT_CALLER">
+		<description>
+			<p>You learn the spells animate dead, phantom steed, revivify, and speak with dead, and you can cast them without expending a spell slot by expending one use of your Bardic Inspiration instead. If you do, the spell’s casting time becomes 1 action.</p>
+			<p class="indent">Once you cast a spell in this way, you cannot cast that spell in this way again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>You learn the spells animate dead, phantom steed, revivify, and speak with dead, and you can cast them without expending a spell slot by expending one use of your Bardic Inspiration instead. If you do, the spell’s casting time becomes 1 action.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_DEAD" spellcasting="Bard"/>
+			<grant type="Spell" id="ID_PHB_SPELL_PHANTOM_STEED" spellcasting="Bard"/>
+			<grant type="Spell" id="ID_PHB_SPELL_REVIVIFY" spellcasting="Bard"/>
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" spellcasting="Bard"/>
+		</rules>
+	</element>
+	<element name="Dance of Death" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEATH_CALLER_DANCE_OF_DEATH">
+		<description>
+			<p>You learn the spell irresistible dance. When you cast it, a target affected by the spell takes 4d10 necrotic damage at the start of each of its turns.</p>
+		</description>
+		<sheet>
+			<description>You learn the spell irresistible dance. When you cast it, a target affected by the spell takes 4d10 necrotic damage at the start of each of its turns.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_OTTOS_IRRESISTIBLE_DANCE" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Dyenoia</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-dyenoia.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-dyenoia.xml" />
+		</update>
+	</info>
+
+	<element name="Dyenoia" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_DYENOIA">
+		<description>
+			<p>Running across the centre of the world, stretched as a band dividing north from south like a colossal, emerald serpent, is the Ouroboros Jungle. Scarcely 50 miles wide at its broadest, this incredibly fragile ecosystem can only survive in the perfect, seasonless equilibrium maintained at the equator. It is home to many incredible fauna and flora, but none so curious as the plant-folk dyenoia.</p>
+			<p>A rigidly defined life awaits every new-born dyenoia. Every child is raised by the community and is given no name until they reach adulthood. Concepts of individuality and personal ambition are foreign; from first gasping breath to last, each dyenoia is trained to think only of the needs of the collective, and to fill their place within the system that maintains it. Though dyenoia have rulers and priests, such roles in society offer no more personal wealth or status than that of a labourer, scholar, nurse, or merchant. To distant outsiders, this is seen as admirable; scholars write of the nobility of dyenoia—a utopian society where greed and ambition has been vanquished for the good of all.</p>
+			<p>To local outsiders however, the dyenoia are terrifying. Their commitment to each other is matched only by their utter indifference to sufferings of others. The ferocity with which they defend the Ouroborus Jungle is legendary, and swiftly puts paid to any attempt by outsiders to barter, conquer, or connect with them. The fearful reputation of dyenoia is not aided by the imposing, acidic maw that crowns each individual’s head, capable of crushing bone and devouring creatures whole. Fortunately, the dyenoia lack ambitions of conquest or domination, and trouble none who do not trouble them. The greatest fear of any who live or travel near the Ouroboros Jungle is that they accidentally tread on dyenoia land and face swift and lethal retribution.</p>
+			<h4>DYENOIA TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 1, and your Wisdom score increases by 2.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> Your creature type is Plant, rather than Humanoid.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Dyenoia reach adulthood at 13 years of age, and can live for up to 60 years.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Fully grown dyenoia can reach up to 7 feet tall. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> You have a walking speed of 35 feet.</p>
+			<p class="indent"><strong><em>Chlorophyll.</em></strong> While you are not in darkness, you have advantage on Constitution saving throws and when you roll Hit Dice.</p>
+			<p class="indent"><strong><em>Maw.</em></strong> The maw atop your head is a second mouth and a fanged weapon that you can use to make unarmed strikes. When you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier.</p>
+			<p class="indent"><strong><em>Clamp.</em></strong> When you hit a creature that is no more than one size larger than you with your maw, you can forgo dealing damage to grapple the target instead. While grappling a creature in this way, you cannot make further unarmed strikes with your maw, and the grappled creature takes 1d6 acid damage at the start of each of its turns. If this acid damage reduces a creature to 0 hit points, you gain temporary hit points equal to that creature’s Challenge Rating or Level.</p>
+			<p class="indent"><strong><em>Ferocity.</em></strong> When you hit a creature with an attack roll, you can expend one Hit Die. Roll the die; the target takes additional damage equal to the result. You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong><em>Ouroborus Warrior.</em></strong> You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Medicine, Nature, or Survival.</p>
+			<p class="indent"><strong><em>Swift Growth.</em></strong> You regain one expended Hit Die when you finish a short rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Dyenoia)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Dyenoia)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Creature Type -->
+			<grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_PLANT" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_CHLOROPHYLL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_MAW" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_CLAMP" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_FEROCITY" />
+			<select type="Proficiency" name="Ouroborus Warrior" supports="ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_SWIFT_GROWTH" />
+		</rules>
+	</element>
+
+	<element name="Chlorophyll" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_CHLOROPHYLL">
+		<description>
+			<p>While you are not in darkness, you have advantage on Constitution saving throws and when you roll Hit Dice.</p>
+		</description>
+		<sheet>
+			<description>While not in darkness, you have advantage on CON saves and when rolling Hit Dice.</description>
+		</sheet>
+	</element>
+	<element name="Maw" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_MAW">
+		<description>
+			<p>The maw atop your head is a second mouth and a fanged weapon that you can use to make unarmed strikes. When you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier.</p>
+		</description>
+		<sheet>
+			<description>Your maw is a natural weapon that deals 1d6 + {{strength:modifier}} piercing damage.</description>
+		</sheet>
+	</element>
+	<element name="Clamp" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_CLAMP">
+		<description>
+			<p>When you hit a creature that is no more than one size larger than you with your maw, you can forgo dealing damage to grapple the target instead. While grappling a creature in this way, you cannot make further unarmed strikes with your maw, and the grappled creature takes 1d6 acid damage at the start of each of its turns. If this acid damage reduces a creature to 0 hit points, you gain temporary hit points equal to that creature’s Challenge Rating or Level.</p>
+		</description>
+		<sheet>
+			<description>When you hit a creature that is no more than one size larger than you with your maw, you can forgo damage to grapple the target. While grappling, you can't use your maw attack, and the target takes 1d6 acid damage at the start of its turns. If this kills it, you gain temp HP equal to its CR/Level.</description>
+		</sheet>
+	</element>
+	<element name="Ferocity" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_FEROCITY">
+		<description>
+			<p>When you hit a creature with an attack roll, you can expend one Hit Die. Roll the die; the target takes additional damage equal to the result. You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you hit with an attack, you can expend one Hit Die to deal additional damage equal to the roll.</description>
+		</sheet>
+	</element>
+	<element name="Swift Growth" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_DYENOIA_SWIFT_GROWTH">
+		<description>
+			<p>You regain one expended Hit Die when you finish a short rest.</p>
+		</description>
+		<sheet>
+			<description>You regain one expended Hit Die when you finish a short rest.</description>
+		</sheet>
+	</element>
+</elements>

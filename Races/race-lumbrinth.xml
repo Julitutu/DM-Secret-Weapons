@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Lumbrinth</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-lumbrinth.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-lumbrinth.xml" />
+		</update>
+	</info>
+
+	<element name="Lumbrinth" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_LUMBRINTH">
+		<description>
+			<p>The humble lumbrinth are an innocuous folk descended from the mighty worms native to the material plane. In terms of temperament, however, they could not be further from their monstrous ancestors; they are every bit as cautious and shy as their purple worm progenitors are chaotic and destructive. That said, lumbrinth are not cowards. Their impressive natural armour and fierce tail stingers make them potent warriors even when stripped of all weaponry, and many tyrants and warlords have met a painful end upon mistaking the lumbrinth as easy pickings for domination and exploitation.</p>
+			<p>Their long, wormlike bodies can strike an impressive figure, though many lumbrinth hang their heads low and fidget instinctively, conscious not to appear confrontational or intimidating. Lumbrinth are deeply unusual among sentient species in that they do not eat meat, able to sustain themselves by devouring vegetation and earth. Their natural carapace also provides sufficient protection from the elements, meaning lumbrinth struggle not for food or shelter, and so have little reason to engage in trade or industry. Some lumbrinth do seek wealth in pursuit of status or pleasure, but for most, all the tools necessary for a comfortable life are granted by their own unique physiology and the earth at their feet.</p>
+			<h4>LUMBRINTH TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Lumbrinth grow swiftly, and are considered adult at the age of 13. They can live for up to 60 years.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Lumbrinth are long creatures, descended from colossal bestial worms, and reach almost 10 feet when stretched out. They carry themselves with the upper two-thirds of their body lifted over their tails, typically standing around 6 feet tall. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet, and you can move at full speed while prone.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Blindsight.</em></strong> Although lumbrinth can see perfectly well in light conditions, the gifts evolved by their blind ancestors remain. You have Blindsight out to 10 feet.</p>
+			<p class="indent"><strong><em>Natural Armour.</em></strong> Lumbrinth have a flexible, segmented carapace which offers natural defense from harm. While you aren’t wearing armour, your base AC is 13 + your Dexterity modifier.</p>
+			<p class="indent"><strong><em>Tail Stinger.</em></strong> The stinger at the base of each lumbrinth’s tail is both a fierce natural weapon and a hive of bubbling chemical activity. You can use your tail to make unarmed strikes. When you do, it has a range of 10-feet and deals 1d6 + your Strength modifier piercing damage on a hit. Additionally, once per turn when you hit a creature with your tail stinger, you can inject a potent poison into the target. The creature must succeed on a Constitution saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus), taking 2d8 poison damage on a failed save, or half as much on a success. This damage increases by 1d8 when you reach 5th level (3d8), 11th level (4d8), and 17th level (5d8). You can inject poison in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong><em>Worm Tactics.</em></strong> You have proficiency in the Stealth and Survival skills.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language that you and your GM agree is appropriate for the character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Lumbrinth)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Lumbrinth)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Size -->
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Blindsight -->
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+            <stat name="blindsight:range" value="10" bonus="base" />
+
+			<!-- Languages -->
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Lumbrinth)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_LUMBRINTH_NATURAL_ARMOUR" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_LUMBRINTH_TAIL_STINGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+		</rules>
+	</element>
+
+	<element name="Natural Armour" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_LUMBRINTH_NATURAL_ARMOUR">
+		<description>
+            <p>Lumbrinth have a flexible, segmented carapace which offers natural defense from harm. While you aren’t wearing armour, your base AC is 13 + your Dexterity modifier.</p>
+        </description>
+		<sheet alt="Natural Armor">
+            <description>While not wearing armor, your AC is 13 + your Dexterity modifier.</description>
+        </sheet>
+		<rules>
+			<stat name="natural armor:ac" value="13" bonus="base" />
+			<stat name="natural armor:ac" value="dexterity:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="natural armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+	</element>
+	<element name="Tail Stinger" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_LUMBRINTH_TAIL_STINGER">
+		<description>
+            <p>The stinger at the base of each lumbrinth’s tail is both a fierce natural weapon and a hive of bubbling chemical activity. You can use your tail to make unarmed strikes. When you do, it has a range of 10-feet and deals 1d6 + your Strength modifier piercing damage on a hit. Additionally, once per turn when you hit a creature with your tail stinger, you can inject a potent poison into the target. The creature must succeed on a Constitution saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus), taking 2d8 poison damage on a failed save, or half as much on a success. This damage increases by 1d8 when you reach 5th level (3d8), 11th level (4d8), and 17th level (5d8). You can inject poison in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+		<sheet usage="{{proficiency}}/Long Rest">
+            <description>Your tail stinger is a natural weapon with 10ft reach that deals 1d6 + {{strength:modifier}} piercing damage. Once per turn on a hit, you can inject poison. The target must make a DC {{tail-stinger:dc}} CON save or take 2d8 poison damage (half on success).</description>
+            <description level="5">Your tail stinger is a natural weapon with 10ft reach that deals 1d6 + {{strength:modifier}} piercing damage. Once per turn on a hit, you can inject poison. The target must make a DC {{tail-stinger:dc}} CON save or take 3d8 poison damage (half on success).</description>
+            <description level="11">Your tail stinger is a natural weapon with 10ft reach that deals 1d6 + {{strength:modifier}} piercing damage. Once per turn on a hit, you can inject poison. The target must make a DC {{tail-stinger:dc}} CON save or take 4d8 poison damage (half on success).</description>
+            <description level="17">Your tail stinger is a natural weapon with 10ft reach that deals 1d6 + {{strength:modifier}} piercing damage. Once per turn on a hit, you can inject poison. The target must make a DC {{tail-stinger:dc}} CON save or take 5d8 poison damage (half on success).</description>
+        </sheet>
+		<rules>
+			<stat name="tail-stinger:dc" value="8" />
+			<stat name="tail-stinger:dc" value="constitution:modifier" />
+			<stat name="tail-stinger:dc" value="proficiency" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Warlock - The Deep Consciousness</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="warlock-the-deep-consciousness.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/warlock-the-deep-consciousness.xml" />
+		</update>
+	</info>
+
+	<element name="The Deep Consciousness" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_WARLOCK_THE_DEEP_CONSCIOUSNESS">
+		<supports>Otherworldly Patron</supports>
+		<description>
+			<p>Your Patron is The Deep Consciousness, an enigmatic and mysterious presence, unknowable and unyielding, existing without form. It is a void, empty of both light and darkness. A vast, incredible, ancient mind untethered to flesh or machine, holding unfathomable knowledge and understanding beyond the limits of mortal comprehension.</p>
+			<p class="indent">The Deep Consciousness grants power to Warlocks, steadily spreading its influence across all planes of existence in the aim of furthering some unknowable agenda.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_EXPANDED_SPELL_LIST" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_IRON_MIND" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MENTAL_INVASION" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MENTAL_FORTRESS" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MIND_CRUSH" />
+		</description>
+		<sheet display="false">
+			<description>Your Patron is The Deep Consciousness, an enigmatic and mysterious presence, unknowable and unyielding, existing without form.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_EXPANDED_SPELL_LIST" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_IRON_MIND" level="1" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MENTAL_INVASION" level="6" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MENTAL_FORTRESS" level="10" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MIND_CRUSH" level="14" />
+		</rules>
+	</element>
+	<element name="Expanded Spell List" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_EXPANDED_SPELL_LIST">
+		<description>
+			<p>The Deep Consciousness lets you choose from an expanded list of spells when you learn a Warlock Spell. The following spells are added to the Warlock spell list for you.</p>
+			<h5>Expanded Spell List</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><i>Disguise Self, Hideous Laughter</i></td></tr>
+				<tr><td>2nd</td><td><i>Blindness/Deafness, Silence</i></td></tr>
+				<tr><td>3rd</td><td><i>Sending, Slow</i></td></tr>
+				<tr><td>4th</td><td><i>Compulsion, Confusion</i></td></tr>
+				<tr><td>5th</td><td><i>Modify Memory, Telepathic Bond</i></td></tr>
+				<tr><td>9th</td><td><i>Weird</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<spellcasting name="Warlock" extend="true">
+			<extend>ID_PHB_SPELL_DISGUISE_SELF</extend>
+			<extend>ID_PHB_SPELL_TASHAS_HIDEOUS_LAUGHTER</extend>
+			<extend>ID_PHB_SPELL_BLINDNESS_DEAFNESS</extend>
+			<extend>ID_PHB_SPELL_SILENCE</extend>
+			<extend>ID_PHB_SPELL_SENDING</extend>
+			<extend>ID_PHB_SPELL_SLOW</extend>
+			<extend>ID_PHB_SPELL_COMPULSION</extend>
+			<extend>ID_PHB_SPELL_CONFUSION</extend>
+			<extend>ID_PHB_SPELL_MODIFY_MEMORY</extend>
+			<extend>ID_PHB_SPELL_TELEPATHIC_BOND</extend>
+			<extend>ID_PHB_SPELL_WEIRD</extend>
+		</spellcasting>
+	</element>
+	<element name="Iron Mind" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_IRON_MIND">
+		<description>
+			<p>The power of The Deep Consciousness has strengthened your mind. At 1st level, you gain resistance to psychic damage, and you can add your charisma modifier to your intelligence saving throws.</p>
+			<p class="indent">In addition, if you would drop concentration on a spell cast using your pact magic, you can choose to maintain concentration instead. You can use this ability an amount of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>If you would drop concentration on a spell cast using your pact magic, you can choose to maintain concentration instead.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+			<stat name="intelligence:save:misc" value="charisma:modifier" />
+		</rules>
+	</element>
+	<element name="Mental Invasion" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MENTAL_INVASION">
+		<description>
+			<p>Beginning at 6th level you can use a bonus action to strike at the mind of a target you can see within 60ft of you that has an intelligence score of 3 or higher. It makes a Wisdom saving throw against your Warlock Spell Save DC. On a failed save it suffers one negative effect of your choice from the following list:</p>
+			<ul>
+				<li>It is blinded until the end of your next turn</li>
+				<li>It is deafened until the end of your next turn</li>
+				<li>Its base movement speed is reduced by 30ft until the end of your next turn</li>
+				<li>It falls prone</li>
+				<li>It drops concentration on any spell it is concentrating on</li>
+				<li>The first time it takes damage each turn, it takes an additional 1d6 psychic damage. This effect ends at the end of your next turn.</li>
+			</ul>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a short rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Bonus Action">
+			<description>As a bonus action, strike at the mind of a target you can see within 60ft of you that has an intelligence score of 3 or higher. It makes a DC {{warlock:spellcasting:dc}} Wisdom saving throw. On a failed save it suffers one negative effect of your choice from the following list:&#13;
+			• It is blinded until the end of your next turn&#13;
+			• It is deafened until the end of your next turn&#13;
+			• Its base movement speed is reduced by 30ft until the end of your next turn&#13;
+			• It falls prone&#13;
+			• It drops concentration on any spell it is concentrating on&#13;
+			• The first time it takes damage each turn, it takes an additional 1d6 psychic damage. This effect ends at the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Mental Fortress" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MENTAL_FORTRESS">
+		<description>
+			<p>When you reach 10th level, your mental fortifications grow even more powerful. You are immune to the charmed and frightened conditions. In addition, whenever you cast a spell that would charm or frighten an enemy, or use your 6th level Mental Invasion ability, you may expend an additional Pact Magic spell slot to have the target make its saving throw to resist the effect with disadvantage.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the charmed and frightened conditions. In addition, whenever you cast a spell that would charm or frighten an enemy, or use your 6th level Mental Invasion ability, you may expend an additional Pact Magic spell slot to have the target make its saving throw to resist the effect with disadvantage.</description>
+		</sheet>
+	</element>
+	<element name="Mind Crush" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_DEEP_CONSCIOUSNESS_MIND_CRUSH">
+		<description>
+			<p>Starting at 14th level, you can expend your energies to open a doorway in a target’s mind to allow a small vestige of your Patron’s power to invade.</p>
+			<p class="indent">As an action, choose a creature you can see within 60ft of you. Both you and it are incapacitated and your base movement speeds become 0 for the next minute, or until you chose to end the effect. At the end of each of its turns, or whenever it takes damage from another source, it takes 2d10 psychic damage and makes a wisdom saving throw, freeing itself from your control on a successful save. Creatures immune to psychic damage treat damage from this effect as though they were resistant to it, not immune.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>Choose a creature you can see within 60ft of you. Both you and it are incapacitated and your base movement speeds become 0 for the next minute, or until you chose to end the effect. At the end of each of its turns, or whenever it takes damage from another source, it takes 2d10 psychic damage and makes a DC {{warlock:spellcasting:dc}} wisdom saving throw, freeing itself from your control on a successful save. Creatures immune to psychic damage treat damage from this effect as though they were resistant to it, not immune.</description>
+		</sheet>
+	</element>
+</elements>

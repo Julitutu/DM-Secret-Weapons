@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ranger - Skyrider</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="ranger-skyrider.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Subclasses/ranger-skyrider.xml" />
+		</update>
+	</info>
+
+	<element name="Skyrider" type="Archetype" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_RANGER_SKYRIDER">
+		<supports>Ranger Archetype</supports>
+		<description>
+			<p>As one with the wind, skyriders are a legendary conclave of rangers that roam the globe, defending the birds and beasts of the sky. As you grow, your connection with the primordial energy of air enhances your movement, magic, and combat prowess with the bite, speed, and untethered fury of a hurricane. Skyriders are renowned for their powers of flight, and tales of a lone, skyborne warrior defending innocents from pirates and dragons are found in cultures across the multiverse.</p>
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_BLADE_OF_THE_NORTH_WIND" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_SKYRIDER_MAGIC" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_HEART_OF_THE_WEST_WIND" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_BREATH_OF_THE_EAST_WIND" />
+			<div element="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_SHIELD_OF_THE_SOUTH_WIND" />
+		</description>
+		<sheet display="false">
+			<description>As one with the wind, skyriders are a legendary conclave of rangers that roam the globe, defending the birds and beasts of the sky.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_BLADE_OF_THE_NORTH_WIND" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_SKYRIDER_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_HEART_OF_THE_WEST_WIND" level="7" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_BREATH_OF_THE_EAST_WIND" level="11" />
+			<grant type="Archetype Feature" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_SHIELD_OF_THE_SOUTH_WIND" level="15" />
+		</rules>
+	</element>
+	<element name="Blade of the North Wind" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_BLADE_OF_THE_NORTH_WIND">
+		<description>
+			<p>The bitter chill and whirling gusts of the north wind empowers your strikes. Once per turn, on your turn, when you hit a creature with a weapon attack roll, you can enhance that strike with one of the following effects:</p>
+			<p class="indent"><b>Concussive Blast.</b> You move the target 10 feet directly towards or away from you.</p>
+			<p class="indent"><b>Fleet Foot.</b> You can take the Dash or Disengage action as a bonus action this turn.</p>
+			<p class="indent"><b>Whirling Eddies.</b> The target must succeed on a Dexterity saving throw (DC = 8 + your Wisdom modifier + your Proficiency Bonus) or have disadvantage on attack rolls until the end of its next turn.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When you hit a creature with a weapon attack roll, you can enhance that strike with one of the following effects:&#13;
+			• Concussive Blast. You move the target 10 feet directly towards or away from you.&#13;
+			• Fleet Foot. You can take the Dash or Disengage action as a bonus action this turn.&#13;
+			• Whirling Eddies. The target must succeed on a DC {{blade of the north wind:dc}} Dexterity saving throw or have disadvantage on attack rolls until the end of its next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="blade of the north wind:dc" value="8" />
+			<stat name="blade of the north wind:dc" value="wisdom:modifier" />
+			<stat name="blade of the north wind:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Skyrider Magic" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_SKYRIDER_MAGIC">
+		<description>
+			<p>You learn the true strike cantrip, or another cantrip of your choice from the Druid or Sorcerer spell list. At the end of a short or long rest, you can swap your chosen cantrip for another applicable choice.</p>
+			<p class="indent">You also learn an additional spell when you reach certain levels in this class, as shown in the Skyrider Spells table. Each spell counts as a ranger spell for you, but it doesn’t count against the number of ranger spells you know.</p>
+			<h5>Skyrider Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Ranger Level</td><td>Spell</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>expeditious retreat</i></td></tr>
+				<tr><td>5th</td><td><i>find steed</i></td></tr>
+				<tr><td>9th</td><td><i>gaseous form</i></td></tr>
+				<tr><td>13th</td><td><i>find greater steed</i></td></tr>
+				<tr><td>17th</td><td><i>cone of cold</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Spell" name="Cantrip (Skyrider)" supports="Druid||Sorcerer,0" default="ID_PHB_SPELL_TRUE_STRIKE" />
+			<grant type="Spell" id="ID_PHB_SPELL_EXPEDITIOUS_RETREAT" level="3" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FIND_STEED" level="5" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GASEOUS_FORM" level="9" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_FIND_GREATER_STEED" level="13" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" level="17" spellcasting="Ranger" prepared="true" />
+		</rules>
+	</element>
+	<element name="Heart of the West Wind" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_HEART_OF_THE_WEST_WIND">
+		<description>
+			<p>The gifts of the west wind amplify your every step with dancing, rising magic. At the start of your turn, you can choose to gain a fly speed equal to walking speed for 10 minutes. In addition, if you are mounted, your mount shares your fly speed. You can use this feature a number of times equal to your Wisdom modifier, regaining all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{wisdom:modifier}}/Long Rest">
+			<description>At the start of your turn, you can choose to gain a fly speed equal to walking speed for 10 minutes. In addition, if you are mounted, your mount shares your fly speed.</description>
+		</sheet>
+	</element>
+	<element name="Breath of the East Wind" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_BREATH_OF_THE_EAST_WIND">
+		<description>
+			<p>The magic of the east wind shimmers through your every strike. When you use your Blade of the North Wind feature, you can also choose from the following options:</p>
+			<p class="indent"><b>Teleport.</b> Expend a spell slot of 1st-level or higher. You and up to 5 willing creatures of your choice within 5 feet of you teleport up to 30 feet to an unoccupied space you can see.</p>
+			<p class="indent"><b>Swift Casting.</b> Expend a spell slot of 1st-level or higher. You can cast a cantrip with the casting time of 1 action using your bonus action this turn.</p>
+			<p class="indent"><b>Whirlwind.</b> You can take the Dodge action as a bonus action this turn. If you are mounted, your mount also gains the benefits of the Dodge action until the start of your next turn.</p>
+		</description>
+		<sheet>
+			<description>When you use your Blade of the North Wind feature, you can also choose from the following options:&#13;
+			• Teleport. Expend a spell slot of 1st-level or higher. You and up to 5 willing creatures of your choice within 5 feet of you teleport up to 30 feet to an unoccupied space you can see.&#13;
+			• Swift Casting. Expend a spell slot of 1st-level or higher. You can cast a cantrip with the casting time of 1 action using your bonus action this turn.&#13;
+			• Whirlwind. You can take the Dodge action as a bonus action this turn. If you are mounted, your mount also gains the benefits of the Dodge action until the start of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Shield of the South Wind" type="Archetype Feature" source="DM Secret Weapons" id="ID_DMSW_ARCHETYPE_FEATURE_SKYRIDER_SHIELD_OF_THE_SOUTH_WIND">
+		<description>
+			<p>The blessing of the south wind guards you from harm. You resist bludgeoning, slashing, and piecing damage.</p>
+		</description>
+		<sheet>
+			<description>You resist bludgeoning, slashing, and piecing damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING" />
+		</rules>
+	</element>
+</elements>

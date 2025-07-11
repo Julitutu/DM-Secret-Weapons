@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Castanoot</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-castanoot.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-castanoot.xml" />
+		</update>
+	</info>
+
+	<!-- Base Castanoot Race -->
+	<element name="Castanoot" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_CASTANOOT">
+		<description>
+			<p>Castanoot are a race of small, fey creatures native to the feywild who are notable for their thick, spined shells. An ancient and deeply solitary peoples, Castanoot are famously distrustful of outsiders and seek to avoid interaction with others if they can. However, they have been known to trade and associate with other races on occasion. Trust is hard earned however, and easily lost. Castanoot have a strong distrust of Fairies for an insult dealt unto them long ago that none remember, aside from the fact it came from the tongue of a Fairy. Although Castanoot can burrow, they typically live in woodland areas, building homes inside trees. They age rapidly from birth, reaching adulthood in just 5 years, and then go on to live for around a century. There are three main variants: The Caescean, Dentata, and Sativan.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Castanoot age rapidly from birth, reaching adulthood in just 5 years, and then go on to live for around a century.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Castanoot are small creatures. Your size is Small.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong> Three main variants of Castanoot exist: the tradition-focused Caescean, the warrior-like Dentata, and the nomadic Sativan. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Grants Small size to all subraces -->
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<!-- Grants the subrace selection trait -->
+			<select type="Sub Race" name="Castanoot Subrace" supports="Castanoot" />
+		</rules>
+	</element>
+
+	<!-- Caescean Subrace -->
+	<element name="Caescean Castanoot" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_CAESCEAN_CASTANOOT">
+		<supports>Castanoot</supports>
+		<description>
+			<p>Caescean Castanoot are the most traditionally focused of all Castanoot races. They live in tight knit, matriarchal societies on lands claimed long ago. They take great pride in their heritage, and resist change fiercely.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Wisdom score increases by 1.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Caescean Castanoot tend toward neutral and lawful alignments.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Natural Armor.</em></strong> You have a thick, spiky hide. When you aren’t wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you use your natural armor.</p>
+			<p class="indent"><strong><em>Wardens.</em></strong> You gain proficiency in the Nature skill.</p>
+			<p class="indent"><strong><em>Spiny Shell.</em></strong> You may use your reaction to lean into your thick, spiny shell. Until the end of your turn, you gain advantage on constitution saving throws. You may use this trait a number of times equal to your proficiency bonus per long rest.</p>
+			<p class="indent"><strong><em>Greatberry.</em></strong> You know the druidcraft cantrip. Starting at 3rd level, you may also cast Goodberry once per long rest using this trait. Any Goodberry created using this trait is a Greatberry, and restores hit points equal to 1 + your proficiency modifier.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- TCoE Custom ASI Rules -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Caescean)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Caescean)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_NATURAL_ARMOR" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_WARDENS" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_SPINY_SHELL_CAESCEAN" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_GREATBERRY" />
+		</rules>
+	</element>
+
+	<!-- Dentata Subrace -->
+	<element name="Dentata Castanoot" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_DENTATA_CASTANOOT">
+		<supports>Castanoot</supports>
+		<description>
+			<p>The Dentata Castanoot are a warrior people. They find great joy in hunting as a tribe and combative sports. To the Dentata, a Castanoot’s shell is of the utmost importance, and many hours each day are devoted to the cleaning, decoration and preservation of one’s shell. It is their first line of defence, and most trusted weapon.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Dentata Castanoot tend toward lawful and good alignments.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Natural Armor.</em></strong> You have a thick, spiky hide. When you aren’t wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you use your natural armor.</p>
+			<p class="indent"><strong><em>Survivalist.</em></strong> You are proficient in the Survival skill.</p>
+			<p class="indent"><strong><em>Spikey Shell.</em></strong> When a creature within 5ft hits you with a melee attack, you can use your reaction to deal piercing damage equal to your Constitution Modifier to that creature. From level 6, the earthen power imbued in your shell has grown to the extent that this counts as magical damage for the purposes of overcoming resistances. From level 11, your skill at maximising your shell offensively allows you to add your proficiency modifier to any damage dealt with this trait.</p>
+			<p class="indent"><strong><em>Tumbler.</em></strong> You can use a reaction to halve any fall damage you would take. You may use this trait a number of times equal to your proficiency per long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- TCoE Custom ASI Rules -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Dentata)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Dentata)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			
+			<!-- Speed -->
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_NATURAL_ARMOR" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_SURVIVALIST" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_SPIKEY_SHELL_DENTATA" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_TUMBLER" />
+		</rules>
+	</element>
+
+	<!-- Sativan Subrace -->
+	<element name="Sativan Castanoot" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SATIVAN_CASTANOOT">
+		<supports>Castanoot</supports>
+		<description>
+			<p>The Sativan Castanoot are a nomadic people who long ago cast off their spiky shells and the traditions of the old ways in favour of physical and social mobility. They shirk the isolationist philosophies of other Castanoot and traverse the feywild, delighting in meeting new creatures. They are famous for living in open, polyamerous societies, although finding two Sativan committed exclusively to one another is not uncommon.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Dexterity score increases by 2, and your Charisma score increases by 1.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Sativan Castanoot tend toward chaotic and good alignments.</p>
+			<p class="indent"><strong><em>Rolliking Spirit.</em></strong> You gain proficiency in the Performance Skill.</p>
+			<p class="indent"><strong><em>Vigorous Energy.</em></strong> You have advantage on saving throws against being Stunned or Paralyzed.</p>
+			<p class="indent"><strong><em>Quick Footed.</em></strong> Your base walking speed is 35ft.</p>
+			<p class="indent"><strong><em>Stop, Drop and Roll.</em></strong> When you are dealt damage, you can use a reaction to fall prone and move 35 ft in any direction along the ground in a straight line. This movement does not provoke opportunity attacks. One you use this trait, you can’t use it again until you finish a short or a long rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Ability Score Increase -->
+			<stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<!-- TCoE Custom ASI Rules -->
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Sativan)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Sativan)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+
+			<!-- Traits -->
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_ROLLIKING_SPIRIT" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_VIGOROUS_ENERGY" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_QUICK_FOOTED" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_STOP_DROP_AND_ROLL" />
+		</rules>
+	</element>
+
+	<!-- Shared Traits -->
+	<element name="Natural Armor" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_NATURAL_ARMOR">
+		<description>
+			<p>You have a thick, spiky hide. When you aren’t wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you use your natural armor.</p>
+		</description>
+		<sheet>
+			<description>When you aren’t wearing armor, your AC is 12 + your Constitution modifier.</description>
+		</sheet>
+		<rules>
+			<stat name="natural armor:ac" value="12" bonus="base" />
+			<stat name="natural armor:ac" value="constitution:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="natural armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+	</element>
+
+    <!-- Caescean Traits -->
+	<element name="Wardens" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_WARDENS">
+		<description>
+			<p>You gain proficiency in the Nature skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+		</rules>
+	</element>
+    <element name="Spiny Shell (Caescean)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_SPINY_SHELL_CAESCEAN">
+		<description>
+			<p>You may use your reaction to lean into your thick, spiny shell. Until the end of your turn, you gain advantage on constitution saving throws. You may use this trait a number of times equal to your proficiency bonus per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+			<description>You can lean into your thick, spiny shell. Until the end of your turn, you gain advantage on constitution saving throws.</description>
+		</sheet>
+	</element>
+	<element name="Greatberry" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_GREATBERRY">
+		<description>
+			<p>You know the druidcraft cantrip. Starting at 3rd level, you may also cast Goodberry once per long rest using this trait. Any Goodberry created using this trait is a Greatberry, and restores hit points equal to 1 + your proficiency modifier.</p>
+		</description>
+		<sheet>
+			<description>You know the druidcraft cantrip.</description>
+			<description level="3">You know the druidcraft cantrip. You can also cast Goodberry once per long rest. Any berry created restores 1+{{proficiency}} hit points.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DRUIDCRAFT" />
+			<grant type="Spell" id="ID_PHB_SPELL_GOODBERRY" level="3" />
+		</rules>
+	</element>
+
+	<!-- Dentata Traits -->
+	<element name="Survivalist" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_SURVIVALIST">
+		<description>
+			<p>You are proficient in the Survival skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+		</rules>
+	</element>
+	<element name="Spikey Shell (Dentata)" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_SPIKEY_SHELL_DENTATA">
+		<description>
+			<p>When a creature within 5ft hits you with a melee attack, you can use your reaction to deal piercing damage equal to your Constitution Modifier to that creature. From level 6, the earthen power imbued in your shell has grown to the extent that this counts as magical damage for the purposes of overcoming resistances. From level 11, your skill at maximising your shell offensively allows you to add your proficiency modifier to any damage dealt with this trait.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>When a creature within 5ft hits you with a melee attack, you can deal {{spikey-shell}} piercing damage to it.</description>
+			<description level="6">When a creature within 5ft hits you with a melee attack, you can deal {{spikey-shell}} magical piercing damage to it.</description>
+        <rules>
+			<stat name="spikey-shell" value="constitution:modifier" />
+            <stat name="spikey-shell" value="proficiency" level="11"/>
+		</rules>
+		</sheet>
+	</element>
+	<element name="Tumbler" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_TUMBLER">
+		<description>
+			<p>You can use a reaction to halve any fall damage you would take. You may use this trait a number of times equal to your proficiency per long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+			<description>You can use your reaction to halve any fall damage you would take.</description>
+		</sheet>
+	</element>
+
+	<!-- Sativan Traits -->
+	<element name="Rolliking Spirit" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_ROLLIKING_SPIRIT">
+		<description>
+			<p>You gain proficiency in the Performance Skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+		</rules>
+	</element>
+	<element name="Vigorous Energy" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_VIGOROUS_ENERGY">
+		<description>
+			<p>You have advantage on saving throws against being Stunned or Paralyzed.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against being Stunned or Paralyzed.</description>
+		</sheet>
+	</element>
+	<element name="Quick Footed" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_QUICK_FOOTED">
+		<description>
+			<p>Your base walking speed is 35ft.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="innate speed" value="35" bonus="base" />
+		</rules>
+	</element>
+	<element name="Stop, Drop and Roll" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASTANOOT_STOP_DROP_AND_ROLL">
+		<description>
+			<p>When you are dealt damage, you can use a reaction to fall prone and move 35 ft in any direction along the ground in a straight line. This movement does not provoke opportunity attacks. One you use this trait, you can’t use it again until you finish a short or a long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Reaction">
+			<description>When you are dealt damage, you can use your reaction to fall prone and move 35 ft in a straight line. This movement does not provoke opportunity attacks.</description>
+		</sheet>
+	</element>
+</elements>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Spherian</name>
+		<source>DM Secret Weapons</source>
+		<update version="0.1.0">
+			<file name="race-spherian.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/Races/race-spherian.xml" />
+		</update>
+	</info>
+
+	<element name="Spherian" type="Race" source="DM Secret Weapons" id="ID_DMSW_RACE_SPHERIAN">
+		<description>
+			<p>As mysterious and beautiful as the trembling twilight sky, spherian are a species of humanoids imbued with divine starlight. Long-lived and deeply reclusive, spherian are believed to be mythological by some creatures, or alien visitors to the material plane by others. In truth, they are as terrestrial as a mountain dwarf, but hold such little interest in the affairs of others that they find no reason to engage with the tussles and tantrums that shape the modern world. Spherian do not require food or water to survive, and care little of earthly possessions, and so have no impetus to exploit or dominate other creatures. They prefer the solace of nighttime, although curious individuals have been known to venture out under the light of day to pursue the call of adventure.</p>
+			<p>Every spherian is born with a unique astrological marking on their body, as distinct as a fingerprint, which relates to a constellation of stars somewhere in the infinite universe. These marks contain divine power, which manifests differently in individuals depending on the resonance of the mark. Spellcasting spherian often work these patterns into their spellbooks and sigils, and many spherian spend long, meditative hours at night staring into the sky, searching for their constellation in the twinkling darkness.</p>
+			<h4>SPHERIAN TRAITS</h4>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 2, and your Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Spherian mature slowly, reaching maturity after about a century, and go on to live to an incredible age. The oldest spherian can count their years to over 1,000 before passing away.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Spherian stand shoulder to shoulder with the tallest of humans. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> At your most comfortable under the twinkling twilight skies, you have superior vision in darkness. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Constellation Mark.</em></strong> You carry a pattern of stars somewhere on your body, which carry magical significance. This power manifests when you reach 3rd level. Choose one constellation from the options below and gain the traits associated with it. You can also invent your own constellation, and choose the trait of a given constellation mark that best fits your character.</p>
+				<div class="reference">
+					<div element="ID_DMSW_SUB_RACE_SPHERIAN_AQUARIUS" />
+					<div element="ID_DMSW_SUB_RACE_SPHERIAN_CASSIOPEIA" />
+					<div element="ID_DMSW_SUB_RACE_SPHERIAN_DRACO" />
+					<div element="ID_DMSW_SUB_RACE_SPHERIAN_GEMINI" />
+					<div element="ID_DMSW_SUB_RACE_SPHERIAN_ORION" />
+					<div element="ID_DMSW_SUB_RACE_SPHERIAN_PEGASUS" />
+				</div>
+			<p class="indent"><strong><em>Night Wanderer.</em></strong> The nocturnal ways of the spherian make them potent nighttime hunters. You have proficiency in the Perception and Stealth skills.</p>
+			<p class="indent"><strong><em>Unusual Nature.</em></strong> You don’t need to eat or drink.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language that you and your GM agree is appropriate for your character.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- Base Spherian Traits -->
+			<stat name="wisdom" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="constitution" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Spherian)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Spherian)" supports="Custom Ability Score Increase 1" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<grant type="Racial Trait" id="ID_DMSW_RACIAL_TRAIT_SPHERIAN_UNUSUAL_NATURE" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Spherian)" supports="Standard||Exotic" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+
+			<!-- Subrace Selection -->
+			<select type="Sub Race" name="Constellation Mark" supports="Spherian" level="3" />
+		</rules>
+	</element>
+
+	<element name="Unusual Nature" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_SPHERIAN_UNUSUAL_NATURE">
+		<description>
+            <p>You don’t need to eat or drink.</p>
+        </description>
+		<sheet>
+            <description>You don't need to eat or drink.</description>
+        </sheet>
+	</element>
+
+
+    <element name="Intelligence" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASSIOPEIA_INT">
+		<supports>Spherian Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="cassiopeia:dc" value="intelligence:modifier" />
+            <stat name="draco:dc" value="intelligence:modifier" />
+        </rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASSIOPEIA_WIS">
+		<supports>Spherian Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="cassiopeia:dc" value="wisdom:modifier" />
+            <stat name="draco:dc" value="wisdom:modifier" />
+        </rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="DM Secret Weapons" id="ID_DMSW_RACIAL_TRAIT_CASSIOPEIA_CHA">
+		<supports>Spherian Ability</supports>
+        <description/>
+        <sheet display="false"/>
+		<rules>
+            <stat name="cassiopeia:dc" value="charisma:modifier" />
+            <stat name="draco:dc" value="charisma:modifier" />
+        </rules>
+	</element>
+
+    
+	<!-- Constellation Mark Subraces -->
+	<element name="Aquarius" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SPHERIAN_AQUARIUS">
+		<supports>Spherian</supports>
+		<description>
+			<p>As a reaction when you roll for initiative, or as a bonus action on your turn, you can cast the spell bless with this trait. Once you use this trait, you cannot do so again until you finish a long rest. You can also cast the spell as normal using any spell slots you have of the appropriate level.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action/Reaction">
+            <description>As a reaction when you roll for initiative, or as a bonus action on your turn, you can cast the spell Bless with this trait. You can also cast the spell as normal using any spell slots you have of the appropriate level.</description>
+        </sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS" />
+		</rules>
+	</element>
+	<element name="Cassiopeia" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SPHERIAN_CASSIOPEIA">
+		<supports>Spherian</supports>
+		<description>
+			<p>As a reaction when you roll for initiative, or as a bonus action on your turn, you can summon icy, spectral chains that attempt to bind a creature you can see within 90 feet. That creature must succeed on a Dexterity saving throw or take 1d8 cold damage and be restrained until the end of its next turn. The DC for this saving throw is 8 + your Proficiency Bonus + your Intelligence, Wisdom, or Charisma modifier (choose when you select this species). Once you use this trait, you can’t use it again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action/Reaction">
+            <description>You summon icy chains to bind a creature within 90ft. It must make a DC {{cassiopeia:dc}} DEX save or take 1d8 cold damage and be restrained until the end of its next turn.</description>
+        </sheet>
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Cassiopeia)" supports="Spherian Ability" />
+			<stat name="cassiopeia:dc" value="8" />
+			<stat name="cassiopeia:dc" value="proficiency" />
+		</rules>
+	</element>
+	
+	<element name="Draco" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SPHERIAN_DRACO">
+		<supports>Spherian</supports>
+		<description>
+			<p>As a reaction when you roll for initiative, or as a bonus action on your turn, you can let loose a draconic roar that shimmers with magic in a 15-foot radius. Creatures of your choice within that area gain a point of Heroic Inspiration, and all other creatures in the area must succeed on a Wisdom saving throw or be frightened of you until the end of their next turn. The DC for this saving throw is 8 + your Proficiency Bonus + your Intelligence, Wisdom, or Charisma modifier (choose when you select this species). Once you use this trait, you can’t use it again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action/Reaction">
+            <description>You roar in a 15-ft radius. Chosen creatures gain Heroic Inspiration. Others must make a DC {{draco:dc}} WIS save or be frightened until the end of their next turn.</description>
+        </sheet>
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Draco)" supports="Spherian Ability" />
+			<stat name="draco:dc" value="8" />
+			<stat name="draco:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Gemini" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SPHERIAN_GEMINI">
+		<supports>Spherian</supports>
+		<description>
+			<p>As a reaction when you roll for initiative, or as a bonus action on your turn, you can cast the spell mirror image with this trait. Once you use this trait, you cannot do so again until you finish a long rest. You can also cast the spell as normal using any spell slots you have of the appropriate level.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action/Reaction">
+            <description>As a reaction to rolling initiative or a bonus action on your turn, you can cast Mirror Image. You can also cast the spell as normal using any spell slots you have of the appropriate level.</description>
+        </sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" />
+		</rules>
+	</element>
+	<element name="Orion" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SPHERIAN_ORION">
+		<supports>Spherian</supports>
+		<description>
+			<p>As a reaction when you roll for initiative, or as a bonus action on your turn, you mark a creature you can see within 120 feet with a magical rune. You gain a bonus equal to your Proficiency Bonus on attack rolls against that creature for the next minute and cannot have disadvantage on attack rolls against it. Once you use this trait, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action/Reaction">
+            <description>You mark a creature within 120ft. For 1 minute, you gain a +{{proficiency}} bonus to attack rolls against it and can't have disadvantage on them.</description>
+        </sheet>
+	</element>
+	<element name="Pegasus" type="Sub Race" source="DM Secret Weapons" id="ID_DMSW_SUB_RACE_SPHERIAN_PEGASUS">
+		<supports>Spherian</supports>
+		<description>
+			<p>As a reaction when you roll for initiative, or as a bonus action on your turn, you can grant yourself the ability to magically fly. You gain a fly speed equal to your walking speed and can hover for the next 10 minutes. Once you use this trait, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action/Reaction">
+            <description>You gain a flying speed of {{innate speed}}ft and can hover for 10 minutes.</description>
+        </sheet>
+	</element>
+</elements>
