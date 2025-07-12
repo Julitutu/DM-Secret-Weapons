@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <name>DM Secret Weapons</name>
+        <description>Magic Items from DM Secret Weapons</description>
+        <update version="0.1.0">
+            <file name="magic-items.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/magic-items.xml" />
+        </update>
+    </info>
+
+    <element name="Essence Capture Vessel" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_ESSENCE_CAPTURE_VESSEL">
+        <description>
+            <p>Made from simple wood and bearing only a basic runic inscription, the Essence Capture Vessel does not appear outwardly powerful. A creature who puts an ear to the locket can hear a gentle swirling sound.</p>
+            <p>As a reaction when a creature within 30ft of you dies, you can make an Arcana check with a DC equal to that creature’s CR or level +5. On a success, a fragment of the creature’s essence is bound to the Soul Capture Vessel.</p>
+            <p>The Vessel can only house one creature’s essence at a time, and cannot be opened while housing a creature’s essence.</p>
+            <p>The bound creature cannot be restored to life by any means shorter than a <i>Wish</i> spell.</p>
+            <p>In addition, while attuned, the Soul Capture Vessel grants you one Special Trait or damage resistance of the captured creature, at the DMs discretion.</p>
+            <p>For example, the captured essence may grant you a Hezrou’s Magical Resistance, a White Dragon’s Ice Climb, a Giant Hyena’s Rampage, or a Water Elemental’s Acid Damage Resistance ability.</p>
+            <p>As an action, you can release the fragment of essence stored within the Essence Capture Vessel, at which point it loses all abilities associated with the captured creature and cannot be used to seal another essence for 1d8 days.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Legendary</set>
+            <set name="attunement" addition="by a spellcaster">true</set>
+            <set name="name-format">Essence Capture Vessel</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+        </setters>
+    </element>
+    <element name="Countercharm Locket" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_COUNTERCHARM_LOCKET">
+        <description>
+            <p>This tiny locket has the symbol of an open palm etched on the surface, and holds a small mirror inside.</p>
+            <p>If you fail a saving throw against either the frightened or charmed condition, you instead succeed, and the Countercharm crumbles to dust.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Countercharm Locket</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">neck</set>
+        </setters>
+    </element>
+    <element name="Jack’s Magical Music Box" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_JACKS_MAGICAL_MUSIC_BOX">
+        <description>
+            <p>This tiny music box plays a delicate and sorrowful tune when open and echoes out in a 30ft radius. The music plays for 10 minutes, after which the box automatically closes and cannot be reopened until the next dawn.</p>
+            <p>A creature within 30ft of the open box can understand any spoken language it hears. Moreover, when it speaks, any creature that knows at least one language and can hear the target understands what it says.</p>
+            <p>Creatures within range of the open box have advantage on any ability check to interact socially with any creature also within range that isn’t immune to the charmed condition or deafened.</p>
+            <p>Up to one creature can choose to concentrate on the box for the full 10 minute duration of the music. If it does so, it gains the benefits of a short rest. It cannot benefit from this effect of Jack’s Magical Music Box again for 1d4 days.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Jack’s Magical Music Box</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+        </setters>
+    </element>
+    <element name="Vibranite Shield" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_VIBRANITE_SHIELD">
+        <description>
+            <p>While holding this shield, when you take the attack action, you can use one of your attacks to hurl the shield at a creature within 60ft.</p>
+            <p>Make a ranged attack roll against that target using either Strength or Dexterity. On a hit, the target takes 1d8 bludgeoning damage and must succeed on a Strength saving throw (DC 8+your strength or dexterity modifier + your proficiency bonus) or be knocked prone.</p>
+            <p>On a critical hit, the shield ricochets off the creature it strikes and towards another creature within 30ft of your choice. Make a new ranged attack roll against the new target, treating all rolls and damage as a part of the same attack action.</p>
+            <p>As a bonus action, if you have at least one hand free and the shield is within 90ft of you, you can speak a command word to cause the Vibranite Shield to animate and fly into your empty hand.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+            <set name="name-format">Vibranite Shield</set>
+        </setters>
+    </element>
+    <element name="Moonblessed Shield" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_MOONBLESSED_SHIELD">
+        <description>
+            <p>As a reaction, if an enemy hits you with a melee attack, you can activate the Moonblessed Shield to let loose a burst of blinding, radiant light. All creatures within 10ft of you must make a Constitution saving throw (DC 10+your proficiency bonus) or be blinded until the start of their next turn.</p>
+            <p>Once you use this property of the Moonblessed Shield, you cannot do so again until the next dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+            <set name="name-format">Moonblessed Shield</set>
+        </setters>
+    </element>
+    <element name="Familiar’s Brooch" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_FAMILIARS_BROOCH">
+        <description>
+            <p>This magical brooch strengthens the bond between a Familiar and their summoner. While both of you are attuned to the brooch, you gain the following benefits:</p>
+            <ul>
+                <li>You can see through your familiar’s eyes and hear what it hears as a bonus action, rather than an action.</li>
+                <li>You can communicate telepathically with your familiar across a number of miles equal to your proficiency bonus.</li>
+                <li>When you cast a spell that targets only you, you can choose to target your familiar as well.</li>
+                <li>If within 5ft of both you and a hostile enemy, your familiar can use its reaction to feint or otherwise distract your foe, giving them disadvantage on their next melee attack roll made against you.</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Familiar’s Brooch</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">neck</set>
+        </setters>
+    </element>
+    <element name="Fated Coin (Heads)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_FATED_COIN_HEADS">
+        <description>
+            <p>This silver coin bears the head of a dragon on both sides. As an action, you can roll it across your fingers to cast the spell <i>Longstrider</i> at 3rd level. Once used in this way, the Fated Coin (Heads) cannot be used again until the next dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="name-format">Fated Coin (Heads)</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+        </setters>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_LONGSTRIDER" />
+        </rules>
+    </element>
+    <element name="Fated Coin (Tails)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_FATED_COIN_TAILS">
+        <description>
+            <p>This silver coin bears the tail of a dragon on both sides. As an action, you can roll it across your fingers to cast the spell <i>Pass Without A Trace</i>. Once used in this way, the Fated Coin (Tails) cannot be used again until the next dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="name-format">Fated Coin (Tails)</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+        </setters>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_PASS_WITHOUT_TRACE" />
+        </rules>
+    </element>
+    <element name="Fey Longbow" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_FEY_LONGBOW">
+        <description>
+            <p>You gain a +1 bonus to damage and attack rolls made with this weapon</p>
+            <p>This bow has 3 charges and regains 1d4-1 charges each dawn. As a bonus action, you can infuse an arrow with the Fey Longbow’s energy. Until the end of this turn, if you shoot that arrow from the Fey Longbow to a point within the weapon’s normal range, a willing creature within 10ft of you can use its reaction to teleport to an unoccupied space within 5ft of where the arrow landed.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="longbow">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Longbow</set>
+            <set name="name-format">Fey Longbow</set>
+            <set name="enhancement">1</set>
+            <set name="charges">3</set>
+        </setters>
+    </element>
+    <element name="Eldritch Chaos Hat" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_ELDRITCH_CHAOS_HAT">
+        <description>
+            <p>This tattered, frayed hat whispers dark promises of power to its wearer.</p>
+            <p>When you make a ranged spell attack that targets only one creature, the Eldritch Chaos Hat sends a flood of Eldritch energy through you, granting the following effects:</p>
+            <ul>
+                <li>You gain a +1 to your spell attack roll.</li>
+                <li>The spell deals an additional 2d8 force damage on a hit.</li>
+                <li>If the spell misses, the Eldritch Chaos Hat deals 1d8 force damage to you. Damage dealt to you by the Eldritch Chaos Hat can’t be prevented or reduced in any way.</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Eldritch Chaos Hat</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">head</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="1" />
+        </rules>
+    </element>
+    <element name="Chaos Rapier" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_CHAOS_RAPIER">
+        <description>
+            <p>You gain a +1 to attack and damage rolls made with this magic weapon.</p>
+            <p>You cannot cast spells or attack with any other weapon while wielding an activated Chaos Rapier.</p>
+            <p>As a bonus action while attuned to the Chaos Rapier, you can speak its command word to activate it for the next 10 minutes. Roll a d20. On a roll of 10 or less you gain the following benefits:</p>
+            <ul>
+                <li>Attack rolls against you have disadvantage.</li>
+                <li>You can use your reaction to parry when hit by an attack to gain +3 AC, potentially turning a hit into a miss.</li>
+                <li>You move 10ft in a random direction at the end of your turn.</li>
+            </ul>
+            <p>On an 11 or above you gain the following benefits:</p>
+            <ul>
+                <li>You have advantage on all attack rolls</li>
+                <li>You can use your reaction to instantly make a melee weapon attack whenever an enemy moves within 5 ft of you, or makes an attack against any other target while within 5ft of you.</li>
+                <li>You gain 10 temporary hit points or lose 10 hit points at the end of each of your turns, at random.</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="rapier">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Rapier</set>
+            <set name="name-format">Chaos Rapier</set>
+            <set name="enhancement">1</set>
+        </setters>
+    </element>
+    <element name="Chaos Boots" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_CHAOS_BOOTS">
+        <description>
+            <p>While you wear these boots, you can use a Bonus Action and click the boots’ heels together. If you do, the boots impart the following effects:</p>
+            <ul>
+                <li>Your walking speed increases by 20ft</li>
+                <li>You can move up, down and across vertical surfaces and upside down, while leaving your hands free.</li>
+                <li>You gain a climbing speed equal to your walking speed</li>
+                <li>Your body shimmers with pale blue light, emits a gentle humming sound and releases a faint scent of burning. You make stealth checks with disadvantage and gain no benefit from being invisible.</li>
+            </ul>
+            <p>If you click your heels together again, you end these effects. When the boots’ property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Chaos Boots</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">feet</set>
+        </setters>
+        <rules>
+            <stat name="innate speed" value="20" />
+            <stat name="speed:climb" value="innate speed" bonus="base" />
+        </rules>
+    </element>
+    <element name="Chaos Shield" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_CHAOS_SHIELD">
+        <description>
+            <p>You gain an additional +1 to your AC while attuned to this Shield.</p>
+            <p>Whenever a melee attack aimed at you misses by 3 or less, the Chaos Shield blasts the attacker with a burst of force. They take force damage equal to half your AC, rounded down.</p>
+            <p>Whenever an enemy scores a critical hit against you with a melee weapon attack, the Chaos Shield vanishes into the ethereal plane, and you lose any benefit from wielding it. It reappears on the ground in front of you 1d10 minutes after disappearing.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+            <set name="name-format">Chaos Shield</set>
+            <set name="enhancement">1</set>
+        </setters>
+    </element>
+    <element name="Bag of Colding" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BAG_OF_COLDING">
+        <description>
+            <p>This bag functions as a normal bag of holding, with the following benefits:</p>
+            <ul>
+                <li>Organic matter stored in the Bag of Colding is preserved perfectly. A corpse placed in the Bag of Colding is treated as being dead for only as long as the amount of time it has spent outside of the Bag of Colding.</li>
+                <li>You can withdraw a 5ft cube of ice from the Bag of Colding each day. This ice does not count against the carrying capacity of the Bag of Colding.</li>
+                <li>As an action, you can open the bag of colding, aim it at a target and speak a command word. A blast of freezing wind shoots from the bag in a 30ft long line. Any creature in this line must make a constitution saving throw, taking 6d6 cold damage on a successful save or half as much on a failed one. Once you use this feature, it cannot be used again until the next dawn.</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="name-format">Bag of Colding</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="15"></set>
+            <set name="stash" lb="500" weightless="true">true</set>
+        </setters>
+    </element>
+    <element name="Hat of all Fashions" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_HAT_OF_ALL_FASHIONS">
+        <description>
+            <p>While attuned to this hat, you can attempt to read and activate spell scrolls from any spellcasting class, not just your own. When you do so, make an arcana check (DC = 10+the spell’s level). On a success, the spell takes effect.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement" addition="by a spellcaster">true</set>
+            <set name="name-format">Hat of all Fashions</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">head</set>
+        </setters>
+    </element>
+    <element name="The Bard’s Boom Box" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_THE_BARDS_BOOM_BOX">
+        <description>
+            <p>This simple music box has a dial that can be turned from numbers 0-11.</p>
+            <p>If the dial is set to 0, no music can be heard.</p>
+            <p>If the dial is turned to 1, an incredibly faint melody emanates from the box.</p>
+            <p>As the dial is turned higher, the volume increases.</p>
+            <p>At 10, the music is deafeningly loud.</p>
+            <p>If the dial is turned to 11, the music instantly stops, and the Bard’s Boom Box explodes one round later. All creatures within 15ft of the Boom Box when it explodes must make a constitution saving throw, taking 12d6 thunder damage on a failed save, or half as much on a successful one.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">The Bard’s Boom Box</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+        </setters>
+    </element>
+    <element name="Bijou of the Banshee" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BIJOU_OF_THE_BANSHEE">
+        <description>
+            <p>A beautiful, ornately fashioned jewel, housing the magical essence of a Banshee.</p>
+            <p>As an action, you can throw the jewel up to 60ft, whereupon it shatters on contact with the ground or an object or creature.</p>
+            <p>From the point where the Bijou shatters, a mournful wail is released. This wail has no effect on constructs and undead. All other creatures within 30ft that can hear the wail must make a DC 13 constitution saving throw. On a failure, a creature drops to 0 hit points. On a success, a creature takes 10 (3d6) psychic damage.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Bijou of the Banshee</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Bijou of the Sphinx" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BIJOU_OF_THE_SPHINX">
+        <description>
+            <p>A beautiful, ornately fashioned jewel, housing the magical essence of a Sphinx.</p>
+            <p>As an action, you can throw the jewel up to 60ft, whereupon it shatters on contact with the ground or an object or creature.</p>
+            <p>When you hurl this Bijou, choose a number of creatures you can see equal to your proficiency modifier. Those creatures are immune to its effects.</p>
+            <p>From the point where the Bijou shatters, a deafening roar is released. All other creatures within 100ft that can hear the roar must make a DC 18 Constitution saving throw. On a failure, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn’t knocked prone.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Bijou of the Sphinx</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Bijou of the Gold Dragon" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BIJOU_OF_THE_GOLD_DRAGON">
+        <description>
+            <p>A beautiful, ornately fashioned jewel, housing the magical essence of a Gold Dragon.</p>
+            <p>As an action, you can throw the jewel up to 60ft, whereupon it shatters on contact with the ground or an object or creature.</p>
+            <p>From the point where the Bijou shatters, a translucent, white gas is released in a 30ft radius sphere. All other creatures in that area must make a DC 21 Strength saving throw. On a failure, a creature has disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Bijou of the Gold Dragon</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Bijou of the Hezrou" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BIJOU_OF_THE_HEZROU">
+        <description>
+            <p>A beautiful, ornately fashioned jewel, housing the magical essence of a Hezrou.</p>
+            <p>As an action, you can throw the jewel up to 60ft, whereupon it shatters on contact with the ground or an object or creature.</p>
+            <p>From the point where the Bijou shatters, a translucent, green gas is released in a 30ft radius sphere. All other creatures in that area must make a DC 14 Constitution saving throw. On a failure, a creature is poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Bijou of the Hezrou</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Bloodwell Claws" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLOODWELL_CLAWS">
+        <description>
+            <p>These black, fingerless gloves are patterned with a sprawling, crimson, jagged design.</p>
+            <p>As a bonus action, you can activate the Bloodwell Claws for one minute. The gloves grow to form vicious, long claws.</p>
+            <p>Your AC increases by 2, and you have advantage on Charisma (intimidation) checks.</p>
+            <p>In addition, any Sorcerer cantrips with the ranged property also become melee spell attacks with a range of 15 feet. When you strike a creature with a melee weapon cantrip, you can add your charisma modifier to any damage you roll.</p>
+            <p>Once the Bloodwell Claws have been activated, they cannot be used again until the following dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement" addition="by a Sorcerer">true</set>
+            <set name="name-format">Bloodwell Claws</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">hands</set>
+        </setters>
+    </element>
+    <element name="Cursed Vial" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_CURSED_VIAL">
+        <description>
+            <p>Any liquid stored in this vial is imbued with foul, necrotic magic. This cursed liquid is indistinguishable from its normal form. Once the Cursed Vial corrupts a liquid in this way, it cannot do so again until the next dawn.</p>
+            <p>Any creature who ingests the cursed liquid becomes poisoned and takes 1d4 necrotic damage at the start of each of their turns until the curse is lifted by <i>Remove Curse</i> or other similar magic.</p>
+            <p>You can also use an action to apply the cursed liquid to any piercing weapon, though when you hit a target with an attack the curse reacts differently. That target must make a DC 16 constitution saving throw, or take 4d6 necrotic damage and become poisoned until the end of their next turn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="name-format">Cursed Vial</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Scroll of Kraken’s Favour" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SCROLL_OF_KRAKENS_FAVOUR">
+        <description>
+            <p>Using an action to read this scroll causes it to disintegrate as a magical tear in the fabric of space appears at a point you choose within 30ft. The portal is one way only; you can choose to create it as an entrance or exit to your current location when you use the scroll.</p>
+            <p><b><i>Entrance:</i></b> Three gargantuan tentacles emerge through the gateway, and each immediately strikes out at creatures you designate within 30ft of the portal’s opening. Make an attack roll for each tentacle: +17 to hit, dealing 3d6+10 bludgeoning damage each.</p>
+            <p>On a hit, if the target is a Large or smaller creature and that tentacle isn’t already grappling a creature, the target is grappled (escape DC 18). Until this grapple ends, the target is also restrained.</p>
+            <p>You can use an action on each of your turns to command three attacks with the tentacles. The portal closes after 1d4-1 rounds, and the tentacles vanish.</p>
+            <p><b><i>Exit:</i></b> You, and any number of creatures within 30ft that you designate when you use this scroll, can pass through the gateway and emerge at a random, safe location on the Material Plane. When a creature passes through the portal in this way, they gain temporary hit points equal to their level multiplied by their constitution modifier.</p>
+            <p>If a creature you didn’t designate attempts to pass through the portal, they take 4d10 lightning damage and fall prone. The portal closes after 1d4-1 rounds.</p>
+        </description>
+        <setters>
+            <set name="category">Scrolls</set>
+            <set name="type">Scroll</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Scroll of Kraken’s Favour</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Gumdack’s Magic “Wand”" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_GUMDACKS_MAGIC_WAND">
+        <description>
+            <p>Attuning to Gumdack’s Magic “Wand” grants you proficiency with firearms.</p>
+            <p>This curious magic “wand” is hewn from metal. It can be held in one hand, and can be loaded with any tiny, non-magical object (such as a pebble) as a bonus action.</p>
+            <p>As an action on your turn, you can make a ranged weapon attack with the wand against a creature within 90ft, adding your spellcasting modifier to attack and damage rolls, as the “wand” magically hurls its ammunition.</p>
+            <p>On a hit, the creature takes a Xd4 bludgeoning damage, where X is equal to your proficiency modifier.</p>
+            <p>When Gumdack’s Magic “Wand” is fired, it lets loose a loud bang and billows out a cloud of black smoke. The area in a 5ft radius of the wand becomes heavily obscured by smoke until the start of your next turn.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="firearm">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement" addition="by a spellcaster">true</set>
+            <set name="weapon">ID_WOTC_DMG_WEAPON_PISTOL</set>
+            <set name="name-format">Gumdack’s Magic “Wand”</set>
+            <set name="cost" currency="gp">0</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_WOTC_DMG_PROFICIENCY_WEAPON_FIREARMS" />
+        </rules>
+    </element>
+    <element name="Cantrip Cube" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_CANTRIP_CUBE">
+        <description>
+            <p>This small, magical box contains one random stored cantrip from the following list:</p>
+            <ul>
+                <li>Dancing Lights</li>
+                <li>Druidcraft</li>
+                <li>Light</li>
+                <li>Minor Illusion</li>
+                <li>Mold Earth</li>
+                <li>Rainfall</li>
+                <li>Prestidigitation</li>
+                <li>Thaumaturgy</li>
+            </ul>
+            <p>Any player can use a bonus action to activate one effect the held cantrip can produce, or you can set the box to repeat one effect the held cantrip can produce automatically every minute, until you use an action while holding the box to end this effect. If a spell requires concentration, it lasts for one minute.</p>
+            <p>If the box would force a creature to make a saving throw, the DC for that saving throw is 13.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="name-format">Cantrip Cube</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+        </setters>
+    </element>
+    <element name="Pumpkinhead Cowl" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_PUMPKINHEAD_COWL">
+        <description>
+            <p>While wearing this cowl, your AC increases by 1, you become immune to the frightened condition, and you can see in darkness, both magical and nonmagical, to a distance of 120ft.</p>
+            <p>In addition, while wearing the cowl, you can cast the spell <i>Phantom Steed</i> as a ritual once per dawn, except the duration of the spell increases to 8 hours.</p>
+            <p>Finally, while wearing the cowl, you can use an action to remove your head from your shoulders and hold it.</p>
+            <p>In this form, you continue to see through your head and can control your body as normal. Your head cannot move on its own, shares your body’s AC, has 13 hit points, and remains conscious while your body takes a long rest or is knocked unconscious.</p>
+            <p>If you cast a spell that targets yourself, it targets both your head and your body, even if they are apart. If a spell or ability would change the form of your body, only your body changes, and your head remains the same within the Pumpkinhead Cowl.</p>
+            <p>If your head is destroyed while separated from your form in the Pumpkinhead Cowl, only the Cowl is destroyed, and your head instantly, magically reforms on your body.</p>
+            <p>You can reattach your head to your form by using an action to hold it to your neck.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Pumpkinhead Cowl</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">head</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="1" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <stat name="darkvision:range" value="120" bonus="base" />
+            <grant type="Spell" id="ID_PHB_SPELL_PHANTOM_STEED" />
+        </rules>
+    </element>
+    <element name="Pendant of Life &amp; Death" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_PENDANT_OF_LIFE_DEATH">
+        <description>
+            <p>This glistening pendant shifts in colour, reflecting how close its weilder strays to the land of the dead. It has 4 charges, and regains 1d4 charges each dawn.</p>
+            <p>As a bonus action while wearing this pendant, you can expend a charge to grant another creature within 30ft temporary hit points equal to your proficiency bonus + your constitution modifier. You can use this ability only if your remaining hit points are over half that of your hit point total.</p>
+            <p>As a bonus action while wearing this pendant, you can expend a charge to curse another creature within 60ft. That creature takes 1d8 + your constitution modifier necrotic damage. You can use this ability only if your remaining hit points are below half that of your hit point total.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Pendant of Life &amp; Death</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">neck</set>
+            <set name="charges">4</set>
+        </setters>
+    </element>
+    <element name="Cloak of the Winds" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_CLOAK_OF_THE_WINDS">
+        <description>
+            <p>This billowing cloak gives +5 to movement speed and +1 AC while attuned.</p>
+            <p><b><i>Hidden Potential.</i></b> If this cloak is attuned to by a character with a movement speed of 50 or above, they gain a flying speed equal to their walking speed and an additional +1 AC.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Cloak of the Winds</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">shoulders</set>
+        </setters>
+        <rules>
+            <stat name="innate speed" value="5" />
+            <stat name="ac:misc" value="1" />
+        </rules>
+    </element>
+    <element name="Bag of Sleeping Darkness" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BAG_OF_SLEEPING_DARKNESS">
+        <description>
+            <p>This item behaves as an ordinary bag of holding. Attuning to the Bag of Sleeping Darkness does nothing, unless you are of the Chaotic Evil alignment.</p>
+            <p><b><i>Hidden Potential.</i></b> If this bag is attuned to by a creature with the Chaotic Evil alignment, it acts as a Bag of Devouring if used by anyone other than them.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Bag of Sleeping Darkness</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="15"></set>
+            <set name="stash" lb="500" weightless="true">true</set>
+        </setters>
+    </element>
+    <element name="Colossal Greatsword" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_COLOSSAL_GREATSWORD">
+        <description>
+            <p>This enormous sword shrinks when attuned to, becoming the appropriate size and weight for the user.</p>
+            <p>Small characters can wield this weapon as if it didn’t have the heavy property.</p>
+            <p>In addition, melee attacks made with this weapon deal an additional 1d4 bludgeoning damage.</p>
+            <p><b><i>Hidden Potential.</i></b> If this sword is wielded by a player with a Strength score of 20 or above, it grows to be one size larger, becoming oversized for the user.</p>
+            <p>They are able to wield it without penalty. It gains the reach property, and deals an additional d6 damage on attacks.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="greatsword">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Greatsword</set>
+            <set name="name-format">Colossal Greatsword</set>
+        </setters>
+    </element>
+    <element name="Beast Bomb" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BEAST_BOMB">
+        <description>
+            <p>As an action you can hurl this glowing red orb up to 30 feet. When it touches the ground, it bursts open and is destroyed, and conjures a fey spirit in the form of a beast. Roll a d6 and consult the table below to determine the beast that appears. If you roll a 6, two spirits appear in that form. The spirit uses that beast’s statistics, and vanishes after 24 hours, or when it reaches 0 hit points.</p>
+            <p>The spirit is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.</p>
+            <table>
+                <thead>
+                    <tr><td>d6</td><td>Beast</td></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Dire Wolf</td></tr>
+                    <tr><td>2</td><td>Giant Eagle</td></tr>
+                    <tr><td>3</td><td>Giant Elk</td></tr>
+                    <tr><td>4</td><td>Giant Scorpion</td></tr>
+                    <tr><td>5</td><td>Saber-Toothed Tiger</td></tr>
+                    <tr><td>6</td><td>2x Brown Bear</td></tr>
+                </tbody>
+            </table>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="name-format">Beast Bomb</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Zombie Bomb" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_ZOMBIE_BOMB">
+        <description>
+            <p>As an action you can hurl this glowing yellow orb up to 30 feet. When it touches the ground, it bursts open and is destroyed, and conjures a fey spirit in the form of an undead. Roll a d6 and consult the table below to determine the undead that appears. If you roll a 6, two spirits appear in that form. The spirit uses that undead’s statistics, and vanishes after 24 hours, or when it reaches 0 hit points.</p>
+            <p>The spirit is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.</p>
+            <table>
+                <thead>
+                    <tr><td>d6</td><td>Undead</td></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Wight</td></tr>
+                    <tr><td>2</td><td>Ghost</td></tr>
+                    <tr><td>3</td><td>Vampire Skeleton</td></tr>
+                    <tr><td>4</td><td>Wraith</td></tr>
+                    <tr><td>5</td><td>Mummy</td></tr>
+                    <tr><td>6</td><td>2x Minotaur Skeleton</td></tr>
+                </tbody>
+            </table>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="name-format">Zombie Bomb</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Monstrosity Bomb" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_MONSTROSITY_BOMB">
+        <description>
+            <p>As an action you can hurl this glowing purple orb up to 30 feet. When it touches the ground, it bursts open and is destroyed, and conjures a fey spirit in the form of a monstrosity. Roll a d6 and consult the table below to determine the monstrosity that appears. If you roll a 6, two spirits appear in that form. The spirit uses that monstrosity’s statistics, and vanishes after 24 hours, or when it reaches 0 hit points.</p>
+            <p>The spirit is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.</p>
+            <table>
+                <thead>
+                    <tr><td>d6</td><td>Monstrosity</td></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Chimera</td></tr>
+                    <tr><td>2</td><td>Drider</td></tr>
+                    <tr><td>3</td><td>Gorgon</td></tr>
+                    <tr><td>4</td><td>Roper</td></tr>
+                    <tr><td>5</td><td>Bulette</td></tr>
+                    <tr><td>6</td><td>2x Owlbear</td></tr>
+                </tbody>
+            </table>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="name-format">Monstrosity Bomb</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+    </element>
+    <element name="Powder of Scrying" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_POWDER_OF_SCRYING">
+        <description>
+            <p>This small packet contains 1d6+4 pinches of silver powder. You can use an action to sprinkle a pinch over a basin of water or a puddle, and cast the spell <i>Scrying</i> without any other components.</p>
+            <p>You can use an action to consume one pinch of the silver powder. If you do, you cannot be detected by any divination magic or perceived through magical scrying sensors for the next 1d4 weeks.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="name-format">Powder of Scrying</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="stackable">true</set>
+        </setters>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SCRYING" />
+        </rules>
+    </element>
+    <element name="Bracers of Unyielding Fury (+1)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BRACERS_OF_UNYIELDING_FURY_1">
+        <description>
+            <p>To attune to these bracers, you must rage while wearing them. The bracers then painlessly bind to your flesh, and cannot be parted from you without your consent.</p>
+            <p>While attuned to the bracers, your unarmed strikes deal 1d8 bludgeoning damage and you gain a +1 bonus to your melee attack and damage rolls.</p>
+            <p>In addition, if you would be killed or reduced to 0 hit points while raging, your rage ends and you fall to 1 hit point instead. This property of the bracers can’t be used again until the next dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement" addition="by a barbarian">true</set>
+            <set name="name-format">Bracers of Unyielding Fury +1</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">arms</set>
+            <set name="enhancement">1</set>
+        </setters>
+    </element>
+    <element name="Bracers of Unyielding Fury (+2)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BRACERS_OF_UNYIELDING_FURY_2">
+        <description>
+            <p>To attune to these bracers, you must rage while wearing them. The bracers then painlessly bind to your flesh, and cannot be parted from you without your consent.</p>
+            <p>While attuned to the bracers, your unarmed strikes deal 1d8 bludgeoning damage and you gain a +2 bonus to your melee attack and damage rolls.</p>
+            <p>In addition, if you would be killed or reduced to 0 hit points while raging, your rage ends and you fall to 1 hit point instead. This property of the bracers can’t be used again until the next dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement" addition="by a barbarian">true</set>
+            <set name="name-format">Bracers of Unyielding Fury +2</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">arms</set>
+            <set name="enhancement">2</set>
+        </setters>
+    </element>
+    <element name="Bracers of Unyielding Fury (+3)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BRACERS_OF_UNYIELDING_FURY_3">
+        <description>
+            <p>To attune to these bracers, you must rage while wearing them. The bracers then painlessly bind to your flesh, and cannot be parted from you without your consent.</p>
+            <p>While attuned to the bracers, your unarmed strikes deal 1d8 bludgeoning damage and you gain a +3 bonus to your melee attack and damage rolls.</p>
+            <p>In addition, if you would be killed or reduced to 0 hit points while raging, your rage ends and you fall to 1 hit point instead. This property of the bracers can’t be used again until the next dawn.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement" addition="by a barbarian">true</set>
+            <set name="name-format">Bracers of Unyielding Fury +3</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">arms</set>
+            <set name="enhancement">3</set>
+        </setters>
+    </element>
+    <element name="Sword of the Final Hour" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SWORD_OF_THE_FINAL_HOUR">
+        <description>
+            <p>You gain a +1 to attack and damage rolls while using this weapon.</p>
+            <p><b><i>Hidden Potential.</i></b> If you have less than 10% of your total hit points, you make attack rolls with this sword at advantage, and it deals an additional 1d6 damage on a hit.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="greatsword">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Greatsword</set>
+            <set name="name-format">Sword of the Final Hour</set>
+            <set name="enhancement">1</set>
+        </setters>
+    </element>
+    <element name="Ring of Fortuity" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RING_OF_FORTUITY">
+        <description>
+            <p>While attuned to this ring, any critical hit against you becomes a normal hit.</p>
+            <p><b><i>Hidden Potential.</i></b> If you missed an attack since the start of your turn, all your attack rolls score a critical hit on a natural 1.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Ring</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="name-format">Ring of Fortuity</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0"></set>
+            <set name="slot">ring</set>
+        </setters>
+    </element>
+    <element name="Bow of Blasting" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_BLASTING">
+        <description>
+            <p>Once per turn, when you hit a creature with a ranged attack roll using this bow, you can add 1d4 bludgeoning damage to the damage roll.</p>
+            <p><b><i>Hidden Potential.</i></b> If you hit a creature within 5 feet of you with a ranged attack roll using this bow, they are also pushed back 20 feet away from you in a straight line.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="longbow">Weapon</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Longbow</set>
+            <set name="name-format">Bow of Blasting</set>
+        </setters>
+    </element>
+    <element name="Incineration Trident" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_INCINERATION_TRIDENT">
+        <description>
+            <p>When you deal damage to a creature with this trident, you can choose to replace the piercing damage with fire damage.</p>
+            <p><b><i>Trial:</i></b> Reduce 20 different, worthy, hostile enemies to 0 hit points with fire damage while attuned to this weapon.</p>
+            <p><b><i>Hidden Ability.</i></b> If you have completed the Incineration Trident’s trial, add 1d6 fire damage to all damage rolls made with this weapon.</p>
+            <p>In addition, if you throw the weapon or drop it, you can speak a command word to cause it to reappear in your open hand in a flash of flame.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="trident">Weapon</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Trident</set>
+            <set name="name-format">Incineration Trident</set>
+        </setters>
+    </element>
+    <element name="Gravity Axe" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_GRAVITY_AXE">
+        <description>
+            <p>You have advantage on attack rolls made with this weapon against creatures that are at least one size smaller than you.</p>
+            <p><b><i>Trial:</i></b> Shove 10 different, worthy, hostile enemies prone while attuned to this weapon.</p>
+            <p><b><i>Hidden Ability.</i></b> If you have completed the Gravity Axe’s trial, as a bonus action, you can grow one size larger. This change lasts for the next 10 minutes. Once you use this feature, you cannot do so again until you finish a short rest.</p>
+            <p>In addition, once per turn, if you hit a creature that’s smaller than you with this weapon, they fall prone.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="greataxe">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Greataxe</set>
+            <set name="name-format">Gravity Axe</set>
+        </setters>
+    </element>
+    <element name="Sword of The Terror Beast" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SWORD_OF_THE_TERROR_BEAST">
+		<description>
+			<p>The Sword of The Terror Beast is a vicious, spiked blade that causes small tremors in the earth when clashing in combat.</p>
+			<p>You gain a +3 bonus to attack and damage rolls made with this magic weapon, and you can make one additional attack with it when you take the attack action. In addition, the Sword of The Terror Beast ignores resistance to slashing damage.</p>
+			<p>If you hit a creature twice in the same turn with the Sword of The Terror Beast, that creature falls prone.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="greatsword">Weapon</set>
+			<set name="rarity">Artifact</set>
+			<set name="attunement">true</set>
+			<set name="weapon">Greatsword</set>
+			<set name="enhancement">3</set>
+			<set name="name-format">Sword of The Terror Beast</set>
+		</setters>
+	</element>
+	<element name="Helm of The Terror Beast" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_HELM_OF_THE_TERROR_BEAST">
+		<description>
+			<p>The Helm of The Terror Beast is a large, horned helmet that resizes to fit perfectly around the head of its wearer. It is coarse and rough to the touch.</p>
+			<p>While wearing the Helm, you have advantage on all saving throws to resist magical effects, and have blindsight with a range of 120 feet. Within that range, you can effectively see anything that isn’t behind total cover, even if you’re blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
+			<p><b><i>Terror Beast Incarnate.</i></b> If you are attuned to the Helm of The Terror Beast, the Sword of The Terror Beast, and the Shield of The Terror Beast, you can use an action to summon a Tarrasque. It appears in an unoccupied space within 120 feet of you.</p>
+			<p>After you use this feature, the Helm, Sword, and Shield of the Terror Beast lose all their magical power for the next 100 years, functioning as ordinary, non-magical pieces of equipment.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Artifact</set>
+			<set name="attunement">true</set>
+			<set name="slot">head</set>
+			<set name="name-format">Helm of The Terror Beast</set>
+		</setters>
+		<rules>
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+			<stat name="blindsight:range" value="120" />
+		</rules>
+	</element>
+	<element name="Rune of the Mighty" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_THE_MIGHTY">
+		<description>
+			<p>This rune enhances its wearer’s Strength. It can appear on a piece of jewellery, an item of clothing, an engraving on a weapon, or as a tattoo.</p>
+			<p>While wearing the rune, a small creature with a Strength score of 15 or above can ignore the “Heavy” property of weapons they wield.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Common</set>
+			<set name="name-format">Rune of the Mighty</set>
+		</setters>
+	</element>
+	<element name="Giant Blood Quill" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_GIANT_BLOOD_QUILL">
+		<description>
+			<p>This quill is fashioned using the blood of a giant. The Giant Blood Quill can be used when scribing a spell into a Wizard’s spellbook, or when creating a spell scroll. When it is used in this way, the spell that is scribed gains the following effects:</p>
+			<ul>
+				<li>If this spell targets a giant with an attack roll, add 1d6 to that attack roll.</li>
+				<li>If this spell forces a giant to make a saving throw, subtract 1d4 from that saving throw.</li>
+			</ul>
+			<p>Once the Giant Blood Quill has been used to scribe a spell, it loses all magical properties and becomes a normal quill.</p>
+			<p>At the GMs discretion, other Blood Quills may exist or be crafted from the blood of different creature types to target them instead.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Giant Blood Quill</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="Rune of the Swift" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_THE_SWIFT">
+		<description>
+			<p>This rune enhances its wearer’s Dexterity. It can appear on a piece of jewellery, an item of clothing, an engraving on a weapon, or as a tattoo.</p>
+			<p>While wearing the rune, a creature with a Dexterity score of 18 or above can ignore the “Loading” property of weapons they wield.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Rune of the Swift</set>
+		</setters>
+	</element>
+	<element name="Detonation Potato" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_DETONATION_POTATO">
+		<description>
+			<p>A deadly, cursed potato. As an action, a creature can hurl the Detonation Potato in a straight line up to 60 feet, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw (DC 15). On a failed save, the object strikes the target and stops moving, dealing 1d4 bludgeoning damage.</p>
+			<p>When the Detonation Potato hits a target, roll 1d6, plus an additional 1d6 for each time the potato has been thrown since the last dawn.</p>
+			<p>If the result on any die rolled is a 6, the potato explodes, and all creatures in a 15-foot radius must succeed on a Dexterity saving throw, or take 4d8 fire damage.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="name-format">Detonation Potato</set>
+			<set name="cursed">true</set>
+		</setters>
+	</element>
+	<element name="Spark Gauntlets" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SPARK_GAUNTLETS">
+		<description>
+			<p>While wearing these gauntlets, you can cast the spell <i>shocking grasp</i> as an action, and your first unarmed strike each turn deals an additional 1d4 lightning damage.</p>
+			<p>In addition, you can attempt to use the gauntlets to revive a creature that has died within the last minute. By touching the corpse with the gauntlets, you can administer a magical jolt of lightning. Make an Arcana check (DC 18). On a success, the target returns to life with 1 hit point.</p>
+			<p>The Spark Gauntlets cannot revive a creature who has died of old age, nor can it restore missing body parts. Once this feature of the gauntlets has been used, it cannot be used again until the next dawn.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="slot">hands</set>
+			<set name="name-format">Spark Gauntlets</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHOCKING_GRASP" />
+		</rules>
+	</element>
+	<element name="Rune of Sight" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_SIGHT">
+		<description>
+			<p>This rune empowers its wearer’s sight. It can appear on a piece of jewellery, an item of clothing, an engraving on a weapon, or as a tattoo.</p>
+			<p>While wearing the rune, attacking at long range doesn’t impose disadvantage on your ranged attack rolls.</p>
+			<p>In addition, if you have a Constitution score of 15 or above, the maximum range of your ranged weapons and cantrips increases by 100 feet.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Rune of Sight</set>
+		</setters>
+	</element>
+	<element name="Rune of Brawn" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_BRAWN">
+		<description>
+			<p>This rune empowers its wearer’s strength. It can appear on a piece of jewellery, an item of clothing, an engraving on a weapon, or as a tattoo.</p>
+			<p>While wearing the rune, if you have a Strength score of 20 or above, you can wield weapons with the two-handed property in only one hand.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="name-format">Rune of Brawn</set>
+		</setters>
+	</element>
+	<element name="Mega Mushroom" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_MEGA_MUSHROOM">
+		<description>
+			<p>This seemingly simple mushroom is bursting with transmutation magic. As an action, a creature can ingest the mushroom, doubling its size in all dimensions, and multiplying its weight by eight. This growth increases its size by one category - from Medium to Large, for example. If there isn’t enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. The target also has advantage on Strength checks and Strength saving throws, and any bludgeoning damage it deals to other creatures as a result of falling on them is doubled. The target’s clothing and weapons also grow to match its new size. While these weapons are enlarged, the target’s attacks with them deal 1d4 extra damage. These effects last for the next minute.</p>
+			<p>While under the effects of a mega mushroom, a creature can use its reaction when dealt damage to reduce that damage to 0. If it does so, the magical effects of the mega mushroom end instantly, and the creature, its clothing, and weapons return to their original size.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Mega Mushroom</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="Blue Shell" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLUE_SHELL">
+		<description>
+			<p>This magical, flying shell is bursting with evocation magic, and is both feared and revered for its power to equalise the playing field in a one-sided battle. As an action, a creature can hurl this shell into the air, where it spirals and hovers 30 feet above them. On initiative count 20 of the following round, the blue shell dives at blistering speed towards the creature with the current highest hit points within 120 feet of it, detonating on contact. That creature must make a Dexterity saving throw (DC 18), taking 10d12 force damage on a failed save, or half as much on a success.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="name-format">Blue Shell</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="Fire Flower" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_FIRE_FLOWER">
+		<description>
+			<p>This spicy plant crackles with evocation magic. As an action, a creature can ingest the flower, gaining the ability to cast the cantrip <i>firebolt</i> as an action and a bonus action for the next minute. Constitution, Intelligence, Wisdom, or Charisma is the spellcasting modifier for this spell (choose when you ingest the flower).</p>
+			<p>While under the effects of a fire flower, a creature can use its reaction when dealt damage to reduce that damage to 0. If it does so, the magical effects of the fire flower end instantly.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="name-format">Fire Flower</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="1-Up Mushroom" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_1UP_MUSHROOM">
+		<description>
+			<p>This small, green mushroom hums and sings with necromancy magic. As an action, a creature can ingest the mushroom, gaining the power to recover from lethal damage.</p>
+			<p>The first time that creature would drop to 0 hit points as a result of taking damage, they instead roll any number of available Hit Dice, add their Constitution modifier, and drop to that hit point total instead. The effects of the 1-Up Mushroom then end. If the creature is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the effects of the 1-Up Mushroom ends.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="name-format">1-Up Mushroom</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="Ice Flower" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_ICE_FLOWER">
+		<description>
+			<p>This freezing plant exudes a steady, rising mist that whispers with evocation magic. As an action, a creature can ingest the flower, gaining the ability to cast the cantrip <i>ray of frost</i> as an action and a bonus action for the next minute. Constitution, Intelligence, Wisdom, or Charisma is the spellcasting modifier for this spell (choose when you ingest the flower).</p>
+			<p>While under the effects of an ice flower, a creature can choose to use its reaction when dealt damage to reduce that damage to 0. If it does so, the magical effects of the ice flower end instantly.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="name-format">Ice Flower</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="Super Star" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SUPER_STAR">
+		<description>
+			<p>This tiny, gleaming star radiates incredible abjuration magic. As a bonus action, a creature touching the star can activate its power. The star dissipates into motes of golden light, and that creature gains immunity to all damage and radiates bright light in a 30-foot radius for the next minute.</p>
+			<p>In addition, the first time on each turn that a creature grapples or otherwise comes into direct contact with a creature empowered by the super star, it takes 6d10 radiant damage.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Legendary</set>
+			<set name="name-format">Super Star</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<element name="Artillerist’s Shield" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_ARTILLERISTS_SHIELD">
+		<description>
+			<p>This mighty shield is fortified with abjuration magic… and big freaking gun. While attuned to it, you gain a +1 bonus to your AC.</p>
+			<p>The Artillerist’s Shield has 7 charges, and regains 1d6 each dawn. As an action, you can expend one charge to fire the magical cannon built into the shield, choosing from one of the options below.</p>
+			<p><b><i>Cannonshot.</i></b> The cannon magically generates a weighty, iron cannonball before firing. Make a ranged attack roll against a creature within 120 feet. On a hit, the cannonshot deals 3d10 bludgeoning damage, and the creature must succeed on a DC 15 Strength saving throw or fall prone.</p>
+			<p><b><i>Flametongue.</i></b> The cannon expels a jet of flame in a 15-foot cone. Creatures in that area must make a DC 15 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much on a success.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Artillerist’s Shield</set>
+			<set name="enhancement">1</set>
+			<set name="charges">7</set>
+		</setters>
+	</element>
+	<element name="Mask of the Greatwyrm" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_MASK_OF_THE_GREATWYRM">
+		<description>
+			<p>This mask bears the visage of a snarling dragon. While wearing it, you have advantage on Wisdom (Perception) and Charisma (Intimidation) checks, and you have darkvision out to 60 feet. If you already have darkvision, its range is extended by 60 feet instead.</p>
+			<p><b><i>Special Property: Greatwym Assembled.</i></b> While attuned to Mask of the Greatwyrm, Sword of the Greatwyrm, and Shield of the Greatwyrm, you can use an action to cast draconic soul*, without a spell slot or components. When you cast it in this way, you can use Constitution for your spellcasting modifier, it doesn’t require concentration, and it lasts for the duration. Once this property of the mask has been used, it cannot be used again for 1d4 days.</p>
+			<p class="reference">*see page 11</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+			<set name="slot">head</set>
+			<set name="name-format">Mask of the Greatwyrm</set>
+		</setters>
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" />
+		</rules>
+	</element>
+	<element name="Shield of the Greatwyrm" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SHIELD_OF_THE_GREATWYRM">
+		<description>
+			<p>This shield was forged in dragonfire, and bears the gilded crest of a dragon. When you take fire damage, you can use a reaction to draw upon the draconic magic of this shield. Until the end of your next turn: you resist fire damage (including against the triggering damage), and any creature within 10 feet of you that makes an attack roll against you takes 1d6 fire damage.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Shield of the Greatwyrm</set>
+		</setters>
+	</element>
+	<element name="Lantern of the Crimson Drake" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_LANTERN_OF_THE_CRIMSON_DRAKE">
+		<description>
+			<p>This ornate lantern bears the head of a dragon atop its case. A creature can use an action to light the lantern, upon which the magical fire within the lantern burns indefinitely, even when starved of oxygen or underwater. While the lantern is uncovered, it sheds bright light in a 15-foot radius and dim light for a further 15 feet.</p>
+			<p>A creature attuned to the lantern can use an action to blow the flame out. When it does so, the light is extinguished as a jet of flame issues from the mouth of the dragon atop the lantern in a 15-foot cone. Creatures in that area must succeed on a DC 15 Dexterity saving throw, taking 4d6 fire damage on a failed save, or half as much on a success.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Lantern of the Crimson Drake</set>
+		</setters>
+	</element>
+	<element name="Helm of the Fathomless" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_HELM_OF_THE_FATHOMLESS">
+		<description>
+			<p>This helm is adorned with interlocking tentacles. While attuned to it, you have a +1 bonus to your AC, you have a swim speed equal to your walking speed, and you can breathe underwater.</p>
+			<p>Additionally, you can speak telepathically with any creature within 300 feet that has a swim speed, granting them the ability to understand your language and telepathically communicate with you in return. As long as you have not dealt damage to a creature with a swim speed, you also have advantage on Charisma checks made to interact with it.</p>
+			<p><b><i>Special Property: Fathomless Call.</i></b> This helm has 8 charges. While attuned to the Helm of the Fathomless, Trident of the Fathomless, and Shield of the Fathomless, you can use a bonus action and expend a charge to summon a Huge, spectral tentacle in an unoccupied space within 60 feet of you. When the tentacle appears, and as a bonus action on each of your turns, you can telepathically command it to ensnare or bludgeon a Huge or smaller creature within 30 feet of it. The target must succeed on a DC 18 Strength saving throw or take 4d10 bludgeoning damage if you choose bludgeon, or become grappled by the tentacle for the next minute if you choose ensnare. The tentacle can only grapple one creature at a time. A grappled creature can use its action to reattempt the saving throw, escaping on a success. The tentacle remains for one minute, after which time it vanishes.</p>
+			<p>When the last charge of the helm has been expended, it must be submerged in seawater for 8 days, after which time it regains all expended charges.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="slot">head</set>
+			<set name="charges">8</set>
+			<set name="name-format">Helm of the Fathomless</set>
+		</setters>
+		<rules>
+			<stat name="ac:misc" value="1" />
+			<stat name="speed:swim" value="speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Trident of the Fathomless" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_TRIDENT_OF_THE_FATHOMLESS">
+		<description>
+			<p>While attuned to this magical trident, you can speak a command word (no action required) to have it dissolve into seawater and reappear in your empty hand. The trident must be on the same plane of existence for you to use this effect.</p>
+			<p>You have a +1 bonus to attack and damage rolls made with the Trident of the Fathomless.</p>
+			<p>Additionally, when you take the Attack action, you can stamp the trident into the ground at your feet in place of one attack. If you do, choose a 10-foot square within 60 feet of you. That area becomes coated in slippery seaweed for the next minute. The area is difficult terrain, and the first time on a turn a creature enters that area or starts its turn there, it must succeed on a DC 15 Dexterity saving throw or fall prone.</p>
+			<p>If you are underwater, you can raise the trident over your head in place of one attack. If you do, a 5-foot cube of water centered on a point you choose within 60 feet boils, dealing 3d10 fire damage to all creatures within that area. This damage ignores fire resistance.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="trident">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="weapon">Trident</set>
+			<set name="enhancement">1</set>
+			<set name="name-format">Trident of the Fathomless</set>
+		</setters>
+	</element>
+	<element name="Shield of the Fathomless" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SHIELD_OF_THE_FATHOMLESS">
+		<description>
+			<p>This shield bears the crest of a kraken. While underwater, it has the properties of an animated shield.</p>
+			<p>Additionally, if a creature within 10 feet of you hits you with an attack, you can use a reaction to conjure a torrent of water that blasts from the shield. The triggering creature must succeed on a DC 15 Strength saving throw or take 1d8 bludgeoning damage and be pushed back 20 feet.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Shield of the Fathomless</set>
+		</setters>
+	</element>
+	<element name="Vial of Kraken’s Ink" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_VIAL_OF_KRAKENS_INK">
+		<description>
+			<p>This vial contains a jet-black, alchemical mixture known as Kraken’s Ink, which has several unique properties. The vial has enough ink for eight uses. As a bonus action, you can uncork the vial and use it in one of the following ways:</p>
+			<ul>
+				<li><b>Body Paint.</b> A creature painted with Kraken’s Ink gains a swim speed equal to their walking speed and can breathe underwater for the next eight hours.</li>
+				<li><b>Poison.</b> You can apply the Kraken’s Ink to food or drink. It is odorless and tasteless, but jet-black in colour. A creature who ingests the Kraken’s Ink must succeed on a DC 15 Constitution saving throw or be unable to breathe outside of water for next eight hours.</li>
+				<li><b>Upturn.</b> While underwater, upturning the vial causes it to form a cloud of black ink in a 20-foot radius. That area is heavily obscured to all creatures, except those painted with Kraken’s Ink (see Body Paint). A strong current disperses the cloud, which otherwise disappears at the end of your next turn.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Vial of Kraken’s Ink</set>
+			<set name="stackable">true</set>
+			<set name="charges">8</set>
+		</setters>
+	</element>
+
+    <!-- Ioun Stones -->
+	<element name="Ioun Stone of Speed" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_SPEED">
+		<description>
+			<p>Your movement speed increases by 10 feet and you have advantage on initiative rolls while this silver stone rapidly orbits your head.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Speed</set>
+		</setters>
+		<rules>
+			<stat name="innate speed" value="10" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_INITIATIVE_ADVANTAGE" />
+		</rules>
+	</element>
+	<element name="Ioun Stone of Resistance (Legendary)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_RESISTANCE_LEGENDARY">
+		<description>
+			<p>When you fail a saving throw, you can choose to succeed instead. Once this property of the Ioun Stone of Resistance has been used, it can’t be used again until the next dawn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Resistance</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Beastcalling" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_BEASTCALLING">
+		<description>
+			<p>While this jagged stone orbits your head, you can use an action to conjure a Fey spirit in the form of a Beast of your choice that is CR 1 or below. The Beast is friendly to you and your companions, and obeys your commands. It disappears after 1 hour, or when it falls to 0 hit points. Once this property of the Ioun Stone of Beastcalling has been used, it can’t be used again until the next dawn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Beastcalling</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Superior Beastcalling" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_SUPERIOR_BEASTCALLING">
+		<description>
+			<p>While this jagged stone orbits your head, you can use an action to conjure a Fey spirit in the form of a Beast of your choice that is CR 8 or below. The Beast is friendly to you and your companions, and obeys your commands. It disappears after 1 hour, or when it falls to 0 hit points. Once this property of the Ioun Stone of Superior Beastcalling has been used, it can’t be used again until the next dawn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Superior Beastcalling</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Redundancy" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_REDUNDANCY">
+		<description>
+			<p>While this jet black sphere orbits your head, your maximum attunement slots increases by 1.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Redundancy</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Flight" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_FLIGHT">
+		<description>
+			<p>While this biconcave crystal orbits your head, you have a fly speed equal to your walking speed.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Flight</set>
+		</setters>
+		<rules>
+			<stat name="speed:fly" value="speed" bonus="base" />
+		</rules>
+	</element>
+	<element name="Ioun Stone of Teleportation" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_TELEPORTATION">
+		<description>
+			<p>While this flat, pink disc orbits your head, you can use a Bonus Action to teleport up to 30 feet to an unoccupied space you can see.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Teleportation</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Ferocity" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_FEROCITY">
+		<description>
+			<p>While this jagged hunk of graphite orbits your head, your unarmed strikes deal 1d8 force damage, and when you take the Attack action, you can make a single unarmed strike as a Bonus Action that turn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Ferocity</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Rejuvenation" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_REJUVENATION">
+		<description>
+			<p>While this perfectly spherical blue stone orbits your head, you can use an action to gain the full benefits of a short rest. Once this property of the Ioun Stone of Rejuvenation has been used, it can’t be used again until the next dawn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Rejuvenation</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Obstinanance" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_OBSTINANANCE">
+		<description>
+			<p>While this translucent gem orbits your head, the first time you would fall to 0 hit points, you fall to 1 instead and take no further damage for the rest of this turn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Obstinanance</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Energy" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_ENERGY">
+		<description>
+			<p>While this bright yellow gem orbits your head, you don’t need to sleep, magic can’t put you to sleep, and you can gain the benefits of a long rest by spending 4 hours doing light activity, such as meditating, reading, writing, or keeping watch.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Energy</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Resistance (Rare)" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_RESISTANCE_RARE">
+		<description>
+			<p>This stone was created with powerful abjuration magic, made to counter a specific type of damage, such as thunder or slashing. While this heavy, silver pebble orbits your head, you have resistance to the damage type it was created to protect against.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Resistance</set>
+		</setters>
+	</element>
+	<element name="Ioun Stone of Self" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_SELF">
+		<description>
+			<p>While this shining, silver stone orbits your head, you can always see yourself reflected in its body, and you are immune to the Charmed and Frightened conditions.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Self</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_IMMUNITY_CHARMED" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_IMMUNITY_FRIGHTENED" />
+		</rules>
+	</element>
+	<element name="Ioun Stone of Duplication" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_IOUN_STONE_DUPLICATION">
+		<description>
+			<p>This stone orbits your head alongside an intangible, illusory duplicate. While attuned to the Ioun Stone of Duplication, you create a perfect illusion of yourself that lasts for 10 minutes. The illusion appears in an unoccupied space that you can see within 30 feet of you. On your turn, you can use your movement speed to move the illusion instead, dividing your movement between the two of you as you choose. When you speak, you can choose to speak through yourself or the illusion.</p>
+			<p>The illusion can’t attack, cast spells, or physically interact with objects or creatures. As an action, you can see and hear from your illusion as if you were located where it is, until the start of your next turn. While you are using your senses at the illusion’s location, you are blinded and deafened in regard to your own surroundings. Once you create an illusory duplicate with the Ioun Stone of Duplication, it can’t be used to do so again until the next dawn.</p>
+			<div element="ID_WOTC_DMG_MAGIC_ITEM_IOUN_STONE_AWARENESS" />
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="name-format">Ioun Stone of Duplication</set>
+		</setters>
+	</element>
+
+    <!-- Rune -->
+	<element name="Rune of Explosive Damage" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_EXPLOSIVE_DAMAGE">
+		<description>
+			<p>This magical rune can be applied to any weapon with a damage die of 2d4, 1d10, 2d6, or 1d12.</p>
+			<p>When a weapon blessed with this magical rune rolls maximum damage for its damage roll (for example, when you roll a 12 on the die using a d12 weapon), you can roll one additional weapon damage die and add the result to the damage dealt by that attack.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Rune of Explosive Damage</set>
+		</setters>
+	</element>
+	<element name="Rune of Spiral Criticals" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_SPIRAL_CRITICALS">
+		<description>
+			<p>This magical rune has 6 charges, and regains 6 charges each dawn. It can be applied to any weapon.</p>
+			<p>When a weapon blessed with this magical rune rolls maximum damage for any damage roll (for example, when you roll two 4s on the dice using a 2d4 weapon), you can expend a charge to roll the damage again, adding the result to the damage dealt by that attack. If the damage roll triggered by expending a charge of this rune also rolls maximum damage, you can expend a further charge to repeat the process.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="name-format">Rune of Spiral Criticals</set>
+			<set name="charges">6</set>
+		</setters>
+	</element>
+	<element name="Rune of Critical Savagery" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_CRITICAL_SAVAGERY">
+		<description>
+			<p>This magical rune can be applied to any spellcasting focus.</p>
+			<p>When a creature rolls a natural 1 on their saving throw against a spell you cast, they take additional force damage equal to you thrice the level of the spell slot you expended to cast that spell + your Proficiency Bonus.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Rune of Critical Savagery</set>
+		</setters>
+	</element>
+	<element name="Rune of Critical Salvation" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_CRITICAL_SALVATION">
+		<description>
+			<p>This magical rune can be applied to any spellcasting focus.</p>
+			<p>When you roll maximum when rolling dice to restore hit points to a creature, this rune vitalises them still further. You can choose to grant the target temporary hit points equal to the total rolled on the dice, or end up to two conditions of your choice affecting that target.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="name-format">Rune of Critical Salvation</set>
+		</setters>
+	</element>
+	<element name="Rune of Critical Hope" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_CRITICAL_HOPE">
+		<description>
+			<p>This magical rune can be tattooed onto one’s body. It has 4 charges, and regains 1d4 charges each dawn.</p>
+			<p>Whenever you roll a natural 1 on an attack roll or saving throw, you can expend one charge from this rune to gain a point of heroic inspiration.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="name-format">Rune of Critical Hope</set>
+			<set name="charges">4</set>
+		</setters>
+	</element>
+	<element name="Rune of the Critical Counter" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RUNE_OF_THE_CRITICAL_COUNTER">
+		<description>
+			<p>This magical rune can be applied to any armour or shield. It has 4 charges, and regains 1d4 charges each dawn.</p>
+			<p>When a creature scores a critical hit against you, you can use a reaction to expend 1 charge from this rune and grant yourself resistance to the damage of that attack.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="name-format">Rune of the Critical Counter</set>
+			<set name="charges">4</set>
+		</setters>
+	</element>
+
+    <!-- Templates -->
+    <element name="Blade of Allies" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_ALLIES">
+        <description>
+            <p>As a bonus action, if you made an attack with the Blade of Allies this turn, you can activate it to create a glowing aura that extends in a 10ft radius from you until the start of your next turn.</p>
+            <p>Allies that start their turn within the aura gain a +2 to their attack rolls, damage rolls and death saving throws until the end of their turn.</p>
+            <p>In addition, if an ally within that aura would take damage, you can use your reaction to halve that damage.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
+            <set name="name-format">Blade of Allies</set>
+        </setters>
+    </element>
+    <element name="Helpful Blade" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_HELPFUL_BLADE">
+        <description>
+            <p>While wielding this sword, you gain a +1 to your AC.</p>
+            <p>In addition, you can use your reaction to parry a blow, giving you a bonus to your AC equal to your proficiency modifier against that one attack. You can use this feature a number of times equal to your proficiency bonus per long rest.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
+            <set name="name-format">Helpful Blade</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="1" />
+        </rules>
+    </element>
+    <element name="Ravenous Soul Blade" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_RAVENOUS_SOUL_BLADE">
+        <description>
+            <p>When a weapon attack made with this blade kills a creature with an intelligence score of 7 or higher, this weapon gains a +1 to all attack and damage rolls until the next dawn. This blade can benefit from this feature up to three times per dawn, for a maximum of +3 to attack and damage rolls.</p>
+            <p><b><i>Curse.</i></b> This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a <i>Remove Curse</i> spell or similar magic, you are unwilling to take prisoners or show mercy to defeated enemies.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
+            <set name="name-format">Ravenous Soul Blade</set>
+            <set name="cursed">true</set>
+        </setters>
+    </element>
+    <element name="FISHBLADE" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_FISHBLADE">
+        <description>
+            <p>You gain a +3 bonus to attack and damage rolls made with this magic weapon.</p>
+            <p>You can use a bonus action to toss this magic sword into the air and speak the command word. When you do, the sword transforms into a floating, spectral fish carrying a knife. It flies up to 30 feet, and attacks one creature of your choice within 5 feet of it. The Fishblade uses your attack roll and ability score modifier for damage rolls.</p>
+            <p>While in fish form, you can use a bonus action to cause the Fishblade to fly up to 30 feet to another spot within 30 feet of you. As part of the same bonus action, you can command the fish to attack one creature within 5 feet of it.</p>
+            <p>If you speak the command word again, the fish flies back to you, transforms into a sword and falls to the ground at your feet, or into your open hand.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or knife">Weapon</set>
+            <set name="rarity">Legendary</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||Dagger</set>
+            <set name="name-format">FISHBLADE</set>
+            <set name="enhancement">3</set>
+        </setters>
+    </element>
+    <element name="Demon Soul Sword" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_DEMON_SOUL_SWORD">
+        <description>
+            <p>You have advantage on saving throws to resist the spells and magical effects of fiends.</p>
+            <p><b><i>Trial.</i></b> Reduce 5 hostile demons to 0 hit points while attuned to this weapon.</p>
+            <p><b><i>Hidden ability.</i></b> If you have completed the Demon Soul Sword’s trial, you can use an action to summon one Quasit (see page 19.) It takes its turn immediately after yours, is friendly to you and your companions, and obeys your commands (no action required from you).</p>
+            <p>The Quasit exists for 10 minutes, or until it is reduced to zero hit points, or until you drop concentration (as if concentrating on a spell). After that time, it vanishes.</p>
+            <p>Once you use this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
+            <set name="name-format">Demon Soul Sword</set>
+        </setters>
+    </element>
+    <element name="Shield of The Terror Beast" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SHIELD_OF_THE_TERROR_BEAST">
+        <description>
+            <p>The Shield of The Terror Beast is a vast, roughly hewn shield that bursts with a titanic roar of sound when struck.</p>
+            <p>While attuned to this shield, any time you are targeted by a <i>magic missile</i> spell, a line spell, or a spell that requires a ranged attack roll, roll a d6. On a 1, the spell targets you as normal. On a 2 to 5, you are unaffected. On a 6, you are unaffected, and the effect is reflected back at the caster as though it originated from you, turning the caster into the target.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="rarity">Artifact</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+            <set name="name-format">Shield of The Terror Beast</set>
+            <set name="enhancement">3</set>
+        </setters>
+    </element>
+    <element name="Blade of Cunning &amp; Corrosion" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_CUNNING_CORROSION">
+        <description>
+            <p>This blade has 4 charges, and regains 1d6 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d4 acid or poison damage.</p>
+            <p><b><i>Stinging Bite.</i></b> When you deal acid damage to a creature with this weapon, you have advantage on the next attack roll you make against that creature before the end of your next turn.</p>
+            <p><b><i>Subtle Toxin.</i></b> When you deal poison damage to a creature with this weapon, that creature has disadvantage on the next attack roll or ability check it makes before the start of your next turn.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or polearm">Weapon</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||ID_INTERNAL_WEAPON_GROUP_POLEARMS</set>
+            <set name="name-format">Blade of Cunning &amp; Corrosion</set>
+            <set name="charges">4</set>
+        </setters>
+    </element>
+    <element name="Blade of Flame &amp; Frost" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_FLAME_FROST">
+        <description>
+            <p>This blade has 5 charges, and regains 1d8 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d6 cold or fire damage.</p>
+            <p><b><i>Biting Frost.</i></b> When you deal cold damage to a creature with this weapon, that creature’s speed is reduced by 10 feet until the end of its next turn.</p>
+            <p><b><i>Living Flame.</i></b> When you deal fire damage to a creature with this weapon, you can also deal an additional 1d6 fire damage to any number of creatures of your choice within 5 feet of the initial target.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or polearm">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||ID_INTERNAL_WEAPON_GROUP_POLEARMS</set>
+            <set name="name-format">Blade of Flame &amp; Frost</set>
+            <set name="charges">5</set>
+        </setters>
+    </element>
+    <element name="Blade of Life &amp; Death" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_LIFE_DEATH">
+        <description>
+            <p>This blade has 6 charges, and regains 1d10 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d8 necrotic or radiant damage.</p>
+            <p><b><i>Thieving Necrosis.</i></b> When you deal necrotic damage to a creature with this weapon, you gain temporary hit points equal to the damage dealt, and the target is poisoned for as long as you have those temporary hit points.</p>
+            <p><b><i>Vibrant Light.</i></b> When you deal radiant damage to a creature with this weapon, you, and allies within 5 feet of you, can add 1d4 to attack rolls, ability checks, and saving throws until the end of your next turn.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or polearm">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||ID_INTERNAL_WEAPON_GROUP_POLEARMS</set>
+            <set name="name-format">Blade of Life &amp; Death</set>
+            <set name="charges">6</set>
+        </setters>
+    </element>
+    <element name="Blade of Mind &amp; Soul" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_MIND_SOUL">
+        <description>
+            <p>This blade has 7 charges, and regains 1d12 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d10 force or psychic damage.</p>
+            <p><b><i>Banishing Blow.</i></b> When you deal force damage to a creature with this weapon, the target must succeed on a Charisma saving throw (DC = 8 + your Strength or Dexterity modifier + your Proficiency Bonus), or be banished to a harmless demiplane until the end of your next turn, reappearing in the space it left or in the nearest unoccupied space if that space is occupied. While there, the target is incapacitated.</p>
+            <p><b><i>Shattered Psyche.</i></b> When you deal psychic damage to a creature with this weapon, the target must succeed on an Intelligence saving throw (DC = 8 + your Strength or Dexterity modifier + your Proficiency Bonus), or suffer the effects of the <i>confusion</i> spell until the end of its next turn.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or polearm">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||ID_INTERNAL_WEAPON_GROUP_POLEARMS</set>
+            <set name="name-format">Blade of Mind &amp; Soul</set>
+            <set name="charges">7</set>
+        </setters>
+    </element>
+    <element name="Blade of Time &amp; Space" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_TIME_SPACE">
+        <description>
+            <p>This blade has 11 charges, and regains 1d20 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d12 damage of any type you choose.</p>
+            <p><b><i>Time Cleave.</i></b> Once per round, you can expend a charge after damaging a creature with this weapon to briefly stop the flow of time in a 1-mile radius. You can spare one creature of your choice within 60 feet (you can choose yourself) from this time cleave. That creature immediately takes an additional turn, during which it can move and use actions as normal. For all other creatures, no time passes, they cannot move, cannot take actions, and aren’t cognizant of any time passing or any actions that take place while time is stopped. Once the chosen creature has finished its additional turn, time resumes as normal. Once a creature has taken an extra turn in this way, that creature cannot do so again until it finishes a long rest.</p>
+            <p><b><i>Spatial Rend.</i></b> Once per round, you can expend a charge after damaging a creature with this weapon to immediately cast the spell <i>Imprisonment</i> without material components as a part of the same action, targeting the subject of your attack with the Hedged Prison effect of that spell (DC = 8 + your Strength or Dexterity modifier + your Proficiency Bonus). If you successfully imprison a creature with this effect, any creatures you have previously imprisoned with it are freed, reappearing in the space it left or the nearest unoccupied space if that space is occupied.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or polearm">Weapon</set>
+            <set name="rarity">Artifact</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||ID_INTERNAL_WEAPON_GROUP_POLEARMS</set>
+            <set name="name-format">Blade of Time &amp; Space</set>
+            <set name="charges">11</set>
+        </setters>
+    </element>
+    <element name="Blade of Potential &amp; Power" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BLADE_OF_POTENTIAL_POWER">
+        <description>
+            <p>This weapon hums with potential. The first time you attune to this weapon it bonds to you; you must give it a name, and if you do, you cannot be forcibly disarmed of it unless you are unconscious, and no other creature can attune to it unless you are dead.</p>
+            <p>When you level up for the 4th time while attuned to this weapon, it becomes the Blade of Cunning &amp; Corrosion.</p>
+            <p>When you level up for the 8th time while attuned to this weapon, it becomes the Blade of Flame &amp; Frost, and you gain a +1 to attack and damage rolls you make with it.</p>
+            <p>When you level up for the 12th time while attuned to this weapon, it becomes the Blade of Life &amp; Death.</p>
+            <p>When you level up for the 16th time while attuned to this weapon, it becomes the Blade of Mind &amp; Soul, and your +1 bonus to attack and damage rolls made with it increases to a +2.</p>
+            <p>When you have levelled up at least 19 times while attuned to this weapon and performed an epic deed or realised a heartfelt ambition, at the GMs discretion, it becomes the Blade of Time &amp; Space, and your +2 bonus to attack and damage rolls made with it increases to a +3.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword or polearm">Weapon</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS||ID_INTERNAL_WEAPON_GROUP_POLEARMS</set>
+            <set name="name-format">Blade of Potential &amp; Power</set>
+        </setters>
+    </element>
+    <element name="Bow of Bite &amp; Bile" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_BITE_BILE">
+        <description>
+            <p>This bow has 4 charges, and regains 1d6 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d4 acid or poison damage.</p>
+            <p><b><i>Blistering Sting.</i></b> When you deal acid damage to a creature with this weapon, that creature suffers a d4 penalty to its next attack roll or ability check.</p>
+            <p><b><i>Sapping Venom.</i></b> When you deal poison damage to a creature with this weapon, on that creature’s next turn, it must choose whether it is able to move, take an action, or take a bonus action; it can only take one of the three without penalty. Should a creature take more than one of the three, it takes 1d4 necrotic damage for each one it takes beyond the first.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any bow">Weapon</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_BOWS</set>
+            <set name="name-format">Bow of Bite &amp; Bile</set>
+            <set name="charges">4</set>
+        </setters>
+    </element>
+    <element name="Bow of Ice &amp; Fire" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_ICE_FIRE">
+        <description>
+            <p>This bow has 5 charges, and regains 1d8 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d6 cold or fire damage.</p>
+            <p><b><i>Blazing Flame.</i></b> When you deal fire damage to a creature with this weapon, that creature must succeed on a Dexterity saving throw (DC = 8 + the modifier of the ability score you used to make the attack + your Proficiency Bonus) or suffer the effects of the <i>faerie fire</i> spell until the end of its next turn.</p>
+            <p><b><i>Numbing Frost.</i></b> When you deal cold damage to a creature with this weapon, that creature cannot have advantage on attack rolls or saving throws until the end of its next turn.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any bow">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_BOWS</set>
+            <set name="name-format">Bow of Ice &amp; Fire</set>
+            <set name="charges">5</set>
+        </setters>
+    </element>
+    <element name="Bow of Spirit &amp; Psyche" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_SPIRIT_PSYCHE">
+        <description>
+            <p>This bow has 6 charges, and regains 1d10 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d8 force or psychic damage.</p>
+            <p><b><i>Crushing Force.</i></b> When you deal force damage to a creature with this weapon, the target must succeed on a Strength saving throw, or have its size category is reduced by 1 (from Huge to Large, for example) for the next minute. The target suffers a 1d4 penalty to all Strength-based attack rolls, ability checks, and saving throws for each size category it is below its original size. This ability can affect a creature multiple times. If a creature’s size would be reduced below Tiny by this effect, it instead falls to 0 hit points.</p>
+            <p><b><i>Deserted Mind.</i></b> When you deal psychic damage to a creature with this weapon, the target must succeed on an Intelligence saving throw (DC = 8 + the modifier of the ability score you used to make the attack + your Proficiency Bonus), or become frightened of all creatures it can see, and be unable to concentrate, for the next minute.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any bow">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_BOWS</set>
+            <set name="name-format">Bow of Spirit &amp; Psyche</set>
+            <set name="charges">6</set>
+        </setters>
+    </element>
+    <element name="Bow of Void &amp; Vitality" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_VOID_VITALITY">
+        <description>
+            <p>This bow has 7 charges, and regains 1d12 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you can expend 1 charge to deal an additional 1d10 necrotic or radiant damage.</p>
+            <p><b><i>Touch of the Dawn.</i></b> When you deal radiant damage to a creature with this weapon, roll 1d20. You gain temporary hit points equal to the result. If the result is a 20, you instead gain the benefits of a long rest.</p>
+            <p><b><i>Touch of the Void.</i></b> When you deal necrotic damage to a creature with this weapon, roll 1d20. The creature takes force damage equal to the result. If the result is a 20, the creature instead falls to 1 hit point, unless it has legendary actions, in which case it takes 6d10 force damage.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any bow">Weapon</set>
+            <set name="rarity">Legendary</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_BOWS</set>
+            <set name="name-format">Bow of Void &amp; Vitality</set>
+            <set name="charges">7</set>
+        </setters>
+    </element>
+    <element name="Bow of Shapes &amp; Pathways" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_SHAPES_PATHWAYS">
+        <description>
+            <p>This bow has 11 charges, and regains 1d20 charges each dawn.</p>
+            <p>When you deal damage to a creature with this weapon, you expend 1 charge to deal an additional 1d12 damage of any type you choose.</p>
+            <p><b><i>Multiversal Pathway.</i></b> Once per round, you can expend a charge after damaging a creature with this weapon to immediately cast the spell <i>plane shift</i>, targeting that creature (DC = 8 + the modifier of the ability score you used to make the attack + your Proficiency Bonus). In addition, you can use an action and expend a charge to cast <i>Plane Shift</i> targeting up to eight willing creatures.</p>
+            <p><b><i>Transfigure.</i></b> Once per round, you can expend a charge after damaging a creature with this weapon to transfigure that target. The creature transforms into a Beast of your choice for the next hour as if under the effect of the <i>polymorph</i> spell, or until you choose to revert it back to its true form as an action. The creature reverts to its true form if it falls to 0 hit points, and any excess damage carries over to its new form.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any bow">Weapon</set>
+            <set name="rarity">Artifact</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_BOWS</set>
+            <set name="name-format">Bow of Shapes &amp; Pathways</set>
+            <set name="charges">11</set>
+        </setters>
+    </element>
+    <element name="Bow of Promise" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_BOW_OF_PROMISE">
+        <description>
+            <p>This weapon hums with potential. The first time you attune to this weapon it bonds to you; you must give it a name, and if you do, you cannot be forcibly disarmed of it unless you are unconscious, and no other creature can attune to it unless you are dead.</p>
+            <p>When you level up for the 4th time while attuned to this weapon, it becomes the Bow of Bite &amp; Bile.</p>
+            <p>When you level up for the 8th time while attuned to this weapon, it becomes the Bow of Ice &amp; Fire, and you gain a +1 to attack and damage rolls you make with it.</p>
+            <p>When you level up for the 12th time while attuned to this weapon, it becomes the Bow of Spirit &amp; Psyche.</p>
+            <p>When you level up for the 16th time while attuned to this weapon, it becomes the Bow of Void &amp; Vitality, and your +1 bonus to attack and damage rolls made with it increases to a +2.</p>
+            <p>When you have levelled up at least 19 times while attuned to this weapon and performed an epic deed or realised a heartfelt ambition, at the GMs discretion, it becomes the Bow of Shapes &amp; Pathways, and your +2 bonus to attack and damage rolls made with it increases to a +3.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any bow">Weapon</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_BOWS</set>
+            <set name="name-format">Bow of Promise</set>
+        </setters>
+    </element>
+    <element name="Gravity Axe" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_GRAVITY_AXE_2">
+        <description>
+            <p>This gravity enchanted axe hums with power and possesses unnatural weight. A simple sling hangs between the shoulder and poll of each blade.</p>
+            <p>You gain a +1 bonus to attack and damage rolls made with this magical weapon. In addition, when you take the attack action, you can replace one or more melee attacks with a ranged attack roll, using the sling built into the weapon, which has a range of 30/120 feet.</p>
+            <p>The magic of the sling generates its own ammunition - a sparkling ball of silver force. Its draw is extraordinarily heavy, but impressively accurate. Ranged attack rolls made with it use your Strength modifier, and deal 1d6 force damage on a hit.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any axe">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement" addition="by a creature with a Strength score of 17+">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_AXES</set>
+            <set name="name-format">Gravity Axe</set>
+            <set name="enhancement">1</set>
+        </setters>
+    </element>
+    <element name="Sneaking Whip Blade" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SNEAKING_WHIP_BLADE">
+        <description>
+            <p>This seemingly innocuous blade hides a magical secret - a sneaking, barbed tail.</p>
+            <p>You have a +1 bonus to attack and damage rolls with this weapon. It has 4 charges, and regains 1d6 charges each dawn.</p>
+            <p>As a bonus action, you can expend a charge to jettison the barbed tail from the hilt in an explosive expulsion. For the next minute, when you attack with the weapon, you can choose to attack with this tail. It has the reach property and deals 1d8 slashing damage on a hit. Additionally, you can make one attack with the tail as a part of the same bonus action you use to jettison it.</p>
+            <p>After 1 minute, the tail retreats back into the hilt of the weapon, unless you use a bonus action to reel it in early.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any melee weapon">Weapon</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE</set>
+            <set name="name-format">Sneaking Whip Blade</set>
+            <set name="enhancement">1</set>
+            <set name="charges">4</set>
+        </setters>
+    </element>
+    <element name="Sword of the Greatwyrm" type="Magic Item" source="DM Secret Weapons" id="ID_DMSW_SWORD_OF_THE_GREATWYRM">
+        <description>
+            <p>This sword was forged in dragonfire, and bears draconic inscriptions along its hilt. In darkness, its unsheathed blade sheds crimson light, creating dim light in a 15-foot radius. Once per turn, when you hit a creature with this weapon, you can choose to deal an additional 1d4 fire damage to one creature of your choice within 10 feet of you, as a wyrm of flame leaps from the blade.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="type" addition="any sword">Weapon</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
+            <set name="name-format">Sword of the Greatwyrm</set>
+        </setters>
+    </element>
+</elements>

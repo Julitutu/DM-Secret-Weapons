@@ -1,0 +1,3131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Feats (DM Secret Weapons)</name>
+		<description>Feats from DM Secret Weapons.</description>
+		<update version="0.1.0">
+			<file name="feats.xml" url="https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/feats.xml" />
+		</update>
+	</info>
+
+	<element name="Dagger Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_DAGGER_MASTER">
+		<description>
+			<p>Your mastery of the dagger grants you certain benefits.</p>
+			<ul>
+				<li>When you take the attack action on your turn, if you make a melee attack with a dagger, you can make one additional melee or ranged attack with a dagger as a part of that action. You can use this feature a number of times equal to your Strength or Dexterity modifier (your choice) per long rest.</li>
+				<li>When you make an off-hand attack with a dagger as your bonus action, you can add your proficiency bonus to any damage rolled.</li>
+				<li>If you score a critical hit with a dagger, you can roll one additional weapon damage die when determining the extra damage.</li>
+			</ul>
+		</description>
+		<sheet usage="{{dagger master:uses}}/Long Rest">
+			<description>When you take the attack action and make a melee attack with a dagger, you can make one additional melee or ranged attack with a dagger as a part of that action.&#13;
+			When you make an off-hand attack with a dagger as a bonus action, add +{{proficiency}} to damage.&#13;
+			On a critical hit with a dagger, roll one additional weapon damage die.</description>
+		</sheet>
+		<rules>
+			<stat name="dagger master:uses" value="strength:modifier" bonus="ability"/>
+			<stat name="dagger master:uses" value="dexterity:modifier" bonus="ability" />
+		</rules>
+	</element>
+
+	<element name="Whip Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WHIP_MASTER">
+		<description>
+			<p>You have trained many hours with the whip, granting you the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity Score by 1, to a maximum of 20.</li>
+				<li>When you make a melee attack with a whip, the range of that attack increases to 15ft.</li>
+				<li>Your damage die for whip attacks increases to a d6.</li>
+				<li>Once per turn, when you hit a large or smaller enemy with a whip, you can attempt to pull them off their feet. The target must make a Strength saving throw with a DC equal to 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice) or fall prone.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Whip range increases to 15ft. Whip damage die becomes a d6.&#13;
+			Once per turn, when you hit a Large or smaller enemy with a whip, they must succeed on a DC {{whip master:dc}} Strength save or fall prone.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Whip Master)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<stat name="whip master:dc" value="8" />
+			<stat name="whip master:dc" value="proficiency" />
+			<stat name="whip master:dc" value="strength:modifier" bonus="ability"/>
+			<stat name="whip master:dc" value="dexterity:modifier" bonus="ability"/>
+		</rules>
+	</element>
+
+	<element name="Elemental Armourist" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_ELEMENTAL_ARMOURIST">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence, Wisdom or Charisma by 1, to a maximum of 20.</li>
+				<li>When you take this feat select two of the following damage types: Acid, lightning, fire, cold, poison, thunder.</li>
+				<li>Damage you take of the chosen types is reduced by an amount equal to your proficiency bonus. In addition, when you are subjected to an effect that allows you to make a Dexterity or Constitution saving throw to take only half damage, you make that saving throw with advantage if the damage type of that effect is one of the types chosen with this feat.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Reduce damage taken by {{proficiency}}. Gain advantage on Dex/Con saves vs. effects of those types that allow a save for half damage.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Elemental Armourist)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Feat Feature" name="Damage Type (Elemental Armourist)" supports="Elemental Armourist Damage Type" number="2" />
+		</rules>
+	</element>
+	<element name="Acid" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_ARMOURIST_ACID">
+		<compendium display="false" />
+		<supports>Elemental Armourist Damage Type</supports>
+	</element>
+	<element name="Lightning" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_ARMOURIST_LIGHTNING">
+		<compendium display="false" />
+		<supports>Elemental Armourist Damage Type</supports>
+	</element>
+	<element name="Fire" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_ARMOURIST_FIRE">
+		<compendium display="false" />
+		<supports>Elemental Armourist Damage Type</supports>
+	</element>
+	<element name="Cold" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_ARMOURIST_COLD">
+		<compendium display="false" />
+		<supports>Elemental Armourist Damage Type</supports>
+	</element>
+	<element name="Poison" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_ARMOURIST_POISON">
+		<compendium display="false" />
+		<supports>Elemental Armourist Damage Type</supports>
+	</element>
+	<element name="Thunder" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_ARMOURIST_THUNDER">
+		<compendium display="false" />
+		<supports>Elemental Armourist Damage Type</supports>
+	</element>
+
+	<element name="Shield Fighting" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SHIELD_FIGHTING">
+		<prerequisite>Proficiency with Shields</prerequisite>
+		<requirements>ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS</requirements>
+		<description>
+			<p>You have focused your training around the mastery of the shield, granting the following benefits:</p>
+			<ul>
+				<li>You can benefit from wielding two shields simultaneously (one in each hand) to further increase your AC.</li>
+				<li>You can use your shield as a weapon. It has a range of 5ft and deals 1d6 + your Strength modifier bludgeoning damage.</li>
+				<li>You can don or doff a shield as a bonus action.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>• You can wield two shields, gaining the AC bonus from both.&#13;
+			• You can use a shield as a weapon: It has a range of 5ft and deals 1d6 + {{strength:modifier}} bludgeoning damage.&#13;
+			• You can don or doff a shield as a bonus action.</description>
+		</sheet>
+	</element>
+
+	<element name="Superior Shield Fighting" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SUPERIOR_SHIELD_FIGHTING">
+		<prerequisite>Shield Fighting Feat</prerequisite>
+		<requirements>ID_DMSW_FEAT_SHIELD_FIGHTING</requirements>
+		<description>
+			<p>You have invested great effort and training into the mastery of the shield, granting you the following benefits:</p>
+			<ul>
+				<li>You gain an additional +1 to your Armor Class, and your Strength, Dexterity and Constitution saving throws while wielding a shield in each hand.</li>
+				<li>Your melee attacks that use a shield now deal 1d8 + your strength modifier.</li>
+				<li>When you score a critical hit when making an attack with a shield, your target makes a Constitution saving throw equal to 10 + your strength modifier. On a failed save, they are stunned until the start of your next turn.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>• While wielding two shields, gain +1 AC and +1 to Str, Dex, and Con saves.&#13;
+			• Your melee attacks that use a shield now deal 1d8 + {{strength:modifier}}.&#13;
+			• On a critical hit with a shield, target must make a DC {{superior shield fighting:dc}} Con save or be stunned until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="superior shield fighting:dc" value="10" />
+			<stat name="superior shield fighting:dc" value="strength:modifier" />
+		</rules>
+	</element>
+
+	<element name="Cantrip King" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CANTRIP_KING">
+		<prerequisite>Pact Magic or Spellcasting Feature</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>You learn an additional three cantrips of your choice from your class’s spell list.</li>
+				<li>When you score a critical hit when making an attack roll with a cantrip, add an additional damage die when calculating damage.</li>
+				<li>At the end of a short rest, you can substitute one cantrip you know with another from your class’s spell list.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Learn 3 additional cantrips from your class list.&#13;
+			On a critical hit with a cantrip attack, add an extra damage die.&#13;
+			After a short rest, you can swap one known cantrip for another from your class list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Ranger,0" number="3" requirements="ID_WOTC_PHB_CLASS_RANGER"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Bard,0" number="3" requirements="ID_WOTC_PHB_CLASS_BARD"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Cleric,0" number="3" requirements="ID_WOTC_PHB_CLASS_CLERIC"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Druid,0" number="3" requirements="ID_WOTC_PHB_CLASS_DRUID"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Paladin,0" number="3" requirements="ID_WOTC_PHB_CLASS_PALADIN"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Sorcerer,0" number="3" requirements="ID_WOTC_PHB_CLASS_SORCERER"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Warlock,0" number="3" requirements="ID_WOTC_PHB_CLASS_WARLOCK"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Wizard,0" number="3" requirements="ID_WOTC_PHB_CLASS_WIZARD"/>
+			<select type="Spell" name="Cantrip (Cantrip King)" supports="Artificer,0" number="3" requirements="ID_WOTC_TCOE_CLASS_ARTIFICER"/>
+		</rules>
+	</element>
+
+	<element name="Storm’s Wrath" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_STORMS_WRATH">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength, Constitution or Charisma by 1, to a maximum of 20.</li>
+				<li>Once per turn, when you make an attack roll, you can switch the damage type of that attack to lightning damage.</li>
+				<li>Once per turn, when you score a critical hit with an attack that deals lightning damage to a creature, that creature is blinded and deafened until the start of your next turn.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Once per turn, you can change an attack's damage to lightning.&#13;
+			Once per turn, when you score a critical hit with an attack that deals lightning damage to a creature, that creature is blinded and deafened until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Storm's Wrath)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="After Image" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_AFTER_IMAGE">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity by 1, to a maximum of 20.</li>
+				<li>When you take the dash action, an illusory duplicate of you appears in your space. It lasts for one minute or until destroyed. The duplicate moves with you and mimics your actions, shifting position and making it impossible to tell which one is real. Your duplicate has an AC equal to 10 + your dexterity modifier.</li>
+				<li>Each time a creature targets you for an attack, roll a d20 to see if it hits you or your duplicate. With a roll of 11 or above, the attack targets your After Image. Your duplicate is destroyed only by an attack that hits it. It ignores all other damage and effects.</li>
+				<li>An attacking creature is unaffected by this ability if it can’t see, or if it relies on senses other than sight, such as blindsight.</li>
+				<li>Once you use this feature, you cannot do so again until you take a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>When you Dash, create an illusory duplicate for 1 min. It has AC {{after image:ac}}. When you are targeted by an attack, roll a d20. On 11+, the attack targets the duplicate. The duplicate is destroyed if hit.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+			<stat name="after image:ac" value="10" />
+			<stat name="after image:ac" value="dexterity:modifier" />
+		</rules>
+	</element>
+
+	<element name="Big Pecks" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BIG_PECKS">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength by 1, to a maximum of 20.</li>
+				<li>While you are unarmored and not carrying a shield, your AC increases by 1. In addition, you may roll for Persuasion and Intimidation skill checks using your Strength modifier, rather than your Charisma modifier.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>While unarmored and not using a shield, your AC is +1.&#13;
+			You can use your Strength modifier for Persuasion and Intimidation checks.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+			<stat name="ac:misc" value="1" equipped="[armor:none],[shield:none]" />
+			<stat name="persuasion:misc" value="-charisma:modifier" />
+			<stat name="persuasion:misc" value="strength:modifier" />
+			<stat name="intimidation:misc" value="-charisma:modifier" />
+			<stat name="intimidation:misc" value="strength:modifier" />
+		</rules>
+	</element>
+
+	<element name="Ingenious Trickster" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_INGENIOUS_TRICKSTER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Charisma or Dexterity by 1, to a maximum of 20.</li>
+				<li>You gain proficiency in the Deception and Performance skills. In addition, you learn the spell Suggestion and one cantrip from the enchantment school of magic. You can cast Suggestion without expending a spell slot. Once cast in this way, you can’t cast it again using this trait again until you finish a long rest.</li>
+				<li>Spellcasters may use their normal spellcasting modifier and spell save DC for these spells. For non-spellcasters, your spellcasting ability for these spells is Charisma, and your save DC is 8 + your proficiency + your Charisma modifier.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>Learn Suggestion and one enchantment cantrip. Spellcasters may use their normal spellcasting modifier and spell save DC for these spells. For non-spellcasters, your spellcasting ability for these spells is Charisma, and your save DC is {{ingenious trickster:dc}}.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Ingenious Trickster)" supports="ID_PHB_FEAT_ASI_CHARISMA|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<grant type="Spell" id="ID_PHB_SPELL_SUGGESTION" />
+			<select type="Spell" name="Cantrip (Ingenious Trickster)" supports="0,Enchantment" />
+			<stat name="ingenious trickster:dc" value="8" />
+			<stat name="ingenious trickster:dc" value="proficiency" />
+			<stat name="ingenious trickster:dc" value="charisma:modifier" />
+		</rules>
+	</element>
+
+	<element name="Quick Draw" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_QUICK_DRAW">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity by 1, to a maximum of 20.</li>
+				<li>If you drew a weapon this turn, you can make your first melee weapon attack with that weapon with advantage. This attack crits on an 18, 19, or 20, and your reach for this attack is increased by 5 feet. Once you use this feature, you cannot do so again until you finish a short or long rest, or until you next roll for initiative.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Short Rest or Initiative">
+			<description>If you drew a weapon this turn, your first melee attack with it has advantage, crits on 18-20, and has +5ft reach.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Quick Draw)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+		</rules>
+	</element>
+
+	<element name="You’re Already Dead" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_YOURE_ALREADY_DEAD">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity by 1, to a maximum of 20.</li>
+				<li>When you make a melee weapon attack against a surprised enemy, you score a critical hit on an 18, 19, or 20.</li>
+				<li>In addition, whenever you score a critical hit with a melee weapon attack against an enemy, they take force damage equal to your level at the start of their next turn.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Melee attacks vs surprised enemies crit on 18-20.&#13;
+			On a melee critical hit, the target takes {{level}} force damage at the start of its next turn.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (You're Already Dead)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+		</rules>
+	</element>
+
+	<element name="Swift Striker" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SWIFT_STRIKER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity by 1, to a maximum of 20.</li>
+				<li>Whenever you would roll for initiative, as long as you are not surprised, you can choose to make a single ranged weapon attack or melee weapon attack immediately before making your roll. If you do so, make your initiative roll with disadvantage.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Before rolling initiative (if not surprised), you can make one weapon attack. If you do, you have disadvantage on the initiative roll.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Swift Striker)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+		</rules>
+	</element>
+
+	<element name="Finesse Fighting Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FINESSE_FIGHTING_MASTER">
+		<description>
+			<p>You have mastered the art of elegant and dexterous fighting while using finesse weapons.</p>
+			<ul>
+				<li>Whenever you make an attack with a finesse weapon on your turn, you can take a -5 penalty on your attack roll. If you hit, you gain +5 AC until the start of your next turn. You can benefit from this AC boost only once per round.</li>
+				<li>In addition, if you score a critical hit with a melee finesse weapon attack, you can forgo rolling the extra damage dice to dodge instead.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Once per round, take -5 to a finesse weapon attack to gain +5 AC until start of your next turn on a hit.&#13;
+			On a melee finesse weapon crit, you can forgo extra damage to take the Dodge action instead.</description>
+		</sheet>
+	</element>
+
+	<element name="Unpredictable Enhancement" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_UNPREDICTABLE_ENHANCEMENT">
+		<description>
+			<p>You embrace a chaotic burst of magical power, enhancing yourself in unpredictable ways.</p>
+			<ul>
+				<li>Increase a randomly determined ability score by 2, and decrease a randomly determined ability score by 1.</li>
+				<li>You gain proficiency in a randomly determined saving throw that you don’t already have proficiency in.</li>
+				<li>Whenever you roll a natural 1 on a saving throw or skill check that you are proficient in, you can reroll that saving throw or skill check. You must use the new roll.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Randomly increase one ability score by 2, decrease another by 1.&#13;
+			Gain proficiency in a random saving throw you lack.&#13;
+			When you roll a 1 on a proficient save or skill check, you can reroll (must use new roll).</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Decrease(Unpredictable Enhancement)" supports="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_STRENGTH_DECREASE_1||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_DEXTERITY_DECREASE_1||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_CONSTITUTION_DECREASE_1||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_INTELLIGENCE_DECREASE_1||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_WISDOM_DECREASE_1||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_CHARISMA_DECREASE_1" />
+			<select type="Ability Score Improvement" name="Ability Score Improvement Increase(Unpredictable Enhancement)" supports="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_STRENGTH_INCREASE_2||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_DEXTERITY_INCREASE_2||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_CONSTITUTION_INCREASE_2||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_INTELLIGENCE_INCREASE_2||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_WISDOM_INCREASE_2||ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI_CHARISMA_INCREASE_2" />
+			<select type="Proficiency" name="Saving Throw (Unpredictable Enhancement)" supports="ID_PROFICIENCY_SAVINGTHROW_STRENGTH||ID_PROFICIENCY_SAVINGTHROW_DEXTERITY||ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION||ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE||ID_PROFICIENCY_SAVINGTHROW_WISDOM||ID_PROFICIENCY_SAVINGTHROW_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Worldly" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WORLDLY">
+		<description>
+			<p>Across a life of adventuring you have seen many incredible things and met many people, learning and growing from new experiences and cultures all the while.</p>
+			<ul>
+				<li>Increase your intelligence, charisma or wisdom score by 1, to a maximum of 20.</li>
+				<li>Choose a background. You gain all skill proficiencies and other bonuses associated with that background, in addition to your current one.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose a background. You gain all its features and proficiencies. Your Feat Feature is: </description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Worldly)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Proficiency" name="Proficiency (Wordly)" supports="Skill" number="2"/>
+			<select type="Feat Feature" name="1st Tool Proficiency or Language" supports="Tool Language Select" optional="true" />
+			<select type="Feat Feature" name="2nd Tool Proficiency or Language" supports="Tool Language Select 2" optional="true" />
+			<select type="Background Feature" name="Background Feature (Worldly)" supports="Background Feature" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
+		</rules>
+	</element>
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT">
+				<supports>Tool Language Select</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT">
+				<supports>Tool Language Select</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>
+
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_2">
+				<supports>Tool Language Select 2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_2">
+				<supports>Tool Language Select 2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>	
+
+	<element name="Worldly" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WORLDLY_1">
+		<compendium display="false" />
+		<requirements>ID_DMSW_FEAT_WORLDLY</requirements>
+		<description>
+			<p>Across a life of adventuring you have seen many incredible things and met many people, learning and growing from new experiences and cultures all the while.</p>
+			<ul>
+				<li>Increase your intelligence, charisma or wisdom score by 1, to a maximum of 20.</li>
+				<li>Choose a background. You gain all skill proficiencies and other bonuses associated with that background, in addition to your current one.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose a background. You gain all its features and proficiencies.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Worldly)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Proficiency" name="Proficiency (Wordly)" supports="Skill" number="2"/>
+			<select type="Feat Feature" name="1st Tool Proficiency or Language" supports="Tool Language Select 1" optional="true" />
+			<select type="Feat Feature" name="2nd Tool Proficiency or Language" supports="Tool Language Select 1-2" optional="true" />
+			<select type="Background Feature" name="Background Feature (Worldly)" supports="Background Feature" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
+		</rules>
+	</element>
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_1">
+				<supports>Tool Language Select 1</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_1">
+				<supports>Tool Language Select 1</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>
+
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_1_2">
+				<supports>Tool Language Select 1-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_1_2">
+				<supports>Tool Language Select 1-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>	
+
+	<element name="Worldly" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WORLDLY_2">
+		<compendium display="false" />
+		<requirements>ID_DMSW_FEAT_WORLDLY_1</requirements>
+		<description>
+			<p>Across a life of adventuring you have seen many incredible things and met many people, learning and growing from new experiences and cultures all the while.</p>
+			<ul>
+				<li>Increase your intelligence, charisma or wisdom score by 1, to a maximum of 20.</li>
+				<li>Choose a background. You gain all skill proficiencies and other bonuses associated with that background, in addition to your current one.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose a background. You gain all its features and proficiencies.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Worldly)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Proficiency" name="Proficiency (Wordly)" supports="Skill" number="2"/>
+			<select type="Feat Feature" name="1st Tool Proficiency or Language" supports="Tool Language Select 2" optional="true" />
+			<select type="Feat Feature" name="2nd Tool Proficiency or Language" supports="Tool Language Select 2-2" optional="true" />
+			<select type="Background Feature" name="Background Feature (Worldly)" supports="Background Feature" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
+		</rules>
+	</element>
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_2">
+				<supports>Tool Language Select 2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_2">
+				<supports>Tool Language Select 2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>
+
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_2_2">
+				<supports>Tool Language Select 2-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_2_2">
+				<supports>Tool Language Select 2-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>	
+	
+	<element name="Worldly" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WORLDLY_3">
+		<compendium display="false" />
+		<requirements>ID_DMSW_FEAT_WORLDLY_2</requirements>
+		<description>
+			<p>Across a life of adventuring you have seen many incredible things and met many people, learning and growing from new experiences and cultures all the while.</p>
+			<ul>
+				<li>Increase your intelligence, charisma or wisdom score by 1, to a maximum of 20.</li>
+				<li>Choose a background. You gain all skill proficiencies and other bonuses associated with that background, in addition to your current one.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose a background. You gain all its features and proficiencies.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Worldly)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Proficiency" name="Proficiency (Wordly)" supports="Skill" number="2"/>
+			<select type="Feat Feature" name="1st Tool Proficiency or Language" supports="Tool Language Select 3" optional="true" />
+			<select type="Feat Feature" name="2nd Tool Proficiency or Language" supports="Tool Language Select 3-2" optional="true" />
+			<select type="Background Feature" name="Background Feature (Worldly)" supports="Background Feature" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
+		</rules>
+	</element>
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_3">
+				<supports>Tool Language Select 3</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_3">
+				<supports>Tool Language Select 3</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>
+
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_3_2">
+				<supports>Tool Language Select 3-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_3_2">
+				<supports>Tool Language Select 3-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>	
+	
+	<element name="Worldly" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WORLDLY_4">
+		<compendium display="false" />
+		<requirements>ID_DMSW_FEAT_WORLDLY_3</requirements>
+		<description>
+			<p>Across a life of adventuring you have seen many incredible things and met many people, learning and growing from new experiences and cultures all the while.</p>
+			<ul>
+				<li>Increase your intelligence, charisma or wisdom score by 1, to a maximum of 20.</li>
+				<li>Choose a background. You gain all skill proficiencies and other bonuses associated with that background, in addition to your current one.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose a background. You gain all its features and proficiencies.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Worldly)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Proficiency" name="Proficiency (Wordly)" supports="Skill" number="2"/>
+			<select type="Feat Feature" name="1st Tool Proficiency or Language" supports="Tool Language Select 4" optional="true" />
+			<select type="Feat Feature" name="2nd Tool Proficiency or Language" supports="Tool Language Select 4-2" optional="true" />
+			<select type="Background Feature" name="Background Feature (Worldly)" supports="Background Feature" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
+		</rules>
+	</element>	
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_4">
+				<supports>Tool Language Select 4</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_4">
+				<supports>Tool Language Select 4</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>
+
+			<element name="Tool Proficiency" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_TOOL_SELECT_4_2">
+				<supports>Tool Language Select 4-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Proficiency" name="Tool Proficiency (Worldly)" supports="Tool" />
+				</rules>
+			</element>
+
+			<element name="Additional Language" type="Feat Feature" source="Player’s Handbook" id="ID_DMSW_FEAT_FEATURE_BACKGROUND_CUSTOM_LANGUAGE_SELECT_4_2">
+				<supports>Tool Language Select 4-2</supports>
+				<compendium display="false" />
+				<sheet display="false" />
+				<rules>
+					<select type="Language" name="Language (Worldly)" supports="Standard||Exotic" />
+				</rules>
+			</element>	
+
+	<element name="Light Armour Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_LIGHT_ARMOUR_MASTER">
+		<prerequisite>Proficiency with Light Armour</prerequisite>
+		<requirements>ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR</requirements>
+		<description>
+			<p>You have trained extensively with Light Armour, learning to maximize the benefits it offers. While you are wearing light armour, you gain the following benefits:</p>
+			<ul>
+				<li>Increase your AC by 1.</li>
+				<li>Whenever you make a dexterity saving throw against an effect that you can see, such as a trap or a spell, you may roll 1d6 and add that number to the roll. To gain this benefit, you can’t be incapacitated. You can use this ability a number of times per long rest equal to your proficiency modifier.</li>
+			</ul>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>While wearing light armor, you gain +1 AC.&#13;
+			When you make a Dex save against an effect you can see, you can add 1d6 to the roll.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:misc" value="1" equipped="[armor:light]" />
+		</rules>
+	</element>
+
+	<element name="Colossal Strength" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_COLOSSAL_STRENGTH">
+		<prerequisite>A Strength score of 20 or more</prerequisite>
+		<requirements>[str:20]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength-based attack rolls, damage rolls, and skill checks by 1.</li>
+				<li>When you make a Strength saving throw, you can choose to make that save at advantage. Once you use this feature, you cannot do so again until you complete a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="Advantage 1/Long Rest">
+			<description>+1 to Strength-based attack rolls, damage rolls, and skill checks.&#13;
+			You can give yourself advantage on one Strength saving throw.</description>
+		</sheet>
+		<rules>
+			<stat name="athletics:misc" value="1" />
+		</rules>
+	</element>
+
+	<element name="Inner Courage" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_INNER_COURAGE">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength, Wisdom or Charisma score by 1, to a maximum of 20.</li>
+				<li>You learn the Heroism spell and you can cast it without using a spell slot. You may cast it at a level equal to your proficiency bonus or below. Once you cast it in this way, you cannot do so again until you finish a short rest.</li>
+				<li>You can also cast the spell with any spell slots you have. The stat you increased with this feat is your spellcasting ability for this spell.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>Learn Heroism. You can cast it once without a spell slot at a level up to your proficiency bonus.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Inner Courage)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEROISM" />
+		</rules>
+	</element>
+
+	<element name="Mesmeriser" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_MESMERISER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>You learn one 1st level spell from the enchantment school of magic and you can cast it at its lowest level without using a spell slot. Once you cast it in this way, you cannot do so again until you finish a long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you take this feat).</li>
+				<li>Whenever you cast a spell or use an ability that forces a creature to make a saving throw to resist the charmed condition, roll 2d4 and subtract that number from the creature’s roll. Once you use this trait, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Learn one 1st-level enchantment spell and cast it once for free. (DC: {{mesmeriser:dc}}&#13;
+			Once per long rest, henever you cast a spell or use an ability that forces a creature wto make a saving throw to resist the charmed condition, roll 2d4 and subtract that number from the creature’s roll.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (Mesmeriser)" supports="1,Enchantment" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mesmeriser)" supports="ID_DMSW_FEAT_FEATURE_MESMERISER_INTELLIGENCE|ID_DMSW_FEAT_FEATURE_MESMERISER_WISDOM|ID_DMSW_FEAT_FEATURE_MESMERISER_CHARISMA" />
+			<stat name="mesmeriser:dc" value="8" />
+			<stat name="mesmeriser:dc" value="proficiency" />
+		</rules>
+	</element>
+	<element name="Intelligence" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_MESMERISER_INTELLIGENCE">
+		<compendium display="false" />
+		<rules>
+			<stat name="mesmeriser:dc" value="intelligence:modifier" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_MESMERISER_WISDOM">
+		<compendium display="false" />
+		<rules>
+			<stat name="mesmeriser:dc" value="wisdom:modifier" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_MESMERISER_CHARISMA">
+		<compendium display="false" />
+		<rules>
+			<stat name="mesmeriser:dc" value="charisma:modifier" />
+		</rules>
+	</element>
+
+	<element name="Unassailable" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_UNASSAILABLE">
+		<prerequisite>A Dexterity score of 20 or more</prerequisite>
+		<requirements>[dex:20]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity-based attack rolls, damage rolls, and skill checks by 1.</li>
+				<li>When you make a Dexterity saving throw, you can choose to make that save at advantage. Once you use this feature, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="Advantage 1/Long Rest">
+			<description>+1 to Dexterity-based attack rolls, damage rolls, and skill checks.&#13;
+			You can give yourself advantage on one Dexterity saving throw.</description>
+		</sheet>
+		<rules>
+			<stat name="acrobatics:misc" value="1" />
+			<stat name="sleightofhand:misc" value="1" />
+			<stat name="stealth:misc" value="1" />
+		</rules>
+	</element>
+
+	<element name="Fighting Spirit" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FIGHTING_SPIRIT">
+		<prerequisite>Monk</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_MONK</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Wisdom or Dexterity score by 1, to a maximum of 20.</li>
+				<li>You gain a number of Ki Points equal to your wisdom modifier. These ki points are added to your existing pool, and recharge after a short rest.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>You gain {{wisdom:modifier}} additional Ki Points.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Fighting Spirit)" supports="ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<stat name="ki:points" value="wisdom:modifier" />
+		</rules>
+	</element>
+
+	<element name="Practiced Grappler" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PRACTICED_GRAPPLER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength score by 1, to a maximum of 20.</li>
+				<li>You have advantage on athletics checks made to grapple another creature, and creatures have disadvantage on checks made to escape your grapple.</li>
+				<li>While you are grappling a creature, you can make a single weapon attack against that creature as a bonus action.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You have advantage on athletics checks made to grapple another creature, and creatures have disadvantage on checks made to escape your grapple.&#13;
+			While you are grappling a creature, you can make a single weapon attack against that creature as a bonus action.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+		</rules>
+	</element>
+
+	<element name="Professional Coward" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PROFESSIONAL_COWARD">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Your movement speed increases by 10ft.</li>
+				<li>As long as you don’t cast a spell or take the attack action on your turn, you can take the dash or dodge action as a bonus action, and your movement doesn’t provoke opportunity attacks.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>+10ft movement speed.&#13;
+			If you don't attack or cast a spell, you can Dash or Dodge as a bonus action, and your movement doesn't provoke opportunity attacks.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" />
+		</rules>
+	</element>
+
+	<element name="Cunning Intellect" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CUNNING_INTELLECT">
+		<prerequisite>An Intelligence score of 20 or more</prerequisite>
+		<requirements>[int:20]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence-based attack rolls, damage rolls, and skill checks by 1.</li>
+				<li>When you make an Intelligence saving throw, you can choose to make that save at advantage. Once you use this feature, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="Advantage 1/Long Rest">
+			<description>+1 to Intelligence-based attack rolls, damage rolls, and skill checks.&#13;
+			You can give yourself advantage on one Intelligence saving throw.</description>
+		</sheet>
+		<rules>
+			<stat name="arcana:misc" value="1" />
+			<stat name="history:misc" value="1" />
+			<stat name="investigation:misc" value="1" />
+			<stat name="nature:misc" value="1" />
+			<stat name="religion:misc" value="1" />
+		</rules>
+	</element>
+
+	<element name="Pledge of Intervention" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PLEDGE_OF_INTERVENTION">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>When you roll initiative, you gain temporary hit points equal to twice your proficiency bonus.</li>
+				<li>In addition, you gain one Divine Favour from a powerful, celestial being. Once, when you would be reduced to 0 hit points or killed outright, you are instead teleported to a safe, familiar location on the material plane. You instantly gain the full benefits of a long rest, and then gain points of exhaustion until you have five. Once this favour has been called upon, you cannot use it again.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you roll initiative, gain {{pledge of intervention:thp}} temp HP.&#13;
+			Divine Favor (1 use ever): When you would be reduced to 0 HP or killed, you are teleported to a safe place, gain the benefits of a long rest, and gain 5 levels of exhaustion.</description>
+		</sheet>
+		<rules>
+			<stat name="pledge of intervention:thp" value="proficiency" />
+			<stat name="pledge of intervention:thp" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Stalwart" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_STALWART">
+		<description>
+			<p>Your body has grown remarkably tough and unyielding.</p>
+			<ul>
+				<li>Increase your Constitution score by 1, to a maximum of 20.</li>
+				<li>Whenever a creature scores a critical hit against you, you can use your reaction to give yourself resistance to one damage type of that attack until the end of this turn.</li>
+				<li>In addition, you have advantage on saving throws to resist or end the poisoned condition.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>Reaction: When critically hit, you can use your reaction to give yourself resistance to one damage type of that attack until the end of this turn. &#13;
+			In addition, you have advantage on saving throws to resist or end the poisoned condition.</description>
+		</sheet>
+		<rules>
+			<stat name="constitution" value="1" />
+		</rules>
+	</element>
+
+	<element name="Acrobat" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_ACROBAT">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>You gain proficiency in Performance and Acrobatics. If you already have proficiency in any of those skills, you gain expertise in that skill instead, doubling your proficiency bonus for any ability check you make with it.</li>
+				<li>In addition, you learn the Jump spell, and can cast it with any spell slots you have.</li>
+				<li>You can also cast Jump without any components, targeting yourself, as a bonus action, without using a spell slot. Once you use this feature, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You learn the Jump spell, and can cast it with any spell slots you have. &#13;
+				You can also cast Jump without any components, targeting yourself, as a bonus action, without using a spell slot. Once you use this feature, you cannot do so again until you finish a long rest.
+			</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_OR_DOUBLE_ACROBATICS" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_OR_DOUBLE_PERFORMANCE" />
+			<grant type="Spell" id="ID_PHB_SPELL_JUMP" />
+		</rules>
+	</element>
+
+	<element name="Cursed Form" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CURSED_FORM">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Reduce your Constitution score by 1.</li>
+				<li>As a bonus action, you can take on a terrifying, monstrous form. This transformation is visual only, has no impact on your abilities, and lasts for one minute, or until you fall unconscious. While in your Monstrous Form, you gain the following benefits:
+					<ul>
+						<li>You gain temporary hit points equal to your proficiency bonus at the start of each of your turns. When the transformation ends, you lose any temporary hit points gained from this effect.</li>
+						<li>You have advantage on intimidation checks.</li>
+						<li>You resist necrotic, cold or poison damage (choose when you transform).</li>
+						<li>The first attack you make each turn deals an additional 1d8 necrotic, cold or poison damage (the same damage type as your resistance) on a hit.</li>
+					</ul>
+				</li>
+				<li>Once you use this feature, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>As a bonus action, you can take on a terrifying, monstrous form. This transformation is visual only, has no impact on your abilities, and lasts for one minute, or until you fall unconscious. While in your Monstrous Form, you gain the following benefits: &#13;
+			• Gain {{proficiency}} temp HP at the start of each of your turns.&#13;
+			• Advantage on Intimidation checks.&#13;
+			• Choose resistance to necrotic, cold, or poison.&#13;
+			• First attack each turn deals +1d8 of the chosen damage type.</description>
+		</sheet>
+		<rules>
+			<stat name="constitution" value="-1" />
+		</rules>
+	</element>
+
+	<element name="Levitation" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_LEVITATION">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Reduce your Strength score by 1.</li>
+				<li>As a bonus action, you can grant yourself a fly speed of 10ft and you can hover. These effects last for the next minute, after which time you float gently to the ground if you are still aloft. You can use this feature a number of times equal to your proficiency bonus per long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>As a bonus action, you can grant yourself a fly speed of 10ft and you can hover. These effects last for the next minute, after which time you float gently to the ground if you are still aloft.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="-1" />
+		</rules>
+	</element>
+
+	<element name="Glimpse of Infinity" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_GLIMPSE_OF_INFINITY">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence score by 1, decrease your Wisdom score by 1.</li>
+				<li>You learn the Guidance cantrip, and gain proficiency in the Arcana and History skills.</li>
+				<li>In addition, you can read all writing and understand any spoken language, but you cannot speak languages you do not know.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You learn the Guidance cantrip.&#13;
+			You can read all writing and understand any spoken language but you cannot speak languages you do not know</description>
+		</sheet>
+		<rules>
+			<stat name="intelligence" value="1" />
+			<stat name="wisdom" value="-1" />
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+		</rules>
+	</element>
+
+	<element name="Devastating Glamour" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_DEVASTATING_GLAMOUR">
+		<prerequisite>A Charisma score of 20 or above</prerequisite>
+		<requirements>[cha:20]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Charisma based attack rolls, damage rolls, and ability checks by 1.</li>
+				<li>When you make a Charisma saving throw, you can choose to make that save at advantage. Once you use this feature, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>+1 to Charisma-based attack rolls, damage rolls, and ability checks.&#13;
+			When you make a Charisma saving throw, you can choose to make that save at advantage.</description>
+		</sheet>
+		<rules>
+			<stat name="deception:misc" value="1" />
+			<stat name="intimidation:misc" value="1" />
+			<stat name="performance:misc" value="1" />
+			<stat name="persuasion:misc" value="1" />
+		</rules>
+	</element>
+
+	<element name="Quick Thinking" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_QUICK_THINKING">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence score by 1, to a maximum of 20.</li>
+				<li>As a reaction, you can add half your intelligence score, rounded up, to an initiative roll or a dexterity saving throw.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>You can add {{intelligence:score:half:up}} to an initiative roll or a dexterity saving throw.</description>
+		</sheet>
+		<rules>
+			<stat name="intelligence" value="1" />
+		</rules>
+	</element>
+
+	<element name="Savage Soul" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SAVAGE_SOUL">
+		<description>
+			<p>When you reduce a hostile enemy Humanoid, Fiend, Celestial, Dragon, Aberration, Ooze or Monstrosity to 0 hit points, you gain temporary hit points equal to your proficiency bonus.</p>
+		</description>
+		<sheet>
+			<description>When you reduce a hostile Humanoid, Fiend, Celestial, Dragon, Aberration, Ooze or Monstrosity to 0 HP, you gain {{proficiency}} temporary HP.</description>
+		</sheet>
+	</element>
+
+	<element name="Versatile Weapon Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_VERSATILE_WEAPON_MASTER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Your weapon attacks made with versatile weapons use the larger damage die, even when wielded with only one hand.</li>
+				<li>In addition, if you take the attack action on your turn and hit a creature while wielding a versatile weapon with both hands, you may use your bonus action to make a single attack against a different creature with that same weapon.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Versatile weapons use their two-handed damage die even when wielded in one hand.&#13;
+			If you hit with a versatile weapon using two hands, you can use a bonus action to attack a different creature.</description>
+		</sheet>
+	</element>
+
+	<element name="Natural Bond" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_NATURAL_BOND">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Wisdom or Charisma score by 1, to a maximum of 20.</li>
+				<li>You gain the ability to communicate and influence certain types of creatures. Choose one: flying speed or swimming speed. Beasts and Monstrosities with the chosen type of movement speed can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Wisdom and Charisma checks you make to influence them.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>Choose flying or swimming. Beasts and Monstrosities with that speed can understand you. You have advantage on Wis/Cha checks to influence them.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Natural Bond)" supports="ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Feat Feature" name="Movement Type (Natural Bond)" supports="ID_DMSW_FEAT_FEATURE_NATURAL_BOND_FLYING|ID_DMSW_FEAT_FEATURE_NATURAL_BOND_SWIMMING" />
+		</rules>
+	</element>
+	<element name="Flying" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_NATURAL_BOND_FLYING">
+		<compendium display="false" />
+		<sheet>
+			<description>Beasts and Monstrosities with flying speed can understand you. YYou have advantage on all Wisdom and Charisma checks you make to influence them.</description>
+		</sheet>
+	</element>
+	<element name="Swimming" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_NATURAL_BOND_SWIMMING">
+		<compendium display="false" />
+		<sheet>
+			<description>Beasts and Monstrosities with swimming speed can understand you. YYou have advantage on all Wisdom and Charisma checks you make to influence them.</description>
+		</sheet>
+	</element>
+
+	<element name="Furious Strikes" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FURIOUS_STRIKES">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength, Dexterity, or Constitution score by 1, to a maximum of 20.</li>
+				<li>Whenever you take the attack action on your turn and score a critical hit with a weapon attack, double your damage modifiers when calculating the damage for that attack.</li>
+				<li>In addition, when you score a critical hit against a creature on your turn, you can make a single weapon attack this turn as a bonus action.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>On a critical hit with a weapon attack, double your damage modifiers and you can make one weapon attack as a bonus action.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Furious Strikes)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION" />
+		</rules>
+	</element>
+
+	<element name="Overchannel" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_OVERCHANNEL">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can channel your body with magical energy. The next levelled spell you cast this turn is treated as being cast with a spell slot of one level higher than the spell slot you expend to cast it.</li>
+				<li>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>As a bonus action, you can channel your body with magical energy. The next levelled spell you cast this turn is treated as being cast with a spell slot of one level higher than the spell slot you expend to cast it.
+			</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Overchannel)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Aerial Tactician" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_AERIAL_TACTICIAN">
+		<prerequisite>Flying Speed</prerequisite>
+		<requirements>[speed:fly:1]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>While you are flying, if you make a melee weapon attack against a creature who is not flying, your attack rolls score a critical hit on a 19 or a 20.</li>
+				<li>In addition, if you are flying and score a critical hit against a creature, that creature cannot make opportunity attacks against you until the start of your next turn.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>While flying, melee attacks vs. non-flying creatures crit on 19-20.&#13;
+			If you are flying and score a critical hit, the target can't make opportunity attacks against you until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+		</rules>
+	</element>
+
+	<element name="Shimmer" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SHIMMER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>If you take the dash action on your turn, your AC increases by an amount equal to your proficiency bonus until the start of your next turn.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>If you Dash, your AC increases by {{proficiency}} until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+		</rules>
+	</element>
+
+	<element name="One With The Shadows" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_ONE_WITH_THE_SHADOWS">
+		<prerequisite>Darkvision or Devil’s Sight</prerequisite>
+		<requirements>ID_VISION_DARKVISION||ID_WOTC_PHB_CLASS_FEATURE_ELDRITCH_INVOCATION_DEVILS_SIGHT</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>While in dim light or darkness, you can take the hide action as a bonus action.</li>
+				<li>While in darkness, you have advantage on all stealth checks.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>While in dim light or darkness, you can Hide as a bonus action.&#13;
+			While in darkness, you have advantage on Stealth checks.</description>
+		</sheet>
+	</element>
+
+	<element name="Trampler" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_TRAMPLER">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength score by 1, to a maximum of 20.</li>
+				<li>When you reduce a creature’s hit points to 0 with a melee weapon attack, you gain a bonus to your next attack roll equal to that creature’s challenge rating or level.</li>
+				<li>In addition, any excess damage you dealt to that creature is added to your next damage roll.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you reduce a creature to 0 HP with a melee attack, your next attack roll gains a bonus equal to the creature's CR/level, and your next damage roll gains a bonus equal to the excess damage dealt.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+		</rules>
+	</element>
+
+	<element name="Double Jump" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_DOUBLE_JUMP">
+		<description>
+			<p>Through mastery of magic or incredible athleticism, you can perform leaps that seem to defy the laws of physics.</p>
+			<ul>
+				<li>Increase your Strength or Dexterity by 1, to a maximum of 20.</li>
+				<li>As a reaction, after jumping, when you reach the height of your jump, you can immediately jump again, as if you were standing on the ground.</li>
+				<li>In addition, you can halve any falling damage you would take from landing after you have jumped, and you do not fall prone upon taking fall damage.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>As a reaction, after jumping, when you reach the height of your jump, you can immediately jump again, as if you were standing on the ground.&#13;
+			In addition, you can halve any falling damage you would take from landing after you have jumped, and you do not fall prone upon taking fall damage.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Double Jump)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+		</rules>
+	</element>
+
+	<element name="Wily Positioning" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WILY_POSITIONING">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>While you are behind cover, you can take the hide action as a bonus action.</li>
+				<li>In addition, while you are behind half cover or three-quarters cover, you gain a further +1 to your AC.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You can Hide as a bonus action while behind cover.&#13;
+			You gain +1 AC while behind half or three-quarters cover.</description>
+		</sheet>
+	</element>
+
+	<element name="Indomitable Fortitude" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_INDOMITABLE_FORTITUDE">
+		<prerequisite>A Constitution score of 20 or more</prerequisite>
+		<requirements>[con:20]</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>You gain a +2 to your Constitution and Death Saving Throws.</li>
+				<li>When you make a Constitution saving throw, you can choose to make that save at advantage. Once you use this feature, you cannot do so again until you complete a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>+2 Death saving throws.&#13;
+			When you make a Constitution saving throw, you can choose to make that save at advantage.</description>
+		</sheet>
+		<rules>
+			<stat name="constitution:save:misc" value="2" />
+		</rules>
+	</element>
+
+	<element name="Jump Slam" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_JUMP_SLAM">
+		<prerequisite>The Double Jump Feat</prerequisite>
+		<requirements>ID_DMSW_FEAT_DOUBLE_JUMP</requirements>
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity by 1, to a maximum of 20.</li>
+				<li>When you fall, if you would land in a space occupied by another creature, you use your reaction to attempt to slam into them. That creature must make a Dexterity saving throw (DC = 8 + your proficiency bonus + your Strength or Dexterity modifier). On a failed save, you land on the creature, knocking them prone. Any fall damage you would have taken from your fall onto that creature is then split equally between the two of you.</li>
+				<li>You then land in the nearest unoccupied space, and the momentum of your collision increases your movement speed by 10 feet until the end of this turn.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>When falling onto a creature's space, use reaction to slam them. Target makes a DC {{jump slam:dc}} Dex save. On fail, they are prone and you split fall damage. You land in nearest space and gain +10ft speed this turn.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Jump Slam)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<stat name="jump slam:dc" value="8" />
+			<stat name="jump slam:dc" value="proficiency" />
+			<stat name="jump slam:dc" value="jump slam:dc:ability" />
+			<stat name="jump slam:dc:ability" value="strength:modifier" bonus="ability" />
+			<stat name="jump slam:dc:ability" value="dexterity:modifier" bonus="ability" />
+		</rules>
+	</element>
+
+	<element name="Explosive Fury" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_EXPLOSIVE_FURY">
+		<prerequisite>Barbarian</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_BARBARIAN</requirements>
+		<description>
+			<p>On your turn, if you are raging, you can expend one use of your rage to channel that energy into an explosive onslaught.</p>
+			<p class="indent">This turn, you can take an additional action and bonus action.</p>
+			<p class="indent">Once you use this feature, you cannot do so again until you finish a short rest.</p>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>While raging, you can expend one use of rage to take an additional action and bonus action this turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Magical Transference" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_MAGICAL_TRANSFERENCE">
+		<prerequisite>Sorcerer</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_SORCERER</requirements>
+		<description>
+			<p>As an action, you can place your hand on a willing creature and expend two or more sorcery points.</p>
+			<p class="indent">That creature regains an expended spell slot of a level equal to or less than half the number of sorcery points you expended, and you both gain temporary hit points equal to twice the number sorcerer points you expended.</p>
+			<p class="indent">If you expended 6 or more sorcery points to use this feature: you both also gain resistance to Bludgeoning, Slashing and Piercing damage for the next 10 minutes.</p>
+			<p class="indent">If you expended 20 or more sorcery points to use this feature: you both also return to full hit points, are cured of the blinded, charmed, deafened, frightened, paralyzed, petrified and stunned conditions, and have advantage on all attack rolls, ability checks and saving throws for the next minute.</p>
+		</description>
+		<sheet action="Action">
+			<description>Expend 2+ sorcery points to touch a willing creature.&#13;
+			• Target regains an spell slot (level =&lt; half points spent). Both gain temp HP twice points spent.&#13;
+			• 6+ points: Both gain B/P/S resistance for 10 min.&#13;
+			• 20+ points: Both are fully healed, cured of blinded, charmed, deafened, frightened, paralyzed, petrified and stunned conditions, and have advantage on all rolls for 1 min.</description>
+		</sheet>
+	</element>
+
+	<element name="Ki Blast" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_KI_BLAST">
+		<prerequisite>Monk</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_MONK</requirements>
+		<description>
+			<p>As an action, you can expend any number of ki points to channel that mystical energy into a devastating blast.</p>
+			<p class="indent">You let loose a beam of force 5 feet wide and 30 feet long. Any creatures in the area of effect must make a Dexterity saving throw, taking 2d6 force damage on a failed save, or half as much on a success. For each ki point you expended beyond the first, increase the damage dealt by 1d6.</p>
+			<p class="indent">If you expended 6 or more ki points to use this feature, you can increase the size of the effect. Either the size of the beam increases to 10 feet wide and 60 feet long, or you can let loose the energy as a pulse that strikes all other creatures in a 15-foot radius.</p>
+			<p class="indent">If you expended 20 or more ki points to use this feature, those in the area of effect automatically fail the dexterity saving throw, and are also paralyzed until the end of your next turn.</p>
+		</description>
+		<sheet action="Action">
+			<description>Expend ki to create a 5x30ft beam. DC {{ki:dc}} Dex save or 2d6 force damage (+1d6 per ki), half on success.&#13;
+			• 6+ ki: Beam becomes 10x60ft OR a 15ft radius pulse.&#13;
+			• 20+ ki: Auto-fail save and targets are paralyzed until end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Contract with the Archdevil God" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CONTRACT_WITH_THE_ARCHDEVIL_GOD">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Charisma score by 1, to a maximum of 20.</li>
+				<li>You cannot have disadvantage on Charisma (Deception) or Charisma (Intimidation) checks.</li>
+				<li>When you take fire damage, you can use your reaction to halve that fire damage. You can use this feature a number of times equal to your proficiency bonus per long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+			<description>You cannot have disadvantage on Deception or Intimidation checks.&#13;
+			When you take fire damage, you can use your reaction to halve it.</description>
+		</sheet>
+		<rules>
+			<stat name="charisma" value="1" />
+		</rules>
+	</element>
+
+	<element name="Blessing of the Celestial Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BLESSING_OF_THE_CELESTIAL_DRAGON">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Wisdom score by 1, to a maximum of 20.</li>
+				<li>On your turn, when you take the attack action, you can replace one of those attacks with a brilliant burst of restorative light that exudes from your form. One creature of your choice within 30 feet of you regains hit points equal to your level.</li>
+				<li>If this healing restores a creature to full hit points, they gain any leftover points of healing from this ability as temporary hit points.</li>
+				<li>You can use this feature a number of times equal to your proficiency bonus per long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you take the Attack action, you can replace one attack to heal a creature within 30ft for {{level}} HP. Overhealing becomes temp HP.</description>
+		</sheet>
+		<rules>
+			<stat name="wisdom" value="1" />
+		</rules>
+	</element>
+
+	<element name="Vassal of the Demon Prince" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_VASSAL_OF_THE_DEMON_PRINCE">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Constitution by 1, to a maximum of 20.</li>
+				<li>On your turn, when you take the attack action, you can replace one of those attacks with an attempt to frighten one creature within 30 feet of you that you can see. That creature must make a Wisdom saving throw (DC = 8 + your constitution modifier + your proficiency bonus). On a failed save, that creature is frightened of you until the end of your next turn or until they are no longer within line of sight.</li>
+				<li>You can use this feature a number of times equal to your proficiency bonus per long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you take the Attack action, you can replace one attack to attempt to frighten a creature within 30ft. It must make a DC {{vassal of the demon prince:dc}} Wis save or be frightened of you until the end of your next turn (or it leaves your sight).</description>
+		</sheet>
+		<rules>
+			<stat name="constitution" value="1" />
+			<stat name="vassal of the demon prince:dc" value="8" />
+			<stat name="vassal of the demon prince:dc" value="constitution:modifier" />
+			<stat name="vassal of the demon prince:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Conduit of the Tarrasque" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CONDUIT_OF_THE_TARRASQUE">
+		<description>
+			<p>The furious power of the Tarrasque echoes within you, granting the following benefits.</p>
+			<ul>
+				<li>Increase your Constitution or Strength score by 1, to a maximum of 20.</li>
+				<li>You cannot have disadvantage on Strength (Athletics) checks.</li>
+				<li>There is no size restriction on creatures you can attempt to shove. In addition, when you shove a creature no more than one size larger than you, you can choose to push it up to 15 feet away, not just 5 feet.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You cannot have disadvantage on Athletics checks.&#13;
+			You can attempt to shove creatures of any size. When you shove a creature no more than one size larger, you can push it up to 15 feet.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Conduit of the Tarrasque)" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_STRENGTH" />
+		</rules>
+	</element>
+
+	<element name="Conduit of the Kraken" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CONDUIT_OF_THE_KRAKEN">
+		<description>
+			<p>The rumbing power of the Kraken surges through you, granting the following benefits.</p>
+			<ul>
+				<li>Increase your Strength or Wisdom score by 1, to a maximum of 20.</li>
+				<li>You can breathe in air and water.</li>
+				<li>When a hostile creature moves out of your reach, you can use your reaction to attempt to grapple the provoking creature. This grapple occurs right before the creature leaves your reach.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>You can breathe air and water.&#13;
+			When a hostile creature moves out of your reach, you can use your reaction to attempt to grapple it.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Conduit of the Kraken)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_WISDOM" />
+		</rules>
+	</element>
+
+	<element name="Conduit of the Beholder" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CONDUIT_OF_THE_BEHOLDER">
+		<description>
+			<p>The tyrannical magic of the Beholder burns within you, granting the following benefits.</p>
+			<p class="indent">When you make an attack roll against one creature, you can imbue that attack with magic. The target must make a Constitution Saving Throw (DC = 8 + your Proficiency Bonus + your Constitution modifier). If the creature fails that saving throw, roll on the table below and apply that effect.</p>
+			<p class="indent">You can use this feature a number of times equal to half your proficiency bonus per long rest (rounded down), but no more than once per turn.</p>
+			<p><b>d10 Result</b></p>
+			<ol>
+				<li>1. The target is charmed by you until the end of your next turn.</li>
+				<li>2. The target is paralyzed until the start of your next turn.</li>
+				<li>3. The target is frightened of you until the end of your next turn.</li>
+				<li>4. The target’s speed is halved and it can’t take reactions until the end of your next turn.</li>
+				<li>5. The target takes Xd6 necrotic damage, where X is equal to your proficiency bonus.</li>
+				<li>6. You telekinetically move the creature up to 30 feet in any direction.</li>
+				<li>7. The creature falls asleep and remains unconscious until the start of your next turn, or until it takes damage or another creature uses an action to wake it.</li>
+				<li>8. The creature is restrained until the end of your next turn.</li>
+				<li>9. The creature takes Xd8 force damage, where X is your proficiency bonus.</li>
+				<li>10. The creature takes Xd10 necrotic damage, where X is your proficiency bonus. It dies if this damage reduces it to 0 hit points.</li>
+			</ol>
+		</description>
+		<sheet usage="{{proficiency:half}}/Long Rest">
+			<description>Once per turn, when you make an attack, you can force the target to make a DC {{conduit of the beholder:dc}} Con save. On a fail, roll a d10 and apply a random effect.
+			1. Charmed until end of your next turn.&#13;
+			2. Paralyzed until start of your next turn.&#13;
+			3. Frightened until end of your next turn.&#13;
+			4. Speed halved and can't take reactions until end of your next turn.&#13;
+			5. Takes {{proficiency}}d6 necrotic damage.&#13;
+			6. Telekinetically moved up to 30ft in any direction.&#13;
+			7. Falls asleep and remains unconscious until start of your next turn, or until it takes damage or another creature uses an action to wake it.&#13;
+			8. Restrained until end of your next turn.&#13;
+			9. Takes {{proficiency}}d8 force damage.&#13;
+			10. Takes {{proficiency}}d10 necrotic damage. If this reduces it to 0 HP, it dies.
+			</description>
+		</sheet>
+		<rules>
+			<stat name="conduit of the beholder:dc" value="8" />
+			<stat name="conduit of the beholder:dc" value="proficiency" />
+			<stat name="conduit of the beholder:dc" value="constitution:modifier" />
+		</rules>
+	</element>
+
+	<element name="Earthshaker" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_EARTHSHAKER">
+		<prerequisite>A Strength score of 18 or above</prerequisite>
+		<requirements>[str:18]</requirements>
+		<description>
+			<p>Making full use of your colossal strength and the weight of your weapon, you can destroy the earth at your feet. You gain the following benefits:</p>
+			<ul>
+				<li>When you take the attack action while wielding a heavy weapon, in place of one attack you can slam that weapon into the earth at a point within your reach, releasing a shockwave of force in a 5 foot square centered at the point you strike. That area becomes difficult terrain.</li>
+				<li>In addition, any creatures other than you standing in the area of the shockwave must succeed on a Dexterity saving throw (DC = 8 + your Strength modifier + your Proficiency Bonus) or take 1d8 bludgeoning damage and fall prone.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you take the Attack action with a heavy weapon, you can replace one attack to slam the ground. A 5ft square becomes difficult terrain. Creatures in the area must make a DC {{earthshaker:dc}} Dex save or take 1d8 bludgeoning and fall prone.</description>
+		</sheet>
+		<rules>
+			<stat name="earthshaker:dc" value="8" />
+			<stat name="earthshaker:dc" value="strength:modifier" />
+			<stat name="earthshaker:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Stealth Shooter" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_STEALTH_SHOOTER">
+		<description>
+			<p>You are adept at shooting from positions of safety without sacrificing accuracy. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>Being prone does not impose disadvantage on your ranged attack rolls.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Being prone does not impose disadvantage on your ranged attack rolls.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+		</rules>
+	</element>
+
+	<element name="Close-Range Tactics" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CLOSE_RANGE_TACTICS">
+		<description>
+			<p>You have trained for the worst, and can hold your own in close range fighting, even while wielding a ranged weapon that requires ammunition. You gain the following benefits:</p>
+			<ul>
+				<li>If your weapon has the ammunition property, such as the longbow or hunting rifle, you can wield it as a club at close range. It has a reach of 5 feet, it deals 1d6 bludgeoning damage on a hit, and you can use your Strength or Dexterity modifier for attack and damage rolls you make with it.</li>
+				<li>While you are wielding a weapon with the ammunition property, you can use your reaction to increase your AC by an amount equal to your proficiency bonus until the end of that turn when you are hit by a melee weapon attack, potentially causing the attack to miss.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You can use a weapon with the Ammunition property as a club (1d6 bludgeoning, Str or Dex).&#13;
+			Reaction: When hit by a melee attack while wielding an ammo weapon, you can use your reaction to increase your AC by {{proficiency}} until the end of that turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Cunning of the Chromatic Green Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_CUNNING_OF_THE_CHROMATIC_GREEN_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the cunning mind and deadly poison of the green chromatic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Intelligence score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you coat one slashing or piercing weapon with a poison you magically conjure. The poison remains potent until the end of this turn. The first time you hit a creature with that weapon this turn, it must make a Constitution saving throw (DC = 8 + your Constitution modifier + your proficiency bonus) taking Xd8 poison damage on a failed save, or half as much on a success, where X is equal to your proficiency bonus. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Coat a weapon with poison until the end of this turn. First hit this turn forces a DC {{cunning of the green dragon:dc}} Con save, taking {{proficiency}}d8 poison damage on a fail, half on success.</description>
+		</sheet>
+		<rules>
+			<stat name="intelligence" value="1" />
+			<stat name="cunning of the green dragon:dc" value="8" />
+			<stat name="cunning of the green dragon:dc" value="constitution:modifier" />
+			<stat name="cunning of the green dragon:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Deftness of the Chromatic Blue Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_DEFTNESS_OF_THE_CHROMATIC_BLUE_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the grace and blistering speed of the blue chromatic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you move up to 30 feet in a straight line in any direction as a bolt of lightning, ending your movement on a surface that can support you. You can move through creatures (but not objects thicker than 5 feet), and your movement does not provoke opportunity attacks. Creatures you move through in this way take 1d6 lightning damage. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Move 30ft in a straight line as lightning. No opportunity attacks. Creatures you move through take 1d6 lightning damage.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+		</rules>
+	</element>
+
+	<element name="Fury of the Chromatic Red Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FURY_OF_THE_CHROMATIC_RED_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the blazing fury of the red chromatic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Charisma score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can exhale a 15-foot cone of flame. Creatures in that area must succeed on a Dexterity saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus) or take Xd6 damage, where X is equal to your proficiency bonus. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Exhale a 15ft cone of flame. Creatures make a DC {{fury of the red dragon:dc}} Dex save or take {{proficiency}}d6 fire damage.</description>
+		</sheet>
+		<rules>
+			<stat name="charisma" value="1" />
+			<stat name="fury of the red dragon:dc" value="8" />
+			<stat name="fury of the red dragon:dc" value="constitution:modifier" />
+			<stat name="fury of the red dragon:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Savagery of the Chromatic White Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SAVAGERY_OF_THE_CHROMATIC_WHITE_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the unyielding ferocity and freezing magic of the white chromatic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Strength score by 1, to a maximum of 20.</li>
+				<li>You can make a single weapon attack as a bonus action. If you do so using this feature, you do not add your ability modifier to the damage. In addition, you can choose for that attack to deal cold damage instead of the weapon’s normal damage type. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Make one weapon attack. You don't add your ability modifier to the damage. You can choose to deal cold damage instead.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+		</rules>
+	</element>
+
+	<element name="Terror of the Chromatic Black Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_TERROR_OF_THE_CHROMATIC_BLACK_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the terrifying aura of the black chromatic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Constitution score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can wield your draconic power to let loose a ferocious roar. Creatures of your choice within 10 feet of you must succeed on a Wisdom saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus) or become frightened of you until the end of your next turn. You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Roar. Creatures of your choice within 10ft must make a DC {{terror of the black dragon:dc}} Wis save or be frightened of you until the end of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="constitution" value="1" />
+			<stat name="terror of the black dragon:dc" value="8" />
+			<stat name="terror of the black dragon:dc" value="constitution:modifier" />
+			<stat name="terror of the black dragon:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Vassal of the Chromatic Dragon God" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_VASSAL_OF_THE_CHROMATIC_DRAGON_GOD">
+		<prerequisite>The Cunning of the Green Dragon, Deftness of the Blue Dragon, Fury of the Red Dragon, Terror of the Black Dragon, and Savagery of the White Dragon feats.</prerequisite>
+		<requirements>ID_DMSW_FEAT_CUNNING_OF_THE_CHROMATIC_GREEN_DRAGON,ID_DMSW_FEAT_DEFTNESS_OF_THE_CHROMATIC_BLUE_DRAGON,ID_DMSW_FEAT_FURY_OF_THE_CHROMATIC_RED_DRAGON,ID_DMSW_FEAT_TERROR_OF_THE_CHROMATIC_BLACK_DRAGON,ID_DMSW_FEAT_SAVAGERY_OF_THE_CHROMATIC_WHITE_DRAGON</requirements>
+		<description>
+			<p>You are a living vortex of turbulent, chromatic energy. Your incredible draconic power offers the following benefits.</p>
+			<ul>
+				<li>On your turn, you can take one additional bonus action. You can use this feature only once per turn, and up to a number of times equal to your proficiency bonus. You regain all expended uses upon finishing a long rest.</li>
+				<li>You have a resistance to acid, cold, fire, lightning, and poison damage.</li>
+				<li>You have a flying speed, swimming speed, and climbing speed equal to your walking speed.</li>
+				<li>You have Blindsight out to 60 feet, and Darkvision out to 120 feet.</li>
+				<li>You have a Legendary Resistance. Once per long rest, if you fail a saving throw, you can choose to succeed instead.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>• One additional bonus action per turn. ({{proficiency}}/Long Rest)&#13;
+			• Blindsight 60ft, Darkvision 120ft.&#13;
+			• Legendary Resistance (1/Long Rest).</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+			<stat name="speed:fly" value="speed" bonus="base" />
+			<stat name="speed:swim" value="speed" bonus="base" />
+			<stat name="speed:climb" value="speed" bonus="base" />
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+			<stat name="blindsight:range" value="60" bonus="base" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="120" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Blessing of the Celestial" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BLESSING_OF_THE_CELESTIAL">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>You learn the sacred flame and spare the dying cantrips.</li>
+				<li>As a bonus action, you can use your own life force to heal others. Expend a number of Hit Dice up to your proficiency bonus, roll them, and add your Constitution modifier. You can then heal a one willing creature within 5 feet of you (excluding yourself) for a number of hit points equal to the result. Once you use this feature, you cannot do so again until you finish a short or long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="1/Short Rest">
+			<description>Learn Sacred Flame and Spare the Dying.&#13;
+			As a bonus action, expend up to {{proficiency}} Hit Dice. Roll them, add your Con modifier, and heal a willing creature within 5ft (not self) for the total.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SACRED_FLAME" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPARE_THE_DYING" />
+		</rules>
+	</element>
+
+	<element name="Blessing of the Storm" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BLESSING_OF_THE_STORM">
+		<description>
+			<p>You gain the following benefits:</p>
+			<ul>
+				<li>You learn the thaumaturgy cantrip.</li>
+				<li>In addition, when you use an action to cast the spell thaumaturgy, or a spell that deals cold, lightning, or thunder damage, you can use a bonus action that turn to generate a whirling eddy of elemental winds about you. Doing so allows you to fly up to 15 feet without provoking opportunity attacks.</li>
+				<li>You can use this feature a number of times equal to your proficiency bonus, regain all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>When you cast Thaumaturgy or a cold/lightning/thunder spell, you can use a bonus action to fly 15ft without provoking opportunity attacks.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" />
+		</rules>
+	</element> 
+
+	<element name="Blessing of the Forge" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BLESSING_OF_THE_FORGE">
+		<description>
+			<p>At the end of a long rest, you can infuse one nonmagical simple or martial weapon with a spark of magical energy. Until the end of your next long rest, the object becomes a magic item, granting a +1 bonus to attack rolls or damage rolls (your choice). This bonus increases to +2 when you reach level 9, and +3 when you reach level 17.</p>
+		</description>
+		<sheet>
+			<description>After a long rest, infuse one nonmagical weapon. It becomes a magic item with a +1 bonus to attack or damage rolls (your choice).</description>
+			<description level="9">After a long rest, infuse one nonmagical weapon. It becomes a magic item with a +2 bonus to attack or damage rolls (your choice).</description>
+			<description level="17">After a long rest, infuse one nonmagical weapon. It becomes a magic item with a +3 bonus to attack or damage rolls (your choice).</description>			
+		</sheet>
+	</element>
+
+	<element name="Breath of the Brass Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BREATH_OF_THE_BRASS_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the magical, sleeping breath of the brass metallic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Constitution score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can exhale sleep gas in a 15-foot cone. Each creature in that area must succeed on a Constitution saving throw (DC = 8 + your Proficiency Bonus + your Constitution Modifier) or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it. Once you use this feature, you can’t do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Exhale sleep gas in a 15ft cone. Creatures must make a DC {{breath of the brass dragon:dc}} Con save or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.</description>
+		</sheet>
+		<rules>
+			<stat name="constitution" value="1" />
+			<stat name="breath of the brass dragon:dc" value="8" />
+			<stat name="breath of the brass dragon:dc" value="proficiency" />
+			<stat name="breath of the brass dragon:dc" value="constitution:modifier" />
+		</rules>
+	</element>
+
+	<element name="Courage of the Bronze Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_COURAGE_OF_THE_BRONZE_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the stalwart courage of the bronze metallic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Wisdom score by 1, to a maximum of 20.</li>
+				<li>You are immune to the frightened condition.</li>
+				<li>In addition, you can use a bonus action to touch an allied creature and impart a magical energy of courage and vitality, ending one of the following conditions affecting it: charmed, frightened, paralyzed, or stunned. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>You are immune to the frightened condition.&#13;
+			As a bonus action, touch an ally to end one of these conditions: charmed, frightened, paralyzed, or stunned.</description>
+		</sheet>
+		<rules>
+			<stat name="wisdom" value="1" />
+		</rules>
+	</element>
+
+	<element name="Form of the Gold Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FORM_OF_THE_GOLD_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the power to take on an aspect of the gold metallic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Strength score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can manifest spectral, golden wings on your body. These wings last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. If you already have a flying speed, your fly speed is instead increased by 15 feet. Once you manifest your wings using this feature, you can’t do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Manifest spectral wings for 1 minute. You gain a flying speed equal to your walking speed and can hover. If you already have a flying speed, it increases by 15ft.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+		</rules>
+	</element>
+
+	<element name="Transformation of the Silver Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_TRANSFORMATION_OF_THE_SILVER_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the shapeshifting powers of the silver chromatic dragons, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Intelligence score by 1, to a maximum of 20.</li>
+				<li>You know the spell Alter Self, and can cast it as a bonus action using this trait. Once you cast Alter Self with this trait, you can’t cast it again with this trait until you finish a long rest. You can also cast Alter Self with any spell slots you have of the appropriate level. Intelligence your spellcasting ability for this spell when you cast it with this trait.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>You know Alter Self and can cast it once as a bonus action without a spell slot. Your spellcasting ability is Intelligence.</description>
+		</sheet>
+		<rules>
+			<stat name="intelligence" value="1" />
+			<grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" />
+		</rules>
+	</element>
+
+	<element name="Wit of the Copper Dragon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_WIT_OF_THE_COPPER_DRAGON">
+		<prerequisite>4th level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You possess the stinging wit and provocative humour of the copper metallic dragons, granting you the following benefits:</p>
+			<ul>
+				<li>Increase your Charisma score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can hurl a magically-infused insult at a creature within 60 feet of yourself that can hear you (it need not understand you). The target must succeed on a Wisdom saving throw or it has disadvantage on attack rolls against targets other than you until the start of your next turn. The DC equals 8 + your proficiency bonus + your Charisma modifier. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Hurl an insult at a creature within 60ft. It must make a DC {{wit of the copper dragon:dc}} Wis save or have disadvantage on attacks against targets other than you until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="charisma" value="1" />
+			<stat name="wit of the copper dragon:dc" value="8" />
+			<stat name="wit of the copper dragon:dc" value="proficiency" />
+			<stat name="wit of the copper dragon:dc" value="charisma:modifier" />
+		</rules>
+	</element>
+
+	<element name="Vassal of the Metallic Dragon God" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_VASSAL_OF_THE_METALLIC_DRAGON_GOD">
+		<prerequisite>The Breath of the Brass Dragon, Courage of the Bronze Dragon, Form of the Gold Dragon, Transformation of the Silver Dragon, and Wit of the Copper Dragon feats.</prerequisite>
+		<requirements>ID_DMSW_FEAT_BREATH_OF_THE_BRASS_DRAGON,ID_DMSW_FEAT_COURAGE_OF_THE_BRONZE_DRAGON,ID_DMSW_FEAT_FORM_OF_THE_GOLD_DRAGON,ID_DMSW_FEAT_TRANSFORMATION_OF_THE_SILVER_DRAGON,ID_DMSW_FEAT_WIT_OF_THE_COPPER_DRAGON</requirements>
+		<description>
+			<p>You are a roiling typhoon of divine, draconic energy. Your incredible power offers the following benefits.</p>
+			<ul>
+				<li>On your turn, you can take one additional bonus action. You can use this feature only once per turn, and up to a number of times equal to your proficiency bonus. You regain all expended uses upon finishing a long rest.</li>
+				<li>You have a resistance to acid, cold, fire, lightning, and poison damage.</li>
+				<li>You have a breath weapon attack. As an action, you can exhale a 30-foot cone of energy of one of the following damage types: acid, cold, fire, lightning, or poison. Creatures in that cone must succeed on a Dexterity saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus) or take 8d6 damage of the type you chose, or half as much on a success. You can use this feature a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</li>
+				<li>You have Blindsight out to 60 feet, and Darkvision out to 120 feet.</li>
+				<li>You have a Legendary Resistance. Once per long rest, if you fail a saving throw, you can choose to succeed instead.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>• One additional bonus action per turn. ({{proficiency}}/Long Rest)&#13;
+			• Breath Weapon (Action): 30ft cone of chosen damage type. DC {{vassal of the metallic dragon god:dc}} Dex save or 8d6 damage (half on success). ({{proficiency}}/Long Rest)&#13;
+			• Blindsight 60ft, Darkvision 120ft.&#13;
+			• Legendary Resistance (1/Long Rest).</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+			<stat name="blindsight:range" value="60" bonus="base" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="120" bonus="base" />
+			<stat name="vassal of the metallic dragon god:dc" value="8" />
+			<stat name="vassal of the metallic dragon god:dc" value="constitution:modifier" />
+			<stat name="vassal of the metallic dragon god:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Heavy Metal" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_HEAVY_METAL">
+		<prerequisite>Barbarian</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_BARBARIAN</requirements>
+		<description>
+			<p>You have trained to wear heavy armour, its cumbersome weight no longer restricting your abilities. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength score by 1, to a maximum of 20.</li>
+				<li>You have proficiency with Heavy Armour, and ignore any restrictions wearing Heavy Armour places on your Barbarian features (with the exception of Unarmoured Defence), such as your ability to Rage.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You ignore heavy armor restrictions on your Barbarian features (except Unarmored Defense).</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+			<stat name="innate speed:misc" value="10" requirements="[innate speed:1]" />
+			<stat name="innate speed:climb:misc" value="10" requirements="[innate speed:climb:1]" />
+			<stat name="innate speed:fly:misc" value="10" requirements="[innate speed:fly:1]" />
+			<stat name="innate speed:swim:misc" value="10" requirements="[innate speed:swim:1]" />
+			<stat name="innate speed:burrow:misc" value="10" requirements="[innate speed:burrow:1]" />
+		</rules>
+	</element>
+
+	<element name="Knockback Blow" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_KNOCKBACK_BLOW">
+		<prerequisite>Monk</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_MONK</requirements>
+		<description>
+			<p>The power of your fists is akin to magic. You learn the punch out cantrip. In addition, you can spend 1 ki point to cast punch out as a bonus action. If you do, you make the melee attack roll as a part of that spell at advantage.</p>
+		</description>
+		<sheet>
+			<description>You learn the punch out cantrip. You can spend 1 ki point to cast it as a bonus action with advantage on the attack roll.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_DMSW_SPELL_PUNCH_OUT" />
+		</rules>
+	</element>
+
+	<element name="Fundamental Boon" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FUNDAMENTAL_BOON_WARLOCK">
+		<prerequisite>4th level, Warlock</prerequisite>
+		<requirements>[level:warlock:4]</requirements>
+		<description>
+			<p>Your patron favours you with increased magical power. You learn two cantrips of your choice from any spell list. Charisma is your spellcasting modifier for these spells. In addition, as a bonus action, you can expend a Pact Magic slot to cast Eldritch Blast.</p>
+			<p class="indent">If you are multiclassed, or multiclass at any time, you lose all benefits of this feat. Instead, you increase one ability score of your choice by 2, to a maximum of 20.</p>
+		</description>
+		<sheet>
+			<description>Learn two cantrips from any spell list (Charisma is the ability). As a bonus action, you can expend a Pact Magic slot to cast Eldritch Blast. If you multiclass, you lose these benefits and instead increase one ability score by 2.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cantrip (Fundamental Boon)" supports="0" number="2" requirements="!ID_INTERNAL_GRANT_MULTICLASS" />
+			<select type="Ability Score Improvement" name="Fundamental Boon" supports="Custom Ability Score Increase 2" requirements="ID_INTERNAL_GRANT_MULTICLASS" />
+		</rules>
+	</element>
+
+	<element name="Infiltration Warrior" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_INFILTRATION_WARRIOR">
+		<prerequisite>Rogue</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_ROGUE</requirements>
+		<description>
+			<p>You have trained to wield heavier and more cumbersome armour, without restricting your stealthy capabilities. You gain the following benefits:</p>
+			<ul>
+				<li>You gain proficiency with Medium Armour and Shields.</li>
+				<li>Wearing Medium Armour doesn’t impose disadvantage on your Dexterity (Stealth) checks.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Wearing Medium Armor doesn’t impose disadvantage on your Stealth checks.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+		</rules>
+	</element>
+
+	<element name="All’s Well That Ends Spell" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_ALLS_WELL_THAT_ENDS_SPELL">
+		<prerequisite>Sorcerer or Wizard</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_SORCERER||ID_WOTC_PHB_CLASS_WIZARD</requirements>
+		<description>
+			<p>You are well practiced in the art of battling other spellcasters, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Constitution, Intelligence, or Charisma score by 1, to a maximum of 20.</li>
+				<li>If a spell you cast is countered, you regain the spell slot used to cast that spell, and can use the same action, bonus action, or reaction you used to cast the countered spell to cast a cantrip in its place.</li>
+				<li>A creature damaged by a spell you cast has disadvantage on Constitution saving throws to maintain its concentration.</li>
+				<li>If you lose concentration on a spell as a result of taking damage, you can use your reaction to deal force damage equal to 5 times that spell’s level to one creature you can see within 30 feet of you.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>• If your spell is countered, regain the slot and cast a cantrip with the same action type.&#13;
+			• Creatures damaged by your spells have disadvantage on concentration saves.&#13;
+			• Reaction: If you lose concentration from damage, deal 5 x spell level force damage to a creature within 30ft.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (All's Well That Ends Spell)" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Ki Thief" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_KI_THIEF">
+		<prerequisite>Monk</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_MONK</requirements>
+		<description>
+			<p>Your command of ki is so great that you have the power to manipulate the life force of others, granting you the following benefits.</p>
+			<ul>
+				<li>Your unarmed strikes and monk weapons score a critical hit on a 19 or a 20.</li>
+				<li>When you score a critical hit against a creature with an unarmed strike or monk weapon, you regain 2 ki points.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Your unarmed strikes and monk weapons crit on a 19-20. When you score a critical hit with them, you regain 2 ki points.</description>
+		</sheet>
+	</element>
+
+	<element name="Hunter’s Mastery" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_HUNTERS_MASTERY">
+		<prerequisite>Ranger</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_RANGER</requirements>
+		<description>
+			<p>Your focus in battle is nigh-unshakable, granting you the following benefits.</p>
+			<ul>
+				<li>You learn the spell hunter’s mark. It counts as a ranger spell for you, but it doesn’t count against the number of ranger spells you know.</li>
+				<li>When you roll for initiative, you can use your reaction to cast hunter’s mark. Once you use this feature, you cannot do so again until you finish a short or long rest.</li>
+				<li>You have advantage on Constitution saving throws to maintain concentration on your ranger spells.</li>
+				<li>If the target of your hunter’s mark has 0 hit points before the spell ends, you can use a reaction to mark a new creature. You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses when you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>• Reaction on Initiative: Cast Hunter's Mark (1/Short Rest).&#13;
+			• Advantage on Con saves to maintain concentration on ranger spells.&#13;
+			• Reaction when target dies: Mark a new creature ({{proficiency}}/Long Rest).</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" spellcasting="Ranger" prepared="true"/>
+		</rules>
+	</element>
+
+	<element name="Deadly Hunter" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_DEADLY_HUNTER">
+		<prerequisite>Ranger</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_RANGER</requirements>
+		<description>
+			<p>Your battlefield focus is unmatched. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength, Dexterity, or Wisdom score by 1, to a maximum of 20.</li>
+				<li>You learn the spell hunter’s mark, or one other 1st level Ranger spell of your choice.</li>
+				<li>The damage you deal through hunter’s mark increases from 1d6 to 1d8.</li>
+				<li>When you cast hunter’s mark using your bonus action, if you take the attack action on that turn, you can make one additional weapon attack as a part of that attack action.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Hunter's Mark damage becomes 1d8.&#13;
+			When you cast Hunter's Mark as a bonus action, if you take the Attack action, you can make one additional weapon attack.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Deadly Hunter)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_WISDOM" />
+			<select type="Spell" name="Spell (Deadly Hunter)" supports="1,Ranger" default="ID_PHB_SPELL_HUNTERS_MARK"/>
+		</rules>
+	</element>
+
+	<element name="Union Shape" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_UNION_SHAPE">
+		<prerequisite>Druid</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_DRUID</requirements>
+		<description>
+			<p>The magic of the natural word flows through your body and into others. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Wisdom score by 1, to a maximum of 20.</li>
+				<li>As an action, you can touch a willing creature and expend a use of your Wild Shape. That creature Wild Shapes into a Beast of its choice that you could Wild Shape into using your Wild Shape feature for the next hour. The transformation ends early if the target uses its action to revert to its true form, if you Wild Shape, or if you use this feature again.</li>
+			</ul>
+		</description>
+		<sheet action="Action">
+			<description>Expend a use of Wild Shape to touch a willing creature. It Wild Shapes into a beast you could become for 1 hour. Ends if target reverts, you Wild Shape, or you use this again.</description>
+		</sheet>
+		<rules>
+			<stat name="wisdom" value="1" />
+		</rules>
+	</element>
+
+	<element name="Savant" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SAVANT">
+		<prerequisite>Wizard</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_WIZARD</requirements>
+		<description>
+			<p>You are prodigious in the art of spellcasting. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence score by 1, to a maximum of 20.</li>
+				<li>You learn two cantrips from the Wizard spell list.</li>
+				<li>You learn one 1st-level spell from the Wizard spell list.</li>
+				<li>Once per short rest, you can cast one 1st-level spell without expending a spell slot.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>You can cast one 1st-level spell you know without expending a spell slot.</description>
+		</sheet>
+		<rules>
+			<stat name="intelligence" value="1" />
+			<select type="Spell" name="Cantrip (Savant)" supports="0,Wizard" number="2" />
+			<select type="Spell" name="1st-level Spell (Savant)" supports="1,Wizard" />
+		</rules>
+	</element>
+
+	<element name="Simple Life" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SIMPLE_LIFE">
+		<description>
+			<p>You prefer to keep things simple, dedicating your full attention to a single action and making it count.</p>
+			<ul>
+				<li>Increase one ability score of your choice by 1, to a maximum of 20.</li>
+				<li>At the start of your turn, you can choose to forgo taking a bonus action, reaction, or using your movement until the start of your next turn. If you do, you gain a bonus equal to half your proficiency bonus (rounded up) to all attack rolls, damage rolls, and saving throws you make until the start of your next turn.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>At start of your turn, you can forgo your bonus action, reaction, and movement. If you do, gain a +{{proficiency:half:up}} bonus to all attack rolls, damage rolls, and saving throws until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Simple Life)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Razor’s Edge" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_RAZORS_EDGE">
+		<description>
+			<p>You revel in danger and the thrill of battle.</p>
+			<ul>
+				<li>Increase one ability score of your choice by 1, to a maximum of 20.</li>
+				<li>While your hit points are lower than half your hit point maximum, you have advantage on attack rolls.</li>
+				<li>While you have exactly 1 hit point, you score a critical hit on an attack roll of 18-20.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>While below half HP, you have advantage on attack rolls.&#13;
+			While at exactly 1 HP, you crit on an 18-20.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Razor's Edge)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Untarnished" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_UNTARNISHED">
+		<description>
+			<p>You are a fearsome combatant, able to push yourself beyond typical limits while at full strength.</p>
+			<ul>
+				<li>Increase one ability score of your choice by 1, to a maximum of 20.</li>
+				<li>While you are at full Hit Points, you can add +1 to your attack rolls, damage rolls, ability checks, and spell save DC.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>While at full HP, you gain a +1 bonus to attack rolls, damage rolls, ability checks, and spell save DC.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Untarnished)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Soul-Fueled" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SOUL_FUELED">
+		<prerequisite>Sorcerer</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_SORCERER</requirements>
+		<description>
+			<p>You can push beyond your normal limitations to enhance your spells at the cost of your own body. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Constitution or Charisma score by 1, to a maximum of 20.</li>
+				<li>You can enhance a spell with metamagic even if you have no sorcery points available. If you do, expend a number of hit dice equal to the number of sorcery points you wish to expend to enhance a spell, roll them, and you take force damage equal to the result. This force damage can’t be reduced, prevented, or redirected in any way. The spell then takes effect as normal with the metamagic applied as if you expended sorcery points to enhance it. You can use this feature a number of times equal to your Charisma modifier, regaining all expended uses when you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="{{charisma:modifier}}/Long Rest">
+			<description>You can use metamagic with no sorcery points by expending Hit Dice equal to the sorcery point cost. You take force damage equal to the roll (cannot be reduced, prevented, or redirected in any way).</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Soul-Fueled)" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Battle Tactician" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BATTLE_TACTICIAN">
+		<prerequisite>Fighter</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_FIGHTER</requirements>
+		<description>
+			<p>You are swift of mind and body on the battlefield, inspiring alpes and striking down foes with your natural combat virtuosity. You gain the following benefits.</p>
+			<ul>
+				<li>Increase your Strength, Dexterity, or Charisma score by 1, to a maximum of 20.</li>
+				<li>You have a +5 bonus to initiative rolls.</li>
+				<li>Once per turn, when you hit a creature with an attack roll, you can target one ally within 30 feet that can see or hear you. That target gains a bonus to the next attack roll, ability check, or saving throw it makes within the next minute equal to the ability score modifier of the ability you increased with this feat.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Once per turn, when you hit a creature, one ally within 30ft gains a bonus to their next attack, check, or save equal to {{battle tactician}}.</description>
+		</sheet>
+		<rules>
+			<select type="Feat Feature" name="Ability Score Increase (Battle Tactician)" supports="Battle Tactician" />
+			<stat name="initiative" value="5" />
+		</rules>
+	</element>
+		<element name="Battle Tactician" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_BATTLE_TACTICIAN_STR">
+			<compendium display="false" />
+			<supports>Battle Tactician</supports>		
+			<description>
+				<p>You are swift of mind and body on the battlefield, inspiring alpes and striking down foes with your natural combat virtuosity. You gain the following benefits.</p>
+				<ul>
+					<li>Increase your Strength, Dexterity, or Charisma score by 1, to a maximum of 20.</li>
+					<li>You have a +5 bonus to initiative rolls.</li>
+					<li>Once per turn, when you hit a creature with an attack roll, you can target one ally within 30 feet that can see or hear you. That target gains a bonus to the next attack roll, ability check, or saving throw it makes within the next minute equal to the ability score modifier of the ability you increased with this feat.</li>
+				</ul>
+			</description>
+			<sheet display="false">
+				<description>Once per turn, when you hit a creature, one ally within 30ft gains a bonus to their next attack, check, or save equal to the modifier of the ability increased by this feat.</description>
+			</sheet>
+			<rules>
+				<stat name="strength" value="1" />
+				<stat name="battle tactician" value="strength:modifier" />
+			</rules>
+		</element>
+		<element name="Battle Tactician" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_BATTLE_TACTICIAN_DEX">
+			<compendium display="false" />
+			<supports>Battle Tactician</supports>		
+			<description>
+				<p>You are swift of mind and body on the battlefield, inspiring alpes and striking down foes with your natural combat virtuosity. You gain the following benefits.</p>
+				<ul>
+					<li>Increase your Strength, Dexterity, or Charisma score by 1, to a maximum of 20.</li>
+					<li>You have a +5 bonus to initiative rolls.</li>
+					<li>Once per turn, when you hit a creature with an attack roll, you can target one ally within 30 feet that can see or hear you. That target gains a bonus to the next attack roll, ability check, or saving throw it makes within the next minute equal to the ability score modifier of the ability you increased with this feat.</li>
+				</ul>
+			</description>
+			<sheet display="false">
+				<description>Once per turn, when you hit a creature, one ally within 30ft gains a bonus to their next attack, check, or save equal to the modifier of the ability increased by this feat.</description>
+			</sheet>
+			<rules>
+				<stat name="dexterity" value="1" />
+				<stat name="battle tactician" value="dexterity:modifier" />
+			</rules>
+		</element>
+		<element name="Battle Tactician" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_BATTLE_TACTICIAN_CHA">
+			<compendium display="false" />
+			<supports>Battle Tactician</supports>		
+			<description>
+				<p>You are swift of mind and body on the battlefield, inspiring alpes and striking down foes with your natural combat virtuosity. You gain the following benefits.</p>
+				<ul>
+					<li>Increase your Strength, Dexterity, or Charisma score by 1, to a maximum of 20.</li>
+					<li>You have a +5 bonus to initiative rolls.</li>
+					<li>Once per turn, when you hit a creature with an attack roll, you can target one ally within 30 feet that can see or hear you. That target gains a bonus to the next attack roll, ability check, or saving throw it makes within the next minute equal to the ability score modifier of the ability you increased with this feat.</li>
+				</ul>
+			</description>
+			<sheet display="false">
+				<description>Once per turn, when you hit a creature, one ally within 30ft gains a bonus to their next attack, check, or save equal to the modifier of the ability increased by this feat.</description>
+			</sheet>
+			<rules>
+				<stat name="charisma" value="1" />
+				<stat name="battle tactician" value="charisma:modifier" />
+			</rules>
+		</element>
+
+	<element name="Pact Tactics" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PACT_TACTICS">
+		<prerequisite>8th level Warlock</prerequisite>
+		<requirements>[level:warlock:8]</requirements>
+		<description>
+			<p>You have entered into an additional pact as a means to enhance your power. Choose one Warlock pact. You gain the benefits of that pact in addition to those of your current pact.</p>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose one Warlock pact. You gain its benefits in addition to your current pact.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Pact Boon (Pact Tactics)" supports="Pact Boon" />
+		</rules>
+	</element>
+	<element name="Pact Tactics" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PACT_TACTICS_1">
+		<compendium display="false" />
+		<prerequisite>8th level Warlock</prerequisite>
+		<requirements>[level:warlock:8],ID_DMSW_FEAT_PACT_TACTICS</requirements>
+		<description>
+			<p>You have entered into an additional pact as a means to enhance your power. Choose one Warlock pact. You gain the benefits of that pact in addition to those of your current pact.</p>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose one Warlock pact. You gain its benefits in addition to your current pact.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Pact Boon (Pact Tactics)" supports="Pact Boon" />
+		</rules>
+	</element>
+	<element name="Pact Tactics" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PACT_TACTICS_2">
+		<compendium display="false" />
+		<prerequisite>8th level Warlock</prerequisite>
+		<requirements>[level:warlock:8],ID_DMSW_FEAT_PACT_TACTICS_1</requirements>
+		<description>
+			<p>You have entered into an additional pact as a means to enhance your power. Choose one Warlock pact. You gain the benefits of that pact in addition to those of your current pact.</p>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose one Warlock pact. You gain its benefits in addition to your current pact.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Pact Boon (Pact Tactics)" supports="Pact Boon" />
+		</rules>
+	</element>
+	<element name="Pact Tactics" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PACT_TACTICS_3">
+		<compendium display="false" />
+		<prerequisite>8th level Warlock</prerequisite>
+		<requirements>[level:warlock:8],ID_DMSW_FEAT_PACT_TACTICS_2</requirements>
+		<description>
+			<p>You have entered into an additional pact as a means to enhance your power. Choose one Warlock pact. You gain the benefits of that pact in addition to those of your current pact.</p>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose one Warlock pact. You gain its benefits in addition to your current pact.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Pact Boon (Pact Tactics)" supports="Pact Boon" />
+		</rules>
+	</element>
+	<element name="Pact Tactics" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_PACT_TACTICS_4">
+		<compendium display="false" />
+		<prerequisite>8th level Warlock</prerequisite>
+		<requirements>[level:warlock:8],ID_DMSW_FEAT_PACT_TACTICS_3</requirements>
+		<description>
+			<p>You have entered into an additional pact as a means to enhance your power. Choose one Warlock pact. You gain the benefits of that pact in addition to those of your current pact.</p>
+			<p class="indent">You can take this feat multiple times.</p>
+		</description>
+		<sheet>
+			<description>Choose one Warlock pact. You gain its benefits in addition to your current pact.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Pact Boon (Pact Tactics)" supports="Pact Boon" />
+		</rules>
+	</element>
+
+	<element name="Smite to Ruin" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SMITE_TO_RUIN">
+		<prerequisite>Paladin</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_PALADIN</requirements>
+		<description>
+			<p>Your tenacity and ferocity as a magical warrior is unmatched.</p>
+			<ul>
+				<li>Increase your Strength or Charisma score by 1, to a maximum of 20.</li>
+				<li>You learn the spell branding smite, or one other 1st-level “smite” spell of your choice.</li>
+				<li>If you cast a “smite” spell using a Bonus Action, you have advantage on the next attack roll you make that turn.</li>
+				<li>You have advantage on Constitution saving throws made to maintain concentration on your smite spells.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>If you cast a smite spell as a bonus action, you have advantage on your next attack roll this turn.&#13;
+			You have advantage on Con saves to maintain concentration on your smite spells.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Smite to Ruin)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Spell" name="Smite Spell (Smite to Ruin)" supports="ID_PHB_SPELL_BRANDING_SMITE||ID_PHB_SPELL_SEARING_SMITE||ID_PHB_SPELL_THUNDEROUS_SMITE||ID_PHB_SPELL_WRATHFUL_SMITE" default="ID_PHB_SPELL_BRANDING_SMITE"/>
+		</rules>
+	</element>
+
+	<element name="Invoked Divinity" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_INVOKED_DIVINITY">
+		<prerequisite>4th Level Cleric</prerequisite>
+		<requirements>[level:cleric:4]</requirements>
+		<description>
+			<p>Your connection to the divine spans multiple faiths and allegiances.</p>
+			<ul>
+				<li>Increase your Wisdom score by 1, to a maximum of 20.</li>
+				<li>Choose a Cleric subclass other than your current one. You can use the Channel Divinity feature of that subclass once per long rest, expending a use of your Channel Divinity as normal.</li>
+			</ul>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>Choose a Cleric subclass other than your own. You can use its Channel Divinity feature once per long rest.</description>
+		</sheet>
+		<rules>
+			<stat name="wisdom" value="1" />
+			<select type="Archetype Feature" name="Cleric Subclass (Invoked Divinity)" supports="Cleric Channel Divinity" />
+		</rules>
+	</element>
+
+	<element name="Self-Affirmation" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SELF_AFFIRMATION"> 
+		<prerequisite>Bard</prerequisite>
+		<requirements>ID_WOTC_PHB_CLASS_BARD</requirements>
+		<description>
+			<p>Your self-confidence and determination empower your magic.</p>
+			<ul>
+				<li>Increase your Charisma score by 1, to a maximum of 20.</li>
+				<li>When you use your Bardic Inspiration, you can choose yourself as the beneficiary of the feature.</li>
+				<li>When you score a critical hit on an attack roll, or a creature rolls a natural 1 when making a saving throw to resist the effect of a spell you cast, you regain one expended use of your Bardic Inspiration.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You can use Bardic Inspiration on yourself.&#13;
+			When you crit or an enemy rolls a natural 1 on a save against your spell, you regain one use of Bardic Inspiration.</description>
+		</sheet>
+		<rules>
+			<stat name="charisma" value="1" />
+		</rules>
+	</element>
+
+	<element name="Soul Gift" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SOUL_GIFT">
+		<prerequisite>The ability to cast at least one spell</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p>The power of your magic ripples out beyond your body and into others. Spells you cast with a range of self (such as alter self) can target a willing creature you can see within 5 feet of you in place of yourself. The spell still uses your spellcasting ability modifier.</p>
+		</description>
+		<sheet>
+			<description>Spells you cast with a range of Self can instead target a willing creature within 5 feet.</description>
+		</sheet>
+	</element>
+
+	<element name="Fiend Touched" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FIEND_TOUCHED">
+		<description>
+			<p>Your exposure to the magic of fiends has changed you, granting you the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</li>
+				<li>You learn the scorching ray spell and one 1st-level spell of your choice. The 1st-level spell must be from the Evocation or Transmutation school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>Learn Scorching Ray and one 1st-level Evocation or Transmutation spell. You can cast each once  without expending a spell slot. The spellcasting ability is the ability increased by this feat.</description>
+		</sheet>
+		<rules>
+			<select type="Feat Feature" name="Ability Score Increase (Fiend Touched)" supports="Fiend Touched" />
+			<grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" />
+			<select type="Spell" name="1st-level Spell (Fiend Touched)" supports="1,(Evocation||Transmutation)"/>
+		</rules>
+	</element>
+	<element name="Intelligence" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_FIEND_TOUCHED_INTELLIGENCE">
+		<compendium display="false" />
+		<supports>Fiend Touched</supports>
+		<description>
+			<p>Increase your Intelligence by 1, to a maximum of 20.</p>
+		</description>
+		<sheet alt="Fiend Touched">
+			<description>You can cast this feat’s spells without a spell slot once per long rest. You can also cast these spells using spell slots you have of the appropriate level. Your spellcasting ability for these spells is Intelligence.</description>
+		</sheet>
+		<rules>
+			<stat name="intelligence" value="1" alt="Fiend Touched" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_FIEND_TOUCHED_WISDOM">
+		<compendium display="false" />
+		<supports>Fiend Touched</supports>
+		<description>
+			<p>Increase your Wisdom by 1, to a maximum of 20.</p>
+		</description>
+		<sheet alt="Fiend Touched">
+			<description>You can cast this feat’s spells without a spell slot once per long rest. You can also cast these spells using spell slots you have of the appropriate level. Your spellcasting ability for these spells is Wisdom.</description>
+		</sheet>
+		<rules>
+			<stat name="wisdom" value="1" alt="Fiend Touched" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_FIEND_TOUCHED_CHARISMA">
+		<compendium display="false" />
+		<supports>Fiend Touched</supports>
+		<description>
+			<p>Increase your Charisma by 1, to a maximum of 20.</p>
+		</description>
+		<sheet alt="Fiend Touched">
+			<description>You can cast this feat’s spells without a spell slot once per long rest. You can also cast these spells using spell slots you have of the appropriate level. Your spellcasting ability for these spells is Charisma.</description>
+		</sheet>
+		<rules>
+			<stat name="charisma" value="1" alt="Fiend Touched" />
+		</rules>
+	</element>
+
+	<element name="Hypnotist" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_HYPNOTIST">
+		<description>
+			<p>You have trained in the subtle art of hypnosis to gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</li>
+				<li>You learn the command spell, and can cast it without expending a spell slot. Once you cast it in this way, you can’t cast it in this way again until you finish a long rest. The spell’s spellcasting ability is the ability increased by this feat.</li>
+				<li>Over the course of a short rest, you can use your skills on a willing ally to temporarily bolster their mental fortitude. Choose one ability from among Intelligence, Wisdom, and Charisma. That creature can add 1d4 to saving throws that use that ability for the next 8 hours. Once you use this feature, you cannot do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>Learn Command and cast it once for free.&#13;
+			During a short rest, grant a willing ally 1d4 to Int, Wis, or Cha saves for 8 hours.</description>
+		</sheet>
+		<rules>
+			<select type="Feat Feature" name="Ability Score Increase (Hypnotist)" supports="Hypnotist" />
+			<grant type="Spell" id="ID_PHB_SPELL_COMMAND" />
+		</rules>
+	</element>
+		<element name="Intelligence" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_HYPNOTIST_INTELLIGENCE">
+			<compendium display="false" />
+			<supports>Hypnotist</supports>
+			<description>
+				<p>Increase your Intelligence by 1, to a maximum of 20.</p>
+			</description>
+			<sheet alt="Hypnotist">
+				<description>You learn the command spell, and can cast it without a spell slot once per long rest. Your spellcasting ability for this spell is Intelligence.&#13;
+					During a short rest, grant a willing ally 1d4 to Int, Wis, or Cha saves for 8 hours.
+				</description>
+			</sheet>
+			<rules>
+				<stat name="intelligence" value="1" alt="Hypnotist" />
+			</rules>
+		</element>
+		<element name="Wisdom" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_HYPNOTIST_WISDOM">
+			<compendium display="false" />
+			<supports>Hypnotist</supports>
+			<description>
+				<p>Increase your Wisdom by 1, to a maximum of 20.</p>
+			</description>
+			<sheet alt="Hypnotist">
+				<description>You learn the command spell, and can cast it without a spell slot once per long rest. Your spellcasting ability for this spell is Wisdom.&#13;
+					During a short rest, grant a willing ally 1d4 to Int, Wis, or Cha saves for 8 hours.
+				</description>
+			</sheet>
+			<rules>
+				<stat name="wisdom" value="1" alt="Hypnotist" />
+			</rules>
+		</element>
+		<element name="Charisma" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_HYPNOTIST_CHARISMA">
+			<compendium display="false" />
+			<supports>Hypnotist</supports>
+			<description>
+				<p>Increase your Charisma by 1, to a maximum of 20.</p>
+			</description>
+			<sheet alt="Hypnotist">
+				<description>You learn the command spell, and can cast it without a spell slot once per long rest. Your spellcasting ability for this spell is Charisma.&#13;
+					During a short rest, grant a willing ally 1d4 to Int, Wis, or Cha saves for 8 hours.
+				</description>
+			</sheet>
+			<rules>
+				<stat name="charisma" value="1" alt="Hypnotist" />
+			</rules>
+		</element> 
+
+	 <element name="Battlefield Commander" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BATTLEFIELD_COMMANDER">
+		<prerequisite>Intelligence or Charisma score of 13 or higher</prerequisite>
+		<requirements>[int:13]||[cha:13]</requirements>
+		<description>
+			<p>You are a natural born leader, with a gifted, tactical mind. In battle, you create opportunities to undermine enemies and engineer the flow of combat to lead alpes to victory. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence or Charisma score by 1, to a maximum of 20.</li>
+				<li>As a bonus action, you can focus your senses to perfectly track the movements of one creature you can see within 30 feet, readying yourself to respond to its every action. Until the start of your next turn, that creature has disadvantage on attack rolls against you.</li>
+				<li>When you take the Attack action on your turn, you can forgo one of your attacks to direct one of your allies to strike instead. When you do so, choose a friendly creature who can see or hear you and who is within 30 feet of you. That creature can immediately use its reaction to make a single weapon attack. You can use this feature a number of times equal to your Charisma modifier, regaining all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>BA: A creature you see within 30ft has disadvantage on attacks against you until start of your next turn.&#13;
+			Attack Action: Forgo one attack to let an ally within 30ft use their reaction to make one weapon attack. ({{charisma:modifier}}/Long Rest)</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Battlefield Commander)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Survivor" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SURVIVOR">
+		<prerequisite>4th Level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>You are a battle-hardened, tough-as-nails survivor, able to shrug off punishment that would fell a lesser warrior. You gain the following benefits:</p>
+			<ul>
+				<li>Your hit point maximum increases by an amount equal to your level. Whenever you gain a level thereafter, you hit point maximum increases by 1 point.</li>
+				<li>Whenever you take bludgeoning, slashing, or piercing damage, you can use a reaction to expend one hit die and roll it. The damage taken is reduced by an amount equal to the number rolled.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>Whenever you take bludgeoning, slashing, or piercing damage, expend one hit die to reduce the damage by the amount rolled.</description>
+		</sheet>
+		<rules>
+			<stat name="hp" value="level" />
+		</rules>
+	</element>
+
+	<element name="Mystic Reserves" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_MYSTIC_RESERVES">
+		<prerequisite>The Spellcasting or Pact Magic feature</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p>Your well of arcane power runs deeper than most, granting you the following benefits:</p>
+			<ul>
+				<li>Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</li>
+				<li>You learn one 1st-level spell of your choice.</li>
+				<li>You gain two additional 1st-level spell slots. These spell slots can only be used to cast spells you know or have prepared. You regain these spell slots after a long rest.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You learn one 1st-level spell. You gain two additional 1st-level spell slots.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Mystic Reserves)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Spell" name="1st-level Spell (Mystic Reserves)" supports="1" />
+			<stat name="wizard:spellcasting:slots:1" value="2" requirements="ID_WOTC_PHB_CLASS_WIZARD,!ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING"/>
+			<stat name="cleric:spellcasting:slots:1" value="2" requirements="ID_WOTC_PHB_CLASS_CLERIC,!ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING"/>
+			<stat name="druid:spellcasting:slots:1" value="2" requirements="ID_WOTC_PHB_CLASS_DRUID,!ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING"/>
+			<stat name="sorcerer:spellcasting:slots:1" value="2" requirements="ID_WOTC_PHB_CLASS_SORCERER,!ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING"/>
+			<stat name="bard:spellcasting:slots:1" value="2" requirements="ID_WOTC_PHB_CLASS_BARD,!ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING"/>
+			<stat name="artificer:spellcasting:slots:1" value="2" requirements="ID_WOTC_TCOE_CLASS_ARTIFICER,!ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING"/>
+			<stat name="multiclass:spellcasting:slot:1" value="2" requirements="ID_INTERNAL_GRANTS_MULTICLASS_SPELLCASTING" />
+			<stat name="warlock:spellcasting:slots:1" value="2" requirements="ID_WOTC_PHB_CLASS_WARLOCK,!ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_SOLO" />
+		</rules>
+	</element>
+
+	<element name="Bouncer" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BOUNCER">
+		<description>
+			<p>You are both hardy and bouncy. You gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Constitution score by 1, to a maximum of 20.</li>
+				<li>When you are hit by an attack roll, you can use your reaction to make a melee weapon attack against one creature within your reach. You can make an attack in this way a number of times equal to the modifier of the Ability Score you increased with this feat, regaining all expended uses when you finish a long rest.</li>
+				<li>When you are knocked prone, you can use your reaction to stand up.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>• When hit by an attack, make a melee weapon attack against a creature in reach.&#13;
+			• When knocked prone, you can stand up.</description>
+		</sheet>
+		<rules>
+			<select type="Feat Feature" name="Ability Score Increase (Bouncer)" supports="Bouncer" />
+		</rules>
+	</element>
+		<element name="Strength" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_BOUNCER_STRENGTH">
+			<compendium display="false" />
+			<supports>Bouncer</supports>
+			<description>
+				<p>Increase your Strength by 1, to a maximum of 20.</p>
+			</description>
+			<sheet action="Reaction" usage="{{strength:modifier}}/Long Rest" alt="Bouncer">
+				<description>You can make an attack when hit by an attack roll a number of times equal to your Strength modifier, regaining all expended uses when you finish a long rest.&#13;
+					When knocked prone, you can stand up as a reaction.</description>
+			</sheet>
+			<rules>
+				<stat name="strength" value="1" alt="Bouncer" />
+				<stat name="bouncer:uses" value="strength:modifier" alt="Bouncer" />
+			</rules>
+		</element>
+		<element name="Constitution" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_BOUNCER_CONSTITUTION">
+			<compendium display="false" />
+			<supports>Bouncer</supports>
+			<description>
+				<p>Increase your Constitution by 1, to a maximum of 20.</p>
+			</description>
+			<sheet action="Reaction" usage="{{strength:modifier}}/Long Rest" alt="Bouncer">
+				<description>You can make an attack when hit by an attack roll a number of times equal to your Constitution modifier, regaining all expended uses when you finish a long rest.&#13;
+					When knocked prone, you can stand up as a reaction.
+				</description>
+			</sheet>
+			<rules>
+				<stat name="constitution" value="1" alt="Bouncer" />
+				<stat name="bouncer:uses" value="constitution:modifier" alt="Bouncer" />
+			</rules>
+		</element>
+
+	<element name="Brewer" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BREWER">
+		<description>
+			<p>You are adept at brewing potions, granting you the following benefits.</p>
+			<ul>
+				<li>You gain proficiency with Brewer’s Supplies, or with one set of artisan’s tools of your choice.</li>
+				<li>Over the course of a long rest, you can brew a number of common potions (such as potions of healing) equal to your proficiency bonus. Each potion requires 30 gold’s worth of materials, which are consumed in the brewing process.</li>
+				<li>Upon reaching 9th level, you can instead craft a single uncommon potion (such as a potion of greater healing) over the course of a long rest. The potion requires 200 gold’s worth of materials, which are consumed in the brewing process.</li>
+				<li>Upon reaching 17th level, you can instead craft a single rare potion (such as a potion of superior healing) over the course of a long rest. The potion requires 1,000 gold’s worth of materials, which are consumed in the brewing process.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>During a long rest, you can brew potions:&#13;
+			• {{proficiency}} common potions (30 gp each).</description>
+			<description level="9">During a long rest, you can brew potions:&#13;
+			• {{proficiency}} common potions (30 gp each).&#13;
+			• 1 uncommon potion (200 gp).</description>
+			<description level="17">During a long rest, you can brew potions:&#13;
+			• {{proficiency}} common potions (30 gp each).&#13;
+			• 1 uncommon potion (200 gp).&#13;
+			• 1 rare potion (1000 gp).</description>
+		</sheet>
+		<rules>
+			<select type="Proficiency" name="Tool Proficiency (Brewer)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES"/>
+		</rules>
+	</element>
+
+	<element name="Swagger" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SWAGGER">
+		<description>
+			<p>Your swaggering confidence is equally irresistible and infuriating, granting you the following benefits.</p>
+			<ul>
+				<li>You gain proficiency in one of the following skills of your choice: Acrobatics, Intimidation, Performance, or Persuasion.</li>
+				<li>As an action, you can make a Charisma (Performance) check contested by a creature’s Wisdom (Insight) check. If you succeed on the check, and the creature is not hostile to you, it becomes charmed by you for 1 minute, or until you or your companions do anything harmful to it. If you succeed on the check, and the creature is hostile to you, it becomes goaded by you for 1 minute. It has advantage on attack rolls against you, and disadvantage on attack rolls made against any other target. If a target succeeds on its check, it is immune to this effect for the next 24 hours. Once you succeed on your check using this feature, you cannot use it again until you finish a short or long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Action" usage="1 (on success)/Short Rest">
+			<description>Make a Performance vs. Insight check.&#13;
+			• Non-hostile success: Charmed for 1 min.&#13;
+			• Hostile success: Goaded for 1 min (adv. vs you, disadv. vs others).&#13;
+			Target immune for 24h on its success.</description>
+		</sheet>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Swagger)" supports="ID_PROFICIENCY_SKILL_ACROBATICS||ID_PROFICIENCY_SKILL_INTIMIDATION||ID_PROFICIENCY_SKILL_PERFORMANCE||ID_PROFICIENCY_SKILL_PERSUASION" />
+		</rules>
+	</element>
+
+	<element name="Savage Strikes" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SAVAGE_STRIKES">
+		<prerequisite>Proficiency with a heavy weapon</prerequisite>
+		<requirements>ID_PROFICIENCY_WEAPON_PROFICIENCY_HEAVY_WEAPONS</requirements>
+		<description>
+			<p>You masterfully leverage your weapon’s size and weight to thwart your foes.</p>
+			<ul>
+				<li>Increase your Strength score by 1, to a maximum of 20.</li>
+				<li>Whenever you roll maximum damage on the damage roll you make using a heavy weapon, the target of the attack falls prone.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you roll max damage with a heavy weapon, the target falls prone.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="1" />
+		</rules>
+	</element> 
+	
+	<element name="Undauntable" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_UNDAUNTABLE">
+		<description>
+			<p>Your courage in the face of adversity is undauntable, granting you the following benefits:</p>
+			<ul>
+				<li>Increase one ability score of your choice by 1, to a maximum of 20.</li>
+				<li>You have advantage on saving throws to resist or end the frightened condition.</li>
+				<li>Whenever you roll a natural 1 on a saving throw, you gain a point of inspiration.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws to resist or end the frightened condition.&#13;
+			Whenever you roll a natural 1 on a saving throw, you gain a point of inspiration.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Undauntable)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_ADVANTAGE_SAVING_THROWS_FRIGHTENED" />
+		</rules>
+	</element>
+
+	<element name="Relentless Ferocity" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_RELENTLESS_FEROCITY">
+		<prerequisite>The Relentless Endurance trait</prerequisite>
+		<requirements>ID_RACIAL_TRAIT_RELENTLESS_ENDURANCE||ID_WOTC_MOTM_RACIAL_TRAIT_ORC_RELENTLESS_ENDURANCE||ID_LT_HGTMH_RACIAL_TRAIT_MYCELIAN_ADAPTATION_RELENTLESS_ENDURANCE</requirements>
+		<description>
+			<p>Your tenacity in the face of death is second to none.</p>
+			<ul>
+				<li>Increase your Strength, Dexterity, or Constitution score by 1, to a maximum of 20.</li>
+				<li>When your Relentless Endurance trait activates, after dropping to 1 hit point, you can expend any number of available Hit Dice, roll them, and gain hit points equal to the result + your Constitution Modifier.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When Relentless Endurance activates, you can expend any number of Hit Dice to heal for the roll + {{constitution:modifier}}.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Relentless Ferocity)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION" />
+		</rules>
+	</element>
+
+	<element name="Ancient Speech" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_ANCIENT_SPEECH">
+		<prerequisite>The Breath Weapon trait</prerequisite>
+		<requirements>ID_RACIAL_TRAIT_BREATH_WEAPON||ID_WOTC_FTOD_RACIAL_TRAIT_CHROMATIC_DRAGONBORN_BREATH_WEAPON||ID_WOTC_FTOD_RACIAL_TRAIT_GEM_DRAGONBORN_BREATH_WEAPON||ID_WOTC_FTOD_RACIAL_TRAIT_METALLIC_DRAGONBORN_BREATH_WEAPON</requirements>
+		<description>
+			<p>The well of draconic power within you can take on many forms.</p>
+			<ul>
+				<li>Increase your Wisdom, Intelligence, or Charisma score by 1, to a maximum of 20.</li>
+				<li>You can expend one use of your Breath Weapon to let loose a magically infused word of draconic power, directed at a creature within 30 feet that can hear you. That creature must succeed on a Wisdom saving throw (DC = 8 + your Constitution modifier + your Proficiency Bonus) or become charmed by you for the next minute, or until you do something harmful to it. When the effect ends, the creature knows it was charmed by you, unless it failed its initial save by 5 or more, in which case it is unaware anything happened.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Expend one use of your Breath Weapon to target a creature within 30ft. It must make a DC {{ancient speech:dc}} Wis save or be charmed by you for 1 minute. It knows it was charmed unless it failed by 5 or more.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Ancient Speech)" supports="ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_CHARISMA" />
+			<stat name="ancient speech:dc" value="8" />
+			<stat name="ancient speech:dc" value="constitution:modifier" />
+			<stat name="ancient speech:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Transient Meditation" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_TRANSIENT_MEDITATION">
+		<prerequisite>The Trance trait</prerequisite>
+		<requirements>ID_RACIAL_TRAIT_TRANCE||ID_WOTC_AAG_RACIAL_TRAIT_ASTRAL_ELF_ASTRAL_TRANCE||ID_WOTC_MOTM_RACIAL_TRAIT_ELADRIN_TRANCE||ID_WOTC_MOTM_RACIAL_TRAIT_SEA_ELF_TRANCE||ID_WOTC_MOTM_RACIAL_TRAIT_SHADARKAI_TRANCE</requirements>
+		<description>
+			<p>In moments of peaceful rest, you find magic as well as tranquility.</p>
+			<ul>
+				<li>Increase your Wisdom, Intelligence, or Charisma score by 1, to a maximum of 20.</li>
+				<li>When you finish a long rest, if you spent those hours in a trance-like meditation, you can choose one 1st-level spell from the Sorcerer spell list. Until your next long rest, you know that spell and have it prepared, and can cast it once without expending a spell slot. Wisdom, Intelligence, or Charisma is your spellcasting ability for this spell (choose when you select this feat). You can also cast that spell with any spell slots you have.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>After a long rest (spent in trance), choose one 1st-level sorcerer spell. You know and have it prepared until your next long rest, and can cast it once for free.</description>
+		</sheet>
+		<rules>
+			<select type="Feat Feature" name="Ability Score Increase (Transient Meditation)" supports="Transient Meditation" />
+		</rules>
+	</element>
+		<element name="Intelligence" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_TRANSIENT_MEDITATION_INTELLIGENCE">
+			<compendium display="false" />
+			<supports>Transient Meditation</supports>
+			<description>
+				<p>Increase your Intelligence by 1, to a maximum of 20.</p>
+			</description>
+			<sheet alt="Transient Meditation">
+				<description>You can cast this feat’s spell without a spell slot once per long rest. You can also cast this spell using spell slots you have of the appropriate level. Your spellcasting ability for this spell is Intelligence.</description>
+			</sheet>
+			<rules>
+				<stat name="intelligence" value="1" alt="Transient Meditation" />
+				<select type="Spell" name="1st level spell (Transient Meditation)" supports="1,Sorcerer" />
+			</rules>
+		</element>
+		<element name="Wisdom" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_TRANSIENT_MEDITATION_WISDOM">
+			<compendium display="false" />
+			<supports>Transient Meditation</supports>
+			<description>
+				<p>Increase your Wisdom by 1, to a maximum of 20.</p>
+			</description>
+			<sheet alt="Transient Meditation">
+				<description>You can cast this feat’s spell without a spell slot once per long rest. You can also cast this spell using spell slots you have of the appropriate level. Your spellcasting ability for this spell is Wisdom.</description>
+			</sheet>
+			<rules>
+				<stat name="wisdom" value="1" alt="Transient Meditation" />
+				<select type="Spell" name="1st level spell (Transient Meditation)" supports="1,Sorcerer" />
+			</rules>
+		</element>
+		<element name="Charisma" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_TRANSIENT_MEDITATION_CHARISMA">
+			<compendium display="false" />
+			<supports>Transient Meditation</supports>
+			<description>
+				<p>Increase your Charisma by 1, to a maximum of 20.</p>
+			</description>
+			<sheet alt="Transient Meditation">
+				<description>You can cast this feat’s spell without a spell slot once per long rest. You can also cast this spell using spell slots you have of the appropriate level. Your spellcasting ability for this spell is Charisma.</description>
+			</sheet>
+			<rules>
+				<stat name="charisma" value="1" alt="Transient Meditation" />
+				<select type="Spell" name="1st level spell (Transient Meditation)" supports="1,Sorcerer" />
+			</rules>
+		</element>
+
+	<element name="Fortune Blessed" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_FORTUNE_BLESSED">
+		<prerequisite>The Lucky trait</prerequisite>
+		<requirements>ID_RACIAL_TRAIT_LUCKY</requirements>
+		<description>
+			<p>Ever blessed, your natural good fortune is starting.</p>
+			<ul>
+				<li>Increase one ability score of your choice by 1, to a maximum of 20.</li>
+				<li>You can use your Lucky trait to reroll a D20 test when the result on the die is a 1 or a 2. You must use the new result.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>You can use your Lucky trait to reroll a d20 when the result is a 1 or 2. You must use the new roll.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Fortune Blessed)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Iron Metabolism" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_IRON_METABOLISM">
+		<description>
+			<p>Your mighty stomach is chief among your greatest assets.</p>
+			<ul>
+				<li>Increase your Constitution score by 1, to a maximum of 20.</li>
+				<li>You have advantage on saves to resist or end the Poisoned condition.</li>
+				<li>If you would gain Hit Points from ingesting something (such as a Potion of Healing or a Goodberry) you regain that many Hit Points plus your Constution modifier instead.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Advantage on saves vs. poisoned.&#13;
+			When you gain HP from ingesting something, you regain an additional {{constitution:modifier}} HP.</description>
+		</sheet>
+		<rules>
+			<stat name="constitution" value="1" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_ADVANTAGE_SAVING_THROWS_POISONED" />
+		</rules>
+	</element> 
+
+	<element name="Elemental Virtuoso" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_ELEMENTAL_VIRTUOSO">
+		<prerequisite>The ability to cast a spell</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p>You have a particular affinity for the primal magic of the multiverse. Choose one of the following damage types: Acid, Cold, Fire, Lightning, Poison, or Thunder.</p>
+			<ul>
+				<li>Add +2 to damage rolls you make that deal the chosen damage type.</li>
+				<li>You resist the chosen damage type.</li>
+			</ul>
+			<p class="indent">You can take this feat multiple times, choosing a different damage type each time.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Feat Feature" name="Damage Type (Elemental Virtuoso)" supports="Elemental Virtuoso Damage Type" />
+		</rules>
+	</element>
+		<element name="Acid" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_VIRTUOSO_ACID">
+			<compendium display="false" />
+			<supports>Elemental Virtuoso Damage Type</supports>
+			<sheet alt="Elemental Virtuoso, Acid">
+				<description>+2 to acid damage rolls. You have resistance to acid damage.</description>
+			</sheet>
+			<rules>
+				<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+			</rules>
+		</element>
+		<element name="Cold" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_VIRTUOSO_COLD">
+			<compendium display="false" />
+			<supports>Elemental Virtuoso Damage Type</supports>
+			<sheet alt="Elemental Virtuoso, Cold">
+				<description>+2 to cold damage rolls. You have resistance to cold damage.</description>
+			</sheet>
+			<rules>
+				<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			</rules>
+		</element>
+		<element name="Fire" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_VIRTUOSO_FIRE">
+			<compendium display="false" />
+			<supports>Elemental Virtuoso Damage Type</supports>
+			<sheet alt="Elemental Virtuoso, Fire">
+				<description>+2 to fire damage rolls. You have resistance to fire damage.</description>
+			</sheet>
+			<rules>
+				<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+			</rules>
+		</element>
+		<element name="Lightning" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_VIRTUOSO_LIGHTNING">
+			<compendium display="false" />
+			<supports>Elemental Virtuoso Damage Type</supports>
+			<sheet alt="Elemental Virtuoso, Lightning">
+				<description>+2 to lightning damage rolls. You have resistance to lightning damage.</description>
+			</sheet>
+			<rules>
+				<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			</rules>
+		</element>
+		<element name="Poison" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_VIRTUOSO_POISON">
+			<compendium display="false" />
+			<supports>Elemental Virtuoso Damage Type</supports>
+			<sheet alt="Elemental Virtuoso, Poison">
+				<description>+2 to poison damage rolls. You have resistance to poison damage.</description>
+			</sheet>
+			<rules>
+				<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+			</rules>
+		</element>
+		<element name="Thunder" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_ELEMENTAL_VIRTUOSO_THUNDER">
+			<compendium display="false" />
+			<supports>Elemental Virtuoso Damage Type</supports>
+			<sheet alt="Elemental Virtuoso, Thunder">
+				<description>+2 to thunder damage rolls. You have resistance to thunder damage.</description>
+			</sheet>
+			<rules>
+				<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" />
+			</rules>
+		</element>
+
+	<element name="Unarmored Mastery" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_UNARMORED_MASTERY">
+		<description>
+			<p>While others place their faith in the tools of war, yours is steadfast in your own body.</p>
+			<ul>
+				<li>Increase your Dexterity or Constitution score by 1, to a maximum of 20.</li>
+				<li>While you aren’t wearing armour and all your hands are free, your AC increases by 1.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>While unarmored and with all hands free, your AC increases by 1.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Unarmored Mastery)" supports="ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION" />
+			<stat name="ac:misc" value="1" equipped="[armor:none],[primary:none],[secondary:none]" />
+		</rules>
+	</element>
+
+	<element name="Outmuscle" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_OUTMUSCLE">
+		<prerequisite>The Powerful Build species trait</prerequisite>
+		<requirements>ID_RACE_TRAIT_POWERFUL_BUILD</requirements>
+		<description>
+			<p>You wield your size and strength to an impressive advantage over those smaller than you.</p>
+			<ul>
+				<li>Increase your Strength or Constitution score by 1, to a maximum of 20.</li>
+				<li>When you hit a creature your size or smaller, you can take a bonus action this turn to take the Shove or Grapple action targeting that creature.</li>
+				<li>When you successfully Shove or Grapple a creature, that creature takes bludgeoning damage equal to your Strength modifier. Creatures grappled by you take this damage again at the end of each of their turns.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>When you hit a creature your size or smaller, you can use a bonus action to Shove or Grapple them.&#13;
+			When you successfully Shove or Grapple, the target takes {{strength:modifier}} bludgeoning damage. A grappled creature takes this damage again at the end of each of its turns.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Outmuscle)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_CONSTITUTION" />
+		</rules>
+	</element>
+
+	<element name="Tinyfication" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_TINYFICATION">
+		<prerequisite>Gnome, Halfling, Fairy, Goblin</prerequisite>
+		<requirements>ID_RACE_GNOME||ID_RACE_HALFLING||ID_WOTC_MOTM_RACE_FAIRY||ID_WOTC_MOTM_RACE_GOBLIN</requirements>
+		<description>
+			<p>Your innate magic lets you take your small size to the extremes.</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>As an action, you can shrink yourself and objects you are wearing or carrying. This reduction decreases your size by one category- from Small to Tiny, for example. While reduced, your AC increases by 2, and you have advantage on Dexterity saving throws and Stealth checks. You also have disadvantage Strength saving throws, and while your weapon are shrunk, they have a -1d4 penalty to damage rolls (this can’t reduce the damage below 1).</li>
+				<li>This size reduction lasts for 1 hour, or until you choose to end it as an action. Once you use this feature, you can’t do so again until you finish a long rest.</li>
+			</ul>
+		</description>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>Shrink to Tiny size for 1 hour. Gain +2 AC, advantage on Dex saves and Stealth checks. Disadvantage on Str saves. Weapon damage is reduced by 1d4 (min 1).</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+		</rules>
+	</element>
+
+	<element name="Natural Magician" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_NATURAL_MAGICIAN">
+		<prerequisite>A species that grants the ability to cast a levelled spell</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p>Magic flows through your blood, its potency sizzling in your very soul.</p>
+			<ul>
+				<li>Increase your Wisdom, Intelligence, or Charisma score by 1, to a maximum of 20.</li>
+				<li>You can cast levelled spells granted by your species a number of times per day equal to your Proficiency Bonus using the trait that confers them.</li>
+				<li>When you cast a levelled spell granted to you by your species, you gain Temporary Hit Points equal to your Proficiency Bonus + the modifier of the ability score you increased with this feat.</li>
+			</ul>
+		</description>
+		<sheet display="false">
+			<description>You can cast your racial spells {{proficiency}} per day.&#13;
+			When you cast a racial spell, you gain temp HP equal to {{proficiency}} + the modifier of the ability increased by this feat.</description>
+		</sheet>
+		<rules>
+			<select type="Feat Feature" name="Ability Score Increase (Natural Magician)" supports="Natural Magician" />
+		</rules>
+	</element>
+		<element name="Natural Magician (Wisdom)" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_NATURAL_MAGICIAN_WISDOM">
+			<compendium display="false" />
+			<supports>Natural Magician</supports>
+			<description>
+				<p>Increase your Wisdom score by 1, to a maximum of 20.</p>
+				<p>You can cast levelled spells granted by your species a number of times per day equal to your Proficiency Bonus using the trait that confers them.</p>
+				<p>When you cast a levelled spell granted to you by your species, you gain Temporary Hit Points equal to your Proficiency Bonus + the modifier of the ability score you increased with this feat.</p>
+			</description>
+			<sheet alt="Natural Magician">
+				<description>You can cast your racial spells {{proficiency}} per day.&#13;
+				When you cast a racial spell, you gain temp HP equal to {{natural magicia:thp}}</description>
+			</sheet>
+			<rules>
+				<stat name="wisdom" value="1" alt="Natural Magician" />
+				<stat name="natural magicia:thp" value="proficiency" />
+				<stat name="natural magicia:thp" value="wisdom:modifier" />
+			</rules>
+		</element>
+		<element name="Natural Magician (Intelligence)" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_NATURAL_MAGICIAN_INTELLIGENCE">
+			<compendium display="false" />
+			<supports>Natural Magician</supports>
+			<description>
+				<p>Increase your Intelligence score by 1, to a maximum of 20.</p>
+				<p>You can cast levelled spells granted by your species a number of times per day equal to your Proficiency Bonus using the trait that confers them.</p>
+				<p>When you cast a levelled spell granted to you by your species, you gain Temporary Hit Points equal to your Proficiency Bonus + the modifier of the ability score you increased with this feat.</p>
+			</description>
+			<sheet alt="Natural Magician">
+				<description>You can cast your racial spells {{proficiency}} per day.&#13;
+				When you cast a racial spell, you gain temp HP equal to {{natural magicia:thp}}</description>
+			</sheet>
+			<rules>
+				<stat name="intelligence" value="1" alt="Natural Magician" />
+				<stat name="natural magicia:thp" value="proficiency" />
+				<stat name="natural magicia:thp" value="intelligence:modifier" />
+			</rules>
+		</element>
+		<element name="Natural Magician (Charisma)" type="Feat Feature" source="DM Secret Weapons" id="ID_DMSW_FEAT_FEATURE_NATURAL_MAGICIAN_CHARISMA">
+			<compendium display="false" />
+			<supports>Natural Magician</supports>
+			<description>
+				<p>Increase your Charisma score by 1, to a maximum of 20.</p>
+				<p>You can cast levelled spells granted by your species a number of times per day equal to your Proficiency Bonus using the trait that confers them.</p>
+				<p>When you cast a levelled spell granted to you by your species, you gain Temporary Hit Points equal to your Proficiency Bonus + the modifier of the ability score you increased with this feat.</p>
+			</description>
+			<sheet alt="Natural Magician">
+				<description>You can cast your racial spells {{proficiency}} per day.&#13;
+				When you cast a racial spell, you gain temp HP equal to {{natural magicia:thp}}</description>
+			</sheet>
+			<rules>
+				<stat name="charisma" value="1" alt="Natural Magician" />
+				<stat name="natural magicia:thp" value="proficiency" />
+				<stat name="natural magicia:thp" value="charisma:modifier" />
+			</rules>
+		</element>
+
+	<element name="Gish Warrior" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_GISH_WARRIOR">
+		<prerequisite>The ability to cast at least one spell</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p>In battle, you entwine spellcasting and weapon fighting, granting you the following benefits:</p>
+			<ul>
+				<li>Increase one Ability Score of your choice by 1, to a maximum of 20.</li>
+				<li>You learn one cantrip of your choice from the Sorcerer spell list.</li>
+				<li>If you take the attack action, you can cast a cantrip with the casting time of 1 action as a bonus action that turn. Once you use this feature, you cannot do so again until you finish a short or long rest.</li>
+				<li>If you cast a spell using an action, you can make a single weapon attack as a bonus action that turn. Once you use this feature, you cannot do so again until you finish a short or long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="1 each/Short Rest">
+			<description>Learn one sorcerer cantrip.&#13;
+			• If you take the Attack action, you can cast a cantrip as a bonus action.&#13;
+			• If you cast a spell as an action, you can make one weapon attack as a bonus action.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Gish Warrior)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Spell" name="Cantrip (Gish Warrior)" supports="0,Sorcerer" />
+		</rules>
+	</element>
+
+	<element name="Magical Conduit" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_MAGICAL_CONDUIT">
+		<description>
+			<p>Your body is unique attuned to magic, granting you the following benefits:</p>
+			<ul>
+				<li>Increase one Ability Score of your choice by 1, to a maximum of 20.</li>
+				<li>When you fail a saving throw against a spell, you can use a reaction to roll 1d4 and add the result to that save, potentially turning a failure into a success.</li>
+				<li>When a spell attack roll hits you, you can use a reaction to roll 1d6 and add the result to your AC for that attack, potentially causing that attack to miss.</li>
+				<li>You gain 1d6 temporary hit points when you cast a spell of 1st-level or higher with the range of self.</li>
+			</ul>
+		</description>
+		<sheet action="Reaction">
+			<description>• Reaction: When you fail a spell save, add 1d4 to the roll.&#13;
+			• Reaction: When hit by a spell attack, add 1d6 to your AC for that attack.&#13;
+			• When you cast a 1st-level+ spell with range Self, gain 1d6 temp HP.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Magical Conduit)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Aerial Acrobat" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_AERIAL_ACROBAT">
+		<prerequisite>A flying speed</prerequisite>
+		<requirements>[speed:fly:1]</requirements>
+		<description>
+			<p>You are a master of flight, granting you the following benefits.</p>
+			<ul>
+				<li>Increase your Strength or Dexterity score by 1, to a maximum of 20.</li>
+				<li>Increase your flying speed by 10 feet.</li>
+				<li>While flying, ranged attack rolls against you can’t have advantage.</li>
+				<li>While flying, you can take the Dodge or Dash actions as a bonus action. You can use this feature a number of times equal to your Proficiency Bonus, regaining all expended uses upon finishing a long rest.</li>
+			</ul>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>+10ft flying speed.&#13;
+			While flying, ranged attacks against you can't have advantage.&#13;
+			While flying, you can Dodge or Dash as a bonus action.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Aerial Acrobat)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<stat name="speed:fly" value="10" />
+		</rules>
+	</element>
+
+	<element name="Sling Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SLING_MASTER">
+		<prerequisite>Proficiency with Slings</prerequisite>
+		<requirements>ID_PROFICIENCY_WEAPON_PROFICIENCY_SLING</requirements>
+		<description>
+			<p>In your capable hands, the simple Sling is a terrifying and lethal weapon. Your mastery grants you the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>Attacking at long range with a Sling doesn’t impose disadvantage on your attack rolls.</li>
+				<li>Attacking a prone creature at range with a Sling doesn’t impose disadvantage on your attack rolls.</li>
+				<li>Once per turn, when you roll maximum damage on an attack made against a creature using a Sling, the target must succeed on a Constitution saving throw (DC = 8 + your Dexterity modifier + your Proficiency Bonus) or fall prone.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>No disadvantage at long range or vs. prone creatures with a sling.&#13;
+			Once per turn, if you roll max damage with a sling, the target must make a DC {{sling master:dc}} Con save or fall prone.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+			<stat name="sling master:dc" value="8" />
+			<stat name="sling master:dc" value="dexterity:modifier" />
+			<stat name="sling master:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Scourge Master" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_SCOURGE_MASTER">
+		<prerequisite>Proficiency with whips</prerequisite>
+		<requirements>ID_PROFICIENCY_WEAPON_PROFICIENCY_WHIP</requirements>
+		<description>
+			<p>You have mastered the whip, granting you the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity score by 1, to a maximum of 20.</li>
+				<li>The damage die of the whip increases from 1d4 to 1d6 when you attack with it.</li>
+				<li>Once per turn, when you damage a creature with an attack roll using a whip, you can also attempt to strike another creature within your reach as part of that same attack. If your initial attack roll is sufficient to hit the second target, it takes damage equal to half the damage dealt to the initial target.</li>
+				<li>Once per turn, when you hit a creature that is no more than one size category larger than you with an attack using a whip, you can forgo dealing damage to instead knock that creature prone or pull it up to 10 feet closer to you.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Whip damage becomes 1d6.&#13;
+			Once per turn, when you hit with a whip, you can also hit a second creature in reach if the attack roll is high enough. It takes half the damage.&#13;
+			Once per turn, when you hit a creature no more than one size larger, you can forgo damage to knock it prone or pull it 10ft.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Scourge Master)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+		</rules>
+	</element>
+
+	<element name="Blowgun Expert" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_BLOWGUN_EXPERT">
+		<prerequisite>Proficiency with blowguns</prerequisite>
+		<requirements>ID_PROFICIENCY_WEAPON_PROFICIENCY_BLOWGUN</requirements>
+		<description>
+			<p>You are an expert in the subtle and deadly art of applying poison to blowgun ammunition, granting you the following benefits:</p>
+			<ul>
+				<li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+				<li>You ignore the loading property of the blowgun.</li>
+				<li>You gain proficiency with the Poisoner’s Kit.</li>
+				<li>As a bonus action, you can coat a number of blowgun darts equal to your Dexterity modifier in a simple poison. The poison remains potent for 1 minute once applied, or until it strikes a creature. When you hit a creature with a poisoned dart, the target takes an additional 1d6 poison damage. If you score a critical hit with a poisoned dart, the target is also blinded until the end of its next turn.</li>
+			</ul>
+		</description>
+		<sheet action="Bonus Action">
+			<description>Ignore loading property of blowguns.&#13;
+			As a bonus action, coat up to {{dexterity:modifier}} darts with poison for 1 min. A hit deals +1d6 poison damage. A crit also blinds the target until the end of its next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="dexterity" value="1" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT" />
+		</rules>
+	</element>
+
+	<element name="Minimizer" type="Feat" source="DM Secret Weapons" id="ID_DMSW_FEAT_MINIMIZER">
+		<prerequisite>4th Level</prerequisite>
+		<requirements>[level:4]</requirements>
+		<description>
+			<p>As an action, or as a reaction when hit by an attack, you can shrink yourself and everything you are currently wearing or carrying to 1/4 size. Your size category is reduced by 2 (to a minimum of Tiny), your AC increases by 2 (potentially turning a hit into a miss), you have disadvantage on Strength (Athletics) checks and Strength saving throws, and you have advantage on Dexterity (Acrobatics and Stealth) checks and Dexterity saving throws.</p>
+			<p class="indent">This transformation lasts for 1 minute, or until you lose concentration (as if concentrating on a spell), at which time you revert to normal size. If there isn’t room for you to return to your normal size, you are shunted directly to the nearest unoccupied space where there is room for you to revert, taking 1d10 bludgeoning damage for every 5 feet you are shunted.</p>
+		</description>
+		<sheet action="Action or Reaction">
+			<description>Shrink to 1/4 size for 1 min (conc.): &#13;
+				• Size reduced by 2 categories (min Tiny).&#13;
+				• Gain +2 AC&#13;
+				• Disadv. on Str checks/saves&#13;
+				• Adv. on Dex checks/saves&#13;
+				Revert if conc. is lost. Take 1d10 bludgeoning per 5ft shunted if no room to revert.</description>
+		</sheet>
+	</element>
+
+	<!-- Channel Divinity Supports -->
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_KNOWLEDGE_DOMAIN_CD_READ_THOUGHTS">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_LIFE_DOMAIN_CD_CHANNEL_DIVINITY_PRESERVE_LIFE">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_LIGHT_DOMAIN_CD_RADIANCE_OF_THE_DAWN">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_NATURE_DOMAIN_CD_CHARM_ANIMALS_AND_PLANTS">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_TEMPEST_DOMAIN_CD_DESTRUCTIVE_WRATH">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_TRICKERY_DOMAIN_CD_INVOKE_DUPLICITY">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_PHB_ARCHETYPE_FEATURE_WAR_DOMAIN_CD_GUIDED_STRIKE">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_ARCHETYPE_FEATURE_ORDER_DOMAIN_CD_ORDERS_DEMAND">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_ARCHETYPE_FEATURE_PEACE_DOMAIN_CD_BALM_OF_PEACE">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_ARCHETYPE_FEATURE_TWILIGHT_DOMAIN_CD_TWILIGHT_SANCTUARY">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_GFG_SCGTD_CLERIC_ARCHETYPE_FEATURE_SHADOW_DOMAIN_CHANNEL_DIVINITY_CLOAK_OF_THE_NIGHT">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_GFG_GHPG_ARCHETYPE_FEATURE_ELDRITCH_DOMAIN_CHANNEL_DIVINITY_PROPHECY_OF_DOOM">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_GFG_GHPG_ARCHETYPE_FEATURE_INQUISITION_DOMAIN_CHANNEL_DIVINITY_SPELL_SHIELD">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_LT_HGTMH_ARCHETYPE_FEATURE_HUNT_DOMAIN_CHANNEL_DIVINITY_HONED_INSTINCTS">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_RGTTYR_ARCHETYPE_FEATURE_SHRINE_WARDEN_DOMAIN_CHANNEL_DIVINITY_HALLOWED_GROUND">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_LT_SGEH_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_CHANNEL_DIVINITY_GUARDIAN_ANGEL">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_SCAG_ARCHETYPE_FEATURE_ARCANA_DOMAIN_CD_ARCANE_ABJURATION">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_GGTR_ARCHETYPE_FEATURE_ORDER_DOMAIN_CD_ORDERS_DEMAND">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_FORGE_DOMAIN_CD_ARTISANS_BLESSING">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_GRAVE_DOMAIN_CD_PATH_TO_THE_GRAVE">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_TALDOREI_CR_ARCHETYPE_FEATURE_BLOOD_DOMAIN_CRIMSON_BOND">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_TALDOREI_CR_ARCHETYPE_FEATURE_MOON_DOMAIN_BLESSING_OF_THE_FULL_MOON">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_AW_OOTD_ARCHETYPE_FEATURE_PROPHECY_DOMAIN_CD_PROPHETIC_TRANCE">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_CRIT_TCS_ARCHETYPE_FEATURE_BLOOD_DOMAIN_CD_BLOOD_PUPPET">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+	<append id="ID_CRIT_TCS_ARCHETYPE_FEATURE_BLOOD_DOMAIN_CD_CRIMSON_BOND">
+		<supports>Cleric Channel Divinity</supports>
+	</append>
+</elements>
