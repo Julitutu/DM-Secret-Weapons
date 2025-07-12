@@ -12,7 +12,7 @@
 		<setters>
 			<set name="abbreviation">DMSW</set>
 			<set name="url">https://dndshorts.myshopify.com/collections/digital-content</set>
-			<set name="image">https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/secret-weapon.png</set>
+			<set name="image">https://raw.githubusercontent.com/Julitutu/DM-Secret-Weapons/refs/heads/main/secret-weapon.jpg</set>
 			<set name="author" abbreviation="DMSW" url="https://dndshorts.myshopify.com">D&amp;D Shorts</set>
 			<set name="third-party">true</set>
 		</setters>
